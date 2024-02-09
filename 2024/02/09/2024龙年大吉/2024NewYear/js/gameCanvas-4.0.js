@@ -1,6 +1,28 @@
 function GameCanvas(settings) {
   let top = this;
 
+  
+  this.fillPageWithCanvas = function () {
+    top.canvas.style.position = "fixed";
+    top.canvas.style.top = "0";
+    top.canvas.style.left = "0";
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let devicePixelRatio = window.devicePixelRatio || 1;
+    top.canvas.width = width * devicePixelRatio;
+    top.canvas.height = height * devicePixelRatio;
+    top.canvas.style.width = width + 'px';
+    top.canvas.style.height = height + 'px';
+    top.ctx.scale(devicePixelRatio, devicePixelRatio);
+    top.disableScrollOnMobile = true;
+    top.contextMenuDisabled = true;
+    this.updateSizeOnResize = true;
+  }
+
+  window.addEventListener("resize", () => {
+    this.setSize(window.innerWidth, window.innerHeight);
+  });
+
   this.functions = [];
   this.keys = [];
   this.images = [];
@@ -430,78 +452,78 @@ function GameCanvas(settings) {
     }
   }
 
-/******************
-  
-       Audio
-     
-   ******************/
+  /******************
+    
+         Audio
+       
+     ******************/
 
-       this.createSound = function (url, volume = 1, startTime = 0, looping = false) {
-        var audio = new Audio("./EverythingInItsRightPlace.mp3"); // 使用本地音乐文件
-        audio.loop = looping;
-        audio.currentTime = startTime;
-        audio.volume = volume;
-      
-        return {
-          volume,
-          startTime,
-          audio
-        };
-      }
-      
-      this.playSound = function (sound) {
-        sound.audio.currentTime = sound.startTime;
-        sound.audio.volume = sound.volume;
-        sound.audio.play();
-      }
-      
-      this.stopSound = function (sound) {
-        sound.audio.pause(); // 更正为使用pause方法
-        sound.audio.currentTime = 0; // 将音乐播放位置重置为开始，模拟停止效果
-      }
-      
-      this.pauseSound = function (sound) {
+  this.createSound = function (url, volume = 1, startTime = 0, looping = false) {
+    var audio = new Audio("./EverythingInItsRightPlace.mp3"); // 使用本地音乐文件
+    audio.loop = looping;
+    audio.currentTime = startTime;
+    audio.volume = volume;
+
+    return {
+      volume,
+      startTime,
+      audio
+    };
+  }
+
+  this.playSound = function (sound) {
+    sound.audio.currentTime = sound.startTime;
+    sound.audio.volume = sound.volume;
+    sound.audio.play();
+  }
+
+  this.stopSound = function (sound) {
+    sound.audio.pause(); // 更正为使用pause方法
+    sound.audio.currentTime = 0; // 将音乐播放位置重置为开始，模拟停止效果
+  }
+
+  this.pauseSound = function (sound) {
+    sound.audio.pause();
+  }
+
+  this.backgroundMusic = function (url) {
+    var audio = new Audio("./EverythingInItsRightPlace.mp3"); // 使用本地音乐文件
+    audio.loop = true;
+    audio.play();
+    return audio;
+  }
+
+  this.fadeOutSound = function (sound, time = 1) {
+    var startVolume = sound.volume;
+    var count = 0;
+    var interv = setInterval(() => {
+      sound.audio.volume = startVolume * (1 - count / (time * 20));
+      count++;
+      if (count > time * 20) {
         sound.audio.pause();
+        sound.audio.currentTime = 0; // 添加音乐播放位置重置
+        clearInterval(interv);
       }
-      
-      this.backgroundMusic = function (url) {
-        var audio = new Audio("./EverythingInItsRightPlace.mp3"); // 使用本地音乐文件
-        audio.loop = true;
-        audio.play();
-        return audio;
-      }
-      
-      this.fadeOutSound = function (sound, time = 1) {
-        var startVolume = sound.volume;
-        var count = 0;
-        var interv = setInterval(() => {
-          sound.audio.volume = startVolume * (1 - count / (time * 20));
-          count++;
-          if (count > time * 20) {
-            sound.audio.pause();
-            sound.audio.currentTime = 0; // 添加音乐播放位置重置
-            clearInterval(interv);
-          }
-        }, 50);
-      }
-      
-      this.playTone = function (freq = 440, time = 1, volume = 1, type = "sine") {
-        var oscillator = top.audioContext.createOscillator();
-      
-        var gainNode = top.audioContext.createGain()
-        gainNode.gain.value = volume;
-        gainNode.connect(top.audioContext.destination);
-      
-        oscillator.type = type;
-        oscillator.frequency.value = freq;
-        oscillator.connect(gainNode);
-        oscillator.start();
-      
-        setTimeout(() => {
-          oscillator.stop();
-        }, time * 1000);
-      }
-      
+    }, 50);
+  }
+
+  this.playTone = function (freq = 440, time = 1, volume = 1, type = "sine") {
+    var oscillator = top.audioContext.createOscillator();
+
+    var gainNode = top.audioContext.createGain()
+    gainNode.gain.value = volume;
+    gainNode.connect(top.audioContext.destination);
+
+    oscillator.type = type;
+    oscillator.frequency.value = freq;
+    oscillator.connect(gainNode);
+    oscillator.start();
+
+    setTimeout(() => {
+      oscillator.stop();
+    }, time * 1000);
+  }
+
 
   /******************
   
@@ -924,6 +946,12 @@ function GameCanvas(settings) {
     if (this.globalFunctions) {
       window.mouse = this.mouse;
       window.touches = this.touches;
+    }
+
+    if (this.updateSizeOnResize) {
+      window.addEventListener("resize", () => {
+        this.fillPageWithCanvas(); // 调整画布大小以填充页面
+      });
     }
 
     this.canvas.addEventListener("mousemove", event => {
