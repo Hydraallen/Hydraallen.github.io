@@ -1,0 +1,250 @@
+var gc = new GameCanvas();
+
+//var points = textToPoints("2024龙年大吉", 20, "Anton");
+// 句子库 - 在这里添加或删除您想要的句子
+var sentences = [
+  "心想事成",
+  "财源滚滚",
+  "岁岁平安",
+  "事业有成",
+  "学业进步",
+  "龙马精神",
+  "笑口常开",
+  "年年有余",
+  "新年快乐",
+  "万事如意",
+  "恭喜发财",
+  "身体健康",
+  "2024龙年大吉",
+  "春风得意马蹄疾",
+  "一帆风顺",
+  "二龙腾飞",
+  "三羊开泰",
+  "四季平安",
+  "五福临门",
+  "六六大顺",
+  "七星高照",
+  "八方来财",
+  "九九同心",
+  "十全十美",
+  "百事顺利",
+  "千事吉祥",
+  "万象更新",
+  "福如东海长流水",
+  "寿比南山不老松"
+];
+
+// 随机选择一个句子的函数
+function getRandomSentence() {
+  var index = Math.floor(Math.random() * sentences.length);
+  return sentences[index];
+}
+
+// 使用随机句子代替固定句子
+var points = textToPoints(getRandomSentence(), 20, "Anton");
+
+function updateSentenceAndPoints() {
+  var randomSentence = getRandomSentence(); // 随机选择一个句子
+  var randomFontSize = 15 + Math.random() * 30; // 随机字体大小，基础大小20，随机增加0到10
+  points = textToPoints(randomSentence, randomFontSize, "Anton"); // 生成新句子的点阵
+}
+
+var titleParticles = [];
+var fireworks = [];
+var particles = [];
+
+var gravity = 0.1;
+
+setTimeout(function () {
+  setInterval(function () {
+    fireworks.push(new Firework(Math.random() * width, height, Math.random() - 0.5, -(Math.random() * 7 + 5)));
+  }, 200);
+}, 2000);
+
+fireworks.push(new Firework(width / 2, height, 0, -9.5, 10, "gold", true));
+setInterval(function () {
+  fireworks.push(new Firework(width / 2, height, 0, -9.5, 10, "gold", true));
+}, 5000);
+
+for (var i = 0; i < 250; i++) {
+  circle(
+    Math.random() * width,
+    Math.random() * height,
+    1,
+    "rgb(200, 200, 200)"
+  );
+}
+var starImage = canvasToImage();
+
+background("black");
+loop();
+function loop() {
+  gc.ctx.globalCompositeOperation = "source-over";
+  background("rgba(0, 0, 0, 0.1)");
+  gc.ctx.drawImage(starImage, 0, 0);
+  gc.ctx.globalCompositeOperation = "lighter";
+
+  for (var i = 0; i < fireworks.length; i++) {
+    var firework = fireworks[i];
+    firework.update();
+    firework.render();
+  }
+
+  for (var i = 0; i < particles.length; i++) {
+    var particle = particles[i];
+    particle.update();
+    particle.render();
+  }
+
+  for (var i = 0; i < titleParticles.length; i++) {
+    var p = titleParticles[i];
+    p.update();
+    p.render();
+  }
+
+  requestAnimationFrame(loop);
+}
+
+function TitleParticle(x, y, vx, vy) {
+  this.x = x;
+  this.y = y;
+  this.vx = vx;
+  this.vy = vy;
+  this.ay = 0.2;
+  this.radius = 4;
+  this.maxHealth = 200;
+  this.health = 200;
+
+  this.update = function () {
+    this.x += this.vx;
+    this.y += this.vy;
+    this.vx *= 0.95;
+    this.vy *= 0.95;
+    this.vy += this.ay;
+    this.ay *= 0.95;
+
+    this.radius = (this.health / this.maxHealth) * 4;
+    this.health--;
+    if (this.health <= 0) {
+      titleParticles.splice(titleParticles.indexOf(this), 1);
+    }
+  }
+
+  this.render = function () {
+    circle(this.x, this.y, this.radius, "rgba(255, 255, 255, " + (this.health / this.maxHealth) + ")");
+  }
+}
+
+function Firework(x, y, vx, vy, radius = 5, color = "white", title = false) {
+  this.x = x;
+  this.y = y;
+  this.vx = vx;
+  this.vy = vy;
+  this.radius = radius;
+  this.title = title;
+  this.color = color;
+
+  this.update = function () {
+    this.x += this.vx;
+    this.y += this.vy;
+    this.vy += gravity;
+
+    if (this.vy >= 0 && this.title) {
+      updateSentenceAndPoints();
+      fireworks.splice(fireworks.indexOf(this), 1);
+
+      if (this.title) {
+        var scale = 0.3;
+        for (var i = 0; i < points.length; i++) {
+          var p = points[i];
+          var v = {
+            x: (p.x - 60) * scale + (Math.random() - 0.5) * 0.1,
+            y: (p.y - 20) * scale + (Math.random() - 0.5) * 0.1
+          }
+          var particle = new TitleParticle(this.x, this.y, v.x, v.y);
+          titleParticles.push(particle);
+        }
+      }
+      else {
+        var color = [Math.random() * 256 >> 0, Math.random() * 256 >> 0, Math.random() * 256 >> 0];
+        for (var i = 0; i < Math.PI * 2; i += 0.1) {
+          var power = (Math.random() + 0.5) * 4;
+          var vx = Math.cos(i) * power;
+          var vy = Math.sin(i) * power;
+          particles.push(new Particle(this.x, this.y, vx, vy, Math.random() + 3, color));
+        }
+      }
+    }
+  }
+
+  this.render = function () {
+    circle(this.x, this.y, this.radius, this.color);
+  }
+}
+
+function Particle(x, y, vx, vy, radius, color) {
+  this.x = x;
+  this.y = y;
+  this.vx = vx;
+  this.vy = vy;
+  this.life = 100;
+  this.color = color;
+  this.radius = radius;
+
+  this.update = function () {
+    this.x += this.vx;
+    this.y += this.vy;
+    this.vy += gravity;
+
+    this.vx *= 0.95;
+    this.vy *= 0.95;
+
+    this.life--;
+    if (this.life <= 0) {
+      particles.splice(particles.indexOf(this), 1);
+    }
+  }
+
+  this.render = function () {
+    circle(this.x, this.y, 3 * (this.life / 100), "rgba(" + this.color[0] + ", " + this.color[1] + ", " + this.color[2] + ", " + (this.life / 100) + ")");
+  }
+}
+
+function textToPoints(text, textSize, font) {
+  var canvas = document.createElement("canvas");
+  canvas.width = 1024;
+  canvas.height = textSize * 1.3;
+  var ctx = canvas.getContext("2d");
+
+  ctx.textBaseline = "middle";
+  ctx.font = textSize + "px " + font;
+  ctx.fillText(text, 0, canvas.height / 2);
+
+  var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  var data = imageData.data;
+
+  var points = [];
+  var index = (x, y) => (x + canvas.width * y) * 4;
+  var threshold = 50;
+
+  for (var i = 0; i < data.length; i += 4) {
+    if (data[i + 3] > threshold) {
+      var p = {
+        x: (i / 4) % canvas.width,
+        y: (i / 4) / canvas.width >> 0
+      };
+
+      if (data[index(p.x + 1, p.y) + 3] < threshold ||
+        data[index(p.x - 1, p.y) + 3] < threshold ||
+        data[index(p.x, p.y + 1) + 3] < threshold ||
+        data[index(p.x, p.y - 1) + 3] < threshold) {
+        points.push({
+          x: (i / 4) % canvas.width,
+          y: (i / 4) / canvas.width >> 0
+        });
+      }
+    }
+  }
+
+  return points;
+}
