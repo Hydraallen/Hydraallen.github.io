@@ -134,7 +134,7 @@
             appId: '',
             appKey: '',
             serverURLs: '',
-            placeholder: '你是我一生只会遇见一次的惊喜...',
+            placeholder: '像评论罗伯特一样畅所欲言...',
             notify: false,
             verify: false,
             avatar: 'mm',
