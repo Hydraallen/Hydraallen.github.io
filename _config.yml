@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: Hydraallen
+subtitle: 'Hail Hydra!'
+description: 'Hydraallen的个人博客'
+keywords: 整活,技术
+author: Hydraallen
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://hydraallen.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -30,6 +30,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
   - "HTML/**"
+  - README.md
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -96,6 +97,9 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+Plugins: hexo-generator-feed
+  hexo generate
+
 ## Themes: https://hexo.io/themes/
 theme: LiveForCode
 
@@ -106,3 +110,10 @@ deploy:
   repo: git@github.com:Hydraallen/Hydraallen.github.io.git
   branch: main
     #token: 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
+
+symbols_count_time:
+  symbols: true                # 文章字数统计
+  time: true                   # 文章阅读时长
+  total_symbols: true          # 站点总字数统计
+  total_time: true             # 站点总阅读时长
+  exclude_codeblock: true     # 排除代码字数统计
