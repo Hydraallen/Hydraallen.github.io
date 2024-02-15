@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>2024龙年大吉!</title>
+</head>
+
+<body>
+
+  <script src="js/gameCanvas-4.0.js"></script>
+  <script src="js/script.js"></script>
+  <!--live2d-->
+  <script src="https://blog-static.cnblogs.com/files/zouwangblog/autoload.js"></script>
+  <!--live2dend-->
+
+  <!--放大图片-->
+  <link rel="stylesheet" type="text/css" href="https://blog-static.cnblogs.com/files/zouwangblog/zoom.css" />
+  <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/transition.js"></script>
+  <script src="https://blog-static.cnblogs.com/files/zouwangblog/zoom.js"></script>
+  <script type="text/javascript">
+    $("#cnblogs_post_body img").attr("data-action", "zoom");
+  </script>
+  <!--放大图片end-->
+
+  <!--鼠标特效-->
+  <script src="https://blog-static.cnblogs.com/files/zouwangblog/mouse-click.js"></script>
+  <canvas width="1777" height="841" style="
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 2147483647;
+        pointer-events: none;
+      "></canvas>
+  <!--鼠标特效 end-->
+
+  <!-- require APlayer -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+  <div id="aplayer"></div>
+  <script>
+    const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: false,                //是否附着页面底部，否为false
+      autoplay: true,             //是否自动播放，否为false,移动端不能生效
+      volume: 0.6,                //初始音量（0~1）
+      lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+      mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+      order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+      preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+      listFolded: false,          //列表默认折叠，开启为true
+      theme: '#ee8243',           //主题颜色
+      audio: [{
+        name: 'Everything In Its Right Place',           //歌曲名称
+        artist: 'Radiohead',       //歌曲作者
+        url: 'https://music.163.com/song/media/outer/url?id=22559034.mp3',         //歌曲源文件地址
+        cover: 'http://p2.music.126.net/9I_7fYAqVn7UAsuWsserfw==/109951167007438303.jpg?param=130y130',     //歌曲封面地址
+        theme: '#eeeeee'        //主题颜色（优先）
+      }]
+    });
+  </script>
+
+
+  <!-- 随机线条 -->
+  <script>
+    !(function () {
+      function n(n, e, t) {
+        return n.getAttribute(e) || t;
+      }
+      function e(n) {
+        return document.getElementsByTagName(n);
+      }
+      function t() {
+        var t = e("script"),
+          o = t.length,
+          i = t[o - 1];
+        return {
+          l: o,
+          z: n(i, "zIndex", -1),
+          o: n(i, "opacity", 0.6),
+          c: n(i, "color", "148,0,211"),
+          n: n(i, "count", 99),
+        };
+      }
+      function o() {
+        (a = m.width =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth),
+          (c = m.height =
+            window.innerHeight ||
+            document.documentElement.clientHeight ||
+            document.body.clientHeight);
+      }
+      function i() {
+        r.clearRect(0, 0, a, c);
+        var n, e, t, o, m, l;
+        s.forEach(function (i, x) {
+          for (
+            i.x += i.xa,
+            i.y += i.ya,
+            i.xa *= i.x > a || i.x < 0 ? -1 : 1,
+            i.ya *= i.y > c || i.y < 0 ? -1 : 1,
+            r.fillRect(i.x - 0.5, i.y - 0.5, 1, 1),
+            e = x + 1;
+            e < u.length;
+            e++
+          )
+            (n = u[e]),
+              null !== n.x &&
+              null !== n.y &&
+              ((o = i.x - n.x),
+                (m = i.y - n.y),
+                (l = o * o + m * m),
+                l < n.max &&
+                (n === y &&
+                  l >= n.max / 2 &&
+                  ((i.x -= 0.03 * o), (i.y -= 0.03 * m)),
+                  (t = (n.max - l) / n.max),
+                  r.beginPath(),
+                  (r.lineWidth = t / 2),
+                  (r.strokeStyle = "rgba(" + d.c + "," + (t + 0.2) + ")"),
+                  r.moveTo(i.x, i.y),
+                  r.lineTo(n.x, n.y),
+                  r.stroke()));
+        }),
+          x(i);
+      }
+      var a,
+        c,
+        u,
+        m = document.createElement("canvas"),
+        d = t(),
+        l = "c_n" + d.l,
+        r = m.getContext("2d"),
+        x =
+          window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.oRequestAnimationFrame ||
+          window.msRequestAnimationFrame ||
+          function (n) {
+            window.setTimeout(n, 1e3 / 45);
+          },
+        w = Math.random,
+        y = { x: null, y: null, max: 2e4 };
+      (m.id = l),
+        (m.style.cssText =
+          "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o),
+        e("body")[0].appendChild(m),
+        o(),
+        (window.onresize = o),
+        (window.onmousemove = function (n) {
+          (n = n || window.event), (y.x = n.clientX), (y.y = n.clientY);
+        }),
+        (window.onmouseout = function () {
+          (y.x = null), (y.y = null);
+        });
+      for (var s = [], f = 0; d.n > f; f++) {
+        var h = w() * a,
+          g = w() * c,
+          v = 2 * w() - 1,
+          p = 2 * w() - 1;
+        s.push({ x: h, y: g, xa: v, ya: p, max: 6e3 });
+      }
+      (u = s.concat([y])),
+        setTimeout(function () {
+          i();
+        }, 100);
+    })();
+  </script>
+
+  <!-- 雪花特效 -->
+  <script type="text/javascript">
+    (function ($) {
+      $.fn.snow = function (options) {
+        var $flake = $('<div id="snowbox" />')
+          .css({ position: "absolute", "z-index": "9999", top: "-50px" })
+          .html("❄"),
+          documentHeight = $(document).height(),
+          documentWidth = $(document).width(),
+          defaults = {
+            minSize: 10,
+            maxSize: 20,
+            newOn: 1000,
+            flakeColor:
+              "#FFFFFF",
+          },
+          options = $.extend({}, defaults, options);
+        var interval = setInterval(function () {
+          var startPositionLeft = Math.random() * documentWidth - 100,
+            startOpacity = 0.5 + Math.random(),
+            sizeFlake = options.minSize + Math.random() * options.maxSize,
+            endPositionTop = documentHeight - 200,
+            endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+            durationFall = documentHeight * 10 + Math.random() * 5000;
+          $flake
+            .clone()
+            .appendTo("body")
+            .css({
+              left: startPositionLeft,
+              opacity: startOpacity,
+              "font-size": sizeFlake,
+              color: options.flakeColor,
+            })
+            .animate(
+              {
+                top: endPositionTop,
+                left: endPositionLeft,
+                opacity: 0.2,
+              },
+              durationFall,
+              "linear",
+              function () {
+                $(this).remove();
+              }
+            );
+        }, options.newOn);
+      };
+    })(jQuery);
+    $(function () {
+      $.fn.snow({
+        minSize: 5 /* 定义雪花最小尺寸 */,
+        maxSize: 80 /* 定义雪花最大尺寸 */,
+        newOn: 200 /* 定义密集程度，数字越小越密集 */,
+      });
+    });
+  </script>
+</body>
+
+</html>
