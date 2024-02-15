@@ -37,3 +37,9 @@ hexo deploy
 ```bash
 hexo clean
 ```
+
+## Write
+
+Add `toc: true` at the beginning part to show the category.
+
+Use `<!--more-->` to hide part of the article.
