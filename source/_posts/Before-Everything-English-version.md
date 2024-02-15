@@ -1,6 +1,7 @@
 ---
 title: Before Everything(English version)
 date: 2024-01-15 16:47:21
+toc: true
 tags:
 ---
 # Beginning

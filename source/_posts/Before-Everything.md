@@ -1,6 +1,7 @@
 ---
 title: Before Everything
 date: 2024-01-15 11:34:53
+toc: true
 tags:
 ---
 

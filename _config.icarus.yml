@@ -209,7 +209,7 @@ donates:
 share:
     type: sharethis
     # URL to the ShareThis share plugin script
-    install_url: ''
+    install_url: 'https://platform-api.sharethis.com/js/sharethis.js#property=65ce47c3d77abd0019f02e62&product=image-share-buttons&source=platform'
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -236,7 +236,7 @@ widgets:
         # Author's current location
         location: Helicarrier
         # URL or path to the avatar image
-        avatar: 
+        avatar: /img/avatar.jpg
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
