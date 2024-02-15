@@ -14,6 +14,8 @@ Before starting doing something crazy, there are a few things I'd like to say...
 
 The reason is straightforward: I want to share learning notes, write tutorials, and document those motivated and adventurous moments.
 
+<!--more-->
+
 ## Why Now
 
 With the widespread use of mobile internet and smartphones, the term "blogger" seems to have become a footnote of the times. In 2024, there are already many mature writing and publishing platforms, and people might question why one would still need to spend time and effort to build and update their own blog. With the rapid development of the internet, we have more ways to express ourselves, yet it seems that the desire to express has diminished. Moments such as expressing emotions on social platforms like friends' circles and Weibo appear to be the preferred choices. However, hindered by character limits and excessive social connections, we sometimes hesitate. Platforms like Zhihu and Jianshu seem too "professional" and may not be suitable for all content, and they are easily influenced by online public opinion.

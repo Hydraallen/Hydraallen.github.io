@@ -59,17 +59,17 @@ head:
         # You should leave this blank for most of the time
         description: 
         # Twitter card type (twitter:card)
-        twitter_card: 
+        # twitter_card: 
         # Twitter ID (twitter:creator)
-        twitter_id: 
+        # twitter_id: 
         # Twitter Site (twitter:site)
-        twitter_site: 
+        # twitter_site: 
         # Google+ profile link (deprecated)
-        google_plus: 
+        # google_plus: 
         # Facebook admin ID
-        fb_admins: 
+        # fb_admins: 
         # Facebook App ID
-        fb_app_id: 
+        # fb_app_id: 
     # Structured data of the page
     # https://developers.google.com/search/docs/guides/intro-structured-data
     structured_data:
@@ -118,7 +118,7 @@ navbar:
 # Page footer configurations
 footer:
     # Copyright text
-    copyright: © 2019
+    copyright: © 2024
     # Links to be shown on the right of the footer section
     links:
         Creative Commons:
@@ -129,7 +129,7 @@ footer:
             url: https://creativecommons.org/licenses/by/4.0/
         Download on GitHub:
             icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+            url: https://github.com/Hydraallen/Hydraallen.github.io
 # Article related configurations
 article:
     # Code highlight settings
@@ -164,45 +164,46 @@ search:
     index_pages: true
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
+# hydraallen-github-io.disqus.com
 comment:
     type: disqus
     # Disqus shortname
-    shortname: ''
+    shortname: 'hydraallen-github-io'
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
     # "Afdian.net" donate button configurations
-    -
-        type: afdian
-        # URL to the "Afdian.net" personal page
-        url: ''
-    # Alipay donate button configurations
+    # -
+    #     type: afdian
+    #     # URL to the "Afdian.net" personal page
+    #     url: ''
+    # # Alipay donate button configurations
     -
         type: alipay
         # Alipay qrcode image URL
-        qrcode: ''
-    # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
-        # URL to the "Buy me a coffee" page
-        url: ''
-    # Patreon donate button configurations
-    -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
-    # Paypal donate button configurations
-    -
-        type: paypal
-        # Paypal business ID or email address
-        business: ''
-        # Currency code
-        currency_code: USD
-    # Wechat donate button configurations
+        qrcode: '/img/alipay.jpg'
+    # # "Buy me a coffee" donate button configurations
+    # -
+    #     type: buymeacoffee
+    #     # URL to the "Buy me a coffee" page
+    #     url: ''
+    # # Patreon donate button configurations
+    # -
+    #     type: patreon
+    #     # URL to the Patreon page
+    #     url: ''
+    # # Paypal donate button configurations
+    # -
+    #     type: paypal
+    #     # Paypal business ID or email address
+    #     business: ''
+    #     # Currency code
+    #     currency_code: USD
+    # # Wechat donate button configurations
     -
         type: wechat
         # Wechat qrcode image URL
-        qrcode: ''
+        qrcode: '/img/wechat.jpg'
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
@@ -229,11 +230,11 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: Hydraallen
         # Author title
-        author_title: Your title
+        author_title: S.H.I.E.L.D. Agent
         # Author's current location
-        location: Your location
+        location: Helicarrier
         # URL or path to the avatar image
         avatar: 
         # Whether show the rounded avatar image
