@@ -6,7 +6,7 @@
   <link href="https://hydraallen.github.io/atom.xml" rel="self"/>
   
   <link href="https://hydraallen.github.io/"/>
-  <updated>2024-02-15T17:26:13.672Z</updated>
+  <updated>2024-02-16T11:46:40.103Z</updated>
   <id>https://hydraallen.github.io/</id>
   
   <author>
@@ -17,16 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>OpenAI Sora</title>
+    <link href="https://hydraallen.github.io/2024/02/16/OpenAI-Sora/"/>
+    <id>https://hydraallen.github.io/2024/02/16/OpenAI-Sora/</id>
+    <published>2024-02-16T11:39:57.000Z</published>
+    <updated>2024-02-16T11:46:40.103Z</updated>
+    
+    <content type="html"><![CDATA[<p>现实不存在了……</p><iframe src="//player.bilibili.com/player.html?aid=1150649220&bvid=BV1VZ421m7aR&cid=1441206040&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="640" height="360"> </iframe><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;现实不存在了……&lt;/p&gt;
+&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=1150649220&amp;bvid=BV1VZ421m7aR&amp;cid=1441206040&amp;p=1&amp;autoplay=0&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot; width=&quot;640&quot; height=&quot;360&quot;&gt; &lt;/iframe&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>2024龙年大吉</title>
     <link href="https://hydraallen.github.io/2024/02/09/2024%E9%BE%99%E5%B9%B4%E5%A4%A7%E5%90%89/"/>
     <id>https://hydraallen.github.io/2024/02/09/2024%E9%BE%99%E5%B9%B4%E5%A4%A7%E5%90%89/</id>
     <published>2024-02-09T14:12:42.000Z</published>
-    <updated>2024-02-15T17:26:13.672Z</updated>
+    <updated>2024-02-16T11:53:56.016Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="2024龙年大吉"><a href="#2024龙年大吉" class="headerlink" title="2024龙年大吉"></a>2024龙年大吉</h1><p>最长路，最短路，单源路径，所有节点对路径祝大家新年路路通畅。</p><p>二叉树，红黑树，van Emde Boas树，最小生成树祝大家新年好运枝繁叶茂。</p><p>除夕闲来无事，整了一个<a href="http://dousy.site:20240/">网页动画</a>。祝大家新年快乐，龙年好运！</p><span id="more"></span><p><img src="https://raw.githubusercontent.com/Hydraallen/images/master/img/onefetch.png"></p><p><a href="https://github.com/Hydraallen/2024NewYear">源码</a></p>]]></content>
+    <content type="html"><![CDATA[<p>最长路，最短路，单源路径，所有节点对路径祝大家新年路路通畅。</p><p>二叉树，红黑树，van Emde Boas树，最小生成树祝大家新年好运枝繁叶茂。</p><p>除夕闲来无事，整了一个<a href="http://dousy.site:20240/">网页动画</a>。祝大家新年快乐，龙年好运！</p><span id="more"></span><p><img src="https://raw.githubusercontent.com/Hydraallen/images/master/img/onefetch.png"></p><p><a href="https://github.com/Hydraallen/2024NewYear">源码</a></p>]]></content>
     
     
-    <summary type="html">&lt;h1 id=&quot;2024龙年大吉&quot;&gt;&lt;a href=&quot;#2024龙年大吉&quot; class=&quot;headerlink&quot; title=&quot;2024龙年大吉&quot;&gt;&lt;/a&gt;2024龙年大吉&lt;/h1&gt;&lt;p&gt;最长路，最短路，单源路径，所有节点对路径祝大家新年路路通畅。&lt;/p&gt;
+    <summary type="html">&lt;p&gt;最长路，最短路，单源路径，所有节点对路径祝大家新年路路通畅。&lt;/p&gt;
 &lt;p&gt;二叉树，红黑树，van Emde Boas树，最小生成树祝大家新年好运枝繁叶茂。&lt;/p&gt;
 &lt;p&gt;除夕闲来无事，整了一个&lt;a href=&quot;http://dousy.site:20240/&quot;&gt;网页动画&lt;/a&gt;。祝大家新年快乐，龙年好运！&lt;/p&gt;</summary>
     
