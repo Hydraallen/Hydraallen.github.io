@@ -6,7 +6,7 @@
   <link href="https://hydraallen.github.io/atom.xml" rel="self"/>
   
   <link href="https://hydraallen.github.io/"/>
-  <updated>2024-02-16T11:46:40.103Z</updated>
+  <updated>2024-02-16T14:08:58.628Z</updated>
   <id>https://hydraallen.github.io/</id>
   
   <author>
@@ -17,11 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>主题更新以及备用站点上线</title>
+    <link href="https://hydraallen.github.io/2024/02/16/%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E5%A4%87%E7%94%A8%E7%AB%99%E7%82%B9%E4%B8%8A%E7%BA%BF/"/>
+    <id>https://hydraallen.github.io/2024/02/16/%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E5%A4%87%E7%94%A8%E7%AB%99%E7%82%B9%E4%B8%8A%E7%BA%BF/</id>
+    <published>2024-02-16T14:05:43.000Z</published>
+    <updated>2024-02-16T14:08:58.628Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="主题更新"><a href="#主题更新" class="headerlink" title="主题更新"></a>主题更新</h1><p>主题从<a href="https://github.com/first19326/Hexo-LiveForCode">LiveForCode</a>迁移到了<a href="https://github.com/theme-next/hexo-theme-next">next</a>，然后又迁移到了<a href="https://github.com/ppoffice/hexo-theme-icarus">icarus</a></p><span id="more"></span><h1 id="备用站点上线"><a href="#备用站点上线" class="headerlink" title="备用站点上线"></a>备用站点上线</h1><p><a href="http://blog.dousy.site:20240/">备用站点戳这里</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;主题更新&quot;&gt;&lt;a href=&quot;#主题更新&quot; class=&quot;headerlink&quot; title=&quot;主题更新&quot;&gt;&lt;/a&gt;主题更新&lt;/h1&gt;&lt;p&gt;主题从&lt;a href=&quot;https://github.com/first19326/Hexo-LiveForCode&quot;&gt;LiveForCode&lt;/a&gt;迁移到了&lt;a href=&quot;https://github.com/theme-next/hexo-theme-next&quot;&gt;next&lt;/a&gt;，然后又迁移到了&lt;a href=&quot;https://github.com/ppoffice/hexo-theme-icarus&quot;&gt;icarus&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>OpenAI Sora</title>
     <link href="https://hydraallen.github.io/2024/02/16/OpenAI-Sora/"/>
     <id>https://hydraallen.github.io/2024/02/16/OpenAI-Sora/</id>
     <published>2024-02-16T11:39:57.000Z</published>
-    <updated>2024-02-16T11:46:40.103Z</updated>
+    <updated>2024-02-16T14:06:05.176Z</updated>
     
     <content type="html"><![CDATA[<p>现实不存在了……</p><iframe src="//player.bilibili.com/player.html?aid=1150649220&bvid=BV1VZ421m7aR&cid=1441206040&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="640" height="360"> </iframe><span id="more"></span>]]></content>
     
