@@ -9,4 +9,4 @@ comments : false
 虽然前路迷茫，但是我会一步一步往前走。
 ## 关于主题
 
-主题参考了[Hexo - LiveForCode](https://github.com/first19326/Hexo-LiveForCode/)的样式。
+主题参考了[Hexo - icarus](1. https://github.com/ppoffice/hexo-theme-icarus)的样式。
