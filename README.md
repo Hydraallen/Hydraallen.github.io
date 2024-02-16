@@ -2,9 +2,11 @@
 
 ## Reference
 
-1. https://xie.infoq.cn/article/ac51ce1f6e9434779c35cbb6c
+1. https://github.com/ppoffice/hexo-theme-icarus
 
-2. https://notes.worstone.cn/article/1112885395/
+2. https://xie.infoq.cn/article/ac51ce1f6e9434779c35cbb6c
+
+3. https://notes.worstone.cn/article/1112885395/
 
 
 ## Usage
