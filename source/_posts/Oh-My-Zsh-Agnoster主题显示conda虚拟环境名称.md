@@ -11,6 +11,10 @@ tags: Terminal
 
 ![](https://raw.githubusercontent.com/Hydraallen/images/master/img/oldconda.png)
 
+看到Marina的配置中将conda虚拟环境名称放置在了右侧，遂决定进行修改。
+
+![](https://raw.githubusercontent.com/Hydraallen/images/master/img/condamarina.png)
+
 ## 修改
 
 <!--more-->
