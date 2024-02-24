@@ -285,6 +285,7 @@ widgets:
             # Hexo: https://hexo.io
             # Bulma: https://bulma.io
             MyServer: http://blog.dousy.site:20240
+            Marina3927: https://marina3927.github.io/
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
