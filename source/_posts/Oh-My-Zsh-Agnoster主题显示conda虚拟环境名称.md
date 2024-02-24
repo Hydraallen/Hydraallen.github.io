@@ -5,8 +5,6 @@ toc: true
 tags: Terminal
 ---
 
-# Oh-My-Zsh Agnoster主题显示conda虚拟环境名称
-
 ## 前情提要
 
 勉为其难地使用了Anaconda，发现Oh-my-zsh Agnoster主题下显示conda虚拟环境名称的位置巨丑无比（如下图所示）。
