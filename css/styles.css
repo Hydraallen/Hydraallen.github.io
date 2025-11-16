@@ -1,0 +1,410 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0;
+}
+
+main {
+    margin-left: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    margin-left: 0;
+    margin-top: 60px;
+    padding: 20px;
+    background-color: rgb(108, 189, 181);
+    height: 100vh;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 10px 20px;
+    color: #000000;
+}
+
+header strong {
+    background-color: #1f8c71c8;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.typing-svg img {
+    max-width: 100%;
+    margin: 0px 20px;
+}
+
+.intro {
+    margin: 5px 20px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.social-icons {
+    margin: 20px 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin: 0 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons .icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a:hover .icon {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+
+footer {
+    margin-left: 0;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* The skip to main part css is referred from homework 3 of mine */
+.skip a {
+    position: absolute;
+    top: -65px;
+    left: 0;
+    padding: 6px;
+    background: yellow;
+    transition: top 1s ease-out;
+}
+
+.skip a:focus {
+    top: 0px;
+}
+
+/* part for hamburger menu */
+.hamburger-menu-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    z-index: 1000;
+}
+
+.hamburger-menu-wrapper h1 {
+    margin: 0;
+    font-size: 30px;
+    color: rgb(0, 75, 0);
+}
+
+.hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1001;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: rgb(0, 75, 0);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.toggle span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.hamburger-menu.toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.toggle span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+nav.hidden-nav {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 30px;
+    width: 100%;
+}
+
+nav ul li a img {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: rgb(0, 75, 0);
+    text-decoration: none;
+    border-left: none;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul li a:hover {
+    border-left: 3px solid rgb(0, 74, 0);
+}
+
+.profile-picture {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #00695c;
+    margin-bottom: 15px;
+    font-size: 28px;
+    border-bottom: 2px solid #00695c;
+    display: inline-block;
+    padding-bottom: 5px;
+    scroll-margin-top: 70px;
+}
+
+section p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+section strong {
+    color: #004d40;
+    font-weight: bold;
+}
+
+.about-skills {
+    margin-top: 20px;
+}
+
+.about-skills h2 {
+    color: #00695c;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.about-skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-skills li {
+    margin: 5px 0;
+    padding-left: 15px;
+    font-size: 15px;
+    position: relative;
+}
+
+.about-skills li::before {
+    content: "•";
+    color: #00695c;
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 700px) {
+    main {
+        margin-left: 200px;
+    }
+
+    header {
+        margin-left: 200px;
+        margin-top: 0px;
+    }
+
+    header h1 {
+        font-size: 50px;
+        margin: 10px 40px;
+    }
+
+    .typing-svg img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 0px 40px;
+    }
+
+    .intro {
+        margin: 10px 40px;
+        font-size: 24px;
+        color: #000000;
+    }
+
+    .social-icons {
+        margin: 20px 40px;
+    }
+
+    footer {
+        margin-left: 200px;
+    }
+
+    .hamburger-menu-wrapper {
+        display: none;
+    }
+
+    nav.hidden-nav {
+        display: block;
+    }
+
+    nav {
+        left: 0;
+        width: 200px;
+        padding-top: 10px;
+    }
+
+    nav ul {
+        padding-left: 0px;
+    }
+
+    nav ul li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+    nav ul li:hover {
+        background-color: #f5f5f5;
+        transform: translateY(2px);
+    }
+
+    nav ul li a {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border-left: 3px solid transparent;
+        transition: border-left 0.3s ease;
+        border-bottom: none;
+    }
+
+    nav ul li a img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        top: 0px;
+    }
+
+    .profile-picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .profile-picture img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+
+    section h2 {
+        font-size: 36px;
+    }
+
+    section p {
+        font-size: 20px;
+    }
+
+    .about-skills h2 {
+        font-size: 26px;
+    }
+
+    .about-skills li {
+        font-size: 20px;
+    }
+
+    .about-skills li::before {
+        font-size: 20px;
+    }
+
+
+
+
+
+
+}
