@@ -357,7 +357,36 @@ section strong {
   display: inline-block;
 }
 
+.hidden_project {
+  display: none;
+}
 
+#toggleProjectsBtn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px; 
+  font-size: 18px;
+  font-weight: bold; 
+  color: white;
+  background: linear-gradient(90deg, #02ddc3, #0288d1); 
+  border: none; 
+  border-radius: 25px; 
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease; 
+  text-align: center; 
+}
+
+#toggleProjectsBtn:hover {
+  background: linear-gradient(90deg, #0288d1, #02ddc3); 
+  transform: scale(1.05); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 
+}
+
+#toggleProjectsBtn:active {
+  transform: scale(0.95); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
 
 
 @media screen and (min-width: 700px) {

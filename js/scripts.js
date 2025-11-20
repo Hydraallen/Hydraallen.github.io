@@ -29,3 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleProjectsBtn = document.getElementById('toggleProjectsBtn'); // 按钮
+  const hiddenProjects = document.querySelectorAll('.project-panel.hidden_project'); // 隐藏的项目
+  if (!toggleProjectsBtn) {
+    console.error('Toggle button not found!');
+    return;
+  }
+  toggleProjectsBtn.addEventListener('click', function () {
+    const isHidden = Array.from(hiddenProjects).some(
+      (project) => project.style.display === 'none' || project.style.display === ''
+    );
+
+    if (isHidden) {
+      hiddenProjects.forEach((project) => {
+        project.style.display = 'block';
+      });
+      toggleProjectsBtn.textContent = 'Show Less';
+    } else {
+      hiddenProjects.forEach((project) => {
+        project.style.display = 'none';
+      });
+      toggleProjectsBtn.textContent = 'Show More';
+    }
+  });
+});
+
+
