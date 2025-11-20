@@ -245,6 +245,8 @@ section strong {
     font-weight: bold;
 }
 
+
+/* About Skills Section */
 .about-skills {
     margin-top: 20px;
 }
@@ -323,21 +325,6 @@ section strong {
   gap: 10px;
 }
 
-.project-links .btn {
-  text-decoration: none;
-  padding: 10px 15px;
-  font-size: 14px;
-  border-radius: 5px;
-  color: white;
-  background-color: #00695c;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.project-links .btn:hover {
-  background-color: #004d40;
-  transform: scale(1.05);
-}
-
 .project-links .optional-link {
   display: block;
 }
@@ -346,8 +333,29 @@ section strong {
   display: none;
 }
 
+.project-links .btn {
+  display: inline-flex; 
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: black;
+  background-color: #02ddc3;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  gap: 8px; 
+}
 
+.project-links .btn:hover {
+  background-color: #01cdab;
+  transform: scale(1.05);
+}
 
+.project-links .btn-icon {
+  width: 20px; 
+  height: 20px; 
+  display: inline-block;
+}
 
 
 
