@@ -130,3 +130,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// Script for toggle Education section (Show More / Show Less)
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleEduBtn = document.getElementById("toggleEduBtn");
+  const hiddenEduCards = document.querySelectorAll(".hidden-edu");
+
+  if (toggleEduBtn) {
+    toggleEduBtn.addEventListener("click", function () {
+      // 检查当前是否是隐藏状态（通过检查第一个隐藏元素的 display 属性）
+      // 注意：CSS类虽然叫 hidden-edu，但我们通过 JS 修改 style.display 来覆盖它
+      const isHidden = hiddenEduCards[0].style.display === "" || hiddenEduCards[0].style.display === "none";
+
+      if (isHidden) {
+        // 展开：显示所有隐藏卡片
+        hiddenEduCards.forEach((card) => {
+          card.style.display = "block";
+        });
+        toggleEduBtn.textContent = "Show Less";
+      } else {
+        // 收起：隐藏卡片
+        hiddenEduCards.forEach((card) => {
+          card.style.display = "none";
+        });
+        toggleEduBtn.textContent = "Show More";
+      }
+    });
+  }
+});
