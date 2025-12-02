@@ -360,8 +360,9 @@ section strong {
 }
 
 #toggleProjectsBtn {
-  display: inline-block;
-  margin-top: 20px;
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
   padding: 10px 20px;
   font-size: 18px;
   font-weight: bold;
@@ -615,10 +616,9 @@ section strong {
 
 #contact-form {
   background-color: #f3f1f1;
-
   max-width: 100%;
   margin: 0 auto;
-  padding: 25px;
+  padding: 25px 25px 10px 25px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -859,7 +859,7 @@ section strong {
   }
 
   #contact-form {
-    padding: 40px;
+    padding: 40px 40px 15px 40px;
     width: 90%;
     max-width: 700px;
   }

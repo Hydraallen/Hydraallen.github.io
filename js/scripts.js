@@ -128,8 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-
 // Script for toggle Education section (Show More / Show Less)
 document.addEventListener("DOMContentLoaded", function () {
   const toggleEduBtn = document.getElementById("toggleEduBtn");
