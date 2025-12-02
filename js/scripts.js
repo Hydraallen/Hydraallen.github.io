@@ -83,3 +83,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Script for handling Formspree contact form submission via AJAX
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+  if (form) {
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault(); 
+      const data = new FormData(event.target);
+      const submitBtn = form.querySelector(".submit-btn");
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = "Sending...";
+      submitBtn.disabled = true;
+      try {
+        const response = await fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        if (response.ok) {
+          status.innerHTML = "Thanks for your message! I'll get back to you soon.";
+          status.className = "form-status success";
+          form.reset(); 
+        } else {
+          const errorData = await response.json();
+          if (Object.hasOwn(errorData, 'errors')) {
+            status.innerHTML = errorData["errors"].map(error => error["message"]).join(", ");
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form.";
+          }
+          status.className = "form-status error";
+        }
+      } catch (error) {
+        status.innerHTML = "Oops! There was a problem submitting your form.";
+        status.className = "form-status error";
+      } finally {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      }
+    });
+  }
+});
+
+
+

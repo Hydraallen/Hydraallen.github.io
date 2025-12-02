@@ -566,6 +566,109 @@ section strong {
   font-size: 15px;
 }
 
+/* part for contact section */
+#contact {
+  display: block;
+  text-align: center;
+}
+
+.contact-intro {
+  color: #555;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact-form {
+  background-color: #f3f1f1;
+
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #00695c;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00695c;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 105, 92, 0.15);
+  background-color: #fff;
+}
+
+.submit-btn {
+  background-color: #00695c;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 105, 92, 0.2);
+}
+
+.submit-btn:hover {
+  background-color: #004d40;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 105, 92, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.form-status {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+  min-height: 24px;
+}
+
+.form-status.success {
+  color: #2e7d32;
+}
+
+.form-status.error {
+  color: #c62828;
+}
+
 @media screen and (min-width: 480px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -719,6 +822,16 @@ section strong {
   .edu-date {
     margin-top: 8px;
     align-self: flex-start;
+  }
+
+  #contact-form {
+    padding: 40px;
+    width: 90%;
+    max-width: 700px;
+  }
+
+  .submit-btn {
+    max-width: 200px;
   }
 }
 
