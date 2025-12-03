@@ -70,6 +70,44 @@ header strong {
   opacity: 0.8;
 }
 
+/* CV Button Styles */
+.cv-container {
+  margin: 0 20px; 
+  display: flex;
+  align-items: center;
+}
+
+.cv-btn {
+  margin: 0 10px; 
+  background-color: white;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px; 
+  border-radius: 50px; 
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+}
+
+.cv-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px; 
+}
+
+.cv-btn:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #f0f0f0; 
+}
+
+.cv-btn:active {
+  transform: scale(0.95);
+}
+
 footer {
   margin-left: 0;
   padding: 10px 20px;
@@ -882,45 +920,9 @@ section strong {
 }
 
 
-/* CV Button Styles */
-.cv-container {
-  text-align: center; /* 确保按钮居中 */
-  margin-top: 25px;   /* 与上方社交图标保持距离 */
-  margin-bottom: 20px;
-}
 
-.cv-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  /* 复用你网站的经典蓝绿渐变 */
-  background: linear-gradient(90deg, #02ddc3, #0288d1);
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  gap: 10px; /* 图标和文字的间距 */
-}
 
-.cv-btn:hover {
-  /* 悬停时反转渐变或加深效果 */
-  background: linear-gradient(90deg, #0288d1, #02ddc3);
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
 
-.cv-btn:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
 
-.cv-btn .btn-icon {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1); /* 确保图标变成白色以适应深色背景 */
-}
+
+
