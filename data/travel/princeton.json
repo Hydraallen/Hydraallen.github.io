@@ -1,0 +1,15 @@
+{
+  "id": "princeton",
+  "name": "Princeton",
+  "country": "USA",
+  "state": "NJ",
+  "date": "2025-03-09",
+  "date_display": "Mar 9, 2025",
+  "video": "",
+  "cover": "https://images.unsplash.com/photo-1623268883564-2134816273e4?q=80&w=600&auto=format&fit=crop",
+  "photos": [
+    "https://images.unsplash.com/photo-1623268883564-2134816273e4?q=80&w=800",
+    "https://images.unsplash.com/photo-1572065990564-4019c7358c48?q=80&w=800"
+  ]
+}
+

@@ -1,0 +1,15 @@
+{
+  "id": "seattle",
+  "name": "Seattle",
+  "country": "USA",
+  "state": "WA",
+  "date": "2025-05-18",
+  "date_display": "May 18-26, 2025",
+  "video": "",
+  "cover": "https://images.unsplash.com/photo-1502175353174-a7a70e73b362?q=80&w=600&auto=format&fit=crop",
+  "photos": [
+    "https://images.unsplash.com/photo-1502175353174-a7a70e73b362?q=80&w=800",
+    "https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?q=80&w=800"
+  ]
+}
+

@@ -1,0 +1,15 @@
+{
+  "id": "ithaca",
+  "name": "Ithaca",
+  "country": "USA",
+  "state": "NY",
+  "date": "2025-01-15",
+  "date_display": "Jan 15 - May 17, 2025",
+  "video": "",
+  "cover": "https://images.unsplash.com/photo-1624483622307-255150692393?q=80&w=600&auto=format&fit=crop",
+  "photos": [
+    "https://images.unsplash.com/photo-1624483622307-255150692393?q=80&w=800",
+    "https://images.unsplash.com/photo-1559666126-84f389796b52?q=80&w=800"
+  ]
+}
+

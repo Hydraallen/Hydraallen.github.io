@@ -1,0 +1,15 @@
+{
+  "id": "columbus",
+  "name": "Columbus",
+  "country": "USA",
+  "state": "OH",
+  "date": "2025-11-02",
+  "date_display": "Nov 2, 2025",
+  "video": "",
+  "cover": "https://images.unsplash.com/photo-1622129757738-408377d09526?q=80&w=600&auto=format&fit=crop",
+  "photos": [
+    "https://images.unsplash.com/photo-1622129757738-408377d09526?q=80&w=800",
+    "https://images.unsplash.com/photo-1565038428979-8753934c3689?q=80&w=800"
+  ]
+}
+

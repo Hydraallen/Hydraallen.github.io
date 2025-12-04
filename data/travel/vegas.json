@@ -1,0 +1,15 @@
+{
+  "id": "vegas",
+  "name": "Las Vegas",
+  "country": "USA",
+  "state": "NV",
+  "date": "2025-03-28",
+  "date_display": "Mar 28 - Apr 7, 2025",
+  "video": "",
+  "cover": "https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?q=80&w=600&auto=format&fit=crop",
+  "photos": [
+    "https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?q=80&w=800",
+    "https://images.unsplash.com/photo-1470076892663-af684e5e15af?q=80&w=800"
+  ]
+}
+

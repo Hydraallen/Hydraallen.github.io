@@ -1,0 +1,15 @@
+{
+  "id": "dc",
+  "name": "Washington DC",
+  "country": "USA",
+  "state": "DC",
+  "date": "2025-05-11",
+  "date_display": "May 11, 2025",
+  "video": "",
+  "cover": "https://images.unsplash.com/photo-1617581629397-a72507c3de9e?q=80&w=600&auto=format&fit=crop",
+  "photos": [
+    "https://images.unsplash.com/photo-1617581629397-a72507c3de9e?q=80&w=800",
+    "https://images.unsplash.com/photo-1557160854-e1e89fdd3286?q=80&w=800"
+  ]
+}
+
