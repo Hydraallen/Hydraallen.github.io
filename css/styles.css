@@ -1602,3 +1602,56 @@ section strong {
     display: none;
   }
 }
+
+/* Part for 404 */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.error-code {
+  font-size: 120px;
+  font-weight: 900;
+  color: #00695c;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-shadow: 4px 4px 0px rgba(0, 105, 92, 0.1);
+}
+
+.error-container h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: none;
+}
+
+.error-container p {
+  font-size: 18px;
+  color: #666;
+  max-width: 600px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.home-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .error-code {
+    font-size: 80px;
+  }
+  
+  .error-container {
+    padding-top: 80px;
+  }
+}
