@@ -6,10 +6,23 @@
   "date": "2025-05-18",
   "date_display": "May 18-26, 2025",
   "video": "",
-  "cover": "https://images.unsplash.com/photo-1502175353174-a7a70e73b362?q=80&w=600&auto=format&fit=crop",
+  "cover": "../../img/travel/Seattle/cover.jpg",
   "photos": [
-    "https://images.unsplash.com/photo-1502175353174-a7a70e73b362?q=80&w=800",
-    "https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?q=80&w=800"
+    "../../img/travel/Seattle/photo1.jpg",
+    "../../img/travel/Seattle/photo2.jpg",
+    "../../img/travel/Seattle/photo3.jpg",
+    "../../img/travel/Seattle/photo4.jpg",
+    "../../img/travel/Seattle/photo5.jpg",
+    "../../img/travel/Seattle/photo6.jpg",
+    "../../img/travel/Seattle/photo7.jpg",
+    "../../img/travel/Seattle/photo8.jpg",
+    "../../img/travel/Seattle/photo9.jpg",
+    "../../img/travel/Seattle/photo10.jpg",
+    "../../img/travel/Seattle/photo11.jpg",
+    "../../img/travel/Seattle/photo12.jpg",
+    "../../img/travel/Seattle/photo13.jpg",
+    "../../img/travel/Seattle/photo14.jpg",
+    "../../img/travel/Seattle/photo15.jpg"
   ]
 }
 
