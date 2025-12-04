@@ -125,6 +125,7 @@ footer {
   padding: 6px;
   background: yellow;
   transition: top 1s ease-out;
+  z-index: 2000;
 }
 
 .skip a:focus {
