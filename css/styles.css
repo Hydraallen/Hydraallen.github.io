@@ -1135,7 +1135,106 @@ section strong {
   font-weight: 600;
 }
 
-@media screen and (min-width: 700px) {
+
+.favorite-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  position: relative; 
+  z-index: 2; 
+  background-color: #fff;
+}
+
+.favorite-label-large {
+  font-size: 16px;
+  font-weight: 900;
+  color: #00695c;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.favorite-card {
+  width: 180px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 105, 92, 0.3);
+  border: 2px solid #00695c;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.favorite-card:hover {
+  transform: scale(1.02);
+}
+
+.vertical-scroll-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #00695c #f0f0f0;
+}
+
+.vertical-scroll-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+.vertical-scroll-wrapper::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+.vertical-scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #00695c;
+  border-radius: 4px;
+}
+
+.movie-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+  height: auto; 
+}
+
+.movie-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.poster-wrapper {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background-color: #eee;
+}
+
+.poster-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 10px;
+}
+
+
+@media screen and (min-width: 800px) {
   .timeline-container::after {
     left: 50%;
   }

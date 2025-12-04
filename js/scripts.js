@@ -191,68 +191,81 @@ async function loadMovies(timelineRoot) {
   }
 }
 
+
 function renderTimeline(data, rootElement) {
   data.forEach((yearData) => {
     const itemDiv = document.createElement("div");
     itemDiv.className = "timeline-item";
-
     const markerDiv = document.createElement("div");
     markerDiv.className = "timeline-marker";
-
     const contentDiv = document.createElement("div");
     contentDiv.className = "timeline-content";
-
     const headerDiv = document.createElement("div");
     headerDiv.className = "timeline-header";
     headerDiv.innerHTML = `
       <div>
         <h3 class="timeline-year">${yearData.year}</h3>
-        <div class="timeline-favorite">
-          <span class="fav-label">🏆 Favorite:</span>
-          <span class="fav-movie-title">${yearData.favorite}</span>
-        </div>
+        <p class="timeline-stats" style="margin:5px 0 0 0; font-size:14px; color:#666;">
+           Watched: ${yearData.movies.length} movies
+        </p>
       </div>
       <span class="toggle-icon">▼</span>
     `;
 
     const movieListContainer = document.createElement("div");
     movieListContainer.className = "movie-list-container";
-
-    const stats = document.createElement("p");
-    stats.className = "timeline-stats";
-    stats.textContent = `Total watched: ${yearData.movies.length} movies`;
-    movieListContainer.appendChild(stats);
-
-    const grid = document.createElement("div");
-    grid.className = "movie-grid";
-
-    yearData.movies.forEach((movie) => {
-      const card = document.createElement("div");
-      card.className = "movie-card";
-      const posterSrc = movie.poster
-        ? movie.poster
-        : "https://via.placeholder.com/200x300?text=No+Image";
-
-      card.innerHTML = `
-        <div class="poster-wrapper">
-          <img src="${posterSrc}" alt="${movie.title}" loading="lazy" />
-        </div>
-        <div class="movie-info">
-          <h4 class="movie-title">${movie.title}</h4>
-          <p class="movie-date">${movie.date}</p>
+    const favMovie = yearData.movies.find(m => m.title === yearData.favorite);
+    const otherMovies = yearData.movies.filter(m => m.title !== yearData.favorite);
+    if (favMovie) {
+      const favSection = document.createElement("div");
+      favSection.className = "favorite-section";
+      const posterSrc = favMovie.poster ? favMovie.poster : "https://via.placeholder.com/200x300?text=No+Image";
+      favSection.innerHTML = `
+        <div class="favorite-label-large">🏆 Best of ${yearData.year}</div>
+        <div class="favorite-card">
+          <div class="poster-wrapper">
+            <img src="${posterSrc}" alt="${favMovie.title}" loading="lazy" />
+          </div>
+          <div class="movie-info">
+            <h4 class="movie-title">${favMovie.title}</h4>
+            <p class="movie-date">${favMovie.date}</p>
+          </div>
         </div>
       `;
-      grid.appendChild(card);
-    });
+      movieListContainer.appendChild(favSection);
+    }
 
-    movieListContainer.appendChild(grid);
+    if (otherMovies.length > 0) {
+      const scrollWrapper = document.createElement("div");
+      scrollWrapper.className = "vertical-scroll-wrapper";
+      otherMovies.forEach((movie) => {
+        const card = document.createElement("div");
+        card.className = "movie-card";
+        const posterSrc = movie.poster ? movie.poster : "https://via.placeholder.com/200x300?text=No+Image";
+        card.innerHTML = `
+          <div class="poster-wrapper">
+            <img src="${posterSrc}" alt="${movie.title}" loading="lazy" />
+          </div>
+          <div class="movie-info">
+            <h4 class="movie-title">${movie.title}</h4>
+            <p class="movie-date">${movie.date}</p>
+          </div>
+        `;
+        scrollWrapper.appendChild(card);
+      });
+      movieListContainer.appendChild(scrollWrapper);
+    } else if (!favMovie) {
+      movieListContainer.innerHTML += '<p style="padding:10px; text-align:center;">No movies recorded.</p>';
+    }
     contentDiv.appendChild(headerDiv);
     contentDiv.appendChild(movieListContainer);
-
     itemDiv.appendChild(markerDiv);
     itemDiv.appendChild(contentDiv);
     rootElement.appendChild(itemDiv);
-    contentDiv.addEventListener("click", function () {
+    contentDiv.addEventListener("click", function (e) {
+      if (e.target.closest('.vertical-scroll-wrapper')) {
+        return; 
+      }
       const parent = this.parentElement;
       const container = parent.querySelector(".movie-list-container");
       const isActive = parent.classList.contains("active");
@@ -274,3 +287,4 @@ function renderTimeline(data, rootElement) {
     });
   });
 }
+
