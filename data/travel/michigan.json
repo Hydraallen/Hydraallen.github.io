@@ -6,10 +6,31 @@
   "date": "2025-10-10",
   "date_display": "Oct 10-14, 2025",
   "video": "",
-  "cover": "https://images.unsplash.com/photo-1602607203580-198f8ca92589?q=80&w=600&auto=format&fit=crop",
+  "cover": "../../img/travel/Michigan/cover.jpg",
   "photos": [
-    "https://images.unsplash.com/photo-1602607203580-198f8ca92589?q=80&w=800",
-    "https://images.unsplash.com/photo-1507160861348-669258549c2b?q=80&w=800"
+    "../../img/travel/Michigan/photo1.jpg",
+    "../../img/travel/Michigan/photo2.jpg",
+    "../../img/travel/Michigan/photo3.jpg",
+    "../../img/travel/Michigan/photo4.jpg",
+    "../../img/travel/Michigan/photo5.jpg",
+    "../../img/travel/Michigan/photo6.jpg",
+    "../../img/travel/Michigan/photo7.jpg",
+    "../../img/travel/Michigan/photo8.jpg",
+    "../../img/travel/Michigan/photo9.jpg",
+    "../../img/travel/Michigan/photo10.jpg",
+    "../../img/travel/Michigan/photo11.jpg",
+    "../../img/travel/Michigan/photo12.jpg",
+    "../../img/travel/Michigan/photo13.jpg",
+    "../../img/travel/Michigan/photo14.jpg",
+    "../../img/travel/Michigan/photo15.jpg",
+    "../../img/travel/Michigan/photo16.jpg",
+    "../../img/travel/Michigan/photo17.jpg",
+    "../../img/travel/Michigan/photo18.jpg",
+    "../../img/travel/Michigan/photo19.jpg",
+    "../../img/travel/Michigan/photo20.jpg",
+    "../../img/travel/Michigan/photo21.jpg",
+    "../../img/travel/Michigan/photo22.jpg",
+    "../../img/travel/Michigan/photo23.jpg"
   ]
 }
 
