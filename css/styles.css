@@ -1059,7 +1059,6 @@ section strong {
 }
 
 .timeline-item.active .movie-list-container {
-  max-height: 5000px;
   opacity: 1;
   margin-top: 20px;
   border-top: 1px solid #eee;

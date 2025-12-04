@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const toggleProjectsBtn = document.getElementById("toggleProjectsBtn");
-  const hiddenProjects = document.querySelectorAll(".project-panel.hidden_project");
+  const hiddenProjects = document.querySelectorAll(
+    ".project-panel.hidden_project"
+  );
 
   if (toggleProjectsBtn && hiddenProjects.length > 0) {
     toggleProjectsBtn.addEventListener("click", function () {
@@ -105,20 +107,24 @@ document.addEventListener("DOMContentLoaded", function () {
           method: form.method,
           body: data,
           headers: {
-            'Accept': 'application/json'
-          }
+            Accept: "application/json",
+          },
         });
 
         if (response.ok) {
-          status.innerHTML = "Thanks for your message! I'll get back to you soon.";
+          status.innerHTML =
+            "Thanks for your message! I'll get back to you soon.";
           status.className = "form-status success";
           form.reset();
         } else {
           const errorData = await response.json();
-          if (Object.hasOwn(errorData, 'errors')) {
-            status.innerHTML = errorData["errors"].map(error => error["message"]).join(", ");
+          if (Object.hasOwn(errorData, "errors")) {
+            status.innerHTML = errorData["errors"]
+              .map((error) => error["message"])
+              .join(", ");
           } else {
-            status.innerHTML = "Oops! There was a problem submitting your form.";
+            status.innerHTML =
+              "Oops! There was a problem submitting your form.";
           }
           status.className = "form-status error";
         }
@@ -165,8 +171,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 async function loadMovies(timelineRoot) {
   try {
-    timelineRoot.innerHTML = '<p style="text-align:center; padding:20px;">Loading movies...</p>';
-    const response = await fetch('./data/movies.json');
+    timelineRoot.innerHTML =
+      '<p style="text-align:center; padding:20px;">Loading movies...</p>';
+    const response = await fetch("./data/movies.json");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -222,7 +229,9 @@ function renderTimeline(data, rootElement) {
     yearData.movies.forEach((movie) => {
       const card = document.createElement("div");
       card.className = "movie-card";
-      const posterSrc = movie.poster ? movie.poster : "https://via.placeholder.com/200x300?text=No+Image";
+      const posterSrc = movie.poster
+        ? movie.poster
+        : "https://via.placeholder.com/200x300?text=No+Image";
 
       card.innerHTML = `
         <div class="poster-wrapper">
@@ -243,10 +252,25 @@ function renderTimeline(data, rootElement) {
     itemDiv.appendChild(markerDiv);
     itemDiv.appendChild(contentDiv);
     rootElement.appendChild(itemDiv);
-
-    contentDiv.addEventListener("click", function() {
+    contentDiv.addEventListener("click", function () {
       const parent = this.parentElement;
-      parent.classList.toggle("active");
+      const container = parent.querySelector(".movie-list-container");
+      const isActive = parent.classList.contains("active");
+      if (!isActive) {
+        parent.classList.add("active");
+        const height = container.scrollHeight;
+        container.style.maxHeight = height + "px";
+        setTimeout(() => {
+          if (parent.classList.contains("active")) {
+            container.style.maxHeight = "none";
+          }
+        }, 600);
+      } else {
+        container.style.maxHeight = container.scrollHeight + "px";
+        void container.offsetHeight;
+        parent.classList.remove("active");
+        container.style.maxHeight = null;
+      }
     });
   });
 }
