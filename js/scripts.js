@@ -1,18 +1,23 @@
-// script for updating the year in the footer
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("year").innerHTML = new Date().getFullYear();
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.innerHTML = new Date().getFullYear();
+  }
 });
 
-// script for hamburger menu
 document.addEventListener("DOMContentLoaded", () => {
   const hamburgerMenu = document.querySelector(".hamburger-menu");
-  const nav = document.querySelector(".hidden-nav");
-  const navLinks = nav.querySelectorAll("a");
+  const nav = document.querySelector("nav");
+
+  if (!hamburgerMenu || !nav) return;
+
   nav.classList.add("hidden-nav");
   hamburgerMenu.classList.remove("toggle");
+
   hamburgerMenu.addEventListener("click", () => {
-    const isMenuOpen = nav.classList.contains("hidden-nav");
-    if (isMenuOpen) {
+    const isClosed = nav.classList.contains("hidden-nav");
+
+    if (isClosed) {
       nav.classList.remove("hidden-nav");
       hamburgerMenu.classList.add("toggle");
     } else {
@@ -20,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
       hamburgerMenu.classList.remove("toggle");
     }
   });
+
+  const navLinks = nav.querySelectorAll("a");
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.add("hidden-nav");
@@ -28,46 +35,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// script for hide/show more projects
 document.addEventListener("DOMContentLoaded", function () {
-  const toggleProjectsBtn = document.getElementById("toggleProjectsBtn"); // 按钮
-  const hiddenProjects = document.querySelectorAll(
-    ".project-panel.hidden_project"
-  );
-  if (!toggleProjectsBtn) {
-    console.error("Toggle button not found!");
-    return;
-  }
-  toggleProjectsBtn.addEventListener("click", function () {
-    const isHidden = Array.from(hiddenProjects).some(
-      (project) =>
-        project.style.display === "none" || project.style.display === ""
-    );
+  const toggleProjectsBtn = document.getElementById("toggleProjectsBtn");
+  const hiddenProjects = document.querySelectorAll(".project-panel.hidden_project");
 
-    if (isHidden) {
-      hiddenProjects.forEach((project) => {
-        project.style.display = "block";
-      });
-      toggleProjectsBtn.textContent = "Show Less";
-    } else {
-      hiddenProjects.forEach((project) => {
-        project.style.display = "none";
-      });
-      toggleProjectsBtn.textContent = "Show More";
-    }
-  });
+  if (toggleProjectsBtn && hiddenProjects.length > 0) {
+    toggleProjectsBtn.addEventListener("click", function () {
+      const isHidden = hiddenProjects[0].classList.contains("hidden_project");
+
+      if (isHidden) {
+        hiddenProjects.forEach((project) => {
+          project.classList.remove("hidden_project");
+        });
+        toggleProjectsBtn.textContent = "Show Less";
+      } else {
+        hiddenProjects.forEach((project) => {
+          project.classList.add("hidden_project");
+        });
+        toggleProjectsBtn.textContent = "Show More";
+      }
+    });
+  }
 });
 
-// script for skill tab filtering
 document.addEventListener("DOMContentLoaded", function () {
   const tabBtns = document.querySelectorAll(".tab-btn");
   const skillCards = document.querySelectorAll(".skill-card");
+
   if (tabBtns.length > 0) {
     tabBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         tabBtns.forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
+
         const target = btn.getAttribute("data-target");
+
         skillCards.forEach((card) => {
           const cardCategory = card.getAttribute("data-category");
           if (target === "all" || cardCategory === target) {
@@ -84,18 +86,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Script for handling Formspree contact form submission via AJAX
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
+
   if (form) {
     form.addEventListener("submit", async function (event) {
-      event.preventDefault(); 
+      event.preventDefault();
       const data = new FormData(event.target);
       const submitBtn = form.querySelector(".submit-btn");
       const originalBtnText = submitBtn.textContent;
+
       submitBtn.textContent = "Sending...";
       submitBtn.disabled = true;
+
       try {
         const response = await fetch(event.target.action, {
           method: form.method,
@@ -104,10 +108,11 @@ document.addEventListener("DOMContentLoaded", function () {
             'Accept': 'application/json'
           }
         });
+
         if (response.ok) {
           status.innerHTML = "Thanks for your message! I'll get back to you soon.";
           status.className = "form-status success";
-          form.reset(); 
+          form.reset();
         } else {
           const errorData = await response.json();
           if (Object.hasOwn(errorData, 'errors')) {
@@ -128,21 +133,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Script for toggle Education section (Show More / Show Less)
 document.addEventListener("DOMContentLoaded", function () {
   const toggleEduBtn = document.getElementById("toggleEduBtn");
   const hiddenEduCards = document.querySelectorAll(".hidden-edu");
-  if (toggleEduBtn) {
+
+  if (toggleEduBtn && hiddenEduCards.length > 0) {
     toggleEduBtn.addEventListener("click", function () {
-      const isHidden = hiddenEduCards[0].style.display === "" || hiddenEduCards[0].style.display === "none";
+      const isHidden = hiddenEduCards[0].classList.contains("hidden-edu");
+
       if (isHidden) {
         hiddenEduCards.forEach((card) => {
-          card.style.display = "block";
+          card.classList.remove("hidden-edu");
         });
         toggleEduBtn.textContent = "Show Less";
       } else {
         hiddenEduCards.forEach((card) => {
-          card.style.display = "none";
+          card.classList.add("hidden-edu");
         });
         toggleEduBtn.textContent = "Show More";
       }
@@ -150,16 +156,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Script for Movies Timeline Page
 document.addEventListener("DOMContentLoaded", function () {
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) yearSpan.innerHTML = new Date().getFullYear();
-  initHamburgerMenu();
-  loadMovies();
+  const timelineRoot = document.getElementById("timeline-root");
+  if (timelineRoot) {
+    loadMovies(timelineRoot);
+  }
 });
 
-async function loadMovies() {
-  const timelineRoot = document.getElementById("timeline-root");
+async function loadMovies(timelineRoot) {
   try {
     timelineRoot.innerHTML = '<p style="text-align:center; padding:20px;">Loading movies...</p>';
     const response = await fetch('./data/movies.json');
@@ -184,10 +188,13 @@ function renderTimeline(data, rootElement) {
   data.forEach((yearData) => {
     const itemDiv = document.createElement("div");
     itemDiv.className = "timeline-item";
+
     const markerDiv = document.createElement("div");
     markerDiv.className = "timeline-marker";
+
     const contentDiv = document.createElement("div");
     contentDiv.className = "timeline-content";
+
     const headerDiv = document.createElement("div");
     headerDiv.className = "timeline-header";
     headerDiv.innerHTML = `
@@ -200,18 +207,23 @@ function renderTimeline(data, rootElement) {
       </div>
       <span class="toggle-icon">▼</span>
     `;
+
     const movieListContainer = document.createElement("div");
     movieListContainer.className = "movie-list-container";
+
     const stats = document.createElement("p");
     stats.className = "timeline-stats";
     stats.textContent = `Total watched: ${yearData.movies.length} movies`;
     movieListContainer.appendChild(stats);
+
     const grid = document.createElement("div");
     grid.className = "movie-grid";
+
     yearData.movies.forEach((movie) => {
       const card = document.createElement("div");
       card.className = "movie-card";
       const posterSrc = movie.poster ? movie.poster : "https://via.placeholder.com/200x300?text=No+Image";
+
       card.innerHTML = `
         <div class="poster-wrapper">
           <img src="${posterSrc}" alt="${movie.title}" loading="lazy" />
@@ -223,40 +235,18 @@ function renderTimeline(data, rootElement) {
       `;
       grid.appendChild(card);
     });
+
     movieListContainer.appendChild(grid);
     contentDiv.appendChild(headerDiv);
     contentDiv.appendChild(movieListContainer);
+
     itemDiv.appendChild(markerDiv);
     itemDiv.appendChild(contentDiv);
     rootElement.appendChild(itemDiv);
+
     contentDiv.addEventListener("click", function() {
       const parent = this.parentElement;
       parent.classList.toggle("active");
     });
   });
-}
-
-function initHamburgerMenu() {
-  const hamburgerMenu = document.querySelector(".hamburger-menu");
-  const nav = document.querySelector(".hidden-nav");
-  const navLinks = nav ? nav.querySelectorAll("a") : [];
-  if (hamburgerMenu && nav) {
-    nav.classList.add("hidden-nav");
-    hamburgerMenu.addEventListener("click", () => {
-      const isMenuOpen = nav.classList.contains("hidden-nav");
-      if (isMenuOpen) {
-        nav.classList.remove("hidden-nav");
-        hamburgerMenu.classList.add("toggle");
-      } else {
-        nav.classList.add("hidden-nav");
-        hamburgerMenu.classList.remove("toggle");
-      }
-    });
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        nav.classList.add("hidden-nav");
-        hamburgerMenu.classList.remove("toggle");
-      });
-    });
-  }
 }
