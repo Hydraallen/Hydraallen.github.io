@@ -149,3 +149,114 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Script for Movies Timeline Page
+document.addEventListener("DOMContentLoaded", function () {
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) yearSpan.innerHTML = new Date().getFullYear();
+  initHamburgerMenu();
+  loadMovies();
+});
+
+async function loadMovies() {
+  const timelineRoot = document.getElementById("timeline-root");
+  try {
+    timelineRoot.innerHTML = '<p style="text-align:center; padding:20px;">Loading movies...</p>';
+    const response = await fetch('./data/movies.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const moviesData = await response.json();
+    timelineRoot.innerHTML = "";
+    renderTimeline(moviesData, timelineRoot);
+  } catch (error) {
+    console.error("Could not load movie data:", error);
+    timelineRoot.innerHTML = `
+      <div style="text-align:center; color:red; padding:20px;">
+        <p>Error loading movie data.</p>
+        <p>Note: If you are opening this file directly (file://), please use a Local Server.</p>
+      </div>
+    `;
+  }
+}
+
+function renderTimeline(data, rootElement) {
+  data.forEach((yearData) => {
+    const itemDiv = document.createElement("div");
+    itemDiv.className = "timeline-item";
+    const markerDiv = document.createElement("div");
+    markerDiv.className = "timeline-marker";
+    const contentDiv = document.createElement("div");
+    contentDiv.className = "timeline-content";
+    const headerDiv = document.createElement("div");
+    headerDiv.className = "timeline-header";
+    headerDiv.innerHTML = `
+      <div>
+        <h3 class="timeline-year">${yearData.year}</h3>
+        <div class="timeline-favorite">
+          <span class="fav-label">🏆 Favorite:</span>
+          <span class="fav-movie-title">${yearData.favorite}</span>
+        </div>
+      </div>
+      <span class="toggle-icon">▼</span>
+    `;
+    const movieListContainer = document.createElement("div");
+    movieListContainer.className = "movie-list-container";
+    const stats = document.createElement("p");
+    stats.className = "timeline-stats";
+    stats.textContent = `Total watched: ${yearData.movies.length} movies`;
+    movieListContainer.appendChild(stats);
+    const grid = document.createElement("div");
+    grid.className = "movie-grid";
+    yearData.movies.forEach((movie) => {
+      const card = document.createElement("div");
+      card.className = "movie-card";
+      const posterSrc = movie.poster ? movie.poster : "https://via.placeholder.com/200x300?text=No+Image";
+      card.innerHTML = `
+        <div class="poster-wrapper">
+          <img src="${posterSrc}" alt="${movie.title}" loading="lazy" />
+        </div>
+        <div class="movie-info">
+          <h4 class="movie-title">${movie.title}</h4>
+          <p class="movie-date">${movie.date}</p>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+    movieListContainer.appendChild(grid);
+    contentDiv.appendChild(headerDiv);
+    contentDiv.appendChild(movieListContainer);
+    itemDiv.appendChild(markerDiv);
+    itemDiv.appendChild(contentDiv);
+    rootElement.appendChild(itemDiv);
+    contentDiv.addEventListener("click", function() {
+      const parent = this.parentElement;
+      parent.classList.toggle("active");
+    });
+  });
+}
+
+function initHamburgerMenu() {
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const nav = document.querySelector(".hidden-nav");
+  const navLinks = nav ? nav.querySelectorAll("a") : [];
+  if (hamburgerMenu && nav) {
+    nav.classList.add("hidden-nav");
+    hamburgerMenu.addEventListener("click", () => {
+      const isMenuOpen = nav.classList.contains("hidden-nav");
+      if (isMenuOpen) {
+        nav.classList.remove("hidden-nav");
+        hamburgerMenu.classList.add("toggle");
+      } else {
+        nav.classList.add("hidden-nav");
+        hamburgerMenu.classList.remove("toggle");
+      }
+    });
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.add("hidden-nav");
+        hamburgerMenu.classList.remove("toggle");
+      });
+    });
+  }
+}
