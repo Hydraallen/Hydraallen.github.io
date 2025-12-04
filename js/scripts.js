@@ -310,14 +310,15 @@ function renderTimeline(data, rootElement) {
 
 
 // Script for Travel Page
-let allTravelData = []
+let allTravelData = [];
+let currentGalleryPhotos = [];
+let currentPhotoIndex = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
   const grid = document.getElementById("travel-grid");
   if (!grid) return;
-
   const filterSelect = document.getElementById("place-filter");
   const sortSelect = document.getElementById("place-sort");
-  
   const galleryModal = document.getElementById("gallery-modal");
   const galleryGrid = document.getElementById("gallery-grid");
   const galleryTitle = document.getElementById("gallery-title");
@@ -326,50 +327,41 @@ document.addEventListener("DOMContentLoaded", function () {
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeLightboxBtn = document.getElementById("close-lightbox");
-
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
   async function loadTravelData() {
     try {
       const indexResponse = await fetch('../data/travel/index.json');
       if (!indexResponse.ok) throw new Error("Failed to load index.json");
       const fileList = await indexResponse.json();
-
       const fetchPromises = fileList.map(filename => 
         fetch(`./data/travel/${filename}.json`).then(res => res.json())
       );
-      
       allTravelData = await Promise.all(fetchPromises);
-
       renderGrid(allTravelData);
-      
       sortSelect.dispatchEvent(new Event('change'));
-
     } catch (error) {
       console.error("Error loading travel data:", error);
-      grid.innerHTML = `<p style="text-align:center; color:red;">Error loading data. Please ensure you are running on a local server (not file://).</p>`;
+      grid.innerHTML = `<p style="text-align:center; color:red;">Error loading data.</p>`;
     }
   }
 
   function renderGrid(data) {
     grid.innerHTML = "";
-
     if (data.length === 0) {
       grid.innerHTML = "<p>No places found.</p>";
       return;
     }
-
     data.forEach(place => {
       let displayName = place.name;
       if (place.country.toLowerCase() === 'usa' && place.state) {
         displayName += `, ${place.state}`;
       }
-
       const card = document.createElement("div");
       card.className = "place-card";
       card.setAttribute("data-country", place.country.toLowerCase());
       card.setAttribute("data-name", place.name);
       card.setAttribute("data-date", place.date);
-      card.setAttribute("data-id", place.id);
-
       card.innerHTML = `
         <div class="place-image-wrapper">
           <img src="${place.cover}" alt="${displayName}" loading="lazy">
@@ -380,55 +372,49 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="place-date">${place.date_display}</div>
         </div>
       `;
-
-      card.addEventListener("click", () => openGallery(place));
-
+      card.addEventListener("click", () => {
+        const isLargeScreen = window.innerWidth > 768;
+        if (isLargeScreen) {
+          openLightboxDirectly(place);
+        } else {
+          openGalleryScroll(place);
+        }
+      });
       grid.appendChild(card);
     });
   }
-
-  filterSelect.addEventListener("change", function () {
-    const selectedCategory = this.value.toLowerCase();
-    const cards = Array.from(grid.getElementsByClassName("place-card"));
-
-    cards.forEach((card) => {
-      const cardCountry = card.getAttribute("data-country");
-      if (selectedCategory === "all" || cardCountry.includes(selectedCategory)) {
-        card.classList.remove("hidden-place");
-      } else {
-        card.classList.add("hidden-place");
-      }
-    });
-  });
-
-  sortSelect.addEventListener("change", function () {
-    const sortType = this.value;
-    const currentCards = Array.from(grid.getElementsByClassName("place-card"));
-
-    const sortedCards = currentCards.sort((a, b) => {
-      if (sortType === "az") {
-        return a.getAttribute("data-name").localeCompare(b.getAttribute("data-name"));
-      } else if (sortType === "newest") {
-        return new Date(b.getAttribute("data-date")) - new Date(a.getAttribute("data-date"));
-      } else if (sortType === "oldest") {
-        return new Date(a.getAttribute("data-date")) - new Date(b.getAttribute("data-date"));
-      } else {
-        return 0;
-      }
-    });
-
-    sortedCards.forEach(card => grid.appendChild(card));
-  });
-
-  function openGallery(placeData) {
+  function openLightboxDirectly(placeData) {
+    if (!placeData.photos || placeData.photos.length === 0) {
+      alert("No photos available.");
+      return;
+    }
+    currentGalleryPhotos = placeData.photos;
+    currentPhotoIndex = 0;
+    updateLightboxImage();
+    lightbox.classList.remove("hidden-modal");
+  }
+  function updateLightboxImage() {
+    if (currentGalleryPhotos.length > 0) {
+      lightboxImg.src = currentGalleryPhotos[currentPhotoIndex];
+    }
+  }
+  function showNextPhoto() {
+    if (currentGalleryPhotos.length === 0) return;
+    currentPhotoIndex = (currentPhotoIndex + 1) % currentGalleryPhotos.length;
+    updateLightboxImage();
+  }
+  function showPrevPhoto() {
+    if (currentGalleryPhotos.length === 0) return;
+    currentPhotoIndex = (currentPhotoIndex - 1 + currentGalleryPhotos.length) % currentGalleryPhotos.length;
+    updateLightboxImage();
+  }
+  function openGalleryScroll(placeData) {
     const photos = placeData.photos;
-    
     let title = placeData.name;
     if (placeData.country.toLowerCase() === 'usa' && placeData.state) {
       title += `, ${placeData.state}`;
     }
     galleryTitle.textContent = title;
-    
     if (placeData.video && placeData.video.trim() !== "") {
       galleryVideoBtn.href = placeData.video;
       galleryVideoBtn.classList.remove("hidden-btn");
@@ -436,23 +422,18 @@ document.addEventListener("DOMContentLoaded", function () {
       galleryVideoBtn.href = "#";
       galleryVideoBtn.classList.add("hidden-btn");
     }
-
     galleryGrid.innerHTML = "";
-
     if (photos && photos.length > 0) {
       photos.forEach(src => {
         const div = document.createElement("div");
         div.className = "gallery-item";
         const img = document.createElement("img");
         img.src = src;
-        img.alt = placeData.name + " photo";
         img.loading = "lazy";
-        
         div.addEventListener("click", () => {
            lightboxImg.src = src;
            lightbox.classList.remove("hidden-modal");
         });
-        
         div.appendChild(img);
         galleryGrid.appendChild(div);
       });
@@ -462,21 +443,55 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("No photos available yet!");
     }
   }
-
+  filterSelect.addEventListener("change", function () {
+    const selectedCategory = this.value.toLowerCase();
+    const cards = Array.from(grid.getElementsByClassName("place-card"));
+    cards.forEach((card) => {
+      const cardCountry = card.getAttribute("data-country");
+      if (selectedCategory === "all" || cardCountry.includes(selectedCategory)) {
+        card.classList.remove("hidden-place");
+      } else {
+        card.classList.add("hidden-place");
+      }
+    });
+  });
+  sortSelect.addEventListener("change", function () {
+    const sortType = this.value;
+    const currentCards = Array.from(grid.getElementsByClassName("place-card"));
+    const sortedCards = currentCards.sort((a, b) => {
+      if (sortType === "az") return a.getAttribute("data-name").localeCompare(b.getAttribute("data-name"));
+      if (sortType === "newest") return new Date(b.getAttribute("data-date")) - new Date(a.getAttribute("data-date"));
+      if (sortType === "oldest") return new Date(a.getAttribute("data-date")) - new Date(b.getAttribute("data-date"));
+      return 0;
+    });
+    sortedCards.forEach(card => grid.appendChild(card));
+  });
   closeGalleryBtn.addEventListener("click", function() {
     galleryModal.classList.add("hidden-modal");
     document.body.style.overflow = "auto";
   });
-
   closeLightboxBtn.addEventListener("click", () => {
     lightbox.classList.add("hidden-modal");
   });
-  
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) {
       lightbox.classList.add("hidden-modal");
     }
   });
-
+  if(prevBtn) prevBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    showPrevPhoto();
+  });
+  if(nextBtn) nextBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    showNextPhoto();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("hidden-modal")) {
+      if (e.key === "ArrowLeft") showPrevPhoto();
+      if (e.key === "ArrowRight") showNextPhoto();
+      if (e.key === "Escape") lightbox.classList.add("hidden-modal");
+    }
+  });
   loadTravelData();
 });
