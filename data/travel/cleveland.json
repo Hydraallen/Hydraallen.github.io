@@ -6,10 +6,15 @@
   "date": "2025-11-30",
   "date_display": "Nov 30, 2025",
   "video": "",
-  "cover": "https://images.unsplash.com/photo-1562097812-d2c43318729f?q=80&w=600&auto=format&fit=crop",
+  "cover": "../../img/travel/Cleveland/cover.jpg",
   "photos": [
-    "https://images.unsplash.com/photo-1562097812-d2c43318729f?q=80&w=800",
-    "https://images.unsplash.com/photo-1569937728357-4971c45997c0?q=80&w=800"
+    "../../img/travel/Cleveland/photo1.jpg",
+    "../../img/travel/Cleveland/photo2.jpg",
+    "../../img/travel/Cleveland/photo3.jpg",
+    "../../img/travel/Cleveland/photo4.jpg",
+    "../../img/travel/Cleveland/photo5.jpg",
+    "../../img/travel/Cleveland/photo6.jpg",
+    "../../img/travel/Cleveland/photo7.jpg"
   ]
 }
 
