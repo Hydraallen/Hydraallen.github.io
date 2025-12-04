@@ -1,0 +1,14 @@
+{
+  "id": "nyc",
+  "name": "New York",
+  "country": "USA",
+  "state": "NY",
+  "date": "2025-01-10",
+  "date_display": "Jan 10-14, 2025",
+  "video": "https://www.youtube.com/watch?v=your_video_id",
+  "cover": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=600&auto=format&fit=crop",
+  "photos": [
+    "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=800",
+    "https://images.unsplash.com/photo-1485871981535-5be8468d130a?q=80&w=800"
+  ]
+}

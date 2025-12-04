@@ -1,0 +1,15 @@
+{
+  "id": "miami",
+  "name": "Miami",
+  "country": "USA",
+  "state": "FL",
+  "date": "2025-02-15",
+  "date_display": "Feb 15-20, 2025",
+  "video": "",
+  "cover": "https://images.unsplash.com/photo-1535498730771-e735b998cd64?q=80&w=600&auto=format&fit=crop",
+  "photos": [
+    "https://images.unsplash.com/photo-1535498730771-e735b998cd64?q=80&w=800",
+    "https://images.unsplash.com/photo-1506966953602-c20cc11f75e3?q=80&w=800"
+  ]
+}
+

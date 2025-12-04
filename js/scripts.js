@@ -1,3 +1,4 @@
+// Script to update the year in the footer
 document.addEventListener("DOMContentLoaded", function () {
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
@@ -5,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Script for Hamburger Menu
 document.addEventListener("DOMContentLoaded", () => {
   const hamburgerMenu = document.querySelector(".hamburger-menu");
   const nav = document.querySelector("nav");
@@ -35,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Script for Projects Section
 document.addEventListener("DOMContentLoaded", function () {
   const toggleProjectsBtn = document.getElementById("toggleProjectsBtn");
   const hiddenProjects = document.querySelectorAll(
@@ -60,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Script for Skills Section
 document.addEventListener("DOMContentLoaded", function () {
   const tabBtns = document.querySelectorAll(".tab-btn");
   const skillCards = document.querySelectorAll(".skill-card");
@@ -88,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Script for Contact Form
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
@@ -139,6 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Script for Education Section
 document.addEventListener("DOMContentLoaded", function () {
   const toggleEduBtn = document.getElementById("toggleEduBtn");
   const hiddenEduCards = document.querySelectorAll(".hidden-edu");
@@ -162,22 +168,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+// Script for Movies Page
 document.addEventListener("DOMContentLoaded", function () {
   const timelineRoot = document.getElementById("timeline-root");
   if (timelineRoot) {
     loadMovies(timelineRoot);
   }
 });
-
 async function loadMovies(timelineRoot) {
   try {
     timelineRoot.innerHTML =
       '<p style="text-align:center; padding:20px;">Loading movies...</p>';
-    const response = await fetch("./data/movies.json");
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    const indexResponse = await fetch("../data/movies/index.json");
+    if (!indexResponse.ok) {
+      throw new Error(`Failed to load index.json: ${indexResponse.status}`);
     }
-    const moviesData = await response.json();
+    const fileList = await indexResponse.json(); // 得到 ["2022", "2023", ...]
+    const dataPromises = fileList.map(async (fileName) => {
+      const res = await fetch(`../data/movies/${fileName}.json`);
+      if (!res.ok) {
+        console.warn(`Warning: Could not load ${fileName}.json`);
+        return null;
+      }
+      return res.json();
+    });
+    const rawData = await Promise.all(dataPromises);
+    const moviesData = rawData
+      .filter((item) => item !== null)
+      .sort((a, b) => parseInt(b.year) - parseInt(a.year));
     timelineRoot.innerHTML = "";
     renderTimeline(moviesData, timelineRoot);
   } catch (error) {
@@ -185,12 +204,12 @@ async function loadMovies(timelineRoot) {
     timelineRoot.innerHTML = `
       <div style="text-align:center; color:red; padding:20px;">
         <p>Error loading movie data.</p>
-        <p>Note: If you are opening this file directly (file://), please use a Local Server.</p>
+        <p>Details: ${error.message}</p>
+        <p>Note: Ensure you are running on a Local Server (http://) not file://</p>
       </div>
     `;
   }
 }
-
 
 function renderTimeline(data, rootElement) {
   data.forEach((yearData) => {
@@ -202,20 +221,20 @@ function renderTimeline(data, rootElement) {
     contentDiv.className = "timeline-content";
     const headerDiv = document.createElement("div");
     headerDiv.className = "timeline-header";
+    const movies = yearData.movies || [];
     headerDiv.innerHTML = `
       <div>
         <h3 class="timeline-year">${yearData.year}</h3>
         <p class="timeline-stats" style="margin:5px 0 0 0; font-size:14px; color:#666;">
-           Watched: ${yearData.movies.length} movies
+           Watched: ${movies.length} movies
         </p>
       </div>
       <span class="toggle-icon">▼</span>
     `;
-
     const movieListContainer = document.createElement("div");
     movieListContainer.className = "movie-list-container";
-    const favMovie = yearData.movies.find(m => m.title === yearData.favorite);
-    const otherMovies = yearData.movies.filter(m => m.title !== yearData.favorite);
+    const favMovie = movies.find(m => m.title === yearData.favorite);
+    const otherMovies = movies.filter(m => m.title !== yearData.favorite);
     if (favMovie) {
       const favSection = document.createElement("div");
       favSection.className = "favorite-section";
@@ -288,3 +307,176 @@ function renderTimeline(data, rootElement) {
   });
 }
 
+
+
+// Script for Travel Page
+let allTravelData = []
+document.addEventListener("DOMContentLoaded", function () {
+  const grid = document.getElementById("travel-grid");
+  if (!grid) return;
+
+  const filterSelect = document.getElementById("place-filter");
+  const sortSelect = document.getElementById("place-sort");
+  
+  const galleryModal = document.getElementById("gallery-modal");
+  const galleryGrid = document.getElementById("gallery-grid");
+  const galleryTitle = document.getElementById("gallery-title");
+  const galleryVideoBtn = document.getElementById("gallery-video-btn");
+  const closeGalleryBtn = document.getElementById("close-gallery");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeLightboxBtn = document.getElementById("close-lightbox");
+
+  async function loadTravelData() {
+    try {
+      const indexResponse = await fetch('../data/travel/index.json');
+      if (!indexResponse.ok) throw new Error("Failed to load index.json");
+      const fileList = await indexResponse.json();
+
+      const fetchPromises = fileList.map(filename => 
+        fetch(`./data/travel/${filename}.json`).then(res => res.json())
+      );
+      
+      allTravelData = await Promise.all(fetchPromises);
+
+      renderGrid(allTravelData);
+      
+      sortSelect.dispatchEvent(new Event('change'));
+
+    } catch (error) {
+      console.error("Error loading travel data:", error);
+      grid.innerHTML = `<p style="text-align:center; color:red;">Error loading data. Please ensure you are running on a local server (not file://).</p>`;
+    }
+  }
+
+  function renderGrid(data) {
+    grid.innerHTML = "";
+
+    if (data.length === 0) {
+      grid.innerHTML = "<p>No places found.</p>";
+      return;
+    }
+
+    data.forEach(place => {
+      let displayName = place.name;
+      if (place.country.toLowerCase() === 'usa' && place.state) {
+        displayName += `, ${place.state}`;
+      }
+
+      const card = document.createElement("div");
+      card.className = "place-card";
+      card.setAttribute("data-country", place.country.toLowerCase());
+      card.setAttribute("data-name", place.name);
+      card.setAttribute("data-date", place.date);
+      card.setAttribute("data-id", place.id);
+
+      card.innerHTML = `
+        <div class="place-image-wrapper">
+          <img src="${place.cover}" alt="${displayName}" loading="lazy">
+        </div>
+        <div class="place-info">
+          <div class="place-country">${place.country}</div>
+          <h3 class="place-city">${displayName}</h3>
+          <div class="place-date">${place.date_display}</div>
+        </div>
+      `;
+
+      card.addEventListener("click", () => openGallery(place));
+
+      grid.appendChild(card);
+    });
+  }
+
+  filterSelect.addEventListener("change", function () {
+    const selectedCategory = this.value.toLowerCase();
+    const cards = Array.from(grid.getElementsByClassName("place-card"));
+
+    cards.forEach((card) => {
+      const cardCountry = card.getAttribute("data-country");
+      if (selectedCategory === "all" || cardCountry.includes(selectedCategory)) {
+        card.classList.remove("hidden-place");
+      } else {
+        card.classList.add("hidden-place");
+      }
+    });
+  });
+
+  sortSelect.addEventListener("change", function () {
+    const sortType = this.value;
+    const currentCards = Array.from(grid.getElementsByClassName("place-card"));
+
+    const sortedCards = currentCards.sort((a, b) => {
+      if (sortType === "az") {
+        return a.getAttribute("data-name").localeCompare(b.getAttribute("data-name"));
+      } else if (sortType === "newest") {
+        return new Date(b.getAttribute("data-date")) - new Date(a.getAttribute("data-date"));
+      } else if (sortType === "oldest") {
+        return new Date(a.getAttribute("data-date")) - new Date(b.getAttribute("data-date"));
+      } else {
+        return 0;
+      }
+    });
+
+    sortedCards.forEach(card => grid.appendChild(card));
+  });
+
+  function openGallery(placeData) {
+    const photos = placeData.photos;
+    
+    let title = placeData.name;
+    if (placeData.country.toLowerCase() === 'usa' && placeData.state) {
+      title += `, ${placeData.state}`;
+    }
+    galleryTitle.textContent = title;
+    
+    if (placeData.video && placeData.video.trim() !== "") {
+      galleryVideoBtn.href = placeData.video;
+      galleryVideoBtn.classList.remove("hidden-btn");
+    } else {
+      galleryVideoBtn.href = "#";
+      galleryVideoBtn.classList.add("hidden-btn");
+    }
+
+    galleryGrid.innerHTML = "";
+
+    if (photos && photos.length > 0) {
+      photos.forEach(src => {
+        const div = document.createElement("div");
+        div.className = "gallery-item";
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = placeData.name + " photo";
+        img.loading = "lazy";
+        
+        div.addEventListener("click", () => {
+           lightboxImg.src = src;
+           lightbox.classList.remove("hidden-modal");
+        });
+        
+        div.appendChild(img);
+        galleryGrid.appendChild(div);
+      });
+      galleryModal.classList.remove("hidden-modal");
+      document.body.style.overflow = "hidden";
+    } else {
+      alert("No photos available yet!");
+    }
+  }
+
+  closeGalleryBtn.addEventListener("click", function() {
+    galleryModal.classList.add("hidden-modal");
+    document.body.style.overflow = "auto";
+  });
+
+  closeLightboxBtn.addEventListener("click", () => {
+    lightbox.classList.add("hidden-modal");
+  });
+  
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.add("hidden-modal");
+    }
+  });
+
+  loadTravelData();
+});
