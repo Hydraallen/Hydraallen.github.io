@@ -5,10 +5,14 @@
   "date": "2024-01-20",
   "date_display": "Jan 20-21, 2024",
   "video": "",
-  "cover": "https://images.unsplash.com/photo-1592926763973-642272076129?q=80&w=600&auto=format&fit=crop",
+  "cover": "../../img/travel/Karlovy/cover.jpg",
   "photos": [
-    "https://images.unsplash.com/photo-1592926763973-642272076129?q=80&w=800",
-    "https://images.unsplash.com/photo-1562865457-0659379a66de?q=80&w=800"
+    "../../img/travel/Karlovy/photo1.jpg",
+    "../../img/travel/Karlovy/photo2.jpg",
+    "../../img/travel/Karlovy/photo3.jpg",
+    "../../img/travel/Karlovy/photo4.jpg",
+    "../../img/travel/Karlovy/photo5.jpg",
+    "../../img/travel/Karlovy/photo6.jpg"
   ]
 }
 
