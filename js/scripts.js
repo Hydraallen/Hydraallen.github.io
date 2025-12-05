@@ -357,6 +357,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (place.country.toLowerCase() === 'usa' && place.state) {
         displayName += `, ${place.state}`;
       }
+      const hasVideo = place.video && place.video.trim() !== "";
+      let buttonsHtml = `<button class="action-btn photo-btn">View Photos</button>`;
+      if (hasVideo) {
+        buttonsHtml += `<a href="${place.video}" target="_blank" class="action-btn video-btn-overlay">Play Video</a>`;
+      }
       const card = document.createElement("div");
       card.className = "place-card";
       card.setAttribute("data-country", place.country.toLowerCase());
@@ -365,6 +370,9 @@ document.addEventListener("DOMContentLoaded", function () {
       card.innerHTML = `
         <div class="place-image-wrapper">
           <img src="${place.cover}" alt="${displayName}" loading="lazy">
+          <div class="hover-actions">
+            ${buttonsHtml}
+          </div>
         </div>
         <div class="place-info">
           <div class="place-country">${place.country}</div>
@@ -372,17 +380,32 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="place-date">${place.date_display}</div>
         </div>
       `;
-      card.addEventListener("click", () => {
+      const openGalleryLogic = () => {
         const isLargeScreen = window.innerWidth > 768;
         if (isLargeScreen) {
           openLightboxDirectly(place);
         } else {
           openGalleryScroll(place);
         }
-      });
+      };
+      card.addEventListener("click", openGalleryLogic);
+      const photoBtn = card.querySelector(".photo-btn");
+      const videoBtn = card.querySelector(".video-btn-overlay");
+      if (photoBtn) {
+        photoBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          openGalleryLogic();
+        });
+      }
+      if (videoBtn) {
+        videoBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+        });
+      }
       grid.appendChild(card);
     });
   }
+
   function openLightboxDirectly(placeData) {
     if (!placeData.photos || placeData.photos.length === 0) {
       alert("No photos available.");
