@@ -6,10 +6,20 @@
   "date": "2025-03-09",
   "date_display": "Mar 9, 2025",
   "video": "",
-  "cover": "https://images.unsplash.com/photo-1623268883564-2134816273e4?q=80&w=600&auto=format&fit=crop",
+  "cover": "../../img/travel/Princeton/cover.png",
   "photos": [
-    "https://images.unsplash.com/photo-1623268883564-2134816273e4?q=80&w=800",
-    "https://images.unsplash.com/photo-1572065990564-4019c7358c48?q=80&w=800"
+    "../../img/travel/Princeton/photo1.png",
+    "../../img/travel/Princeton/photo2.png",
+    "../../img/travel/Princeton/photo3.png",
+    "../../img/travel/Princeton/photo4.png",
+    "../../img/travel/Princeton/photo5.png",
+    "../../img/travel/Princeton/photo6.png",
+    "../../img/travel/Princeton/photo7.png",
+    "../../img/travel/Princeton/photo8.png",
+    "../../img/travel/Princeton/photo9.png",
+    "../../img/travel/Princeton/photo10.png",
+    "../../img/travel/Princeton/photo11.png",
+    "../../img/travel/Princeton/photo12.png"
   ]
 }
 
