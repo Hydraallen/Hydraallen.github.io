@@ -1,0 +1,17 @@
+{
+  "id": "berlin",
+  "name": "Berlin",
+  "country": "🇩🇪 Germany",
+  "date": "2024-01-02",
+  "date_display": "Jan 2 - Feb 3, 2024",
+  "video": "",
+  "cover": "../../img/travel/Berlin/cover.jpg",
+  "photos": [
+    "../../img/travel/Berlin/photo1.jpg",
+    "../../img/travel/Berlin/photo2.jpg",
+    "../../img/travel/Berlin/photo3.jpg",
+    "../../img/travel/Berlin/photo4.jpg",
+    "../../img/travel/Berlin/photo5.jpg"
+  ]
+}
+
