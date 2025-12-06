@@ -1,8 +1,8 @@
 {
   "year": 2023,
-  "total_count": 344,
-  "saved_count": 344,
-  "favorite": "M3GAN",
+  "total_count": 50,
+  "saved_count": 50,
+  "favorite": "Oppenheimer",
   "movies": [
     {
       "title": "M3GAN",
@@ -10,79 +10,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BYjU1ZWMxYTUtNzQ1ZC00ZTcxLTg0NTMtMzY1ZmQyZjhmYjMyXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "The Pale Blue Eye",
-      "date": "Jan 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2EyM2QyZWUtMzUzOC00YTU4LTg4OGEtZWIwNWZiZjRjY2I3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Hatchet Wielding Hitchhiker",
-      "date": "Jan 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2I3OWRiYzEtZmJkNy00YmYzLWIyZWEtYzMwZGJkOTNmMmUyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Varisu",
-      "date": "Jan 11, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDM4NDBkNGEtNzI2Yi00ODkwLTliNzAtODkwMmRhNTEzZmVlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Thunivu",
-      "date": "Jan 11, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWUwMzc3MTQtNDRlYi00MmUzLTllODktZDlhOTIyMmMyNWNjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Plane",
       "date": "Jan 13, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDAyYjZmNjctOWE2Mi00ZDBiLWE2YjEtMWM1YmM0NmYzOGQwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Old Way",
-      "date": "Jan 13, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjUwNTcyMTEtMDRjMi00OTg5LWI1NzAtM2FjZmY3MDg5Y2NiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kuttey",
-      "date": "Jan 13, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDQyOWI0ZjctZTc0OS00NzBmLWE3NjAtYTU0ZjRhNDhiMThmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "A Man Called Otto",
-      "date": "Jan 13, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjY5YWJjODYtNDUzNy00ZGMyLTk3NTQtN2EzZmFhZTFmMDNiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Holy Spider",
-      "date": "Jan 13, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGU4ODE3OWUtODQyMC00Y2VjLWJjNjAtMzE1MTk5YTRiODljXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sick",
-      "date": "Jan 13, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjY2MjRiOTktOTRlNy00YTFmLTlhZDEtY2Q0MDU5MDllMTJkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Bank of Dave",
-      "date": "Jan 16, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmFmYWNkYmItOWY1Yy00NWQ5LWI3NjUtYjI2NWU2M2MwMzc2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Missing",
-      "date": "Jan 20, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGVkMGU0NDktNTFlMC00ZWI5LWI5OGUtYmVjZTEzOTM4MTI5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Jung_E",
-      "date": "Jan 20, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTMyNGY3NjMtNTRkMS00OWMwLWExNWEtMWJiZmI3MDExOWZhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Mission Majnu",
-      "date": "Jan 20, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzA0NDhiYzQtZTM5NC00OTQ5LThiNDQtNmRiMTk0MGU1ZTYzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Chhatriwali",
-      "date": "Jan 20, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzJiNjljYTktNzcyNC00ZTQxLWE5OWQtZTU0YjczNTA4MDQ0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Son",
@@ -90,109 +20,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BYjE4ZTJmMWQtNWI2My00NjhhLTkwYmEtODk5YzM0YzNkNjJjXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Alice, Darling",
-      "date": "Jan 20, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODExMmRjYTAtZTI1OS00MjRkLWI4NTQtMTY3NDYyYjY5ZDBhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "EO",
-      "date": "Jan 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjNlZWRlMjgtYzllMC00Y2RkLTk2ZTMtMmIwODY4NmJlOTIyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "The Wandering Earth II",
       "date": "Jan 22, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzg5MTNkZGUtNGViNS00NzFlLTg1NDYtN2Y2NzY3NWNmNzg2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Narvik: Hitler's First Defeat",
-      "date": "Jan 23, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjg4MjkwYzAtYTlmMi00ODk2LThmYWMtNWUzNDcyMzk5ZTNjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Pathaan",
-      "date": "Jan 25, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDdkNTY1MDQtY2I5MC00OTFlLTg5OWQtZWE2YzE5NWFiMDgzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Teen Wolf: The Movie",
-      "date": "Jan 26, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjZhOTliNTMtZGVlOS00NDgwLWE5MzctM2VlNTY1OWE3YzRiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kranti",
-      "date": "Jan 26, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTJiMjNhNzQtOWI5YS00MjY0LWJmYTEtNDEwMzRlMWI5N2UwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Infinity Pool",
-      "date": "Jan 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjZiNGUxNDUtN2QwZi00ZmE5LTgyZjctYzQwOTQ1NWY1MWViXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Maybe I Do",
-      "date": "Jan 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDVjNDYxMDctMWM0OS00Y2Y4LWFhM2EtNDEzZjNhYmUwOTM1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "You People",
-      "date": "Jan 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmQ4MjY2YmYtNDhjZi00ODZmLWFkYmItZmY3YTRmZGMzZjJiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Women Talking",
-      "date": "Jan 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzM2YzEzOTktNTJiNy00YjAwLWI2N2YtNjBkZWM5Y2U1OTRlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Shotgun Wedding",
-      "date": "Jan 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGI5ZGYyMmQtYzVmZC00YWI0LTgwYTUtNjdmZmY5YjQwMDhlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Pamela: A Love Story",
-      "date": "Jan 31, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2M5YjJjYmItZTg1ZC00MTM3LThmOGQtZjlmMTYyMmNjY2FhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Skinamarink",
-      "date": "Feb 2, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTY5OWUwZTUtMzUwZi00MmUwLThiMGItNWJkODE2MjY4MTkyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "80 for Brady",
-      "date": "Feb 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTU3NDgwYmMtNGFlMi00MzhhLWI4ZmItYTU0NTM3NjJiNTYyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Knock at the Cabin",
-      "date": "Feb 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzU1ODIzYjAtNjUzNi00YmNjLWI5ZDAtNDgzOWY3MDU1OThlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Romancham",
-      "date": "Feb 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTY4MzU5YjQtYjNhNS00MjVlLWE1ZTAtN2VjYjJlNDMyNmI2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "True Spirit",
-      "date": "Feb 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOWU4ZDBkNjAtMTk0ZS00ZDVmLTgwMDMtNmE5NzJhMTZhYWJiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Magic Mike's Last Dance",
-      "date": "Feb 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzk2NGRmNDEtNDQ3ZC00NWZjLTlhYTUtM2M2MmM5YzljYzZmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Your Place or Mine",
-      "date": "Feb 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjRiMjBkNGMtYTRkMi00MWRiLWE3OTUtZjljZTQ0NTBjOTE1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Marlowe",
-      "date": "Feb 15, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTJkZWIwZGMtMzliMS00NmFjLWIwYTktNTRjYmY1MGU0MGZhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ant-Man and the Wasp: Quantumania",
@@ -200,99 +30,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Sharper",
-      "date": "Feb 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmRhNWQ3YmUtODc3NC00MTk0LTg2NGQtZDIxMjY5NWYwOTMyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Unlocked",
-      "date": "Feb 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzBhN2IzMmYtOGY5MC00ZDkwLTkxYWUtMDkzZmJmZWFiYmRhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Shehzada",
-      "date": "Feb 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZWRiYTg2M2ItNDhkNS00ZDI3LWE2OGItM2VhZDE0ZjQ4ZWU0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Vaathi",
-      "date": "Feb 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODhmMTFmNjMtZjMwOS00MjNlLWJkNzQtYTI0MjhiZDMzNzZmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Strays",
-      "date": "Feb 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTI1NTJmOTYtOGI5YS00MmMzLTkzOGItNDBhM2FmYzU3ZDhmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Cocaine Bear",
-      "date": "Feb 24, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjg3MmNiNWQtOWI1OS00MjE2LWFhYzYtMWY0NWRhZmVkMGFiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Jesus Revolution",
-      "date": "Feb 24, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzk5MTRjMDctNTAzMy00MmVmLWIxMGItODY5ZDdiZDk3YmUzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Mummies",
-      "date": "Feb 24, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGEyYjNkYmQtMTk4ZC00MDk0LTlkODAtYjdhNzY4NWRmNWRhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Selfiee",
-      "date": "Feb 24, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGE4ODI5MjQtMmE3NC00NDVlLWJhNzAtNGZkMzlkZGZlNjFmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "We Have a Ghost",
-      "date": "Feb 24, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDk0ZTA3ZTQtODE3OC00MmUyLWE3N2MtMGI4N2E3Y2NhZjMxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Creed III",
       "date": "Mar 3, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOWY0MTRmY2YtMzBlYi00NjlkLThkZWYtMmE2NzJiZmIzODFkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Demon Slayer: Kimetsu No Yaiba - To the Swordsmith Village",
-      "date": "Mar 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDUyZTJmODQtZmRkMS00YjJiLTgxZmUtMjQ5OGNjNzkyM2Y5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Operation Fortune: Ruse de Guerre",
-      "date": "Mar 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjk3MjcwMWQtZDFmMS00NTk2LTkxYWItNWU0NzhlZTFiNTE1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Tu Jhoothi Main Makkaar",
-      "date": "Mar 8, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2Y0ZmZjNjQtYjIwYi00YWNhLThjNGUtMTU0ZTI3Zjc0YTNjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Scream VI",
-      "date": "Mar 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDZkYzk3YTEtYTQ5MS00MzQ5LTg0NjUtOTgzODA5N2EyYTQ1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "65",
-      "date": "Mar 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZWQ2NjUyNWMtNDhlYy00Y2Y3LThlZTYtNzI3ODhiYjQ5YmFjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Champions",
-      "date": "Mar 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWM0OWZiZTctN2IxZi00NTY2LWEwZjctOWRiNzYzMTg3NzM0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Luther: The Fallen Sun",
-      "date": "Mar 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDFmYzdjOGYtMWY3MC00ZjQ0LWJiYjgtODc3ZDUzZmM4MmQ3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Alice the Musical",
-      "date": "Mar 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYWNiODllZTMtY2Y5Mi00ZDM3LWI2NGYtOWUzNGVlMzg2NzE4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Shazam! Fury of the Gods",
@@ -300,64 +40,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMjdlYzAwYTMtMWJlOC00OTQ5LWJhMmYtMDhjNGY4M2RhMGU4XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Winnie-the-Pooh: Blood and Honey",
-      "date": "Mar 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTA1YjEyNmQtNGNiYi00OWFlLWJlMDQtOWIyZjA5OTZhODVjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Boston Strangler",
-      "date": "Mar 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2ZlNThhOGYtNTUwNC00MWVhLTg2NzQtMWRmOWE2YjFkODZiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Mrs. Chatterjee vs. Norway",
-      "date": "Mar 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmMwMDM5ZmEtNzkyZi00MjY3LWJiMzMtMWVjMWYxMzFiMzIxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kabzaa",
-      "date": "Mar 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTc3NGY2MTItZmNiZC00ODZiLWI3MGQtMTFmN2I4Y2E0ZjQyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Zwigato",
-      "date": "Mar 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjZkMDhjMjYtYWYzMS00MTcwLTgwYzMtYjliMDZkMmQ2MDI2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "John Wick: Chapter 4",
       "date": "Mar 24, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BY2Q2ZmI5ZjUtNWVhMC00YzJkLTlmYjMtY2RmZDhkNzEzYjZhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "A Good Person",
-      "date": "Mar 24, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTJmYWM4ZjUtYzI5NC00MTM3LWI4YTUtYmE4ODAyOGYzNjlkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Chor Nikal Ke Bhaga",
-      "date": "Mar 24, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTgwMmVlZjgtMDhjMC00ZGU2LTgyNGEtOGM1ZDQ0Y2VmZjdlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Bheed",
-      "date": "Mar 24, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmE1Y2VhZGUtMTk0OS00YzdiLThjZDQtYTlkZmJlYTljZDE3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Lost King",
-      "date": "Mar 24, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGUzMTY2M2YtZGMxZi00NTVhLWFiZDQtM2E4ZTQwOTcwMjc3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Bholaa",
-      "date": "Mar 30, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzMzYzZiNWYtZDNlMy00YzIwLTk3YWYtYmMyZjc3NGQ5ZTk5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Pathu Thala",
-      "date": "Mar 30, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDJjMWZkYTctMzEyOS00ZjI5LWI3NjgtMTY1ZjhmM2ZmM2U3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Dungeons & Dragons: Honor Among Thieves",
@@ -365,189 +50,14 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOGRjMjQ0ZDAtODc0OS00MGY1LTkxMTMtODhhNjY5NTM4N2IwXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Tetris",
-      "date": "Mar 31, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDZhY2Y4ZGQtODk4MC00NGQwLWFiMWItNzU2M2Q3Nzk2MmVlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Murder Mystery 2",
-      "date": "Mar 31, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWU3OWYwNjAtNWExZS00ODY4LTgwMGQtNzliMzM2MjEyNDBkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kill Boksoon",
-      "date": "Mar 31, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjkyOTBlMmItYTFmNS00ZDZkLTk5OTktODEwZWJhOGQ3OTI0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Rye Lane",
-      "date": "Mar 31, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDIzZmIwZDYtOGI5Mi00ZTcxLTg3YWQtYWNiY2NmNDRkMzNlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Viduthalai: Part 1",
-      "date": "Mar 31, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzFjYTE5MDctYzYwNS00MGQ3LThiMTgtZDgxMTJiYzlhYTdlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dasara",
-      "date": "Mar 31, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzkxNmQ5NGItZDFiZi00MTFiLWFmZTktODAxODliZDkzZTY4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Gaslight",
-      "date": "Mar 31, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODFlZjg5YmQtOTYwMy00M2YwLThhYzktM2U3Y2I0MmRhZmRkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "The Super Mario Bros. Movie",
       "date": "Apr 5, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGZlN2EzOTYtMzUzOS00NTM3LTg0MTQtZDVjZGM4YmJlNWNhXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Air",
-      "date": "Apr 5, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjdjYzJkZmUtZDNiMC00MzQ0LWE2MGEtYTk4ZGM4NzFkMzM3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Three Musketeers - Part I: D'Artagnan",
-      "date": "Apr 5, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2FlN2ZiYTItNzBlMi00OWY5LWFlNzMtMTgzMTJlNTVkNGJiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Hunger",
-      "date": "Apr 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODQ2ZDVhY2ItMTcwYS00ZDUzLTlhMDctYjhmMWVkODUzYzU4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Portable Door",
-      "date": "Apr 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWYyMDc3ZjctMGQ2My00ZTNhLWIwNDktMjIzMWMzYTU4MDk1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "How to Blow Up a Pipeline",
-      "date": "Apr 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmE2OGJiZjAtZWY4OS00YjdmLTk5NGMtNjYzNWVlZGI5MWZkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Law of Tehran",
-      "date": "Apr 11, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDgxM2YxMDAtYWFkMi00MWEwLTg0NTMtODUyNzAyOTlhMWUwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Pope's Exorcist",
-      "date": "Apr 14, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWFhZGRiNjItNjAzNC00NjdlLTk5YWUtOTNkNzYwMTE4YzA3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Renfield",
-      "date": "Apr 14, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDY2MWVmMTUtMTBkMS00ZWI4LWFlMDQtYjE0ZWM2NTc2NWExXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Nefarious",
-      "date": "Apr 14, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2Q3M2EwMTItYjVjOS00MjdjLWExMTItMjA4MmRhOTAxNzI3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Mafia Mamma",
-      "date": "Apr 14, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2M4NjA5ZjEtMWIwYy00MjE2LTg4YWQtMDlmZGNlMjBjYzE5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Last Kingdom: Seven Kings Must Die",
-      "date": "Apr 14, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmQzMTMwOTItYjUyMS00NDY4LThmOWEtZjE3ODkyMzg3MDdlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Suzume",
-      "date": "Apr 14, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODhkNDhmNzktODFmMC00NDZiLWEzN2UtY2YwYzgzYTVlMWZmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Afire",
-      "date": "Apr 20, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjI5ZWU2YjgtMTBjMC00N2NhLTllZmItZmMyYTNmM2NmZWI4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Evil Dead Rise",
-      "date": "Apr 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjM1ZmViMmYtOGYzZC00YzhmLWE0MTMtMzNjYzcyNjEwYWRkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Covenant",
-      "date": "Apr 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDY2NmI1YzAtYmE2OS00NTY4LWJjM2UtNjQzMDliYzc5MzUyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Beau Is Afraid",
-      "date": "Apr 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTdmYmQ5MjctYzU3NS00N2I0LTkwYTYtZWMxNTVhOTRkODA1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Ghosted",
       "date": "Apr 21, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDI0YzJjZTctNjU0MS00Y2Y3LThkNDgtNWMxYWVlZjVkYzYwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kisi Ka Bhai Kisi Ki Jaan",
-      "date": "Apr 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDZlZDIxM2EtMDk1Ni00MTM3LTg2YjYtNzYxMTM3ZTU0NzU0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Artifice Girl",
-      "date": "Apr 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDQwNTVjZGMtM2NhNC00Njg4LWE3ZjUtZTFiOGUyYWUyNDY4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Are You There God? It's Me, Margaret.",
-      "date": "Apr 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTY5ZTY1MTQtOGNjOC00ZDRkLWEyNGItNGEyYjJiMzM0MWEwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Big George Foreman",
-      "date": "Apr 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZWM3N2JiYzMtOTY0NS00OWY2LWJmMjktZTU1YWEyYWY2OTg3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Ponniyin Selvan: Part Two",
-      "date": "Apr 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmU1ZmQwMGYtZjY1MS00NGE0LTkzMzgtN2UyYTNiZDFhNTc2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Polite Society",
-      "date": "Apr 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmQ2ZDNhNjQtYjdjMS00MjEzLWJlYzYtM2U0OGE1OGNlZTNiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Peter Pan & Wendy",
-      "date": "Apr 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmNkZGM0ODctNjA1OS00Y2Q4LTk5ZmQtNzhmNTgyODIyMjdlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "AKA",
-      "date": "Apr 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDJiZmQ3OGUtOTEzYS00NDRkLTlmNjQtMTAzOWRjYTZhZGMwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Black Demon",
-      "date": "Apr 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjJjMTlkMDYtNTllNi00NWE2LWIyMzYtZjVhNmQwNzFhMTA2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sisu",
-      "date": "Apr 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjAxN2RmYjktMDE2OS00MWM5LThlZTQtZDY4YzAxMWQyZWY4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Moonage Daydream",
-      "date": "Apr 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjgyZGU2ODAtMzg2ZC00ZWMxLWJhZWItNjk2NjE4OTI2MjQyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Teachers' Lounge",
-      "date": "May 4, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTkwZDgzNzgtMDBiZC00Y2M2LWI3MmUtZDM2Zjk1ZDc1YWJiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Guardians of the Galaxy Vol. 3",
@@ -560,44 +70,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BODIxY2NkYWEtNWE3ZS00NDZhLWFlMDktMTE0NDNlZDk0MzAyXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "2018",
-      "date": "May 5, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjBjYzVmOTAtMWI2NC00ODhiLTk4NDYtYmY3YmQxYmU2NTI5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "What's Love Got to Do with It?",
-      "date": "May 5, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjdhYzdiOWItYTcwMS00ODcwLTk4MWYtZTNkYWYyNWEzMWMwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Hypnotic",
       "date": "May 12, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzUyNzBjMjQtNmJhOS00M2U0LTg0MWEtZDVmYmNjNGY2N2U4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Knights of the Zodiac",
-      "date": "May 12, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTVmMjZiN2QtYzgzYy00ZThjLThmZDQtYjVhNWFkMTkyMTM5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Mother",
-      "date": "May 12, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzBmNjg0YWEtMTdlNS00OTMxLWI0MDAtODgzNmEyMWEyY2YxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Kerala Story",
-      "date": "May 12, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmRlZmY4OTQtOTlkZC00NzAyLWJmNmItNDM4ODdjZWJkOTMwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Still: A Michael J. Fox Movie",
-      "date": "May 12, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjAyMjVjZGMtMzM4NS00MWM4LTkzMzUtNWZlMjJkMmJiODExXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "IB 71",
-      "date": "May 12, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOWMwNzlmZjQtMzFhZi00ZjUzLThmMmQtYzNkZGMxYTc4YWRhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Fast X",
@@ -605,74 +80,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BYzEwZjczOTktYzU1OS00YjJlLTgyY2UtNWEzODBlN2RjZDEwXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "White Men Can't Jump",
-      "date": "May 19, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjgyM2Y5ZWUtMzdmMS00ZGJkLWJlODItZWI3MDM2YjMzMTY4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Asterix & Obelix: The Middle Kingdom",
-      "date": "May 19, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmRjZjg4MDAtYTkzNy00OWI5LTkzNTgtMDUxMTgxNjkzZDliXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kathal: A Jackfruit Mystery",
-      "date": "May 19, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2M5NTllZDctNTlmYy00YTBhLTgzYWItZjQ2OWZkOThiOGE2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sanctuary",
-      "date": "May 19, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGFhZWQyMjQtNzA4ZS00MTQ0LTk1YWItZGVkNmI1NThiNGZhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sirf Ek Bandaa Kaafi Hai",
-      "date": "May 23, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzMzMTY2NDktYjJkNC00MzQ3LWJlZWYtNzRiYzc1NTJkYTI1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "The Little Mermaid",
       "date": "May 26, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTM4MWY0OTEtY2E4ZC00NDdhLThkY2ItYTlmNWQxNTNkZTRmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "About My Father",
-      "date": "May 26, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmQ2YjA3NzgtNWZjYS00ZTEwLTkxZDUtOTE5OWU5ZGRiMmQ0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Machine",
-      "date": "May 26, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGFlZjI3OWItMTg4YS00NjViLTliYjktOTU4YmJlZjNjM2Y4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kandahar",
-      "date": "May 26, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTQ5NTlkZTctODdmMi00Nzc1LWI0NTMtYmY0MDhjZTBkYjI2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Blood & Gold",
-      "date": "May 26, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2RmNDE5ODQtYTY5MS00YjIzLTg3ZmEtMTJlNmIzNGZjYzM5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "MobKing",
-      "date": "May 26, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmU3NDM5YjEtNzhmZi00Y2QzLTlkNDEtNjg0MjVmZWQ3ODdiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Master Gardener",
-      "date": "May 26, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDMwN2U3OWQtNGUwMi00M2M3LThmMGQtYWVjZjE3NmQxOWIxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Influencer",
-      "date": "May 26, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOWE4M2FiMjctZmM3Ni00NTJlLTgxOTMtMDI2ZjhjMDRiZTQ2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Reality",
-      "date": "May 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOWY5NjgzODAtMjZkZS00ZmRkLWIxNzQtMzI0MzhiMGZiMTY4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Spider-Man: Across the Spider-Verse",
@@ -680,49 +90,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "The Boogeyman",
-      "date": "Jun 2, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzIzOThmYjAtMTEwMy00ZmEwLWIzOGMtYjZkYmI3ODk0OGQ4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Zara Hatke Zara Bachke",
-      "date": "Jun 2, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGZmMjg3ZDEtZDRmZC00ZGNjLTlkZDktYWY4YWFhZTIwYjA0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Holy Trinity",
-      "date": "Jun 5, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMmMxY2I5NWItOTk0NC00MDY2LWI2ZjAtOGM4NmE1MjRkZTA0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Culpa Mía",
-      "date": "Jun 8, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTI4ZWQ5YjYtMmYwMy00OWFmLWFmNDYtZGNlNWMxNTllZjc4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Transformers: Rise of the Beasts",
       "date": "Jun 9, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTVkZWY5MmItYjY3OS00OWY3LTg2NWEtOWE1NmQ4NGMwZGNlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Flamin' Hot",
-      "date": "Jun 9, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjk0ZDljYmUtZDVmZC00NjU2LTg1NDItNTk2NDFlOGJiNjJhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Por Thozhil",
-      "date": "Jun 9, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjc1MDA2ZTgtYzkyMC00ZTcwLWEwNmUtYjM1MmZhYTc3YzgzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Bloody Daddy",
-      "date": "Jun 9, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTFlMzkyOTgtMTU0OS00MzkwLWIzMGQtMmI3ZTU2OGJjYWVjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Maggie Moore(s)",
-      "date": "Jun 15, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTc4YjM3ZTYtYWVmMi00YWQyLTkxNWYtNjJjZDFjMWI4ODQwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Elemental",
@@ -740,34 +110,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BZGQwNDdhODAtY2Y0Ni00YzFhLTk1OGUtY2RkMDAzNzBmZjAxXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Adipurush",
-      "date": "Jun 16, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjA2ODRkMGUtNzUxNC00MmM5LTk3YjQtNTkxNTFlNzFiMjNiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Blackening",
-      "date": "Jun 16, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDI3NTRjNmItYjBkMS00OGRhLTk2MTEtNWM4OTA1MGU5NWExXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Take Care of Maya",
-      "date": "Jun 19, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODI2ZWI3YjAtMzgxMy00NmFhLTk3Y2UtZWFmNTIzOWJjNzRlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "No Hard Feelings",
       "date": "Jun 23, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZjk1NmZiNzYtZGUyYi00YzEwLTgwNWQtM2VmOWFmMGIwZDM2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Asteroid City",
-      "date": "Jun 23, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjY2YjYxNjEtNDJkYi00ZmJjLWIwYTEtNjEyZDgzY2M5ZDc3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Past Lives",
-      "date": "Jun 23, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjQyMTNhNjUtN2VmYy00NWRhLTkwOTctMGVmNTBmNDIxYjZhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Run Rabbit Run",
@@ -775,64 +120,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMDUyM2FmYjItYjU5MS00NTA3LWI1NmYtOTE1ODI1OWFjYThmXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Lust Stories 2",
-      "date": "Jun 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDM3ZGI5MWUtMTViOS00OGVkLWIwNzUtNTQ5OTgxMThiMzI2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Satyaprem Ki Katha",
-      "date": "Jun 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTVmZDNjMGEtNzc5MC00ODY4LWI1ZTYtMjM2ODhhNGExNzgxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Carry on Jatta 3",
-      "date": "Jun 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDY2YzA2MjUtYjJlMi00MWRlLWE2NTAtN2RiYzM3ZGMyZDVhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Surongo",
-      "date": "Jun 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTVhYmNhNTgtN2UwMi00NjYwLWE5ZDYtNjhiZGZmOGQ2MGQxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Indiana Jones and the Dial of Destiny",
       "date": "Jun 30, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWJlOWE2ZjEtZGRhOC00M2YzLWFkZGEtYzIzZWI2Zjg3NWYxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Ruby Gillman: Teenage Kraken",
-      "date": "Jun 30, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjIzMDI5N2YtYzY0Mi00MzU5LWFiNGEtZDI4Yjc2MmI2NWNkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Nimona",
-      "date": "Jun 30, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjIyMmY0MWYtZGRkMC00MjhhLTgwNGUtYWVjZmQ4YjhjZWRmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sound of Freedom",
-      "date": "Jul 4, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzU5MmVkODQtZWM5ZC00MjRiLWIwOTMtN2ViZGM5MjU5Nzc1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Insidious: The Red Door",
-      "date": "Jul 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGExMzQ2NWYtMjk2My00YzczLTk0MGQtYzliNDU3ZjU1NDU1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Joy Ride",
-      "date": "Jul 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODhlNjFkNWEtNDMzNi00YjE1LWI3N2QtNzBmZjIyNTlkZjA2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Priyotoma",
-      "date": "Jul 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYWM4ZTMzOGMtMjhjYi00YTNkLWFlY2YtYzYzYzhhMDM3ZmUxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Out-Laws",
-      "date": "Jul 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDZmMTczYTgtYzA5MS00ODI5LTk0OWYtYzlkN2ZlYTJjNzBhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Resident Evil: Death Island",
@@ -840,34 +130,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BNzg0OWYwOTMtYjVhNy00NzY0LWJiYTMtMGQ3OTczMmEwZmVhXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "72 Hoorain",
-      "date": "Jul 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzEzNDg1MmItMTZmYy00NTM3LThmZjQtOTE1MTFiNjRiNzI2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Mission: Impossible - Dead Reckoning Part One",
       "date": "Jul 12, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2U4OTdmM2QtZTkxYy00ZmQyLTg2N2UtMDdmMGJmNDhlZDU1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Checkmate",
-      "date": "Jul 12, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmU1MDY5ZTYtZWQ5ZS00ODg4LWE0MGYtZGQxNTY5NWMwMGVjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Bird Box: Barcelona",
-      "date": "Jul 14, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDkzZWQ1YjctNTUyZi00NmM4LTljNTEtNWFiMzQwM2YzNGZiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Maaveeran",
-      "date": "Jul 14, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGMxMGZmZDItMjY5NC00OTVhLWE2MWEtNzJiZTU1NzI1MTllXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Deepest Breath",
-      "date": "Jul 19, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMmY2YmUwZDMtNjRmNi00ODJhLTllZjYtYzk4ZDg3MTE4ZjA4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Barbie",
@@ -880,59 +145,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BM2RmYmVmMzctMzc5Ny00MmNiLTgxMGUtYjk1ZDRhYjA2YTU0XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "They Cloned Tyrone",
-      "date": "Jul 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDBlZDQ2NzYtNDU4Ny00MjZkLTk0YjctODg2NGZkODkwY2I1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Bawaal",
-      "date": "Jul 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDI5NTBkYjItNjYzZS00ZjE0LWE2MTktY2QyMWEwYjk3ZTNlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Paradise",
-      "date": "Jul 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWJlNGEwNTMtYmEwMS00ODc0LTllYzAtMmUyYTk0NjUyMDRhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Happiness for Beginners",
-      "date": "Jul 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTEzYTFkMDctNzY0ZS00MGZhLTg3MGItZmY0ZTc0NTFiYjk3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Haunted Mansion",
-      "date": "Jul 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmQ5ZDY0NjYtNzdlNC00ZWI4LTkwZDItNjNiNTRhZjNmN2RiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sympathy for the Devil",
-      "date": "Jul 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGEzMDc1NWYtNTM1Yi00MjNlLTg3ODEtNjcxZTk1NjI2MzMyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Rocky Aur Rani Kii Prem Kahaani",
-      "date": "Jul 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTE2YTZlODgtMTRiNS00YjZkLTljN2YtNTM3ZTQ2MzcwZGNiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Hidden Strike",
       "date": "Jul 28, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTk0NDZjNzAtZmZlYy00OWMwLTg2MTUtMjM3MTVjYjBlYzMzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Beanie Bubble",
-      "date": "Jul 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjdmNGFlYjEtOTIzNS00OGU0LWI2ZDMtODJhNmFkMjdjM2NkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Bro",
-      "date": "Jul 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTYxOTUxZWMtZjk1ZC00M2E0LWI5YjQtY2E0ZmE4MTM5MTIzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Talk to Me",
-      "date": "Jul 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2I2NzJmY2YtYTM3Ni00ZGJhLThkZTItODFhMzhlZjZkMDQ5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The First Slam Dunk",
@@ -945,44 +160,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMTViNDM0MmUtOTAwMS00MWRhLWI1NDktMzFkN2YzYTI5OGVlXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "The Moon",
-      "date": "Aug 2, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTMwMWJjMmQtZGQ4Yi00Y2I2LWFiOTktODFjOThiNjI5Y2U1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Meg 2: The Trench",
       "date": "Aug 4, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGNiOTFkYTUtMDdiMi00YmJlLTkzOTAtMGViYWRhZjY3ODhkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Passenger",
-      "date": "Aug 4, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODYzM2QxOTgtM2QyNS00YmI0LWFkNjAtYTQ4YmVjMTY0OTRlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Jailer",
-      "date": "Aug 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTVjZDlhYWUtYzk1NS00ZTViLThkNzAtYzc1NDFhNjA1YjU2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Last Voyage of the Demeter",
-      "date": "Aug 11, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmRkMTFjNWMtNTVhNS00Y2EwLWJjYTAtMDRiMjA2MDJhOGI1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Jules",
-      "date": "Aug 11, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTU4OWVhZDAtZTA3Ny00NTllLWI3MDktN2FhOWZkZDhlZWZlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Red, White & Royal Blue",
-      "date": "Aug 11, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzYyMzIyZjQtYzJkYi00M2E4LWI0YTUtOWVlNzk5NGI4YWY1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Beautiful Disaster",
-      "date": "Aug 11, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODc5ZDVmYWItODM2Ni00MGYyLWIwNGUtZmEzNjVlYjc5NGY0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Heart of Stone",
@@ -990,39 +170,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTM5OTQ2ZTYtY2EzMC00Zjc3LTg3NWEtZWI4OTdlMjcwMGFlXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Gadar 2",
-      "date": "Aug 11, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODViY2ExYjYtNDhhMi00NTBmLTk2N2ItNzdhNTBkOTY3ODQ5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "OMG 2",
-      "date": "Aug 11, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzRmMDYyZTgtZjhjMS00YzViLWEwMjktOTNiMjFjM2RmNmVhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Blue Beetle",
       "date": "Aug 18, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTEyYzQzOTMtMWExNi00OWNjLTgwMDUtNzY0YjhmZDBiMTk2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Strays",
-      "date": "Aug 18, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDZjN2E2MDYtZWY4ZS00NGMxLWE3MjktYTQ3MzY2ZmNlMTY5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Puppy Love",
-      "date": "Aug 18, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTYwYjcyNjItNGUxZi00NmE2LWFhNDQtM2E0ODQ3NTE0YTY0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Ghoomer",
-      "date": "Aug 18, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDViNDc1MjEtMGY1My00NTE2LTliMTMtYzVkNWE0MmUwMWE0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "To Catch a Killer",
-      "date": "Aug 19, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDk4YWM2YTktZGM4Zi00ZThkLTk4OWYtYzZjZjAxYjAzZThkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Gran Turismo",
@@ -1030,109 +180,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMjA0N2YyNmYtZDk4Ny00ODE2LThmZWQtNGJiMDk0YzhiNzE5XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Retribution",
-      "date": "Aug 25, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTIxZTM4ZWUtZjczOS00MWFmLWJhMWMtMjA4NmMzYzFlMTIyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Golda",
-      "date": "Aug 25, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjNmNjM2NzItZGM1NC00MjdkLTk2NmQtOTJiOGU1YThhYjgzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "You Are So Not Invited to My Bat Mitzvah",
-      "date": "Aug 25, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmU0NjhkYzctZDBhNi00NzFjLWFkMjAtZGY0MmM3YzU3ZTgyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Vacation Friends 2",
-      "date": "Aug 25, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTZhYzliYzktNGQxNC00YTliLWFhNzMtMDY5Y2ZmOTI4ZjNiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dream Girl 2",
-      "date": "Aug 25, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTMzNzYzNzctNWIyNC00NDRhLWFkNGMtMzYxOTA2ZjgwYzFhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Equalizer 3",
-      "date": "Sep 1, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTM1OTAyYmQtY2ZiZS00NTRlLWEyZDYtZWMyYjMyOTE2YWE4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Jawan",
-      "date": "Sep 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGExNGI1NDktOWI2Mi00NDM3LWIxMmQtNTQxYTgzMzI0MTA1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Io Capitano",
-      "date": "Sep 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGI1OTg3MGMtZTFhMy00ZjFkLTk5YmEtY2MzMDIzNTA3MzdiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Nun II",
-      "date": "Sep 8, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmJkYWIyYWYtNWVhZi00ZTkyLWExMTktZWUzNGE1MjNlNjQ0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "My Big Fat Greek Wedding 3",
-      "date": "Sep 8, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTIwYThiOGYtZTdmMS00MjUyLWIxMGQtMjY0NDc3ZDFlOTA1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Corsage",
-      "date": "Sep 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTc4OWJiYWQtNTNmZS00ZjIwLWJiMzQtYjBmYzNlNjQ1Mzk5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Inside",
-      "date": "Sep 12, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYWJkY2I3NWQtYWZiMC00MjFjLWIyOGItMjZlNWJkYmRiODdkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "After Everything",
-      "date": "Sep 13, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTMyNzY0NDMtNGUyYi00NmVhLWJiZTAtNDA2MzMzNzliNzk0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Theater Camp",
-      "date": "Sep 14, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDMzNzdhYTctOTg4MC00MGZjLWI2ZmEtZTE2YjU4MWM3NGM5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Fallen Leaves",
-      "date": "Sep 14, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjNkY2M5NWMtZjJiMy00YTZmLWI2NWEtZTI0MjhmNDc4ZThmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "A Haunting in Venice",
       "date": "Sep 15, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTgwODdhZTMtYTFiNy00NzI1LTkwZWEtNjI2NWZiMzFmMjJlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Retirement Plan",
-      "date": "Sep 15, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGI3ODc4ZTUtZmNiOC00MzUzLTg1NTItZTUwNDViNDNhNzgxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "A Million Miles Away",
-      "date": "Sep 15, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmQwNjI2ZjYtNzFkMC00ZjZhLTgyNDgtODZhMzNjZWM5MzU4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Love at First Sight",
-      "date": "Sep 15, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTY0M2EyNGUtYmZiYi00MTVlLThkMWMtMjNkZjg5Nzg2NjRmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "El Conde",
-      "date": "Sep 15, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2U3ZWFjNzMtNzU2NC00MjBiLThmYzItOTMxODQ5ZTI2ZDM1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Jaane Jaan",
-      "date": "Sep 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGIzNTI0ODktMWE1NS00MTdlLWJlZjYtN2ExNTFlMTBhOWEwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Expendables 4",
@@ -1140,129 +190,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BZjgyMmRmM2EtYWY5ZC00ZTllLWJhM2QtMGRlNGEzMWEzYzllXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "No One Will Save You",
-      "date": "Sep 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjJhYzMwMjItYTI4MC00N2MxLThhN2UtNjY1MjNiOTE5N2JkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Forgotten Love",
-      "date": "Sep 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjA3MGFiZGMtNmIwYi00OTVjLWJmMGYtYzRlY2Q3NmQ2YjZkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kannur Squad",
-      "date": "Sep 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTE4Y2NiYTQtODM1OC00NTQ4LTllOTItMzQwYWExOTRlNzhkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Fukrey 3",
-      "date": "Sep 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDk1OGVjMWEtN2UwNy00MDlhLWFhMWEtMTAzYTlkZGZkYTcwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Vaccine War",
-      "date": "Sep 28, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOWRkMGRlZmQtMjZhNy00NzMxLTk1MTctMGU0ZmUwOTFlMTNmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Saw X",
-      "date": "Sep 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODRmMzAwMWItZjI5MS00NDYyLWFjMmMtZGUwYjQ1ZTBkNmYzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "The Creator",
       "date": "Sep 29, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDkxMTUxOTQtYzM4Yi00YzA2LTgzOTYtNDg2NTliODE0ZTRjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dumb Money",
-      "date": "Sep 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGVkOTcyOGEtYzEyMy00OWI4LWE3ZWItZTZkYTIzZmY2MGIyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Old Oak",
-      "date": "Sep 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzlhM2U4Y2YtODhmYy00ODg2LWEzN2EtZDIwYjg2MjNlM2Q2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Reptile",
-      "date": "Sep 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2ZkOGI0ZDgtMTJlZi00Y2QyLTg2YWEtNmI2MzcwYWIwYzUwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Nowhere",
-      "date": "Sep 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmQwODM5NTctYzRkMi00MmIwLWFjODAtMTFiMWY2OWE3MGQyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Flora and Son",
-      "date": "Sep 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYWNlODkxY2QtNDZmNS00NWIxLTg5NWMtYWMwNDAwZWE4ZTFiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "57 Seconds",
-      "date": "Sep 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTljMTJiOGItNzJlNy00ZWYzLWEwNjktNzMzMWExNTFlZDAzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Do Not Disturb",
-      "date": "Sep 29, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODM0ZTFiZmQtMDVhNy00MzBkLWFhMzctMDMwY2Q5YjY4ZTM2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Promised Land",
-      "date": "Oct 5, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYWViODY0NTMtYjEyOS00NDEwLWFjZDYtOGYyZDEzMjZkOGE2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Exorcist: Believer",
-      "date": "Oct 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjMxN2E4NTctYjYxZi00OTM5LTk3YTAtZmI0MjljN2VhNmY5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Royal Hotel",
-      "date": "Oct 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDIxNDZmNjUtYjM5YS00NGJjLTlhZjctNGEyODU3MmJjZGJmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Passages",
-      "date": "Oct 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDA0NzhkNGYtNmZhYy00NTlmLTk4NDAtMDlkMjc5Njc2NmFjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Totally Killer",
-      "date": "Oct 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2IwZDI2ZDQtMTU5MC00MDY2LWEwOGYtNGU0ZjNkMzkwMmEyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Fair Play",
-      "date": "Oct 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjkxYjNkMGMtOTkyNC00YTRhLWIyZDctNmFmZjYxNjEwMDdjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Ballerina",
-      "date": "Oct 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTgxNzA0MDktYzc5ZC00MGY3LWIwYjItMDJhNzE2ZGFjYmE1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "V/H/S/85",
-      "date": "Oct 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGZhOTljNmQtNDVjOC00YTFiLWI4Y2ItMGM2ZWFkM2IyNWFmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Pet Sematary: Bloodlines",
-      "date": "Oct 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTFlZmU5YTMtNzg2NC00NWU3LTk3OTktMzdlZjUwNTM4NjljXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Mission Raniganj",
-      "date": "Oct 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2Q3NGI4MzctZDNjMy00NTJiLTkwNTgtNzU2ZDk5ZTNiMmRlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Thank You for Coming",
-      "date": "Oct 6, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGJlZjU1NGQtZjUwYS00ZWU3LTk5MDMtYmZiZTRmZmIwYjhmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Taylor Swift: The Eras Tour",
@@ -1270,49 +200,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BM2EzMzU3NTEtOWI3NC00N2VjLWFlZTMtMmJjNDc3ZWRjZTk4XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "The Burial",
-      "date": "Oct 13, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDNjZDY4OTMtZjM1Ni00OGYwLWE2NDItYzk1ZWYzYTgyYWNiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Conference",
-      "date": "Oct 13, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGE3ZjA3YmEtYzIzZi00NmQzLTg4YWItYjdmMjdjNjYxYjIwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dark Harvest",
-      "date": "Oct 13, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTcxYmQ5OTgtMjUxZC00ODBhLWI0NTMtMTQ5YTg3MDA0MDllXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Killers of the Flower Moon",
       "date": "Oct 20, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZWY5ZDVjNTUtODI5Yy00MjFhLWEyM2EtYzZjM2VjZTI0MTBjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Cobweb",
-      "date": "Oct 20, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDY5ZGIwZjUtMmVhZi00OTBlLTk5ZTctOTY3Y2VlMGM1ZjI0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Old Dads",
-      "date": "Oct 20, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTY0ZThmZmYtNDc1Mi00NDNjLWFhZjEtYWM5MDZhNDYwMDRjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Yaariyan 2",
-      "date": "Oct 20, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2Y3NjhhOTUtOTM5OS00YWY3LTljNDYtYzM1NzBjZTZlMjJiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Ganapath",
-      "date": "Oct 20, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmI4OGY2ODYtN2I0YS00YjM4LTkzNTctMDRkN2Q5N2VkMTYxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Five Nights at Freddy's",
-      "date": "Oct 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzFkMDE2ZmEtOWMwNy00MWM2LThlNjMtZWQzNWY5MTJjZjcxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Freelance",
@@ -1320,119 +210,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMDcwYzM1YTEtYmU3YS00YjAzLTg1OGMtZjZmOWVhNTUyMmUxXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "When Evil Lurks",
-      "date": "Oct 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2UxZWExMTYtMzIzYy00NGUxLTk4Y2QtNTUxNWEyNWYxMWYzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "12th Fail",
-      "date": "Oct 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTE3OTIxZDYtNjA0NC00N2YxLTg1NGQtOTYxNmZkMDkwOWNjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Pain Hustlers",
-      "date": "Oct 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTc2ZTlkYWQtZmU2ZC00ZTFjLWFmOTAtMmRlZDYwMGVkYjhmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sister Death",
-      "date": "Oct 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzA4ZWQ2MDgtMDJmOC00NTI0LThiNWQtOTQ4YTgxN2MxMDU1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Tejas",
-      "date": "Oct 27, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzUxZDBkNzctMmY3ZC00ZmZmLWIxYTktZWM5YzFiMmY0NWVmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Hell House LLC Origins: The Carmichael Manor",
-      "date": "Oct 30, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOWNkZmZhYTItMWE3Mi00ODA3LWI3NTItZGM3NDZjMTQ1YjRmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Locked In",
-      "date": "Nov 1, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDhkYjUxNGMtZTk5Yy00MTZlLThlZTAtYjc5OGE5MTk1OGI4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Priscilla",
-      "date": "Nov 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOWRjYjVhYWUtNjM2OS00OWE1LTk5ZmYtZDM3MjllNzI1ZmQ4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Marsh King's Daughter",
-      "date": "Nov 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDBkY2M4MzUtNTZmZi00NDUzLWJmZmItM2ViOTA4NGE4NDc3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Nyad",
-      "date": "Nov 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjBmNGY5YWUtNzg0Ny00YTQ2LWIwNjctOTMzOGI3Y2E1YzFiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Quiz Lady",
-      "date": "Nov 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNWIyNjk4OGEtNjQwNS00ZWNjLWJjNjEtY2YyNDMzMjgyMjMwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sly",
-      "date": "Nov 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMmIxOGVhMDctNzliNi00OTEyLTkxNzQtMTlkODZhNTM5ZTkxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Deep Fear",
-      "date": "Nov 3, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGNmNjI2ZGMtOTU3My00NzFhLTg0NjUtYmM0ODk2MTBiNzQyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Foe",
-      "date": "Nov 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzdiNDM1ODctZDU3Mi00ZjQzLTk3N2QtZGFiZjEzOGQwNmE3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "The Marvels",
       "date": "Nov 10, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzczOWM4MzItMWMyOS00ZDczLWIxMzctNzBmYTgzOTI1MzI3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Holdovers",
-      "date": "Nov 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOWY3MjUzZTctOTI5ZC00MDA5LTk4ZTMtZWJjNjRmMzE4ZmI2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Other Zoey",
-      "date": "Nov 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjNhYzI1ZmMtMjYyYy00YzA5LTliMDUtYzdjMGJlZGM0YWM1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Killer",
-      "date": "Nov 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzU2MTlkMTctNWI3MC00ODUzLTlmYzQtMzZjYjVmMmYwZGU0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Jigarthanda Double X",
-      "date": "Nov 10, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDc5YWJmNDEtOTY3Mi00ZGY0LWJlNDQtMDhkM2VkNjMzMTVlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Tiger 3",
-      "date": "Nov 11, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGQ1MzkzZDYtMzg1YS00ODE0LTgyYTYtNDdkOWNjMDFhMmZjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "BlackBerry",
-      "date": "Nov 13, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzEzZDM5NWEtODgzNC00MTE5LWFhZTYtMGE2YTkxMzFiZWIyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Best. Christmas. Ever!",
-      "date": "Nov 16, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTM1MTdkYjUtMzQxNS00NzAxLWI3OWMtNjIyNTgyMzViNGE5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Little Bone Lodge",
-      "date": "Nov 16, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGE1NWExMGMtOTQyMS00OTFkLThmZjItZWQ2NDgxNWQzZDRjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
@@ -1440,169 +220,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BZDk2YjNhYzEtYzg2ZC00OWEwLWJhYzgtMGUzMWVjNDFmYzI5XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Trolls Band Together",
-      "date": "Nov 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2EzNTY0N2MtMTAyZS00ZTIwLTk5MmUtNWJhMmIwYmM5OWFiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Thanksgiving",
-      "date": "Nov 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzhiZTkyM2UtNjU2MC00MjcxLWJhZGYtODQ0MDViN2UxMzAwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Next Goal Wins",
-      "date": "Nov 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYThhZjU4MTYtNDI5Ni00NTE0LTk2NjUtZmZhMGFiNDhiNDM4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Please Don't Destroy: The Treasure of Foggy Mountain",
-      "date": "Nov 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTg2YjYyMjItNWJlYi00OTVmLWE2NTYtOWViMjhmYjk5OWM2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Rustin",
-      "date": "Nov 17, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmU0YTliNzItZmM0MS00YTg4LTg3NzMtN2U3OTAwZGIwNGM1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "20 Days in Mariupol",
-      "date": "Nov 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmY2ODlmNmQtODQ2MS00OTlkLWIyNTEtNzhhNTEyNjNjMjdjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Leo",
-      "date": "Nov 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODFkZWQwZDAtZDNkYi00MWU1LTkyNmYtM2JjMTM5OTI0ZGQwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Wish",
-      "date": "Nov 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2UyZTAxZDctODI5Mi00MDczLWI4OWMtNTliZjEyMmEyN2FkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Napoleon",
-      "date": "Nov 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGQ1NGUxNDUtNjg3Yi00ZTZjLWIwOTUtNDBjYWY5ZjVmZGI4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dream Scenario",
-      "date": "Nov 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTVhZjNhMzktOGQ2YS00OGVkLWExNGEtMjBlYWI3MjVmYmM1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Monster",
-      "date": "Nov 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGJjYzVhYjEtNWYwMy00YTk5LWExMjYtNTdjODMyZTU3MzQwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Genie",
-      "date": "Nov 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjJlN2Y5YjgtZDA4NS00OTY1LWJhOTgtZDdiOGQ4Y2MxODkwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Last Call for Istanbul",
-      "date": "Nov 24, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjdmMDgtMTBhMi00NGUzLWFmNGItYWNiNGQ2YWM2YzA4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Starfish",
-      "date": "Nov 24, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWI1MGU4MjYtNDIyOS00OTJhLWFiM2EtZGI3OTRiMzY3ZjEyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Family Switch",
-      "date": "Nov 30, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjYwNWMyNzgtYzZiNS00MjA3LWJmYTQtZGFlN2I5NzBhZDM4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Godzilla Minus One",
       "date": "Dec 1, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjc5MjllMGUtMDIwMS00ZDVkLWEzODQtM2NlMTMwMTZhNThmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Animal",
-      "date": "Dec 1, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZThmNDg1NjUtNWJhMC00YjA3LWJiMjItNmM4ZDQ5ZGZiN2Y2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Silent Night",
-      "date": "Dec 1, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzhjM2Q5ZmItNzkyMC00YjU5LWI3N2QtM2E5OGJhMGMxOGEzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Candy Cane Lane",
-      "date": "Dec 1, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjcyYmYzYTgtMzY3NC00NzdhLThhODQtMWJhYmRiYTdiZjc4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "May December",
-      "date": "Dec 1, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjA0ODViOWUtYzFjYy00ZDZlLWFlMmMtMjU2NzFmNWNlZmFhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sam Bahadur",
-      "date": "Dec 1, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDVkMjZlMGEtMjZlOS00MzQ3LThhOTUtYjY4YTE2OTZiMjBjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Mortal World 2",
-      "date": "Dec 1, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTExMzUyZjctZDViNS00NzA3LWJiNTctNzE1ZWJiYmZjNmM4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Parking",
-      "date": "Dec 1, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2NiZTUzNDMtMTFmYi00Yjg2LTlmYTgtZmQ5OGIzYWM3MWUwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Lady Ballers",
-      "date": "Dec 1, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzczYTg3NTctNzgxNS00MjZjLWE1NTQtYzEzYmVmODhkMjliXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Hi Nanna",
-      "date": "Dec 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmU4MzExZGQtYzUzZC00NGE2LTg5NTgtZWI3MWM4YzgyNWUxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Naga",
-      "date": "Dec 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2YwODk4ZGQtMGZjZi00MDg3LTkyYzktYjhjNWUzNmFlZTEwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Archies",
-      "date": "Dec 7, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmM5NDIyNDUtM2U5NC00ZTM4LTg5ZGQtMmFkYTQwZTcwNTQ2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Boy and the Heron",
-      "date": "Dec 8, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzA5Zjg3MTAtM2FhZS00NTNjLTg3NjEtNWQ4MTRhZjhiNzVmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Eileen",
-      "date": "Dec 8, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGNjMzc3ZWMtODc0MS00MWU3LTkxMDMtMjQ4MjhkZmRmNzMwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Leave the World Behind",
-      "date": "Dec 8, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjI0YzhjZjAtMzg3ZS00NTFhLWFkYjctMjE5ZGExNTk1MmJkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Fast Charlie",
-      "date": "Dec 8, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODAyNDBlNDItNjQ0Yi00NmJjLWFjYTYtNDczM2EyZTAwMTFjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Mr. Monk's Last Case: A Monk Movie",
-      "date": "Dec 8, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGFjMmMxNTgtYmQyNS00ODRjLWE4Y2YtMDAyOWMwNDMxMmMxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kaiva",
-      "date": "Dec 8, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZWE2YzMxY2MtZjlhOS00NDA3LWFiMWEtMDQxZDRlM2QxYjFlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Wonka",
@@ -1610,54 +230,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BM2Y1N2ZhNjctYjVhZC00MDg2LWFhNTItMzI3ZjAwZDhjYmFiXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "The Family Plan",
-      "date": "Dec 15, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjcxYmNmNTktZDhlNS00ZGUzLTk2NGUtZDQwMDVmMWZkMjY0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Finestkind",
-      "date": "Dec 15, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmM2YzZlN2QtMmM3OC00NTFkLTgyY2YtYjI1NDdiYTYyNjRhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Chicken Run: Dawn of the Nugget",
-      "date": "Dec 15, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTMwN2Y0MDYtYzhhZS00YzI5LWE5N2UtOThlZWQxODc4YjkxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Pindam",
-      "date": "Dec 15, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjhmODY1ZWQtYWM1ZC00OTczLWJhYzYtZGFjYmY0NTMyZWIxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Maestro",
-      "date": "Dec 20, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2M1MWUyYzctMzk1Zi00M2RkLTkwY2YtMzE4MDhiZGQwZmU5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dunki",
-      "date": "Dec 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMThhZjM4M2UtYmE1NC00YTMzLTk3ZTAtNmQ1ZmI4YmRmZGE1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Perfect Days",
-      "date": "Dec 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGVmODFkM2MtOTEzMy00MjFjLThjZmYtODMxZmI1MzcyNDkyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Rebel Moon - Part One: A Child of Fire",
       "date": "Dec 21, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYTRmOTk2ZDYtY2Q3Mi00MGYwLWFjNDQtYTliODc3NzM1ZjBlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Neru",
-      "date": "Dec 21, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDY0OTYyOWMtYzIzMy00Zjg0LWE2MjUtZTcxYWI4NTViNjYxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Migration",
-      "date": "Dec 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjdlYWJjZTctODViZS00ODVlLTljOTEtOTZhYWZhZTRkZDM1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Aquaman and the Lost Kingdom",
@@ -1670,54 +245,14 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BZWUxYTFhMzItMmE0ZC00ODgzLTkwZWItOGUwMTI1YjQwMDJjXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "The Iron Claw",
-      "date": "Dec 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjJjZDc5YTUtYTc4My00Yzc2LTkwMGUtOTg3ODIwYzJkYTJiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Poor Things",
       "date": "Dec 22, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWU2MjRjZTYtMjVkMS00MTBjLWFiMTAtYmZlYTk1YjkyMWFkXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "American Fiction",
-      "date": "Dec 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2I4ZTZhOTMtZDQ0Ni00MzI5LWE2YjktNzc0NjdkOGJiZjYzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Saltburn",
-      "date": "Dec 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjk4NGE3MWItMDRhMy00YzhiLTk0MGUtZDlkNmQxYWIxYzc2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Salaar",
       "date": "Dec 22, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzU2MzZiOTEtZTgwOS00MTdlLWJmMDQtNjdjOGIxYTA0NTYxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "All of Us Strangers",
-      "date": "Dec 22, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDU2ZjBlOTUtMTIzMC00OWI0LTg2OTAtZmUxYTE2MzdhNzZlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Color Purple",
-      "date": "Dec 25, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzg2ZGEzZjItZWY3Ni00MTFjLTk3ZmEtZTE1OGFmOTkzM2I4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Boys in the Boat",
-      "date": "Dec 25, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzc2MTAzMGEtYjVlYy00N2YxLWIwODEtMTc1MjE0MjExYjI1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Ferrari",
-      "date": "Dec 25, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmUzYmJiMDMtZjIxNy00ZjBlLThjZDMtMDA1ZDM4MWMwNmI0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kho Gaye Hum Kahan",
-      "date": "Dec 26, 2023",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODNkMTE3M2YtYjdkMi00ZDc3LWI3N2ItMDFkNTU5MjIyYzNhXkEyXkFqcGc@._V1_.jpg"
     }
   ]
 }
