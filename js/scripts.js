@@ -218,6 +218,12 @@ function renderTimeline(data, rootElement) {
     markerDiv.className = "timeline-marker";
     const contentDiv = document.createElement("div");
     contentDiv.className = "timeline-content";
+    contentDiv.setAttribute("tabindex", "0");
+    contentDiv.setAttribute("role", "button");
+    contentDiv.setAttribute(
+      "aria-label",
+      `Expand movie list for ${yearData.year}`
+    );
     const headerDiv = document.createElement("div");
     headerDiv.className = "timeline-header";
     const movies = yearData.movies || [];
@@ -311,6 +317,12 @@ function renderTimeline(data, rootElement) {
         void container.offsetHeight;
         parent.classList.remove("active");
         container.style.maxHeight = null;
+      }
+    });
+    contentDiv.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        this.click(); 
       }
     });
   });

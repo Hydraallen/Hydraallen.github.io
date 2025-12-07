@@ -985,9 +985,17 @@ section strong {
   position: relative;
 }
 
-.timeline-content:hover {
+.timeline-content:hover,
+.timeline-content:focus {
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  outline: 2px solid #00695c;
+  outline-offset: 2px;
+}
+
+.timeline-content:hover .toggle-icon,
+.timeline-content:focus .toggle-icon {
+  color: #00695c;
 }
 
 .timeline-header {
