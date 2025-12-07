@@ -322,7 +322,7 @@ function renderTimeline(data, rootElement) {
     contentDiv.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        this.click(); 
+        this.click();
       }
     });
   });
@@ -383,6 +383,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       const card = document.createElement("div");
       card.className = "place-card";
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "button");
+      card.setAttribute("aria-label", `View photos of ${displayName}`);
+      card.setAttribute("data-country", place.country.toLowerCase());
       card.setAttribute("data-country", place.country.toLowerCase());
       card.setAttribute("data-name", place.name);
       card.setAttribute("data-date", place.date);
@@ -408,6 +412,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       };
       card.addEventListener("click", openGalleryLogic);
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openGalleryLogic();
+        }
+      });
       const photoBtn = card.querySelector(".photo-btn");
       const videoBtn = card.querySelector(".video-btn-overlay");
       if (photoBtn) {
@@ -421,6 +431,12 @@ document.addEventListener("DOMContentLoaded", function () {
           e.stopPropagation();
         });
       }
+      const buttons = card.querySelectorAll(".action-btn");
+      buttons.forEach((btn) => {
+        btn.addEventListener("focus", (e) => {
+          e.stopPropagation();
+        });
+      });
       grid.appendChild(card);
     });
   }
