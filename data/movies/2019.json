@@ -1,193 +1,13 @@
 {
   "year": 2019,
-  "total_count": 377,
-  "saved_count": 377,
-  "favorite": "The Balkan Line",
+  "total_count": 43,
+  "saved_count": 43,
+  "favorite": "Avengers: Endgame",
   "movies": [
-    {
-      "title": "The Balkan Line",
-      "date": "Jan 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGFiMWQwYjMtYzg2YS00YWFiLTkxNDUtZTEyMDhjYzgxOGI0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Wildlife",
-      "date": "Jan 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTliYzZkZmItODdhZi00YTcyLTkzYzQtZWJlNjE0NTUzMGU1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "T-34",
-      "date": "Jan 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjc3Y2M4ZmQtZjMyMy00NDA1LTkzYTUtNGU1M2QxOWJlMmViXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Escape Room",
-      "date": "Jan 4, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjQ2NDMwMTY3MF5BMl5BanBnXkFtZTgwNDg5OTc1NjM@._V1_.jpg"
-    },
-    {
-      "title": "The Vanishing",
-      "date": "Jan 4, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTU5NDQxNzE0Ml5BMl5BanBnXkFtZTgwNDMwODE1NzM@._V1_.jpg"
-    },
-    {
-      "title": "Rust Creek",
-      "date": "Jan 4, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzg0Yjk2YjYtYzVmZi00Mzg5LWE0MGYtNGVmMDMyMDIwYTM1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Last Boy",
-      "date": "Jan 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGExYmMyMWQtOGFjNC00YzA5LWJiNTYtMmJjZTU0NWIwMzQzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Petta",
-      "date": "Jan 9, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTZiM2EyOTAtNjk2OC00NmQxLThlY2YtNTliYTg4ZDRlMzA4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Colette",
-      "date": "Jan 9, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2RmNjc2NmEtNjdjYi00YmFmLTlmZjMtZjQyYzIxZGE4YWRiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Reign of the Supermen",
-      "date": "Jan 10, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTQzYWM2NDYtNTc3MC00MDUxLTgxOWEtMjNmMmY4ODFkZWVmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Viswasam",
-      "date": "Jan 10, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2EzNDUxODktMDIzNC00ZGFiLTk5NTItMTk3MDIyNjMxZTZlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "A Dog's Way Home",
-      "date": "Jan 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTg5MjcwMzY5OV5BMl5BanBnXkFtZTgwMDM0OTI1NjM@._V1_.jpg"
-    },
-    {
-      "title": "Uri: The Surgical Strike",
-      "date": "Jan 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTgyMTlkZTgtMTMxYi00Mjk5LTg2NTMtNGYyMDVlZWM0NmZjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "On the Basis of Sex",
-      "date": "Jan 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDMyOWY1ODEtNjQwMy00ZjE3LTliMjQtZWM4YTk3OTM1Y2Y0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Stan & Ollie",
-      "date": "Jan 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDU5ODI0MzktNjdhMy00MTcwLTljMzYtNzg3Njk5ZTgwMDgxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Replicas",
-      "date": "Jan 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODNhZDU0NzgtNjMxOC00ZGMzLThhZDctMzk5NzExMzIzZjFlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Upside",
-      "date": "Jan 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzY3NzYyNjI0N15BMl5BanBnXkFtZTgwNjYzMDc0NjM@._V1_.jpg"
-    },
-    {
-      "title": "Abducted in Plain Sight",
-      "date": "Jan 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODQ1ZWE4ZDUtMzgxMC00ZjQ1LWJhMDMtMjc4ZDk5ZTFlNjM5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dragon Ball Super: Broly",
-      "date": "Jan 16, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTA5MTc1M2EtZWQ2Ni00ZmU2LTg3MzQtOTliMjE4OGM0ZWFiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Glass",
-      "date": "Jan 18, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_.jpg"
-    },
-    {
-      "title": "Close",
-      "date": "Jan 18, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWNhN2JkZTQtOTM3Zi00MzVlLTg2ZTctZDljNjhhMmIyYWYxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Fyre",
-      "date": "Jan 18, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjQ2NzE1MjYxMV5BMl5BanBnXkFtZTgwMjM3MDQxNzM@._V1_.jpg"
-    },
     {
       "title": "IO",
       "date": "Jan 18, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2RiYTkyMjMtYTljOS00ZDJiLWJhMWItMGYzNzJkYmE1NTMzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Kid Who Would Be King",
-      "date": "Jan 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTU3OTA1OTU1Ml5BMl5BanBnXkFtZTgwNzgzNTM5NjM@._V1_.jpg"
-    },
-    {
-      "title": "Serenity",
-      "date": "Jan 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjRlMWQ3MzUtOGU3ZS00YmJlLTljYjMtYWRiYTJjMDYzNGMyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Polar",
-      "date": "Jan 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmEzNzU2MDUtZmJiNi00ZGI0LWFiNjItYWQzNGIxY2I2MGZjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Manikarnika: The Queen of Jhansi",
-      "date": "Jan 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTg0MTA5YjgtNDJkMS00Mzk0LTg5NzAtZDkwMjg2Y2QwM2E3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "King of Thieves",
-      "date": "Jan 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTdmZDYyN2ItN2ZmOC00NjllLWJhYmUtM2ZhYjc0YzNjMGU5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Serial (Bad) Weddings 2",
-      "date": "Jan 30, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDU5YWYyNmUtZDcwOC00NGI3LThmYjEtYTFiNzE3MzVhMGY0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Arctic",
-      "date": "Jan 30, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGFmMDczODAtMzFiZi00NGQ2LTgyOTYtZmY2YTJlOTE4MzUxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Wild Pear Tree",
-      "date": "Jan 30, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOWU1YjExYTktZjNjMi00ODQwLWE5ODQtZGE4NzMyYWQ1NTU2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Resurrection",
-      "date": "Jan 31, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTJjNDM4NDYtYjkwOS00MDQ1LThmYzgtMjk3OWYzNDNkOTJkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Miss Bala",
-      "date": "Feb 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDZkMzlhY2ItY2Q2Ni00ZDMyLTgzYzgtMWVjMDdhODczZDJhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Velvet Buzzsaw",
-      "date": "Feb 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjExMDQ1NjMzOV5BMl5BanBnXkFtZTgwMjkxMzMyNzM@._V1_.jpg"
-    },
-    {
-      "title": "Money Trap",
-      "date": "Feb 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTUwNWI0OTQtNzgzZS00NDFmLTk0OWQtMGE2NTIxMTYzY2VlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "They Shall Not Grow Old",
-      "date": "Feb 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGMwNzc3NTQtY2QzZS00YzJmLTgyM2UtYjlkMjBjZTAwM2Y5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Then Came You",
-      "date": "Feb 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTQ0ZmUyMDgtYTRlMi00MzVlLWIxZDAtYzY1MmRkZmEzNDBkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Wandering Earth",
@@ -195,79 +15,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BM2RkYTg4YWQtNmE3Ny00MmE3LWJkNzQtZTFhNWNjOGM3OTZlXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "The Lego Movie 2: The Second Part",
-      "date": "Feb 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTkyOTkwNDc1N15BMl5BanBnXkFtZTgwNzkyMzk3NjM@._V1_.jpg"
-    },
-    {
-      "title": "What Men Want",
-      "date": "Feb 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTYxNjE2NjIwOF5BMl5BanBnXkFtZTgwMjE0MzkxNzM@._V1_.jpg"
-    },
-    {
-      "title": "Cold Pursuit",
-      "date": "Feb 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmQ5OTk1OWMtYmY0MS00ZjFlLTk5MmYtMGRhZGRkZDI5ZGJiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Prodigy",
-      "date": "Feb 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDExNWI4ZDMtNjhiZi00NDBkLTljMTctMDNiNTZhOThkOWNmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Everybody Knows",
-      "date": "Feb 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzMwNDQwNjc4N15BMl5BanBnXkFtZTgwMDM3OTY3NjM@._V1_.jpg"
-    },
-    {
-      "title": "Lords of Chaos",
-      "date": "Feb 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjUwNDA3MTgwOV5BMl5BanBnXkFtZTgwNTEzMjk5NjM@._V1_.jpg"
-    },
-    {
-      "title": "The Man Who Killed Hitler and Then the Bigfoot",
-      "date": "Feb 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTg2NzI4NjY1Nl5BMl5BanBnXkFtZTgwNjUxOTc3NTM@._V1_.jpg"
-    },
-    {
-      "title": "Isn't It Romantic",
-      "date": "Feb 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTk4MDE1ZmItNDVlOC00NTI4LThhNWMtNzUwOGFlNzM0OWNiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Happy Death Day 2U",
-      "date": "Feb 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTg0NzkwMzQyMV5BMl5BanBnXkFtZTgwNDcxMTMyNzM@._V1_.jpg"
-    },
-    {
-      "title": "Birds of Passage",
-      "date": "Feb 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjUxODM5ODUyM15BMl5BanBnXkFtZTgwNzA3Nzg3NjM@._V1_.jpg"
-    },
-    {
       "title": "Alita: Battle Angel",
       "date": "Feb 14, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmZhZGQzM2MtMWEyZC00YTU1LTk4YTQtMTg3ZjEzM2U1NTkxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Gully Boy",
-      "date": "Feb 14, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOWFkY2M3NDctZGEzMS00M2VmLTgzMTAtZWFiNjVmZDc5NWFjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "At Eternity's Gate",
-      "date": "Feb 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZWJkOWMyNTUtNTFmZi00ZmUyLWExZGQtMjYwOGRlNTQ1YTkwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Golden Glove",
-      "date": "Feb 21, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODcwNTRlZjItNzNiOC00MWRlLTkzNGQtOGRkZmNiYWEzYWJmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kumbalangi Nights",
-      "date": "Feb 21, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWE2NTAyZjEtOTNlZC00Y2NkLTgxMDEtNGJmNmU4MzJhODU0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "How to Train Your Dragon: The Hidden World",
@@ -275,49 +25,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMjIwMDIwNjAyOF5BMl5BanBnXkFtZTgwNDE1MDc2NTM@._V1_.jpg"
     },
     {
-      "title": "Fighting with My Family",
-      "date": "Feb 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjliMDY3N2YtOTI2NS00MjQ0LWFjOGItMjQ1MzYyZGVlMDJiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Paddleton",
-      "date": "Feb 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2I0ODk3NjgtMmEwYi00MzQxLThlMWUtZWViZmRjMTkwMjFlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Hole in the Ground",
-      "date": "Feb 26, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjI3NjMwNzUzNV5BMl5BanBnXkFtZTgwMzEzMDkyNzM@._V1_.jpg"
-    },
-    {
       "title": "Apollo 11",
       "date": "Mar 1, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYyMzEzNjI4M15BMl5BanBnXkFtZTgwODgxOTgyNzM@._V1_.jpg"
-    },
-    {
-      "title": "Luka Chuppi",
-      "date": "Mar 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYWEyY2NkYmMtMGQ4Ni00ZTgzLThhNDMtNmI3ZTI5MDJiY2EyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sonchiriya",
-      "date": "Mar 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTA1MGI1NDEtOTY2Ni00ZTQxLWEwY2EtMzIzNTQxMzY0NDg4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Boy Who Harnessed the Wind",
-      "date": "Mar 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjM2OTg5MTA0OV5BMl5BanBnXkFtZTgwNTMyNTY0NzM@._V1_.jpg"
-    },
-    {
-      "title": "Greta",
-      "date": "Mar 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGMwYWU0NjctY2E4MS00MzZmLWEyZWEtNWEwOTQxNzc4MDJkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Transit",
-      "date": "Mar 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODhkZjNkNGItNDQ3Zi00MGUwLWFkZTctMGY1ODExNzAyOWUwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Captain Marvel",
@@ -325,149 +35,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BZDI1NGU2ODAtNzBiNy00MWY5LWIyMGEtZjUxZjUwZmZiNjBlXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Badla",
-      "date": "Mar 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDEyNjI2NTktZmJlMy00Njk5LTk2OGQtMjI5NTAwNWRiZmFlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Kid",
-      "date": "Mar 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTI0NzQxOTMwOF5BMl5BanBnXkFtZTgwMjAxMzg0NzM@._V1_.jpg"
-    },
-    {
-      "title": "A.I. Rising",
-      "date": "Mar 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDNiY2IwYjktZGI0Yi00MzU3LTlhNjYtMTlmNzgxMzdlMGQ1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Triple Frontier",
-      "date": "Mar 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODU4MzM2MDAxMl5BMl5BanBnXkFtZTgwNDEzNjM0NzM@._V1_.jpg"
-    },
-    {
-      "title": "Five Feet Apart",
-      "date": "Mar 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDE5NTFmODMtZDUyZi00MTdkLTlmMmItMThjZmViMjIzOTcxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Wonder Park",
-      "date": "Mar 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjI5MTQ5NzE4Nl5BMl5BanBnXkFtZTgwNTk2MDA5NjM@._V1_.jpg"
-    },
-    {
-      "title": "Captive State",
-      "date": "Mar 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTgyNjU0NTAxOV5BMl5BanBnXkFtZTgwNTc4MDIzNjM@._V1_.jpg"
-    },
-    {
-      "title": "The Aftermath",
-      "date": "Mar 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTk2MDEyNTE5M15BMl5BanBnXkFtZTgwMzY1NDM4NjM@._V1_.jpg"
-    },
-    {
-      "title": "Fisherman's Friends",
-      "date": "Mar 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDgxNmY1ZTMtZmM2MC00MGZkLWFkNzEtNGJmNmEzNDY1NGM2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Climax",
-      "date": "Mar 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYWQwOTVmNGQtNGU1Ny00ODNkLTkzMmMtYzY1ZWQyMzk0Y2ZiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Girl",
-      "date": "Mar 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTE5Njk1YzItMzEyYi00ZjQ2LTgzYjYtNTczYzIzN2QyYzE2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Inventor: Out for Blood in Silicon Valley",
-      "date": "Mar 18, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmM2ZjAxZWYtOTIwYS00NDgyLThlYjctZTdlOTkxOTExZjliXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kesari",
-      "date": "Mar 21, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMmUyYzA3MGQtNzE0Zi00Nzg0LTk4NTAtNDQ3YWQ4M2IwMWYxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Us",
-      "date": "Mar 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzhkMjFkN2YtODU2Ni00YWYwLWExN2MtOWNjZmQxM2U4YTM5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Triple Threat",
-      "date": "Mar 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODc3ODJkZDItZDkyNy00OWIxLWFiZjAtZTAyYWQ1OGJjNzAxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Dirt",
-      "date": "Mar 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmRjZWUzMWEtNWNmNC00YjBlLTliOTUtY2I1Y2JkZjQ4NmViXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Gloria Bell",
-      "date": "Mar 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTc5Nzc1OTk3OV5BMl5BanBnXkFtZTgwNDM1NTQ3NjM@._V1_.jpg"
-    },
-    {
-      "title": "The Hummingbird Project",
-      "date": "Mar 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTA2MDM2OTMzODNeQTJeQWpwZ15BbWU4MDgxNjExMjcz._V1_.jpg"
-    },
-    {
-      "title": "Dragged Across Concrete",
-      "date": "Mar 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjE1MTk5NDQ5Ml5BMl5BanBnXkFtZTgwODUxNzg0NzM@._V1_.jpg"
-    },
-    {
-      "title": "Mirage",
-      "date": "Mar 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTZhM2U5MjEtZWZmNC00ZDA2LWFlMWEtODliMzU1YmVlYzNhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Super Deluxe",
-      "date": "Mar 28, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmQ3NjM2OWMtY2IxNy00OWY4LWIyYjMtNGUzMGU3ZTZkMWJmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Lucifer",
-      "date": "Mar 28, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODIwNTc3NjAtODY5OS00YjcxLWE0ZWYtY2NmOWZiMGIwZTBjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Dumbo",
       "date": "Mar 29, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_.jpg"
-    },
-    {
-      "title": "Unplanned",
-      "date": "Mar 29, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzBjMjQ1YTAtYmMwMy00YTk0LTlmNDUtNDI4YjY0MmExZjI3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Beach Bum",
-      "date": "Mar 29, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGU5MzRkY2MtYWIyMS00NzU5LWE0NmQtMjMwYmE4NTkyMjA2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Highwaymen",
-      "date": "Mar 29, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjIyNzBjNDktYjhlZS00MDk5LTg3OTctNDkwMTFlNmJhN2FlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Hotel Mumbai",
-      "date": "Mar 29, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDE5NTVmM2UtMjYyZC00NTYzLTgyMjMtYzc5OTZkODliNTA1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "A Vigilante",
-      "date": "Mar 29, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGJmNzA5ODktM2NlOS00YjcxLWJiNTMtODc2OGUzM2ExNmYyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Justice League vs the Fatal Five",
-      "date": "Mar 30, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWI5MmU3ZDAtNGFkNS00ZTI4LTgxMDMtNzUwYzkxYzhlOWU0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Shazam!",
@@ -475,199 +45,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BZWM1YjdmOGQtNGYyMC00NjMwLTk1OWUtMGYzM2NjYjliYzYyXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Pet Sematary",
-      "date": "Apr 5, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNWQ0ZTQ2NTQtNGQ3MS00YTdlLThlOTAtZDBiZDkzNDk1MDk2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Best of Enemies",
-      "date": "Apr 5, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjQ5MjA2NDkyM15BMl5BanBnXkFtZTgwNTIwNjUzNzM@._V1_.jpg"
-    },
-    {
-      "title": "The Wind",
-      "date": "Apr 5, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTJmNzFhNTUtNDZmZS00M2Y4LTkyNWMtNDhkNjg2NDg4OGJhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Unicorn Store",
-      "date": "Apr 5, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjUyMTY2OTkwMF5BMl5BanBnXkFtZTgwODEyODA3NzM@._V1_.jpg"
-    },
-    {
-      "title": "The Silence",
-      "date": "Apr 10, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzY2ZjM0NTgtNDc3OS00YmQwLTlkN2YtMmRmMDAxMmM0NTliXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Little",
-      "date": "Apr 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTU2NDYwNzkzMV5BMl5BanBnXkFtZTgwNjAyMjMxNzM@._V1_.jpg"
-    },
-    {
-      "title": "Hellboy",
-      "date": "Apr 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjI1Yzc0M2MtZjc5Ny00ZDU0LWE3NzEtOWY5ODk2MzdhZThjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Missing Link",
-      "date": "Apr 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTBiMzZiM2MtYTMxMS00M2Q3LTkwYTItOWMzMDkyMTdlOGU2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "After",
-      "date": "Apr 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjEyMjhmODItNWI2Zi00ODBiLWExNWItYjgwYWIzNjJhODI5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Perfect Date",
-      "date": "Apr 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzc4ZWJmYTEtYTA2Yy00ZDBiLTk5NzQtNWIxN2NiYjBiZGUyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Tashkent Files",
-      "date": "Apr 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODVkZWI2MTAtZDkzZi00NWY4LWE2YTMtNGU2ZTg2NjFhZDEwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "High Life",
-      "date": "Apr 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDRhYjdiMDEtN2UzZC00ZGQyLTk3OTQtMTFkZGQ0YmM5NDk4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Stockholm",
-      "date": "Apr 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmYyNzhhN2EtODNlNi00MWMyLTg3YzYtMTc5Nzk4YWFlNDMxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dogman",
-      "date": "Apr 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGU1MGIzMTYtM2JkMy00N2JhLWE2MDgtNDdkNDU2Mjc4NzRjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Guava Island",
-      "date": "Apr 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjRmZjY4OWMtZDljMC00OGI4LTgxODMtMzk3MzRlZTVjNGEyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Breakthrough",
-      "date": "Apr 17, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmU1NWU3MWYtMWIzZC00YzgwLWI3ODktZGYyNzJmNTIwZDgxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kalank",
-      "date": "Apr 17, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNWVlMWNmMTUtMmY2MC00NWQwLTkzZjctMWMzMzFhMDVjNDNiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Curse of La Llorona",
-      "date": "Apr 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWFkNjBkYjQtYjQyNC00NDIxLTg3ZDQtNDU3YzRiYWI5NjQyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Someone Great",
-      "date": "Apr 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjI5MzQ0NjA5Ml5BMl5BanBnXkFtZTgwNjA1MTg1NzM@._V1_.jpg"
-    },
-    {
-      "title": "Jersey",
-      "date": "Apr 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWU0ZTk1ODYtOTk4MS00ZTdmLWJjOWYtMmJiYWQ2ZTcwZjJlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Athiran",
-      "date": "Apr 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmExYmRiMDAtNDc4NC00MjcyLTgwMjUtYzE1ZTJiZTBhZDRmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Red Joan",
-      "date": "Apr 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGE0NWM0ZjQtNDRhYi00M2E0LWE2ZGYtN2ZjY2UyMWUzMDM5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Teen Spirit",
-      "date": "Apr 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2QwNWVmYTYtOWNiNS00NDYxLWFkMTItMWUwMGU3MGYxZTZjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Man Who Killed Don Quixote",
-      "date": "Apr 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZWRmOTY5MGYtNjAyYS00ZjUzLTk1YWQtOTMyMDFlNWNmOTI0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Under the Silver Lake",
-      "date": "Apr 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTMzN2JkZDAtYjgyMy00M2QxLWE2NWItNTEyZGVlNTgyYTViXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Avengers: Endgame",
       "date": "Apr 26, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg"
-    },
-    {
-      "title": "Knock Down the House",
-      "date": "May 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzZmZjhiMzItZDk5NC00Y2U3LTkzOGQtZjJjMWM2MmViZDBiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Intruder",
-      "date": "May 3, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTczMzc4NDY0MF5BMl5BanBnXkFtZTgwMjI3Njg3NjM@._V1_.jpg"
-    },
-    {
-      "title": "Long Shot",
-      "date": "May 3, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2E2NDIwMGUtNmFkZC00NDFjLWI5ZWMtMTE1M2E2YTM1OWVlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Extremely Wicked, Shockingly Evil and Vile",
-      "date": "May 3, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDgyMjM4ZmYtYTcyZi00YzhhLTkwNzgtMTVhYTdmNjkxMzIzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Last Summer",
-      "date": "May 3, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTg3NTQ5Mjc1N15BMl5BanBnXkFtZTgwNzg0MjU4NzM@._V1_.jpg"
-    },
-    {
-      "title": "Maharshi",
-      "date": "May 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmU5NDU0YjktYzYwYy00N2FiLWI2YmYtNzhjOTg4NjkwN2IyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Pokémon: Detective Pikachu",
-      "date": "May 10, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDU4Mzc3NzE5NV5BMl5BanBnXkFtZTgwMzE1NzI1NzM@._V1_.jpg"
-    },
-    {
-      "title": "The Hustle",
-      "date": "May 10, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTc3MDcyNzE5N15BMl5BanBnXkFtZTgwNzE2MDE0NzM@._V1_.jpg"
-    },
-    {
-      "title": "Tolkien",
-      "date": "May 10, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjUzNzA1MDczOF5BMl5BanBnXkFtZTgwODY5OTI2NzM@._V1_.jpg"
-    },
-    {
-      "title": "Student of the Year 2",
-      "date": "May 10, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjRlMjFhYzktMGRjOC00NGQ5LTgzZjktNTg3ZWI2ZTgzNGQ5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Professor and the Madman",
-      "date": "May 10, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2JlYzRmNjYtYTg4Mi00MjMyLTlhYTYtMmNiY2Y0ODg5M2I1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Wine Country",
-      "date": "May 10, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmE5NWJkYzktZWVjMC00NjAxLWJiMzktMTRlNDQ3MDViZjZiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Gangster, the Cop, the Devil",
-      "date": "May 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTdjOTAzOTgtNWI1My00YzZkLWI2YWMtYjQ2MTAxOTI4YWQzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "John Wick: Chapter 3 - Parabellum",
@@ -675,79 +55,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BYjdlNWFlZjEtM2U0NS00ZWU5LTk1M2EtZmQxNWFiZjk0MGM5XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "A Dog's Journey",
-      "date": "May 17, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNWVkY2NlNmEtNzU3Mi00Njc0LWJiNjMtNzU5ZTdhZTAzZmU3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "De De Pyaar De",
-      "date": "May 17, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmU4ZDNmOGQtNzUxMC00MmJkLWE5MDYtZTA4NTNiOTk3OTAwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "See You Yesterday",
-      "date": "May 17, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTI1OGY0NjgtN2JhYS00OGRhLTliNGYtYTcwZDIwMDhkOGZiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Trial by Fire",
-      "date": "May 17, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDZiODFjYTUtNDY1OS00ZjMxLTkzN2MtNzA5NWIwYWJlYTg5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Aniara",
-      "date": "May 17, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjUzMzk4NDMzNV5BMl5BanBnXkFtZTgwNjE5NDY1NzM@._V1_.jpg"
-    },
-    {
-      "title": "Slaughterhouse Rulez",
-      "date": "May 17, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjExMjU1NjUwN15BMl5BanBnXkFtZTgwOTAzOTgwNjM@._V1_.jpg"
-    },
-    {
-      "title": "The Professor",
-      "date": "May 17, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGI5MjIxOTAtMGQzMy00OWU2LThjODktZTRmM2IwNTgwMmY0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "We Have Always Lived in the Castle",
-      "date": "May 17, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGJkY2JhMTMtMDc3OS00ZjY0LWEwYzYtMWZlMmFmZGQzNzJlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Aladdin",
       "date": "May 24, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjQ2ODIyMjY4MF5BMl5BanBnXkFtZTgwNzY4ODI2NzM@._V1_.jpg"
-    },
-    {
-      "title": "Booksmart",
-      "date": "May 24, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjEzMjcxNjA2Nl5BMl5BanBnXkFtZTgwMjAxMDM2NzM@._V1_.jpg"
-    },
-    {
-      "title": "Brightburn",
-      "date": "May 24, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTBhNDcwNzYtOWE3Mi00MGU1LWI1YTAtOTJiZjIzODRjMjc2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Avengement",
-      "date": "May 24, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTQ1ZWNlODctNmI0MC00NmUzLWE4NTYtZjUwYzFlODYzMTgxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Rim of the World",
-      "date": "May 24, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjAyNTE0MTQzNF5BMl5BanBnXkFtZTgwMjc2MzUwODM@._V1_.jpg"
-    },
-    {
-      "title": "The Perfection",
-      "date": "May 24, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTA3NzkzMDUxODBeQTJeQWpwZ15BbWU4MDM0ODc5ODcz._V1_.jpg"
-    },
-    {
-      "title": "Level 16",
-      "date": "May 27, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTdlMmFkYTgtOTU5NC00ZGNjLTg1MjMtOWEzMjBjZDk0MDM3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Godzilla: King of the Monsters",
@@ -755,69 +65,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMDVhMjk2OGUtYzYxNS00NzBjLTk5YTItYzI0ZjgzNjY1NmI0XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Rocketman",
-      "date": "May 31, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDNmM2U1MDAtNmE3NS00ZWVjLWFiZDktZTkwZjY5YWU2ZjZkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Ma",
-      "date": "May 31, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTA2MjA3ODU0NjBeQTJeQWpwZ15BbWU4MDE3NTQxNDcz._V1_.jpg"
-    },
-    {
-      "title": "Always Be My Maybe",
-      "date": "May 31, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjUxMDEzMWItN2Y2OS00ZTNmLThhYTEtZDAzYWFiMzQ0MTlkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Enes Batur: Gerçek Kahraman",
-      "date": "May 31, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzgwOTljZjgtMzQxYi00ZDQ5LWIzMTEtZDNjYWQyMGVmYTU5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Mustang",
-      "date": "Jun 4, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2YzYTE5Y2ItMzg0Ni00M2YwLWJjZGQtNTA3MjUwNzBmNGY0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Giant Little Ones",
-      "date": "Jun 4, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTU5OGI2ZGItODNiNS00OTkxLTk3MmItMmFkZjNlYjIyNDAyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Bharat",
-      "date": "Jun 5, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTUzYWUzYzMtNTQ2NS00ZDI5LTk2MzQtNmE0ZWQwMGZiMjliXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Would You Rather",
-      "date": "Jun 6, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTI1ODY3MTQwNl5BMl5BanBnXkFtZTcwMjU5MjMxOQ@@._V1_.jpg"
-    },
-    {
-      "title": "The Secret Life of Pets 2",
-      "date": "Jun 7, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTA2NzM0MjA0MTJeQTJeQWpwZ15BbWU4MDk1MzYwNzYz._V1_.jpg"
-    },
-    {
       "title": "X-Men: Dark Phoenix",
       "date": "Jun 7, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BZjcwMDIyNjctMDVmNS00MzkyLTgxMDMtNTFmNTk0NDkyNzdjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Last Black Man in San Francisco",
-      "date": "Jun 7, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTUyNTdhNmUtYzU5Zi00ZTI0LTg3NzQtNjM5ZmFkZWNiOTYwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Souvenir",
-      "date": "Jun 7, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTk2NjY3NDYzN15BMl5BanBnXkFtZTgwOTUxNzg0NzM@._V1_.jpg"
-    },
-    {
-      "title": "I Am Mother",
-      "date": "Jun 7, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTkxMTczNTA4Nl5BMl5BanBnXkFtZTgwNDAyMzgwODM@._V1_.jpg"
     },
     {
       "title": "Men in Black: International",
@@ -825,104 +75,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BNTI0ZjJlODYtNTAyOS00ZDk4LTk0M2ItNDljMzY5NmZkYTRkXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Shaft",
-      "date": "Jun 14, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNWUzNjIxY2EtNGNjMC00N2U1LTk1YzItMzUwOWIzOTc1OGRjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Late Night",
-      "date": "Jun 14, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDFkZTUxZTMtODU5Mi00YzE1LWE0ODEtZDg4ZmMxMTNiNTA3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Dead Don't Die",
-      "date": "Jun 14, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGQzMTFkM2UtZDhmOC00OGY4LWFjYzctMjljZDkzYTAxN2VmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Murder Mystery",
-      "date": "Jun 14, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzg4NDFjNmYtZjQxMy00MDY4LWEyZjUtYzRjNjNkNjJiZTZhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Plus One",
-      "date": "Jun 14, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzUyYjcxNmQtM2ZkZC00NzBjLThjYjktYjVkODBhYTA0OTI4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Edge of Democracy",
-      "date": "Jun 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzA1NWFiZGUtZjQ4Ni00NmE1LThjMzAtMjA0YzE1MzM2ODlmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kabir Singh",
-      "date": "Jun 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjU5ZTljMDEtNzg5Ny00OTliLWI3NmYtOTE1ZDg3NTNkMDM0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Agent Sai Srinivasa Athreya",
-      "date": "Jun 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDRiMjY1ZjQtNzFkNC00NmVhLWIyZTQtNTAzMGUzMTMxMzdkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Wolf's Call",
-      "date": "Jun 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDQyN2Y5NzAtNmYxOS00NTY5LTg2YjUtOWZlMTM5YjYyZGYxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Toy Story 4",
       "date": "Jun 21, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYzMDM4NzkxOV5BMl5BanBnXkFtZTgwNzM1Mzg2NzM@._V1_.jpg"
-    },
-    {
-      "title": "Child's Play",
-      "date": "Jun 21, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzMwZTNkYzktM2EwYS00ZGZlLWJhNmQtZWNhMTBlMDUzOWRkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Anna",
-      "date": "Jun 21, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGZmMGE3MGQtZGMzNC00NDJhLWExNzMtYmI2YjkwZWZhMTJmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Extreme Job",
-      "date": "Jun 21, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjkwYmRiY2EtYTAwZi00ZTA1LTk4OTgtNzlhYTVlM2RmOWExXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Wild Rose",
-      "date": "Jun 21, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTBlOWM4ZTgtYTIyYS00YTViLWE0YTYtNGVhNGM5YTQxODFkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Command",
-      "date": "Jun 21, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzk2OTNmZDQtNTdlMy00NDVhLWE2YTktODcwMzdkNDE0YzI0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Insult",
-      "date": "Jun 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTI4MGE1M2EtNDQ4Zi00OTExLTgxYjItMTZkNzViNDI5MGFlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Annabelle Comes Home",
-      "date": "Jun 26, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjRjYmQ5NTQtYzIyNi00MmNlLTlmNjYtNjQ3NzRlZmY3YjFlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Yesterday",
-      "date": "Jun 28, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjQ0NTI0NjkyN15BMl5BanBnXkFtZTgwNzY0MTE0NzM@._V1_.jpg"
-    },
-    {
-      "title": "Article 15",
-      "date": "Jun 28, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmNlMWYzN2MtODNhOC00ZTdhLTk3NzAtNzRkMTg3MWE4ZmJhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Ophelia",
-      "date": "Jun 28, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTU2OTAxNjI2OV5BMl5BanBnXkFtZTgwNzc2NjUwODM@._V1_.jpg"
     },
     {
       "title": "Spider-Man: Far from Home",
@@ -930,74 +85,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMzNhNTE0NWQtN2E1Ny00NjcwLTg1YTctMGY1NmMwODJmY2NmXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Escape Plan: The Extractors",
-      "date": "Jul 2, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTcyMmFmYzMtZmYwMi00ZGNhLTg1ZjctODNiNTAzOWY3NjBmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Midsommar",
-      "date": "Jul 3, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzQxNzQzOTQwM15BMl5BanBnXkFtZTgwMDQ2NTcwODM@._V1_.jpg"
-    },
-    {
-      "title": "Crawl",
-      "date": "Jul 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTE4NjJmZDgtMzk4MS00MmYzLWI0YjAtZWU0NTNmMDJhNzI3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Stuber",
-      "date": "Jul 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTg4YjkyZTAtMmFmZi00ZTk2LWExMDgtMzE3ZTJjNjIwMWY0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Super 30",
-      "date": "Jul 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTM0N2I4OTQtYmJlOC00MTUzLTlhZWMtZGIxODkxZTZkMDIyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Point Blank",
-      "date": "Jul 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjQzYzhlOGMtYWRkMi00MTg2LWEyODYtZTI2MjUxYjU2OGYwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Secret Obsession",
-      "date": "Jul 18, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2I0N2RiZjUtMTkxNy00NzRhLWI3NGItYjg2NTI2NWUzNmNlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "The Lion King",
       "date": "Jul 19, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_.jpg"
-    },
-    {
-      "title": "The Art of Self-Defense",
-      "date": "Jul 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzVjYjU2NDAtODljZS00OGE0LTllZDAtNDYzOWQ4N2EzZTk0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Iron Sky: The Coming Race",
-      "date": "Jul 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTQ1ZWIxYjctMDEwMS00YjhmLTkyMWEtMDkyMmE4NjExOWQ2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Isle",
-      "date": "Jul 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjVlNGRiZmYtYjYwYS00NmNhLWEwMjktNWY3MGZlNmFkNWE5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Skin",
-      "date": "Jul 23, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzI5YWFhZjgtNzZjZS00OGY2LWE4NzktMWQ1ZjMzZmQyNjNiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Great Hack",
-      "date": "Jul 24, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDhmODFlMTQtYzU0YS00YTg4LWEyMTctZmRkZWYxMzgxMDFhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Blue Elephant 2",
-      "date": "Jul 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDIzZjE3YTctMzI3Ni00M2Q2LWI2MjQtM2NlNjY1OWQ5YjhiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Once Upon a Time... in Hollywood",
@@ -1010,21 +100,6 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BYmRlODVlZDAtNzcxOC00N2U2LWE4MmQtZTYzZjg3Yjg1MzUxXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Honeyland",
-      "date": "Jul 26, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWViMTZlMzUtZjU3My00MzQ3LWI0YTYtNzg4NzcyOTZkZjUxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "For Sama",
-      "date": "Jul 26, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmI3OTZiZDktMDg1Mi00MjhjLTkyZmUtNzhhOTkyZWVlMTQxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dear Comrade",
-      "date": "Jul 26, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTE1YTgxYWUtMjZlMS00ZWEzLWI1MGMtOWRmZTQ5NjM0NGVhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "The Red Sea Diving Resort",
       "date": "Jul 31, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BODk5ZmI1MTItZmU1Zi00MTMzLTk3ZDctYzM5YzYyMTI2YzE3XkEyXkFqcGc@._V1_.jpg"
@@ -1033,126 +108,6 @@
       "title": "Fast & Furious Presents: Hobbs & Shaw",
       "date": "Aug 2, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNmU4OTA5NGYtMTFjMS00MzgxLWFjNTMtYjdlMThlYzc4M2M4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Otherhood",
-      "date": "Aug 2, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDY4YzM3ZDktMTQxYS00YmQwLWI5MzQtODI0ZjNhYTEyZjA0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "JCVD",
-      "date": "Aug 2, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDAwMDg5MTY1N15BMl5BanBnXkFtZTcwMTU1MjcwMg@@._V1_.jpg"
-    },
-    {
-      "title": "Nerkonda Paarvai",
-      "date": "Aug 7, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDk0MDI1MjEtMDliMC00ZTcyLTljOTItZWVlNjZjNmZjMGMxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Killerman",
-      "date": "Aug 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTI3MzFiZTItNWNmZC00ZDUzLTljNzEtOGI0MjI5ODhkYmMwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Scary Stories to Tell in the Dark",
-      "date": "Aug 9, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDBiOTEwM2MtNTQ5NC00NGVhLWI1MTgtY2E3YmIzMTdlMjI3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dora and the Lost City of Gold",
-      "date": "Aug 9, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjUwNjJmOGEtOGI0YS00ZjAyLWJjMTYtMjMzZjNhYWQxODY1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Art of Racing in the Rain",
-      "date": "Aug 9, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzUyMTJlMzMtYjJkYy00MDA4LTlhMDAtNjM1OGVhYmFjZmJiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Farewell",
-      "date": "Aug 9, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjdlZDI1OWYtZWU4MC00NDhkLThmOWEtMTZiODFhZThkMjA4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Kitchen",
-      "date": "Aug 9, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDUyNTU1MDctYmI2My00MDc5LTgxNzUtZGM1ZmI1YmIyODFhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Light of My Life",
-      "date": "Aug 9, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjYyODlkYzgtYWNmOS00MGM0LThlZDctMGMwNDE5MDVlMGZjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Brian Banks",
-      "date": "Aug 9, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjAxZDk3NDQtYzg1OS00MDQ1LTlmNTctNDRjMWNmZDZmMzExXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Exit 0",
-      "date": "Aug 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGM5OTQ5OWUtYzk2Yy00NTM2LTg5MDUtZjk4ODA5NTA0NWE3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The VelociPastor",
-      "date": "Aug 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTQyZDEwMDQtOTYyYS00ZmRkLWI0Y2EtNTRhNjhiZTJmMDVmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Angry Birds Movie 2",
-      "date": "Aug 14, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGJkNzYyZmYtOGJkNy00NDExLWEwOWEtZDcxYmRmYTg1YTI3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Mission Mangal",
-      "date": "Aug 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTEyYTAzZWYtNTdjMi00YzJiLWE5MjctZjhmNGZiNjdlNzgwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Batla House",
-      "date": "Aug 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmVjODE5NmQtZGU5ZS00NTI2LTkyMTktY2EwNzNmMjU2NTE2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Monos",
-      "date": "Aug 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2VhMmY2YmMtZGY4OS00YmFlLTk3YTctNTE4NjVmMGEwOWI3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Heroic Losers",
-      "date": "Aug 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjZkODA3MTktMjc0ZS00ZDc4LThlZGItMDkzZGExN2QxZGY3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Good Boys",
-      "date": "Aug 16, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTc1NjIzODAxMF5BMl5BanBnXkFtZTgwMTgzNzk1NzM@._V1_.jpg"
-    },
-    {
-      "title": "47 Meters Down: Uncaged",
-      "date": "Aug 16, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZWM4ZWQyOGMtYTczMC00MGYyLWIxNjktYzg5MThmYzFhZGI1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Blinded by the Light",
-      "date": "Aug 16, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODA4YjY1NTItODUwNi00NDM2LWJjNTgtYjY4NmFiY2E5YzQ0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Where'd You Go, Bernadette",
-      "date": "Aug 16, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTE0ZjYwOTEtZjBjYS00MTgyLTg4MGMtODdkMjRmY2ZiOTlmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sextuplets",
-      "date": "Aug 16, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjA2NWYxMmYtMTMxYS00NDJhLWI2MDgtN2ZmMmJiOWUxOGRjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Ready or Not",
-      "date": "Aug 21, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTViMDA4YjgtZDQ4NC00ZDk2LTg0MWItOTc4MTkwMmVkZWRmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "American Factory",
@@ -1165,149 +120,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BZmY4YTJlZjktNmVkYi00MzBjLTg3MTAtMGZiNWUwY2NiMmM5XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "The Peanut Butter Falcon",
-      "date": "Aug 23, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjgxZTE4NDctZTM1MC00YjIwLTk0MmMtNWFkZGUwMGE2ZjNhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Luce",
-      "date": "Aug 23, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTk0MWJjNzMtOTg5Ny00YjA3LWJmZjctYmY2YjlhMzEzYTg1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Falling Inn Love",
-      "date": "Aug 29, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTdjNmI4ODMtOGVhOC00NGYxLTk5YTEtN2Y4NjM3ZTliYWM4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Nightingale",
-      "date": "Aug 29, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYWJlNjVhY2EtODY5NC00MTEyLWE1ODEtMzllZjNlN2JhNzVmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Don't Let Go",
-      "date": "Aug 30, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjU1YmRkZDItZTNlYi00ZmFhLWI1ZTMtZmM1NDA5NDIzYzFkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Saaho",
-      "date": "Aug 30, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmNlM2NkNzEtODAwOS00MTFjLTljODAtNjJjODdhZjI5MGYzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Official Secrets",
-      "date": "Aug 30, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGM2NzcwZjItOTE4Mi00Yzc5LWI3ZmItYTdkZWQ0NDYxN2YzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Informer",
-      "date": "Aug 30, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzNhYmQxNDUtMjBiZS00NjYyLWFhZDUtYmM3YWYxMmI0MTE3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Angel of Mine",
-      "date": "Aug 30, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWQ1MmNiOTYtMGU0NS00NmVjLWE0NWEtNjliNTkyMGYyYTE4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "It: Chapter Two",
-      "date": "Sep 6, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzUxM2VhOGItZTY2My00OTA4LWI4NjUtMDA5YWJjM2M2NDJjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Chhichhore",
-      "date": "Sep 6, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODgwYWE2MGEtYTMwYi00NTg5LWEzOWYtNTFiZDc4NWMzODcyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Night Hunter",
-      "date": "Sep 6, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDU1NmIwNTItYjdhMC00OTZlLTk0NWMtYTNlNmE0NjgyOWNhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Hustlers",
-      "date": "Sep 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzczZjhlODEtZDk5OS00MTdjLThlZWEtYzExY2IxNWVlMjk1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Goldfinch",
-      "date": "Sep 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOWM2YjgxZmYtNjNhYi00OTA5LWI3ODMtOTllNzc1ZDAyN2Q0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Haunt",
-      "date": "Sep 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDM4ZTIyMTAtNDg3ZS00NDIzLThjZDYtMjRmYjE5OWI3ZTViXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Can You Keep a Secret?",
-      "date": "Sep 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzZhM2M1MTEtMjg0Yi00ZTIzLTljYWYtZGQwMmNkZjkyNzY1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Tall Girl",
-      "date": "Sep 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmUwYzA0MzQtMjU2ZS00OWI0LWEzZjctYWE0NDdhOTFiNDc4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Section 375",
-      "date": "Sep 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzhjMDk1NmQtYjU5My00ZmE0LWI5ZmQtZTc2ODYwNGZiNzQ3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dream Girl",
-      "date": "Sep 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTlmOGQ1MTktYjI2Mi00ZWUzLWEzNDQtMTdlYzcyMGUxNDg0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Freaks",
-      "date": "Sep 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjcxZjdkNmYtYWM1Yi00YWQ0LWFkZDEtMmIzNDVlMzVmZjY0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "3 from Hell",
-      "date": "Sep 16, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2FiMjIzMDktNTRhNi00NzRiLTljNmMtMjdiMTNjNTQ2YmZiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Game Changers",
-      "date": "Sep 16, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjgwMGZhNDMtM2QzMC00NDM3LThlYmMtMGZlODRiMWEwNjgzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Polaroid",
-      "date": "Sep 17, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTU2MDI0NDYxNl5BMl5BanBnXkFtZTgwMDAxOTQxMjI@._V1_.jpg"
-    },
-    {
-      "title": "Downton Abbey",
-      "date": "Sep 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGMxYzUyZTgtM2ZiNy00YWYxLTg3NWMtNmY2YWNkM2Q5NDNlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Ad Astra",
       "date": "Sep 20, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGRhOGNjZjEtNTU2Ni00MDlmLWI3MWEtNzc1OGE2ZmEwZGNhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Rambo: Last Blood",
-      "date": "Sep 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWM5NzVlNzMtMDNhNy00OGMxLTlmYTktOGIwMzRlZmE0ZWVmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Villains",
-      "date": "Sep 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNWY0M2EzM2EtYTFmNS00NDYxLTgxODgtNWJkN2MxZjg3Mzc0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Between Two Ferns: The Movie",
-      "date": "Sep 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGRhMmFmODItYzkwZS00MzAyLTk3NjEtYjNiNzg0ZTdhOTZmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Running with the Devil",
-      "date": "Sep 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTYwMWFjM2UtMDRjNy00ZWM1LTk5ZmEtNzQ3YzNlM2U0ZDI3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Diego Maradona",
@@ -1315,59 +130,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BYzVjYTI1NDEtYTk2OS00NzhiLTliZWUtNzgxODdlMWJlMGQ4XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Bloodline",
-      "date": "Sep 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmIzMjA0MzktNGU4Yi00OWQyLWJkZmUtMmE5YTBkMDE0MTRjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "One Cut of the Dead",
-      "date": "Sep 24, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMGJmOTkzNmQtMTVkYS00M2Y3LWE4OGUtMTFjZTJlZmQ5NGIwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Abominable",
       "date": "Sep 27, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDdiYTViMzQtNDhkZC00YTgzLWI2NWItODZkNjVlMDZkMDNiXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Laundromat",
-      "date": "Sep 27, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDRmNzMzZGYtZDdiMy00ZjNiLThjYzUtODMzY2QxY2VkZmIxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "In the Shadow of the Moon",
-      "date": "Sep 27, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYWM3YzQ2MTEtZjA2OS00NzRkLWFmMWEtYjZjODUzN2VlNmY1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Sink or Swim",
-      "date": "Sep 27, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzk3YzEzMWUtODA1OS00NjkwLWE3MjAtNjAyNjExMjliOGZkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Killers Anonymous",
-      "date": "Sep 28, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZjg0YzIxMWYtODM2MC00Zjk3LWE4MjktMjgxYjI4MThiZWMwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Doom: Annihilation",
-      "date": "Oct 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2NlMzA0ZmEtMzdkNS00MjY2LTkzMjctZmFlODRjMDA1MTE0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Legend of Tomiris",
-      "date": "Oct 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzVjZDczZDMtNGI5NS00MWFiLTg0NWQtZDlkOTc5YWU0ZDE3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "War",
-      "date": "Oct 2, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZGI0ZGQ3MTQtYjllYy00MTkyLTg4ZWUtOTc1MmI2ZDE4OTYyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Asuran",
-      "date": "Oct 3, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjgyMGFlNmMtYzkzNy00ZjgyLTljNTItMTg4MmNjYWE5NDM4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Joker",
@@ -1375,74 +140,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BNzY3OWQ5NDktNWQ2OC00ZjdlLThkMmItMDhhNDk3NTFiZGU4XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Judy",
-      "date": "Oct 4, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjY1OTJlZmQtNTEwNy00MjI1LWE4MWQtMzJlNTZmN2FmN2U5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Pain and Glory",
-      "date": "Oct 4, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmIxMTRhMjAtYzE2ZS00NDJiLTllYjktMzRlN2FiMGI2MmI4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "In the Tall Grass",
-      "date": "Oct 4, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2YyZTk3ZjUtMTgxYS00NGVlLThmNDQtMjRjNmMwOTc0MzdhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Cuck",
-      "date": "Oct 4, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMmU4MzMxNDAtMDMxOC00ZDQ0LWFlYjMtZmM4OGVjNGZiNGQ1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Addams Family",
-      "date": "Oct 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDg1NTZhN2UtMmVkYi00NzQxLWI2MWEtNTg5M2YyOWU3MmIwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Gemini Man",
       "date": "Oct 11, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWY2ZmM4ZGEtODJjMC00MzY5LTk4ZmYtNzA5NmRhYzA5Y2EzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Jexi",
-      "date": "Oct 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDI1OGI0YjUtZTc2Mi00YzIxLTlmNWItNzA3OTI2Mjk1YjJjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Fantastic Fungi",
-      "date": "Oct 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGYxNzg3ZGEtYWU2MS00ODBmLWI1NzMtNTdmZDMzMzVkYzE4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Sky Is Pink",
-      "date": "Oct 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDYxNjMzNzctYTJjZC00Y2VkLWE3NDUtYjI0YTU1YWFiYmQxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "El Camino",
-      "date": "Oct 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTYxMjI2YzUtODQ5Mi00M2JmLTlmNzItOTlkM2MyM2ExM2RlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Fractured",
-      "date": "Oct 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDViOTQwZDMtNjBiMS00YzU4LTllNGUtM2YwNjk4NGMwOTk3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Miracle in Cell No. 7",
-      "date": "Oct 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzZmMWUxZGMtOTg3MS00OTA4LTg5NzktZGY4NjgyMzExYTZhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Little Monsters",
-      "date": "Oct 11, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzM2YzJmZmEtYmM4NS00Zjg0LWIzM2ItNGNmYTc3NWNjZTk3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Mermaid Down",
-      "date": "Oct 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDcwY2IwNDctMDdjMS00YTdjLWFiMGYtNjJiNDgyNTBhM2RhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Maleficent: Mistress of Evil",
@@ -1455,91 +155,6 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTViNDc4NTgtYzVlNi00YmY3LWFiNDgtODJlNGU1YzI1MGExXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Eli",
-      "date": "Oct 18, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzJmNjc2ODctNTc5NC00ZjJjLTg4MWEtMjE5ZDYxYjY5MmNmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Tell Me Who I Am",
-      "date": "Oct 18, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmU5YWE0MDctMGRlMS00Y2IxLWI0ZTQtNmQ5ZDUxZGU0YzI2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Wounds",
-      "date": "Oct 18, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDcyMmJmZmMtZTkyOS00MDc5LTk4YmItMDY2NzM0NzE1NjdkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Karakomik Filmler: Kaçamak",
-      "date": "Oct 18, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2FmMTM4YmItMGQxOC00OTFjLWI5NGEtYmZiMjcwZDIzY2VmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Specials",
-      "date": "Oct 23, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDkxZWY0MzQtZmRlMS00NjlhLWFjOTItMGVhNzhkOTZiZDI5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Brittany Runs a Marathon",
-      "date": "Oct 24, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjMyYTk1ODMtNmJmMC00MzdlLWFmMWItNjNmMjE2ZjBlNzI4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Kaithi",
-      "date": "Oct 24, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDk2NWQyMjQtODlkYi00YTJjLTkxMGItMGU0ZDExODI3OWIxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Bigil",
-      "date": "Oct 24, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTQ5ZDgwYzMtOTBjYi00NTQ5LWE2ZjUtZmM3MTk2OTcyMjliXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Countdown",
-      "date": "Oct 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzJjODI5ZTQtMTIxNy00MjY0LTlhNDgtNzk0YjZjM2Q1ZDIyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Black and Blue",
-      "date": "Oct 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMmFmZjE5NmUtZGFjYi00Zjc0LWIyYzYtZDhlYzVlZDUxY2JlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Housefull 4",
-      "date": "Oct 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGY4N2IwNmItMDFmNS00YzM0LWI0MjctYTU1MmVhZTZmNTg1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Better Days",
-      "date": "Oct 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDAwNDEyODMtNGQ0NC00Y2M5LWE0OTctZjIwMWU3ZDlmMzMyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dolemite Is My Name",
-      "date": "Oct 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTYyNGU3MDctZWU1NS00N2Y5LWE2MDUtOWFlMmVmM2IzNDQ5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Mr. Jones",
-      "date": "Oct 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjM3NjU5YmEtNDg4OS00MGEwLTkxYzktYjg1OTY2NmEwNWM3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Cinayet Süsü",
-      "date": "Oct 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNjA1YjQxM2YtNjBmZi00ZDQ0LTlhZGMtNTVhYjRiNjRhM2VkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Girl on the Third Floor",
-      "date": "Oct 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTU4NDUyMmUtNzUxZC00YWIzLWIzYjYtNDE2YWNhNGZmZjZmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Paradise Hills",
-      "date": "Oct 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTY4Njg3ZGItOGJkZS00MDcyLTk4Y2EtMmY4Mjg4ZGM3NTliXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "The Current War",
       "date": "Oct 25, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk4MzhkMDAtNWMyMi00ZmI4LWEyNTUtZDVkMTVlZjJmYTAzXkEyXkFqcGc@._V1_.jpg"
@@ -1550,104 +165,14 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BOTU2OGFhYjktNDJhMC00NmU5LWE1OWItNzg5ODU1MzdmNTZkXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Harriet",
-      "date": "Nov 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTVlNGQ0ZWQtZTkzZC00YmQxLTg5MzQtYjFhYjVhMTdmM2I3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Lighthouse",
-      "date": "Nov 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTI4MjFhMjAtNmQxYi00N2IxLWJjMGEtYWY1YmU3OTQ0Zjk3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Motherless Brooklyn",
-      "date": "Nov 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTU3ZWViNGUtZWFkNC00NWQzLTg4MzgtNGYwZThhOWU0YzFkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The King",
-      "date": "Nov 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOTFhZTY4YWUtMmJjMy00OTE0LTlmZjctMDg5MTk4N2ZjZWNjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Holiday in the Wild",
-      "date": "Nov 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTY5YmZkOGMtZTE4YS00NTdkLTkyMGYtNjIyMGIzOTNjMGNhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "A Sun",
-      "date": "Nov 1, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2IyNjFmNDItNGQ3YS00MDAxLWEyOWQtNTJjOGI2ZDFmZTFmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Bala",
-      "date": "Nov 7, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BM2FlODNjNDgtMDg3OS00ZDM3LTk1ODMtOTUxNDliZjBiMzdhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Midway",
       "date": "Nov 8, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDcyMGVlYzctZjYwNC00MDBiLTg1NDAtNzcxZjlhZTA4NzczXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Parasite",
-      "date": "Nov 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjk1Y2U4MjQtY2ZiNS00OWQyLWI3MmYtZWUwNmRjYWRiNWNhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Playing with Fire",
-      "date": "Nov 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTBmNGU1OTctZmNmOS00MTUwLTg2NTktZDdhMGI3MWU1YTY1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Last Christmas",
-      "date": "Nov 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2NlNTMwYzgtZjI2Ny00ZWExLWE2NDUtNzFlYTQyMmY1NjkwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Jojo Rabbit",
       "date": "Nov 8, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmFmNmUyMjYtZTFjNS00OWQyLThhZmMtMGZkYTQ3YjY0ZDQ1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Doctor Sleep",
-      "date": "Nov 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGUyNTg0NWItODdkZS00YWY0LTljNjItMDYwMTI1ZmZkMjExXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Let It Snow",
-      "date": "Nov 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGRmNjFlZjAtYzNjOC00ZDBjLWFmODctZGE0OTYwNGMxYjRmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Danger Close",
-      "date": "Nov 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYzQ5NGE5MjQtZDI5NS00ZWY0LWEyNGItMjk0MjM3ZmZiOTc5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Primal",
-      "date": "Nov 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2E0Njk1YjgtMDRlYi00NDRmLTg4NjUtNmE5NWIxZTlmNDg2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Recep Ivedik 6",
-      "date": "Nov 8, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjJiM2IwOTktZThlNi00ODc1LTk3ZjEtZTNkMjY5YjU4NGI4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Noelle",
-      "date": "Nov 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2I2OTM0MjQtYjY0Mi00NWY1LWEyZjItZjM5MzM0Y2M2N2MxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Lady and the Tramp",
-      "date": "Nov 12, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjlhNjVhMDItZTBjNi00MDljLWI1ODktNzU5ZTg2YWZhMWZmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "An Officer and a Spy",
-      "date": "Nov 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNWM2ZmJiMzMtZDY4Yy00Y2U5LTk0YmMtMTI4NGYxNmQxNjE2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ford v Ferrari",
@@ -1660,74 +185,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMjIyYTRhNDItNzc2MS00MjkxLWFhOTItMzg1MTZkNDk5Nzc0XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "The Good Liar",
-      "date": "Nov 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGU4MzMwNzgtOWRiYy00ZWExLWE2YTctZGQ1OWVhYTk4NGM3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Klaus",
-      "date": "Nov 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDA4ODhlMzctNGRmYi00NmViLTkxZGYtZjRkNGQ5YzYwYWVlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Report",
-      "date": "Nov 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNTA3MDQwMDktNTNmYS00ZTkzLWE4ZDAtMzg2NGYyM2UzYWQ3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "I Lost My Body",
-      "date": "Nov 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzI5ZmNmMmUtYTc2NS00OTNjLThiNGQtYjRjMDJjYzk3ZWQyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Earthquake Bird",
-      "date": "Nov 15, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYmI5MTM0ZDgtMTAzMy00YzQ5LWIyZWQtNTU1NDJhYzg5MjY0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Queen of Hearts",
-      "date": "Nov 19, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTNmNmY4MzctOTJiZC00ZWY4LTg3MDQtOTViMzc2N2Y2MjVhXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Les Misérables",
-      "date": "Nov 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzE2Y2Y0NjUtNWI3Yy00NGUyLTk0MmEtODE1YzAxNDhkMTgzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Blackout",
-      "date": "Nov 21, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmVkMWE0Y2EtM2Q2My00MjM5LTkwOTctMWE2NTgyYzA0MjRkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Knight Before Christmas",
-      "date": "Nov 21, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzY0YThhNDktMDA4Mi00NzdjLWI3MmQtYzBlYTJmYzU5NDdmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Frozen II",
-      "date": "Nov 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTE1YjlmZjctNjIwNi00NDQ0LTlmMzgtYWZkY2RkZTMwNTdmXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "A Beautiful Day in the Neighborhood",
-      "date": "Nov 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMzE5MjVhNDMtMDJhYi00NDJhLWFmZjQtNzc2MWFkYmIzYzU4XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "21 Bridges",
       "date": "Nov 22, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMmZjYjI0YjUtOTc4OC00MmEyLWE4MDItN2M5NGZmNWY1YzYxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Pocket Hercules: Naim Süleymanoglu",
-      "date": "Nov 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2I4OGE0NGEtY2YxYy00YzBkLWI0NDctNzhkMWIzNDg1ZmUzXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Courier",
-      "date": "Nov 22, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2Y0MmZlNDQtMTljMi00M2U3LWJmMzctNjkwZjdlYzc0YTZkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Knives Out",
@@ -1735,69 +195,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BZDU5ZTRkYmItZjg0Mi00ZTQwLThjMWItNWM3MTMxMzVjZmVjXkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Queen & Slim",
-      "date": "Nov 27, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGQ4NDFjYjYtMmU3My00MDcyLWIwMWUtM2JiYTBiYTI2ZGE5XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Honey Boy",
-      "date": "Nov 27, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMmE2ZWU0NzUtMWZlOS00OWEzLWJiNjUtMDAwZWEyY2MzYjc2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Irishman",
-      "date": "Nov 27, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMTY2YThkNmQtOWJhYy00ZDc3LWEzOGEtMmQwNzM0YjFmZWIyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Jay and Silent Bob Reboot",
-      "date": "Nov 29, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2Y1N2Y0MDAtYTMwZC00Mzc3LWJjMGYtZjliYWQxYmE4ZDdlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Atlantics",
-      "date": "Nov 29, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGY1NTZhMTAtMjc2Ni00OGM1LTliMmUtM2I0MDQ2OTQ1NWJkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Tigers Are Not Afraid",
-      "date": "Dec 3, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNDcyY2YyMDgtMjcwNS00YzI4LThlMDYtMjEzZmMxZTY5YTc3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Legacy of the Bones",
-      "date": "Dec 5, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDU5YTFlZmYtMTAyYy00OTA4LThjNTYtZTQ1ZGNiZmNkZTk2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dark Waters",
-      "date": "Dec 6, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmQzM2M4MTEtZjM3Yy00Njk1LWJmNjQtYzg4YjVmZmZkZDA0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Waves",
-      "date": "Dec 6, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmFlNmQyYzctMzE3Ni00NjRkLWFiYzctYmZjMDllZTdkY2VjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Marriage Story",
       "date": "Dec 6, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNmE0OWJlM2MtNzhmMi00YmQyLTlmY2EtZmUzNzBiNGRlN2JkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Daniel Isn't Real",
-      "date": "Dec 6, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjlhN2ZkYmQtYjZhMC00NTk3LThjNzQtMjc3MjliMGQ0NDFjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Trauma Center",
-      "date": "Dec 6, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZmYwN2MxNGQtNjdiNC00NjE4LWE5NGItM2MyNzFjNjFhZTg1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "In Fabric",
-      "date": "Dec 6, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzE5MGE2MTItMmM2Zi00NTI4LTg0MjItMjc2ZDU0MjJkOGIwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Jumanji: The Next Level",
@@ -1805,29 +205,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BYWFjODExZWEtYzIwYS00M2YwLTk4YTktNDQ5ZmVmOThiNmI1XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Richard Jewell",
-      "date": "Dec 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMjI3ZThhNTYtM2ZlMy00OWMwLTk3M2MtM2IyYzYzN2IwMDA2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Black Christmas",
-      "date": "Dec 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYTRlODA4MGUtYTJhZC00MDA5LWJlNWYtY2YwZDEwZmM3ODRjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "6 Underground",
       "date": "Dec 13, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTNmZDgzMmMtMzJhMy00NGI3LWI5YTktYjg5MTllZmYyYTMxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Code 8",
-      "date": "Dec 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMWNjZDVlMzUtZWVhNi00YmRmLThlM2MtZWZmOTY4ZjI0MTVlXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Mardaani 2",
-      "date": "Dec 13, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BOGYwMjE4ZDgtNzdmMi00YTFjLTgyMDUtMGE5MDI4ZGRiYTY2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Star Wars: Episode IX - The Rise of Skywalker",
@@ -1835,59 +215,9 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BODg5ZTNmMTUtYThlNy00NjljLWE0MGUtYmQ1NDg4NWU5MjQ1XkEyXkFqcGc@._V1_.jpg"
     },
     {
-      "title": "Bombshell",
-      "date": "Dec 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BODY3ODVkYTAtZDFmNS00ZDYyLTlkOTEtNTY3NTFhNDE4ZjFjXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Cats",
-      "date": "Dec 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjhmMjcxNDUtNmVjZS00MjA1LTgzZjgtOTRjMTk4YjU1NDcwXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Dabangg 3",
-      "date": "Dec 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNGRkZjQzNzctNTZjYi00YzgwLWE3NjctMmQ2OTE0OGJmNTk0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Invisible Life",
-      "date": "Dec 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZTBmZDYwYmUtMGFjNi00NDA3LTk1MTYtYjhlYzhkZDQ2NDA1XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Togo",
-      "date": "Dec 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDU2YmExNjctNWViMy00MDc3LTliMjYtYjQ4ZTU4Mzg4YWQ3XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Two Popes",
-      "date": "Dec 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BN2NlYjdkOGEtMGYyOC00MzM5LWE5MzYtYzUyZjE3NTM5NGIyXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "The Aeronauts",
-      "date": "Dec 20, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BMDNkNmRjZGMtOGY0NS00ZmI5LWIzOWMtODI3NGZjZTZkYTBkXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
       "title": "Little Women",
       "date": "Dec 25, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWMzYjNiZWMtMDg4NS00MDgyLTk5MWItOTFmNjg4NzRhZmExXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Spies in Disguise",
-      "date": "Dec 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BZDk1M2NiMjktMjJmMC00MWNiLThhM2MtNjZkZGM1M2Y5NTMxXkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Uncut Gems",
-      "date": "Dec 25, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNmI0YjA5NjItYzExYi00NzkxLTkxNDctNGJjYTZhM2M0NDQ0XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Good Newwz",
-      "date": "Dec 27, 2019",
-      "poster": "https://m.media-amazon.com/images/M/MV5BNzhiNWUzMjktN2Y2NS00NzA5LWFkNjYtN2M4YTY0MDJlNjY0XkEyXkFqcGc@._V1_.jpg"
     }
   ]
 }
