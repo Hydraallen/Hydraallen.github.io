@@ -168,7 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 // Script for Movies Page
 document.addEventListener("DOMContentLoaded", function () {
   const timelineRoot = document.getElementById("timeline-root");
@@ -233,12 +232,14 @@ function renderTimeline(data, rootElement) {
     `;
     const movieListContainer = document.createElement("div");
     movieListContainer.className = "movie-list-container";
-    const favMovie = movies.find(m => m.title === yearData.favorite);
-    const otherMovies = movies.filter(m => m.title !== yearData.favorite);
+    const favMovie = movies.find((m) => m.title === yearData.favorite);
+    const otherMovies = movies.filter((m) => m.title !== yearData.favorite);
     if (favMovie) {
       const favSection = document.createElement("div");
       favSection.className = "favorite-section";
-      const posterSrc = favMovie.poster ? favMovie.poster : "https://via.placeholder.com/200x300?text=No+Image";
+      const posterSrc = favMovie.poster
+        ? favMovie.poster
+        : "https://via.placeholder.com/200x300?text=No+Image";
       favSection.innerHTML = `
         <div class="favorite-label-large">🏆 Best of ${yearData.year}</div>
         <div class="favorite-card">
@@ -257,10 +258,17 @@ function renderTimeline(data, rootElement) {
     if (otherMovies.length > 0) {
       const scrollWrapper = document.createElement("div");
       scrollWrapper.className = "vertical-scroll-wrapper";
+      scrollWrapper.setAttribute("tabindex", "0");
+      scrollWrapper.setAttribute(
+        "aria-label",
+        `Movies list for ${yearData.year}`
+      );
       otherMovies.forEach((movie) => {
         const card = document.createElement("div");
         card.className = "movie-card";
-        const posterSrc = movie.poster ? movie.poster : "https://via.placeholder.com/200x300?text=No+Image";
+        const posterSrc = movie.poster
+          ? movie.poster
+          : "https://via.placeholder.com/200x300?text=No+Image";
         card.innerHTML = `
           <div class="poster-wrapper">
             <img src="${posterSrc}" alt="${movie.title}" loading="lazy" />
@@ -274,7 +282,8 @@ function renderTimeline(data, rootElement) {
       });
       movieListContainer.appendChild(scrollWrapper);
     } else if (!favMovie) {
-      movieListContainer.innerHTML += '<p style="padding:10px; text-align:center;">No movies recorded.</p>';
+      movieListContainer.innerHTML +=
+        '<p style="padding:10px; text-align:center;">No movies recorded.</p>';
     }
     contentDiv.appendChild(headerDiv);
     contentDiv.appendChild(movieListContainer);
@@ -282,8 +291,8 @@ function renderTimeline(data, rootElement) {
     itemDiv.appendChild(contentDiv);
     rootElement.appendChild(itemDiv);
     contentDiv.addEventListener("click", function (e) {
-      if (e.target.closest('.vertical-scroll-wrapper')) {
-        return; 
+      if (e.target.closest(".vertical-scroll-wrapper")) {
+        return;
       }
       const parent = this.parentElement;
       const container = parent.querySelector(".movie-list-container");
@@ -307,8 +316,6 @@ function renderTimeline(data, rootElement) {
   });
 }
 
-
-
 // Script for Travel Page
 let allTravelData = [];
 let currentGalleryPhotos = [];
@@ -331,15 +338,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.getElementById("next-btn");
   async function loadTravelData() {
     try {
-      const indexResponse = await fetch('../data/travel/index.json');
+      const indexResponse = await fetch("../data/travel/index.json");
       if (!indexResponse.ok) throw new Error("Failed to load index.json");
       const fileList = await indexResponse.json();
-      const fetchPromises = fileList.map(filename => 
-        fetch(`./data/travel/${filename}.json`).then(res => res.json())
+      const fetchPromises = fileList.map((filename) =>
+        fetch(`./data/travel/${filename}.json`).then((res) => res.json())
       );
       allTravelData = await Promise.all(fetchPromises);
       renderGrid(allTravelData);
-      sortSelect.dispatchEvent(new Event('change'));
+      sortSelect.dispatchEvent(new Event("change"));
     } catch (error) {
       console.error("Error loading travel data:", error);
       grid.innerHTML = `<p style="text-align:center; color:red;">Error loading data.</p>`;
@@ -352,9 +359,9 @@ document.addEventListener("DOMContentLoaded", function () {
       grid.innerHTML = "<p>No places found.</p>";
       return;
     }
-    data.forEach(place => {
+    data.forEach((place) => {
       let displayName = place.name;
-      if (place.country.toLowerCase() === 'usa' && place.state) {
+      if (place.country.toLowerCase() === "usa" && place.state) {
         displayName += `, ${place.state}`;
       }
       const hasVideo = place.video && place.video.trim() !== "";
@@ -428,13 +435,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   function showPrevPhoto() {
     if (currentGalleryPhotos.length === 0) return;
-    currentPhotoIndex = (currentPhotoIndex - 1 + currentGalleryPhotos.length) % currentGalleryPhotos.length;
+    currentPhotoIndex =
+      (currentPhotoIndex - 1 + currentGalleryPhotos.length) %
+      currentGalleryPhotos.length;
     updateLightboxImage();
   }
   function openGalleryScroll(placeData) {
     const photos = placeData.photos;
     let title = placeData.name;
-    if (placeData.country.toLowerCase() === 'usa' && placeData.state) {
+    if (placeData.country.toLowerCase() === "usa" && placeData.state) {
       title += `, ${placeData.state}`;
     }
     galleryTitle.textContent = title;
@@ -447,15 +456,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     galleryGrid.innerHTML = "";
     if (photos && photos.length > 0) {
-      photos.forEach(src => {
+      photos.forEach((src) => {
         const div = document.createElement("div");
         div.className = "gallery-item";
         const img = document.createElement("img");
         img.src = src;
         img.loading = "lazy";
         div.addEventListener("click", () => {
-           lightboxImg.src = src;
-           lightbox.classList.remove("hidden-modal");
+          lightboxImg.src = src;
+          lightbox.classList.remove("hidden-modal");
         });
         div.appendChild(img);
         galleryGrid.appendChild(div);
@@ -471,7 +480,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const cards = Array.from(grid.getElementsByClassName("place-card"));
     cards.forEach((card) => {
       const cardCountry = card.getAttribute("data-country");
-      if (selectedCategory === "all" || cardCountry.includes(selectedCategory)) {
+      if (
+        selectedCategory === "all" ||
+        cardCountry.includes(selectedCategory)
+      ) {
         card.classList.remove("hidden-place");
       } else {
         card.classList.add("hidden-place");
@@ -482,14 +494,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const sortType = this.value;
     const currentCards = Array.from(grid.getElementsByClassName("place-card"));
     const sortedCards = currentCards.sort((a, b) => {
-      if (sortType === "az") return a.getAttribute("data-name").localeCompare(b.getAttribute("data-name"));
-      if (sortType === "newest") return new Date(b.getAttribute("data-date")) - new Date(a.getAttribute("data-date"));
-      if (sortType === "oldest") return new Date(a.getAttribute("data-date")) - new Date(b.getAttribute("data-date"));
+      if (sortType === "az")
+        return a
+          .getAttribute("data-name")
+          .localeCompare(b.getAttribute("data-name"));
+      if (sortType === "newest")
+        return (
+          new Date(b.getAttribute("data-date")) -
+          new Date(a.getAttribute("data-date"))
+        );
+      if (sortType === "oldest")
+        return (
+          new Date(a.getAttribute("data-date")) -
+          new Date(b.getAttribute("data-date"))
+        );
       return 0;
     });
-    sortedCards.forEach(card => grid.appendChild(card));
+    sortedCards.forEach((card) => grid.appendChild(card));
   });
-  closeGalleryBtn.addEventListener("click", function() {
+  closeGalleryBtn.addEventListener("click", function () {
     galleryModal.classList.add("hidden-modal");
     document.body.style.overflow = "auto";
   });
@@ -501,14 +524,16 @@ document.addEventListener("DOMContentLoaded", function () {
       lightbox.classList.add("hidden-modal");
     }
   });
-  if(prevBtn) prevBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    showPrevPhoto();
-  });
-  if(nextBtn) nextBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    showNextPhoto();
-  });
+  if (prevBtn)
+    prevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showPrevPhoto();
+    });
+  if (nextBtn)
+    nextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showNextPhoto();
+    });
   document.addEventListener("keydown", (e) => {
     if (!lightbox.classList.contains("hidden-modal")) {
       if (e.key === "ArrowLeft") showPrevPhoto();
