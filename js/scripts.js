@@ -420,9 +420,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       const card = document.createElement("div");
       card.className = "place-card";
-      card.setAttribute("tabindex", "0");
-      card.setAttribute("role", "button");
-      card.setAttribute("aria-label", `View photos of ${displayName}`);
       card.setAttribute("data-country", place.country.toLowerCase());
       card.setAttribute("data-country", place.country.toLowerCase());
       card.setAttribute("data-name", place.name);
