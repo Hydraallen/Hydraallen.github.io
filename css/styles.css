@@ -1332,6 +1332,19 @@ section strong {
   border-color: #00695c;
 }
 
+select:focus-visible {
+  outline: 3px solid #00695c; 
+  outline-offset: 2px;
+  border-color: #00695c;
+  box-shadow: 0 0 0 4px rgba(0, 105, 92, 0.2); 
+  z-index: 10; 
+}
+
+.control-group label {
+  cursor: pointer;
+}
+
+
 .travel-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
