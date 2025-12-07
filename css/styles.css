@@ -1604,6 +1604,7 @@ select:focus-visible {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
   justify-content: center;
+  margin-bottom: 120px;
 }
 
 .lightbox-btn {
