@@ -527,6 +527,7 @@ document.addEventListener("DOMContentLoaded", function () {
         div.setAttribute("tabindex", "0");
         div.setAttribute("role", "button");
         div.setAttribute("aria-label", "View photo in full screen");
+        div.setAttribute("alt", `Photo ${index + 1} of ${title}`);
         const img = document.createElement("img");
         img.src = src;
         img.loading = "lazy";
