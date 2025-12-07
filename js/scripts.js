@@ -287,7 +287,7 @@ function renderTimeline(data, rootElement) {
         <div class="favorite-label-large">🏆 Best of ${yearData.year}</div>
         <div class="favorite-card">
           <div class="poster-wrapper">
-            <img src="${posterSrc}" alt="${favMovie.title}" loading="lazy" />
+            <img src="${posterSrc}" alt="${favMovie.title}" loading="lazy">
           </div>
           <div class="movie-info">
             <h4 class="movie-title">${favMovie.title}</h4>
@@ -314,7 +314,7 @@ function renderTimeline(data, rootElement) {
           : "https://via.placeholder.com/200x300?text=No+Image";
         card.innerHTML = `
           <div class="poster-wrapper">
-            <img src="${posterSrc}" alt="${movie.title}" loading="lazy" />
+            <img src="${posterSrc}" alt="${movie.title}" loading="lazy">
           </div>
           <div class="movie-info">
             <h4 class="movie-title">${movie.title}</h4>
@@ -485,7 +485,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateLightboxImage();
     lightbox.classList.remove("hidden-modal");
     setTimeout(() => {
-        lightbox.classList.add("active");
+      lightbox.classList.add("active");
     }, 10);
   }
   function updateLightboxImage() {
@@ -533,8 +533,8 @@ document.addEventListener("DOMContentLoaded", function () {
         img.loading = "lazy";
         const openPhoto = () => {
           currentGalleryPhotos = photos;
-          currentPhotoIndex = index;     
-          updateLightboxImage(); 
+          currentPhotoIndex = index;
+          updateLightboxImage();
           lightbox.classList.remove("hidden-modal");
           setTimeout(() => {
             lightbox.classList.add("active");
@@ -603,10 +603,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.overflow = "auto";
   });
   function closeLightbox() {
-    lightbox.classList.remove("active"); 
+    lightbox.classList.remove("active");
     setTimeout(() => {
-      lightbox.classList.add("hidden-modal"); 
-    }, 300); 
+      lightbox.classList.add("hidden-modal");
+    }, 300);
   }
   closeLightboxBtn.addEventListener("click", closeLightbox);
   lightbox.addEventListener("click", (e) => {
@@ -618,7 +618,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!lightbox.classList.contains("hidden-modal")) {
       if (e.key === "ArrowLeft") showPrevPhoto();
       if (e.key === "ArrowRight") showNextPhoto();
-      if (e.key === "Escape") closeLightbox(); 
+      if (e.key === "Escape") closeLightbox();
     }
   });
   if (prevBtn)
