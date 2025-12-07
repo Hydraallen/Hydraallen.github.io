@@ -484,6 +484,9 @@ document.addEventListener("DOMContentLoaded", function () {
     currentPhotoIndex = 0;
     updateLightboxImage();
     lightbox.classList.remove("hidden-modal");
+    setTimeout(() => {
+        lightbox.classList.add("active");
+    }, 10);
   }
   function updateLightboxImage() {
     if (currentGalleryPhotos.length > 0) {
@@ -532,7 +535,10 @@ document.addEventListener("DOMContentLoaded", function () {
           currentGalleryPhotos = photos;
           currentPhotoIndex = index;     
           updateLightboxImage(); 
-          lightbox.classList.remove("hidden-modal"); 
+          lightbox.classList.remove("hidden-modal");
+          setTimeout(() => {
+            lightbox.classList.add("active");
+          }, 10);
         };
         div.addEventListener("click", openPhoto);
         div.addEventListener("keydown", (e) => {
@@ -596,12 +602,23 @@ document.addEventListener("DOMContentLoaded", function () {
     galleryModal.classList.add("hidden-modal");
     document.body.style.overflow = "auto";
   });
-  closeLightboxBtn.addEventListener("click", () => {
-    lightbox.classList.add("hidden-modal");
-  });
+  function closeLightbox() {
+    lightbox.classList.remove("active"); 
+    setTimeout(() => {
+      lightbox.classList.add("hidden-modal"); 
+    }, 300); 
+  }
+  closeLightboxBtn.addEventListener("click", closeLightbox);
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) {
-      lightbox.classList.add("hidden-modal");
+      closeLightbox();
+    }
+  });
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("hidden-modal")) {
+      if (e.key === "ArrowLeft") showPrevPhoto();
+      if (e.key === "ArrowRight") showNextPhoto();
+      if (e.key === "Escape") closeLightbox(); 
     }
   });
   if (prevBtn)
