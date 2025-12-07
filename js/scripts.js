@@ -10,29 +10,66 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", () => {
   const hamburgerMenu = document.querySelector(".hamburger-menu");
   const nav = document.querySelector("nav");
-
   if (!hamburgerMenu || !nav) return;
-
   nav.classList.add("hidden-nav");
   hamburgerMenu.classList.remove("toggle");
+  const focusableNavElements = nav.querySelectorAll(
+    'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+  );
+  const firstFocusableElement = focusableNavElements[0];
+  const lastFocusableElement =
+    focusableNavElements[focusableNavElements.length - 1];
+  function openMenu() {
+    nav.classList.remove("hidden-nav");
+    hamburgerMenu.classList.add("toggle");
+    hamburgerMenu.setAttribute("aria-expanded", "true");
+    setTimeout(() => {
+      firstFocusableElement.focus();
+    }, 100);
+    document.addEventListener("keydown", trapTabKey);
+  }
+  function closeMenu() {
+    nav.classList.add("hidden-nav");
+    hamburgerMenu.classList.remove("toggle");
+    hamburgerMenu.setAttribute("aria-expanded", "false");
+    document.removeEventListener("keydown", trapTabKey);
+    hamburgerMenu.focus();
+  }
 
+  function trapTabKey(e) {
+    const isTabPressed = e.key === "Tab" || e.keyCode === 9;
+    const isEscPressed = e.key === "Escape" || e.keyCode === 27;
+    if (isEscPressed) {
+      closeMenu();
+      return;
+    }
+    if (!isTabPressed) {
+      return;
+    }
+    if (e.shiftKey) {
+      if (document.activeElement === firstFocusableElement) {
+        e.preventDefault();
+        lastFocusableElement.focus();
+      }
+    } else {
+      if (document.activeElement === lastFocusableElement) {
+        e.preventDefault();
+        firstFocusableElement.focus();
+      }
+    }
+  }
   hamburgerMenu.addEventListener("click", () => {
     const isClosed = nav.classList.contains("hidden-nav");
-
     if (isClosed) {
-      nav.classList.remove("hidden-nav");
-      hamburgerMenu.classList.add("toggle");
+      openMenu();
     } else {
-      nav.classList.add("hidden-nav");
-      hamburgerMenu.classList.remove("toggle");
+      closeMenu();
     }
   });
-
   const navLinks = nav.querySelectorAll("a");
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      nav.classList.add("hidden-nav");
-      hamburgerMenu.classList.remove("toggle");
+      closeMenu();
     });
   });
 });
@@ -487,6 +524,9 @@ document.addEventListener("DOMContentLoaded", function () {
       photos.forEach((src) => {
         const div = document.createElement("div");
         div.className = "gallery-item";
+        div.setAttribute("tabindex", "0");
+        div.setAttribute("role", "button");
+        div.setAttribute("aria-label", "View photo in full screen");
         const img = document.createElement("img");
         img.src = src;
         img.loading = "lazy";
@@ -494,11 +534,22 @@ document.addEventListener("DOMContentLoaded", function () {
           lightboxImg.src = src;
           lightbox.classList.remove("hidden-modal");
         });
+        div.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            lightboxImg.src = src;
+            lightbox.classList.remove("hidden-modal");
+          }
+        });
         div.appendChild(img);
         galleryGrid.appendChild(div);
       });
       galleryModal.classList.remove("hidden-modal");
       document.body.style.overflow = "hidden";
+      const backBtn = document.getElementById("close-gallery");
+      if (backBtn) {
+        setTimeout(() => backBtn.focus(), 100);
+      }
     } else {
       alert("No photos available yet!");
     }
