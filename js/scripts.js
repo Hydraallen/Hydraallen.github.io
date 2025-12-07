@@ -521,7 +521,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     galleryGrid.innerHTML = "";
     if (photos && photos.length > 0) {
-      photos.forEach((src) => {
+      photos.forEach((src, index) => {
         const div = document.createElement("div");
         div.className = "gallery-item";
         div.setAttribute("tabindex", "0");
@@ -530,17 +530,20 @@ document.addEventListener("DOMContentLoaded", function () {
         const img = document.createElement("img");
         img.src = src;
         img.loading = "lazy";
-        div.addEventListener("click", () => {
-          lightboxImg.src = src;
-          lightbox.classList.remove("hidden-modal");
-        });
+        const openPhoto = () => {
+          currentGalleryPhotos = photos;
+          currentPhotoIndex = index;     
+          updateLightboxImage(); 
+          lightbox.classList.remove("hidden-modal"); 
+        };
+        div.addEventListener("click", openPhoto);
         div.addEventListener("keydown", (e) => {
           if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
-            lightboxImg.src = src;
-            lightbox.classList.remove("hidden-modal");
+            openPhoto();
           }
         });
+
         div.appendChild(img);
         galleryGrid.appendChild(div);
       });
