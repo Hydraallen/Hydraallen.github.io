@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       const card = document.createElement("div");
       card.className = "place-card";
-      card.setAttribute("data-country", place.country.toLowerCase());
+      card.setAttribute("tabindex", "0");
       card.setAttribute("data-country", place.country.toLowerCase());
       card.setAttribute("data-name", place.name);
       card.setAttribute("data-date", place.date);
