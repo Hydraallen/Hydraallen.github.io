@@ -92,11 +92,14 @@ class MovieCleanerApp:
         btn_frame = tk.Frame(self.root)
         btn_frame.pack(pady=10)
 
+        self.btn_back = tk.Button(btn_frame, text="🔙 Change Year", command=self.return_to_year_select, bg="#DDDDDD", fg="black", width=15)
+        self.btn_back.pack(side=tk.LEFT, padx=5)
+
         self.btn_imdb = tk.Button(btn_frame, text="View on IMDb", command=self.open_imdb, bg="#E2B616", fg="black", width=15)
-        self.btn_imdb.pack(side=tk.LEFT, padx=10)
+        self.btn_imdb.pack(side=tk.LEFT, padx=5)
 
         self.btn_fav = tk.Button(btn_frame, text="❤️ Set as Favorite", command=self.set_favorite, bg="#FFCDD2", fg="#C2185B", width=15)
-        self.btn_fav.pack(side=tk.LEFT, padx=10)
+        self.btn_fav.pack(side=tk.LEFT, padx=5)
 
         self.lbl_help = tk.Label(self.root, text="← / → : Keep & Next   |   Enter : Remove & Backup", font=("Arial", 10), fg="blue")
         self.lbl_help.pack(pady=20, side=tk.BOTTOM)
@@ -135,6 +138,10 @@ class MovieCleanerApp:
         
         if not self.selected_year:
             self.root.destroy()
+
+    def return_to_year_select(self):
+        self.save_data()
+        self.select_year_dialog()
 
     def render_movie(self):
         if not self.current_movies:
