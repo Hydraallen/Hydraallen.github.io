@@ -173,7 +173,7 @@ footer {
   height: 60px;
   background-color: white;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .hamburger-menu-wrapper h1 {
@@ -1365,14 +1365,17 @@ select:focus-visible {
   z-index: 1;
 }
 
-.place-card:focus-visible {
+.place-card:focus-visible,
+.place-card:focus-within {
   transform: translateY(-8px);
   outline: 3px solid #02ddc3;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .place-card:focus-visible .place-image-wrapper::after,
-.place-card:focus-visible .hover-actions {
+.place-card:focus-visible .hover-actions,
+.place-card:focus-within .place-image-wrapper::after,
+.place-card:focus-within .hover-actions {
   opacity: 1;
   pointer-events: auto;
 }
@@ -1456,7 +1459,7 @@ select:focus-visible {
   font-size: 0.9rem;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .action-btn:hover {
@@ -1474,7 +1477,7 @@ select:focus-visible {
 }
 
 .video-btn-overlay {
-  background-color: #00AEEC;
+  background-color: #00aeec;
   color: #000000;
   border: none;
 }
