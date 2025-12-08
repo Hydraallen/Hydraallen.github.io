@@ -256,14 +256,23 @@ function renderTimeline(data, rootElement) {
     const contentDiv = document.createElement("div");
     contentDiv.className = "timeline-content";
     contentDiv.setAttribute("tabindex", "0");
-    contentDiv.setAttribute("role", "button");
-    contentDiv.setAttribute(
-      "aria-label",
-      `Expand movie list for ${yearData.year}`
-    );
+
+    const movies = yearData.movies || [];
+    const favMovie = movies.find((m) => m.title === yearData.favorite);
+    const otherMovies = movies.filter((m) => m.title !== yearData.favorite);
+    const hasMoreMovies = otherMovies.length > 0;
+
+    if (hasMoreMovies) {
+      contentDiv.setAttribute("role", "button");
+      contentDiv.setAttribute("aria-label", `Expand movie list for ${yearData.year}`);
+    } else {
+      contentDiv.style.cursor = "default";
+    }
+
     const headerDiv = document.createElement("div");
     headerDiv.className = "timeline-header";
-    const movies = yearData.movies || [];
+    const arrowHtml = hasMoreMovies ? '<span class="toggle-icon">▼</span>' : '';
+
     headerDiv.innerHTML = `
       <div>
         <h3 class="timeline-year">${yearData.year}</h3>
@@ -271,18 +280,27 @@ function renderTimeline(data, rootElement) {
            Watched: ${movies.length} movies
         </p>
       </div>
-      <span class="toggle-icon">▼</span>
+      ${arrowHtml}
     `;
-    const movieListContainer = document.createElement("div");
-    movieListContainer.className = "movie-list-container";
-    const favMovie = movies.find((m) => m.title === yearData.favorite);
-    const otherMovies = movies.filter((m) => m.title !== yearData.favorite);
+    contentDiv.appendChild(headerDiv);
+
     if (favMovie) {
       const favSection = document.createElement("div");
       favSection.className = "favorite-section";
+
+      if (hasMoreMovies) {
+        favSection.style.borderBottom = "1px solid #eee";
+        favSection.style.marginBottom = "20px";
+      } else {
+        favSection.style.borderBottom = "none";
+        favSection.style.marginBottom = "0";
+        favSection.style.paddingBottom = "0";
+      }
+
       const posterSrc = favMovie.poster
         ? favMovie.poster
         : "https://via.placeholder.com/200x300?text=No+Image";
+
       favSection.innerHTML = `
         <div class="favorite-label-large">🏆 Best of ${yearData.year}</div>
         <div class="favorite-card">
@@ -295,10 +313,13 @@ function renderTimeline(data, rootElement) {
           </div>
         </div>
       `;
-      movieListContainer.appendChild(favSection);
+      contentDiv.appendChild(favSection);
     }
 
-    if (otherMovies.length > 0) {
+    const movieListContainer = document.createElement("div");
+    movieListContainer.className = "movie-list-container";
+
+    if (hasMoreMovies) {
       const scrollWrapper = document.createElement("div");
       scrollWrapper.className = "vertical-scroll-wrapper";
       scrollWrapper.setAttribute("tabindex", "0");
@@ -306,6 +327,7 @@ function renderTimeline(data, rootElement) {
         "aria-label",
         `Movies list for ${yearData.year}`
       );
+
       otherMovies.forEach((movie) => {
         const card = document.createElement("div");
         card.className = "movie-card";
@@ -324,44 +346,51 @@ function renderTimeline(data, rootElement) {
         scrollWrapper.appendChild(card);
       });
       movieListContainer.appendChild(scrollWrapper);
+      contentDiv.appendChild(movieListContainer);
     } else if (!favMovie) {
       movieListContainer.innerHTML +=
         '<p style="padding:10px; text-align:center;">No movies recorded.</p>';
+      contentDiv.appendChild(movieListContainer);
     }
-    contentDiv.appendChild(headerDiv);
-    contentDiv.appendChild(movieListContainer);
+
     itemDiv.appendChild(markerDiv);
     itemDiv.appendChild(contentDiv);
     rootElement.appendChild(itemDiv);
-    contentDiv.addEventListener("click", function (e) {
-      if (e.target.closest(".vertical-scroll-wrapper")) {
-        return;
-      }
-      const parent = this.parentElement;
-      const container = parent.querySelector(".movie-list-container");
-      const isActive = parent.classList.contains("active");
-      if (!isActive) {
-        parent.classList.add("active");
-        const height = container.scrollHeight;
-        container.style.maxHeight = height + "px";
-        setTimeout(() => {
-          if (parent.classList.contains("active")) {
-            container.style.maxHeight = "none";
-          }
-        }, 600);
-      } else {
-        container.style.maxHeight = container.scrollHeight + "px";
-        void container.offsetHeight;
-        parent.classList.remove("active");
-        container.style.maxHeight = null;
-      }
-    });
-    contentDiv.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        this.click();
-      }
-    });
+
+    if (hasMoreMovies) {
+      contentDiv.addEventListener("click", function (e) {
+        if (e.target.closest(".vertical-scroll-wrapper")) {
+          return;
+        }
+
+        const parent = this.parentElement;
+        const container = parent.querySelector(".movie-list-container");
+        const isActive = parent.classList.contains("active");
+
+        if (!isActive) {
+          parent.classList.add("active");
+          const height = container.scrollHeight;
+          container.style.maxHeight = height + "px";
+          setTimeout(() => {
+            if (parent.classList.contains("active")) {
+              container.style.maxHeight = "none";
+            }
+          }, 600);
+        } else {
+          container.style.maxHeight = container.scrollHeight + "px";
+          void container.offsetHeight;
+          parent.classList.remove("active");
+          container.style.maxHeight = null;
+        }
+      });
+
+      contentDiv.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    }
   });
 }
 
