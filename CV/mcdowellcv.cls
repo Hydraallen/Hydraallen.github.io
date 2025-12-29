@@ -102,7 +102,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \def\namespaceskip{0.575em}
   \def\afterheaderspace{1.1pt}
   % \def\beforesectionheaderspace{5pt}
-  \def\beforesectionheaderspace{3.9pt}
+  \def\beforesectionheaderspace{2.9pt}
   \def\sectionheadermargin{6pt}
   \def\beforesectionheaderhrulespace{2.85pt}
   \def\sectionheaderhrlueheight{0.518pt}
@@ -119,7 +119,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \def\afteremptysubsectionheaderspace{1.25pt}
   \def\subsectionmargin{9pt}
   % \def\aftersubsectionspace{2.1pt}
-  \def\aftersubsectionspace{0pt}
+  \def\aftersubsectionspace{-5pt}
 }{
   \def\namespaceskip{0.4em}
   \def\afterheaderspace{3pt}
