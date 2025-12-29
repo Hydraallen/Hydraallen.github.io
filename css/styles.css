@@ -353,6 +353,27 @@ section strong {
   top: -2px;
 }
 
+.experience-bullets {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.experience-bullets li {
+  margin-bottom: 8px;
+  font-size: 18px; 
+  color: #333;
+  line-height: 1.6;
+}
+
+.experience-bullets li::marker {
+  color: #00695c;
+}
+
+.experience-bullets a:hover {
+  color: #02ddc3 !important;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
