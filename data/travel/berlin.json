@@ -1,12 +1,15 @@
 {
   "id": "berlin",
   "name": "Berlin",
-  "country": "🇩🇪 Germany",
+  "country": "Germany",
+  "continent": "europe", 
+  "coordinates": [52.5200, 13.4050],
+  "status": "visited",
   "date": "2024-01-02",
   "date_display": "Jan 2 - Feb 3, 2024",
-  "video": "",
   "cover": "../../img/travel/Berlin/cover.jpg",
-  "photos": [
+  "photos": 
+  [
     "../../img/travel/Berlin/photo1.jpg",
     "../../img/travel/Berlin/photo2.jpg",
     "../../img/travel/Berlin/photo3.jpg",
