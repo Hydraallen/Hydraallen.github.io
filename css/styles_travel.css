@@ -355,6 +355,47 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* Map Reset Button */
+.map-reset-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Above Map */
+  background-color: white;
+  color: #00695c;
+  border: 2px solid #00695c;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+}
+
+.map-reset-btn:hover {
+  background-color: #00695c;
+  color: white;
+}
+
+/* Map Popup Styling for Photos */
+.leaflet-popup-content {
+  text-align: center;
+}
+.popup-photo-thumb {
+  width: 100%;
+  max-width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.popup-location-name {
+  font-weight: bold;
+  font-size: 12px;
+  color: #333;
+}
+
 /* Continent Tabs */
 .continent-tabs {
   display: flex;

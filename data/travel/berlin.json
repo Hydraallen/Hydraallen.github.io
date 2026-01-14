@@ -2,19 +2,34 @@
   "id": "berlin",
   "name": "Berlin",
   "country": "Germany",
-  "continent": "europe", 
-  "coordinates": [52.5200, 13.4050],
+  "continent": "europe",
+  "date": "2023-10-05",
+  "date_display": "Oct 2023",
+  "cover": "../../img/travel/berlin/cover.jpg",
+  "video": "",
   "status": "visited",
-  "date": "2024-01-02",
-  "date_display": "Jan 2 - Feb 3, 2024",
-  "cover": "../../img/travel/Berlin/cover.jpg",
-  "photos": 
-  [
-    "../../img/travel/Berlin/photo1.jpg",
-    "../../img/travel/Berlin/photo2.jpg",
-    "../../img/travel/Berlin/photo3.jpg",
-    "../../img/travel/Berlin/photo4.jpg",
-    "../../img/travel/Berlin/photo5.jpg"
+  "coordinates": [52.5200, 13.4050],
+  "photos": [
+    {
+      "src": "../../img/travel/Berlin/photo1.jpg",
+      "location": "Brandenburg Gate",
+      "coordinates": [52.516275, 13.377704]
+    },
+    {
+      "src": "../../img/travel/Berlin/photo2.jpg",
+      "location": "Fernsehturm Berlin",
+      "coordinates": [52.520815, 13.409419]
+    },
+    {
+      "src": "../../img/travel/Berlin/photo3.jpg",
+      "location": "Museum Island",
+      "coordinates": [52.516934, 13.397835]
+    },
+    {
+      "src": "../../img/travel/Berlin/photo4.jpg",
+      "location": "Museum Island (Detail)",
+      "coordinates": [52.516934, 13.397835] 
+    }
   ]
 }
 

@@ -99,9 +99,15 @@
       <h2>Travel Journey</h2>
 
       <!-- 2. 地图容器 -->
-      <div id="map-container"></div>
+      <div class="map-wrapper" style="position: relative;">
+        <div id="map-container"></div>
+        <!-- 新增：返回世界地图按钮 (默认隐藏) -->
+        <button id="reset-map-btn" class="map-reset-btn hidden-btn">
+          ← Back to World Map
+        </button>
+      </div>
 
-      <!-- 3. 大洲筛选 Tab (新增 Antarctica) -->
+      <!-- 3. 大洲筛选 Tab -->
       <div class="continent-tabs">
         <button class="tab-btn active" data-continent="all">All World</button>
         <button class="tab-btn" data-continent="asia">Asia</button>
@@ -113,7 +119,7 @@
         <button class="tab-btn" data-continent="antarctica">Antarctica</button>
       </div>
 
-      <!-- 4. 控制区域 (下拉菜单 + 筛选按钮) -->
+      <!-- 4. 控制区域 -->
       <div class="travel-controls">
         
         <!-- 左侧：下拉菜单组 -->
@@ -143,7 +149,7 @@
           </div>
         </div>
 
-        <!-- 右侧：筛选开关 (Visited / Bucket List) -->
+        <!-- 右侧：筛选开关 -->
         <div class="filter-toggles">
           <label class="toggle-btn visited-toggle">
             <input type="checkbox" id="filter-visited" checked>
