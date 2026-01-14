@@ -1,5 +1,5 @@
 // ==========================================
-// Script for Travel Page (Final Version with Direct Map Jump & Styled Lightbox)
+// Script for Travel Page (Fixed: No Scroll on Map Click)
 // ==========================================
 
 let allTravelData = [];
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeGalleryBtn = document.getElementById("close-gallery");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
-  const lightboxCaption = document.getElementById("lightbox-caption"); // New caption element
+  const lightboxCaption = document.getElementById("lightbox-caption");
   const closeLightboxBtn = document.getElementById("close-lightbox");
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Helper: Centralized View Update
   function updateView() {
-    if (isCityView) return; // Don't update global map if in city mode
+    if (isCityView) return; 
 
     const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
     const targetContinent = activeBtn ? activeBtn.getAttribute("data-continent") : "all";
@@ -131,11 +131,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (place.coordinates) {
         const marker = L.marker(place.coordinates).addTo(map);
         
-        // 核心修改：点击标记直接跳转到城市地图，而不是显示弹窗
+        // --- 修复点：移除了触发滚动的代码 ---
         marker.on('click', function() {
           showCityOnMap(place);
-          // 同时滚动到对应的卡片（可选，增强体验）
-          document.dispatchEvent(new CustomEvent('focus-card', {detail: place.name}));
+          // 之前这里有一行 dispatchEvent('focus-card') 导致了页面跳转，现已删除
         });
 
         // 鼠标悬停显示简单提示
@@ -170,7 +169,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add markers for photos if they exist and have coordinates
     if (placeData.photos && placeData.photos.length > 0) {
       placeData.photos.forEach((photo, index) => {
-        // Check if photo is an object (new format) and has coordinates
         if (typeof photo === 'object' && photo.coordinates) {
           const marker = L.marker(photo.coordinates).addTo(map);
           
@@ -267,9 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!isPlanned) {
         const openGalleryLogic = () => {
-          // 核心修改：点击卡片或“View Photos”时，地图也飞向该城市
           showCityOnMap(place);
-
           const isLargeScreen = window.innerWidth > 768;
           if (isLargeScreen) {
             openLightboxDirectly(place);
@@ -370,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Lightbox Logic (Updated for Address Display) ---
+  // --- Lightbox Logic ---
   
   function openLightboxDirectly(placeData) {
     if (!placeData.photos || placeData.photos.length === 0) {
@@ -387,12 +383,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateLightboxImage() {
     if (currentGalleryPhotos.length > 0) {
       const photo = currentGalleryPhotos[currentPhotoIndex];
-      // Handle both string and object formats
       const src = typeof photo === 'object' ? photo.src : photo;
       const location = (typeof photo === 'object' && photo.location) ? photo.location : "";
       
       lightboxImg.src = src;
-      // Update Caption
       if (lightboxCaption) {
         lightboxCaption.textContent = location;
         lightboxCaption.style.display = location ? 'block' : 'none';
@@ -494,7 +488,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (prevBtn) prevBtn.addEventListener("click", (e) => { e.stopPropagation(); showPrevPhoto(); });
   if (nextBtn) nextBtn.addEventListener("click", (e) => { e.stopPropagation(); showNextPhoto(); });
 
-  // Map Popup Focus Logic (Global Map)
+  // Map Popup Focus Logic (Global Map) - Only used for manual focus, not click
   document.addEventListener('focus-card', function(e) {
     const placeName = e.detail;
     const cards = document.querySelectorAll('.place-card');
