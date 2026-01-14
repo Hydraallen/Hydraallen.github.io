@@ -1,5 +1,5 @@
 // ==========================================
-// Script for Travel Page (Final Version with City Map & Photo Locations)
+// Script for Travel Page (Final Version with Direct Map Jump & Styled Lightbox)
 // ==========================================
 
 let allTravelData = [];
@@ -11,7 +11,7 @@ let markers = []; // Array to store map markers
 let currentLanguage = 'en'; // Default language: English
 let isCityView = false; // Track if we are in city view mode
 
-// 大洲坐标中心点配置 (包含南极洲)
+// 大洲坐标中心点配置
 const continentViews = {
   all: { center: [20, 0], zoom: 2 },
   asia: { center: [34.0479, 100.6197], zoom: 3 },
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const continentBtns = document.querySelectorAll(".continent-tabs .tab-btn");
   const visitedCheckbox = document.getElementById("filter-visited");
   const plannedCheckbox = document.getElementById("filter-planned");
-  const resetMapBtn = document.getElementById("reset-map-btn"); // New Button
+  const resetMapBtn = document.getElementById("reset-map-btn");
 
   // Gallery & Lightbox Elements
   const galleryModal = document.getElementById("gallery-modal");
@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeGalleryBtn = document.getElementById("close-gallery");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCaption = document.getElementById("lightbox-caption"); // New caption element
   const closeLightboxBtn = document.getElementById("close-lightbox");
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
@@ -128,22 +129,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     data.forEach(place => {
       if (place.coordinates) {
-        const isPlanned = place.status === 'planned';
         const marker = L.marker(place.coordinates).addTo(map);
         
-        const popupContent = `
-          <div style="text-align:center">
-            <strong>${place.name}</strong><br>
-            <span style="color:${isPlanned ? '#ff9800' : '#00695c'}">
-              ${isPlanned ? '✈️ Bucket List' : '✅ Visited'}
-            </span><br>
-            <button onclick="document.dispatchEvent(new CustomEvent('focus-card', {detail: '${place.name}'}))" 
-              style="margin-top:5px; cursor:pointer; background:#eee; border:none; padding:4px 8px; border-radius:4px;">
-              View Details
-            </button>
-          </div>
-        `;
-        marker.bindPopup(popupContent);
+        // 核心修改：点击标记直接跳转到城市地图，而不是显示弹窗
+        marker.on('click', function() {
+          showCityOnMap(place);
+          // 同时滚动到对应的卡片（可选，增强体验）
+          document.dispatchEvent(new CustomEvent('focus-card', {detail: place.name}));
+        });
+
+        // 鼠标悬停显示简单提示
+        marker.bindTooltip(place.name, {
+            permanent: false, 
+            direction: 'top',
+            offset: [0, -20]
+        });
+
         markers.push(marker);
       }
     });
@@ -154,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     markers = [];
   }
 
-  // --- NEW: City Map Logic ---
+  // --- City Map Logic ---
 
   function showCityOnMap(placeData) {
     if (!map || !placeData.coordinates) return;
@@ -215,8 +216,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => lightbox.classList.add("active"), 10);
   });
 
-  // --- End City Map Logic ---
-
   // 4. Render Grid Cards
   function renderGrid(data) {
     grid.innerHTML = "";
@@ -268,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!isPlanned) {
         const openGalleryLogic = () => {
-          // Trigger City Map View
+          // 核心修改：点击卡片或“View Photos”时，地图也飞向该城市
           showCityOnMap(place);
 
           const isLargeScreen = window.innerWidth > 768;
@@ -311,7 +310,6 @@ document.addEventListener("DOMContentLoaded", function () {
       continentBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
-      // If in city mode, exit it first
       if (isCityView) {
           isCityView = false;
           resetMapBtn.classList.add("hidden-btn");
@@ -372,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Lightbox & Gallery Logic (Updated for Object Support) ---
+  // --- Lightbox Logic (Updated for Address Display) ---
   
   function openLightboxDirectly(placeData) {
     if (!placeData.photos || placeData.photos.length === 0) {
@@ -391,7 +389,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const photo = currentGalleryPhotos[currentPhotoIndex];
       // Handle both string and object formats
       const src = typeof photo === 'object' ? photo.src : photo;
+      const location = (typeof photo === 'object' && photo.location) ? photo.location : "";
+      
       lightboxImg.src = src;
+      // Update Caption
+      if (lightboxCaption) {
+        lightboxCaption.textContent = location;
+        lightboxCaption.style.display = location ? 'block' : 'none';
+      }
     }
   }
 
@@ -432,7 +437,6 @@ document.addEventListener("DOMContentLoaded", function () {
         div.setAttribute("role", "button");
         
         const img = document.createElement("img");
-        // Handle both string and object formats
         img.src = typeof photo === 'object' ? photo.src : photo;
         img.loading = "lazy";
         
