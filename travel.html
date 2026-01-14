@@ -101,7 +101,7 @@
       <!-- 2. 地图容器 -->
       <div class="map-wrapper" style="position: relative;">
         <div id="map-container"></div>
-        <!-- 新增：返回世界地图按钮 (默认隐藏) -->
+        <!-- 返回世界地图按钮 (默认隐藏) -->
         <button id="reset-map-btn" class="map-reset-btn hidden-btn">
           ← Back to World Map
         </button>
@@ -121,10 +121,7 @@
 
       <!-- 4. 控制区域 -->
       <div class="travel-controls">
-        
-        <!-- 左侧：下拉菜单组 -->
         <div class="dropdown-group">
-          <!-- Sort by -->
           <div class="control-item">
             <label for="place-sort">Sort by</label>
             <div class="select-wrapper">
@@ -135,8 +132,6 @@
               </select>
             </div>
           </div>
-
-          <!-- Map Language -->
           <div class="control-item">
             <label for="lang-select">Map Language</label>
             <div class="select-wrapper">
@@ -149,19 +144,16 @@
           </div>
         </div>
 
-        <!-- 右侧：筛选开关 -->
         <div class="filter-toggles">
           <label class="toggle-btn visited-toggle">
             <input type="checkbox" id="filter-visited" checked>
             <span class="toggle-icon">●</span> Visited
           </label>
-          
           <label class="toggle-btn planned-toggle">
             <input type="checkbox" id="filter-planned" checked>
             <span class="toggle-icon">●</span> Bucket List
           </label>
         </div>
-
       </div>
 
       <div class="travel-grid" id="travel-grid">
@@ -188,12 +180,17 @@
     </div>
   </div>
 
-  <!-- Lightbox -->
+  <!-- Lightbox (Updated Structure) -->
   <div id="lightbox" class="lightbox hidden-modal">
     <span id="close-lightbox" class="close-lightbox">&times;</span>
     <div id="prev-btn" class="lightbox-btn prev-btn">&#10094;</div>
     <div id="next-btn" class="lightbox-btn next-btn">&#10095;</div>
-    <img class="lightbox-content" id="lightbox-img" alt="Travel Photo" src="./img/avatar.jpg">
+    
+    <!-- 新增容器，用于包裹图片和文字 -->
+    <div class="lightbox-container">
+      <img class="lightbox-content" id="lightbox-img" alt="Travel Photo" src="./img/avatar.jpg">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
   </div>
 
   <footer>

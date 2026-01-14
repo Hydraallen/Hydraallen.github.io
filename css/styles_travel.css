@@ -273,13 +273,14 @@
   object-fit: cover;
 }
 
+/* --- Lightbox Styling (Beautified) --- */
 .lightbox {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.92); /* Slightly darker background */
   z-index: 3000;
   display: flex;
   justify-content: center;
@@ -294,11 +295,34 @@
   pointer-events: auto;
 }
 
-.lightbox-content {
+/* Lightbox Container for Flex Layout */
+.lightbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 90%;
   max-height: 90%;
-  border-radius: 4px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-content {
+  max-height: 75vh; /* Don't fill screen, leave room for text */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Nice shadow */
+}
+
+.lightbox-caption {
+  margin-top: 20px;
+  color: #f0f0f0;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  font-family: "Inter", sans-serif;
 }
 
 .close-lightbox {
@@ -310,40 +334,39 @@
   font-weight: bold;
   cursor: pointer;
   z-index: 3001;
+  transition: transform 0.2s;
 }
+.close-lightbox:hover { transform: scale(1.1); }
 
 .lightbox-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
-  padding: 16px;
+  padding: 10px;
   user-select: none;
   z-index: 3001;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1); /* Subtle background */
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
+  transition: all 0.3s;
+  backdrop-filter: blur(5px);
 }
 
 .lightbox-btn:hover {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
 }
 
-.prev-btn {
-  left: 20px;
-}
-
-.next-btn {
-  right: 20px;
-}
+.prev-btn { left: 30px; }
+.next-btn { right: 30px; }
 
 /* Map Container */
 #map-container {
@@ -370,6 +393,7 @@
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   transition: all 0.3s;
+  font-size: 14px;
 }
 
 .map-reset-btn:hover {
@@ -377,7 +401,7 @@
   color: white;
 }
 
-/* Map Popup Styling for Photos */
+/* Map Popup Styling */
 .leaflet-popup-content {
   text-align: center;
 }
@@ -389,7 +413,9 @@
   border-radius: 4px;
   margin-bottom: 5px;
   cursor: pointer;
+  transition: opacity 0.2s;
 }
+.popup-photo-thumb:hover { opacity: 0.8; }
 .popup-location-name {
   font-weight: bold;
   font-size: 12px;
@@ -427,22 +453,21 @@
   border-color: #00695c;
 }
 
-/* --- Controls Area Styling (New Layout) --- */
+/* --- Controls Area Styling --- */
 .travel-controls {
   display: flex;
-  justify-content: space-between; /* 左右两端对齐 */
-  align-items: flex-end; /* 底部对齐，让Label和按钮协调 */
+  justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 30px;
   background-color: #ffffff;
   padding: 20px 25px;
   border-radius: 16px;
   border: 1px solid #eee;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* 轻微阴影增加质感 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
   flex-wrap: wrap;
   gap: 20px;
 }
 
-/* 左侧下拉菜单组 */
 .dropdown-group {
   display: flex;
   gap: 20px;
@@ -451,7 +476,7 @@
 
 .control-item {
   display: flex;
-  flex-direction: column; /* Label 在上方 */
+  flex-direction: column;
   gap: 8px;
 }
 
@@ -464,7 +489,6 @@
   margin-left: 4px;
 }
 
-/* 下拉框样式微调 */
 .select-wrapper {
   position: relative;
   display: inline-block;
@@ -492,7 +516,6 @@
   color: #00695c;
 }
 
-/* 下拉箭头 */
 .select-wrapper::after {
   content: "▼";
   font-size: 10px;
@@ -509,20 +532,17 @@
   color: white;
 }
 
-/* --- 右侧筛选按钮 (Toggle Buttons) --- */
 .filter-toggles {
   display: flex;
   gap: 15px;
   align-items: center;
-  padding-bottom: 2px; /* 微调对齐 */
+  padding-bottom: 2px;
 }
 
-/* 隐藏原生 Checkbox */
 .toggle-btn input[type="checkbox"] {
   display: none;
 }
 
-/* 按钮基础样式 */
 .toggle-btn {
   display: inline-flex;
   align-items: center;
@@ -534,8 +554,8 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid transparent;
   user-select: none;
-  background-color: #f0f0f0; /* 默认未选中背景 */
-  color: #999; /* 默认未选中文字 */
+  background-color: #f0f0f0;
+  color: #999;
 }
 
 .toggle-icon {
@@ -544,60 +564,35 @@
   transition: transform 0.3s;
 }
 
-/* --- Visited 选中状态 --- */
-.toggle-btn.visited-toggle input:checked + .toggle-icon {
-  color: white;
-}
-
+.toggle-btn.visited-toggle input:checked + .toggle-icon { color: white; }
 .toggle-btn.visited-toggle:has(input:checked) {
-  background-color: #00695c; /* 绿色背景 */
+  background-color: #00695c;
   color: white;
   box-shadow: 0 4px 10px rgba(0, 105, 92, 0.3);
   transform: translateY(-2px);
 }
 
-/* --- Bucket List 选中状态 --- */
-.toggle-btn.planned-toggle input:checked + .toggle-icon {
-  color: white;
-}
-
+.toggle-btn.planned-toggle input:checked + .toggle-icon { color: white; }
 .toggle-btn.planned-toggle:has(input:checked) {
-  background-color: #ff9800; /* 橙色背景 */
+  background-color: #ff9800;
   color: white;
   box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
   transform: translateY(-2px);
 }
 
-/* 鼠标悬停效果 */
-.toggle-btn:hover {
-  background-color: #e0e0e0;
-}
-.toggle-btn:has(input:checked):hover {
-  opacity: 0.9;
-}
+.toggle-btn:hover { background-color: #e0e0e0; }
+.toggle-btn:has(input:checked):hover { opacity: 0.9; }
 
-/* 响应式：手机端垂直排列 */
 @media (max-width: 768px) {
   .travel-controls {
     flex-direction: column;
     align-items: stretch;
   }
-  
   .dropdown-group {
     flex-direction: column;
     width: 100%;
   }
-  
-  .select-wrapper select {
-    width: 100%;
-  }
-
-  .filter-toggles {
-    justify-content: space-between; /* 手机上按钮撑满 */
-  }
-  
-  .toggle-btn {
-    flex: 1;
-    justify-content: center;
-  }
+  .select-wrapper select { width: 100%; }
+  .filter-toggles { justify-content: space-between; }
+  .toggle-btn { flex: 1; justify-content: center; }
 }
