@@ -1,5 +1,5 @@
 // ==========================================
-// Script for Travel Page (Final Version with Filters)
+// Script for Travel Page (Final Version with Filters & Antarctica)
 // ==========================================
 
 let allTravelData = [];
@@ -10,7 +10,7 @@ let tileLayer; // Keep track of the tile layer to switch languages
 let markers = []; // Array to store map markers
 let currentLanguage = 'en'; // Default language: English
 
-// 大洲坐标中心点配置 (用于地图视角切换)
+// 大洲坐标中心点配置 (包含南极洲)
 const continentViews = {
   all: { center: [20, 0], zoom: 2 },
   asia: { center: [34.0479, 100.6197], zoom: 3 },
@@ -18,7 +18,8 @@ const continentViews = {
   namerica: { center: [54.5260, -105.2551], zoom: 3 },
   samerica: { center: [-8.7832, -55.4915], zoom: 3 },
   africa: { center: [-8.7832, 34.5085], zoom: 3 },
-  oceania: { center: [-25.2744, 133.7751], zoom: 4 }
+  oceania: { center: [-25.2744, 133.7751], zoom: 4 },
+  antarctica: { center: [-75.0000, 0.0000], zoom: 2 } // 新增南极洲
 };
 
 document.addEventListener("DOMContentLoaded", function () {
