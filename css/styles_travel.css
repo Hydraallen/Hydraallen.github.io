@@ -360,3 +360,73 @@
 .lightbox-close:hover {
   color: #02ddc3;
 }
+
+/* --- 地图相关样式 --- */
+#map-container {
+  width: 100%;
+  height: 450px; /* 地图高度 */
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1; /* 保证不遮挡下拉菜单 */
+}
+
+/* --- 大洲 Tab 样式 --- */
+.continent-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.continent-tabs .tab-btn {
+  padding: 10px 20px;
+  border: 2px solid #00695c;
+  background: transparent;
+  color: #00695c;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.continent-tabs .tab-btn:hover,
+.continent-tabs .tab-btn.active {
+  background: #00695c;
+  color: white;
+}
+
+/* --- 图例样式 --- */
+.map-legend {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+.dot.visited { background-color: #00695c; } /* 绿色 */
+.dot.planned { background-color: #ff9800; } /* 橙色 */
+
+/* --- 卡片样式更新 --- */
+/* 想去的地方 (Bucket List) 样式 */
+.place-card.planned .place-image-wrapper::after {
+  background: rgba(255, 152, 0, 0.6); /* 橙色遮罩 */
+}
+.place-card.planned .place-date {
+  color: #ff9800;
+  font-style: italic;
+}
+.place-card.planned .place-city::before {
+  content: "✈️ "; /* 增加一个小飞机图标 */
+  font-size: 0.8em;
+}
+
+/* 现有的 Grid 样式保持不变... */

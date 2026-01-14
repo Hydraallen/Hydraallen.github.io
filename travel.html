@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/styles_travel.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 
 <body>
@@ -94,30 +96,40 @@
 
   <main id="main-content">
     <section id="travel-gallery">
-      <h2>Travel Gallery</h2>
+      <h2>Travel Journey</h2>
+
+      <!-- 2. 地图容器 -->
+      <div id="map-container"></div>
+
+      <!-- 3. 大洲筛选 Tab (替代原有的下拉菜单) -->
+      <div class="continent-tabs">
+        <button class="tab-btn active" data-continent="all">All World</button>
+        <button class="tab-btn" data-continent="asia">Asia</button>
+        <button class="tab-btn" data-continent="europe">Europe</button>
+        <button class="tab-btn" data-continent="namerica">North America</button>
+        <button class="tab-btn" data-continent="samerica">South America</button>
+        <!-- 添加更多大洲 -->
+      </div>
 
       <div class="travel-controls">
+        <!-- 只保留排序，国家筛选已由大洲 Tab 取代，或者你可以保留作为二级筛选 -->
         <div class="control-group">
-          <label for="place-filter">Filter by country</label>
-          <select id="place-filter">
-            <option value="all">All Countries</option>
-            <option value="usa">USA</option>
-            <option value="germany">Germany</option>
-            <option value="czech">Czech Republic</option>
-          </select>
-        </div>
-        <div class="control-group">
-          <label for="place-sort">Sort places by</label>
+          <label for="place-sort">Sort by</label>
           <select id="place-sort">
-            <option value="newest">Date (Newest First)</option>
-            <option value="oldest">Date (Oldest First)</option>
+            <option value="newest">Date (Newest)</option>
+            <option value="oldest">Date (Oldest)</option>
             <option value="az">Name (A-Z)</option>
           </select>
+        </div>
+        <!-- 图例说明 -->
+        <div class="map-legend">
+          <span class="legend-item"><span class="dot visited"></span> Visited</span>
+          <span class="legend-item"><span class="dot planned"></span> Bucket List</span>
         </div>
       </div>
 
       <div class="travel-grid" id="travel-grid">
-        <p class="loading-text">Loading travel memories...</p>
+        <p class="loading-text">Loading world map & memories...</p>
       </div>
     </section>
   </main>
@@ -152,7 +164,9 @@
       reserved.
     </p>
   </footer>
-
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/scripts_travel.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 
