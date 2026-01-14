@@ -1,12 +1,14 @@
 // ==========================================
-// Script for Travel Page (Updated with Map)
+// Script for Travel Page (Final Version with Filters)
 // ==========================================
 
 let allTravelData = [];
 let currentGalleryPhotos = [];
 let currentPhotoIndex = 0;
 let map; // Leaflet map instance
+let tileLayer; // Keep track of the tile layer to switch languages
 let markers = []; // Array to store map markers
+let currentLanguage = 'en'; // Default language: English
 
 // 大洲坐标中心点配置 (用于地图视角切换)
 const continentViews = {
@@ -25,8 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!grid) return;
 
   const sortSelect = document.getElementById("place-sort");
+  const langSelect = document.getElementById("lang-select"); // 语言选择器
   const continentBtns = document.querySelectorAll(".continent-tabs .tab-btn");
   
+  // 筛选复选框
+  const visitedCheckbox = document.getElementById("filter-visited");
+  const plannedCheckbox = document.getElementById("filter-planned");
+
   // Gallery & Lightbox Elements
   const galleryModal = document.getElementById("gallery-modal");
   const galleryGrid = document.getElementById("gallery-grid");
@@ -42,13 +49,43 @@ document.addEventListener("DOMContentLoaded", function () {
   // 1. Initialize Map
   function initMap() {
     if (document.getElementById('map-container')) {
+      // 初始化地图容器
       map = L.map('map-container').setView([20, 0], 2);
       
-      // 使用 OpenStreetMap 图层 (免费)
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
+      // 加载默认语言图层 (English)
+      addTileLayer(currentLanguage);
     }
+  }
+
+  // Helper: Switch Map Tile Layer based on Language
+  function addTileLayer(lang) {
+    // 如果已有图层，先移除，防止叠加
+    if (tileLayer) {
+      map.removeLayer(tileLayer);
+    }
+
+    let url = '';
+    let attribution = '';
+
+    if (lang === 'cn') {
+      // Google Maps - Chinese (强制中文)
+      url = 'http://mt0.google.com/vt/lyrs=m&hl=zh-CN&x={x}&y={y}&z={z}';
+      attribution = '&copy; Google Maps';
+    } else if (lang === 'en') {
+      // Google Maps - English (强制英文)
+      url = 'http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}';
+      attribution = '&copy; Google Maps';
+    } else {
+      // Original / Local - OpenStreetMap (显示当地语言)
+      url = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      attribution = '&copy; OpenStreetMap contributors';
+    }
+
+    tileLayer = L.tileLayer(url, {
+      attribution: attribution,
+      maxZoom: 20,
+      subdomains: lang === 'local' ? 'abc' : '' // OSM uses subdomains
+    }).addTo(map);
   }
 
   // 2. Load Data
@@ -67,16 +104,44 @@ document.addEventListener("DOMContentLoaded", function () {
       allTravelData = await Promise.all(fetchPromises);
       
       // 初始渲染：显示全部
-      renderGrid(allTravelData);
-      renderMapMarkers(allTravelData);
-      
-      // 触发一次排序
-      sortSelect.dispatchEvent(new Event("change"));
+      updateView();
       
     } catch (error) {
       console.error("Error loading travel data:", error);
       grid.innerHTML = `<p style="text-align:center; color:red;">Error loading data.</p>`;
     }
+  }
+
+  // Helper: Centralized View Update (Map + Grid)
+  function updateView() {
+    // 1. 获取当前激活的大洲
+    const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
+    const targetContinent = activeBtn ? activeBtn.getAttribute("data-continent") : "all";
+
+    // 2. 获取筛选按钮状态
+    const showVisited = visitedCheckbox.checked;
+    const showPlanned = plannedCheckbox.checked;
+
+    // 3. 筛选数据
+    let filteredData = allTravelData.filter(place => {
+      // 大洲筛选
+      if (targetContinent !== "all" && place.continent !== targetContinent) {
+        return false;
+      }
+      
+      // 状态筛选 (Visited / Planned)
+      const isPlanned = place.status === 'planned';
+      if (isPlanned && !showPlanned) return false; // 如果是计划中，但没勾选 Bucket List -> 隐藏
+      if (!isPlanned && !showVisited) return false; // 如果是已去过，但没勾选 Visited -> 隐藏
+
+      return true;
+    });
+
+    // 4. 渲染地图标记
+    renderMapMarkers(filteredData);
+
+    // 5. 触发排序 (排序逻辑内部会调用 renderGrid)
+    sortSelect.dispatchEvent(new Event("change"));
   }
 
   // 3. Render Map Markers
@@ -89,16 +154,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     data.forEach(place => {
       if (place.coordinates) {
-        // 区分颜色：去过(绿色默认)，想去(橙色)
-        // Leaflet 默认图标是蓝色，这里我们可以用 CSS filter 或者自定义 icon
-        // 为了简单，这里使用默认图标，但在 popup 里区分
-        
         const isPlanned = place.status === 'planned';
-        const markerColor = isPlanned ? 'hue-rotate(140deg)' : ''; // 简单的 CSS 滤镜变色
-
+        
+        // 创建标记
         const marker = L.marker(place.coordinates).addTo(map);
         
-        // 自定义 Popup 内容
+        // Popup 内容
         const popupContent = `
           <div style="text-align:center">
             <strong>${place.name}</strong><br>
@@ -125,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cards.forEach(card => {
       if (card.getAttribute('data-name') === placeName) {
         card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        card.classList.add('highlight-card'); // 你可以在 CSS 加一个闪烁动画
+        card.classList.add('highlight-card'); 
         setTimeout(() => card.classList.remove('highlight-card'), 2000);
       }
     });
@@ -135,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function renderGrid(data) {
     grid.innerHTML = "";
     if (data.length === 0) {
-      grid.innerHTML = "<p>No places found for this category.</p>";
+      grid.innerHTML = "<p>No places found matching your filters.</p>";
       return;
     }
 
@@ -148,7 +209,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const isPlanned = place.status === "planned";
       const hasVideo = place.video && place.video.trim() !== "";
       
-      // 按钮逻辑：如果是 Planned，可能没有 View Photos 按钮
       let buttonsHtml = "";
       if (!isPlanned) {
         buttonsHtml += `<button class="action-btn photo-btn">View Photos</button>`;
@@ -165,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
       card.setAttribute("tabindex", "0");
       card.setAttribute("data-continent", place.continent || "other");
       card.setAttribute("data-name", place.name);
-      card.setAttribute("data-date", place.date); // 用于排序
+      card.setAttribute("data-date", place.date); 
 
       card.innerHTML = `
         <div class="place-image-wrapper">
@@ -209,7 +269,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      // 视频按钮阻止冒泡
       const videoBtn = card.querySelector(".video-btn-overlay");
       if (videoBtn) {
         videoBtn.addEventListener("click", (e) => e.stopPropagation());
@@ -219,51 +278,63 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 5. Filtering Logic (Tabs)
+  // 5. Filtering Logic (Tabs & Checkboxes)
+  
+  // 大洲 Tab 点击
   continentBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-      // UI Update
       continentBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
       const targetContinent = btn.getAttribute("data-continent");
-
-      // Filter Data
-      let filteredData = allTravelData;
-      if (targetContinent !== "all") {
-        filteredData = allTravelData.filter(place => place.continent === targetContinent);
-      }
-
-      // Re-render Grid
-      renderGrid(filteredData);
       
-      // Re-render Map Markers (Optional: if you only want to show markers for current tab)
-      // renderMapMarkers(filteredData); 
-      // Or keep all markers and just move the camera:
-      
-      // Move Map Camera
+      // 移动地图视角
       if (continentViews[targetContinent]) {
         const view = continentViews[targetContinent];
         map.flyTo(view.center, view.zoom, { duration: 1.5 });
       }
       
-      // Re-apply current sort
-      sortSelect.dispatchEvent(new Event("change"));
+      // 更新列表和标记
+      updateView();
     });
   });
 
-  // 6. Sorting Logic
+  // 状态 Checkbox 点击 (Visited / Bucket List)
+  if (visitedCheckbox) visitedCheckbox.addEventListener("change", updateView);
+  if (plannedCheckbox) plannedCheckbox.addEventListener("change", updateView);
+
+  // 6. Language Switching Logic
+  if (langSelect) {
+    langSelect.addEventListener("change", function() {
+      currentLanguage = this.value; // 'en', 'cn', or 'local'
+      addTileLayer(currentLanguage); // 切换地图底图
+    });
+  }
+
+  // 7. Sorting Logic
   sortSelect.addEventListener("change", function () {
     const sortType = this.value;
-    const currentCards = Array.from(grid.getElementsByClassName("place-card"));
     
-    const sortedCards = currentCards.sort((a, b) => {
-      const dateA = a.getAttribute("data-date");
-      const dateB = b.getAttribute("data-date");
-      const nameA = a.getAttribute("data-name");
-      const nameB = b.getAttribute("data-name");
+    // 重新获取经过筛选（大洲+状态）的数据
+    const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
+    const targetContinent = activeBtn ? activeBtn.getAttribute("data-continent") : "all";
+    const showVisited = visitedCheckbox.checked;
+    const showPlanned = plannedCheckbox.checked;
 
-      // 处理 TBD 日期 (Planned trips usually at top or bottom)
+    let dataToSort = allTravelData.filter(place => {
+      if (targetContinent !== "all" && place.continent !== targetContinent) return false;
+      const isPlanned = place.status === 'planned';
+      if (isPlanned && !showPlanned) return false;
+      if (!isPlanned && !showVisited) return false;
+      return true;
+    });
+
+    const sortedData = [...dataToSort].sort((a, b) => {
+      const dateA = a.date;
+      const dateB = b.date;
+      const nameA = a.name;
+      const nameB = b.name;
+
       if (dateA === "TBD") return sortType === "newest" ? -1 : 1;
       if (dateB === "TBD") return sortType === "newest" ? 1 : -1;
 
@@ -273,10 +344,10 @@ document.addEventListener("DOMContentLoaded", function () {
       return 0;
     });
 
-    sortedCards.forEach((card) => grid.appendChild(card));
+    renderGrid(sortedData);
   });
 
-  // --- Lightbox & Gallery Logic (Kept largely the same) ---
+  // --- Lightbox & Gallery Logic (Unchanged) ---
   
   function openLightboxDirectly(placeData) {
     if (!placeData.photos || placeData.photos.length === 0) {

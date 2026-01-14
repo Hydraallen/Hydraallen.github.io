@@ -101,31 +101,60 @@
       <!-- 2. 地图容器 -->
       <div id="map-container"></div>
 
-      <!-- 3. 大洲筛选 Tab (替代原有的下拉菜单) -->
+      <!-- 3. 大洲筛选 Tab -->
       <div class="continent-tabs">
         <button class="tab-btn active" data-continent="all">All World</button>
         <button class="tab-btn" data-continent="asia">Asia</button>
         <button class="tab-btn" data-continent="europe">Europe</button>
         <button class="tab-btn" data-continent="namerica">North America</button>
         <button class="tab-btn" data-continent="samerica">South America</button>
-        <!-- 添加更多大洲 -->
+        <button class="tab-btn" data-continent="africa">Africa</button>
+        <button class="tab-btn" data-continent="oceania">Oceania</button>
       </div>
 
+      <!-- 4. 控制区域 (下拉菜单 + 筛选按钮) -->
       <div class="travel-controls">
-        <!-- 只保留排序，国家筛选已由大洲 Tab 取代，或者你可以保留作为二级筛选 -->
-        <div class="control-group">
-          <label for="place-sort">Sort by</label>
-          <select id="place-sort">
-            <option value="newest">Date (Newest)</option>
-            <option value="oldest">Date (Oldest)</option>
-            <option value="az">Name (A-Z)</option>
-          </select>
+        
+        <!-- 左侧：下拉菜单组 -->
+        <div class="dropdown-group">
+          <!-- Sort by -->
+          <div class="control-item">
+            <label for="place-sort">Sort by</label>
+            <div class="select-wrapper">
+              <select id="place-sort">
+                <option value="newest">Date (Newest)</option>
+                <option value="oldest">Date (Oldest)</option>
+                <option value="az">Name (A-Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Map Language -->
+          <div class="control-item">
+            <label for="lang-select">Map Language</label>
+            <div class="select-wrapper">
+              <select id="lang-select">
+                <option value="en" selected>English</option>
+                <option value="cn">中文 (Chinese)</option>
+                <option value="local">Original (Local)</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <!-- 图例说明 -->
-        <div class="map-legend">
-          <span class="legend-item"><span class="dot visited"></span> Visited</span>
-          <span class="legend-item"><span class="dot planned"></span> Bucket List</span>
+
+        <!-- 右侧：筛选开关 (Visited / Bucket List) -->
+        <div class="filter-toggles">
+          <label class="toggle-btn visited-toggle">
+            <input type="checkbox" id="filter-visited" checked>
+            <span class="toggle-icon">●</span> Visited
+          </label>
+          
+          <label class="toggle-btn planned-toggle">
+            <input type="checkbox" id="filter-planned" checked>
+            <span class="toggle-icon">●</span> Bucket List
+          </label>
         </div>
+
       </div>
 
       <div class="travel-grid" id="travel-grid">
@@ -134,6 +163,7 @@
     </section>
   </main>
 
+  <!-- Gallery Modal -->
   <div id="gallery-modal" class="gallery-modal hidden-modal">
     <div class="gallery-content">
       <div class="gallery-header">
@@ -151,6 +181,7 @@
     </div>
   </div>
 
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox hidden-modal">
     <span id="close-lightbox" class="close-lightbox">&times;</span>
     <div id="prev-btn" class="lightbox-btn prev-btn">&#10094;</div>
