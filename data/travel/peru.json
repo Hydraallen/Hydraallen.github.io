@@ -1,0 +1,13 @@
+{
+  "id": "peru",
+  "name": "Peru",
+  "country": "🇵🇪 Peru",
+  "continent": "samerica",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Peru/cover.jpg",
+  "coordinates": [-13.1631, -72.5450],
+  "photos": []
+}
