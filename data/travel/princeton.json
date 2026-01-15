@@ -70,6 +70,11 @@
       "src": "../../img/travel/Princeton/photo12.jpg",
       "location": "Princeton University",
       "coordinates": [40.34325771768744, -74.65509536035908]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo13.jpg",
+      "location": "Rockefeller College",
+      "coordinates": [40.34945588327674, -74.6623115205555]
     }
   ]
 }

@@ -13,78 +13,78 @@
   "photos": [
     {
       "src": "../../img/travel/Seattle/photo1.jpg",
-      "location": "Space Needle",
-      "coordinates": [47.6205, -122.3493]
+      "location": "Kerry Park",
+      "coordinates": [47.62959201363168, -122.35991168708254]
     },
     {
       "src": "../../img/travel/Seattle/photo2.jpg",
-      "location": "Chihuly Garden and Glass",
-      "coordinates": [47.6215, -122.3504]
+      "location": "Deception Pass State Park",
+      "coordinates": [48.40653448248842, -122.64490374467353]
     },
     {
       "src": "../../img/travel/Seattle/photo3.jpg",
-      "location": "Museum of Pop Culture (MoPOP)",
-      "coordinates": [47.6215, -122.3481]
+      "location": "San Juan Island",
+      "coordinates": [48.55817982634147, -123.03207839861246]
     },
     {
       "src": "../../img/travel/Seattle/photo4.jpg",
-      "location": "Pike Place Market",
-      "coordinates": [47.6097, -122.3422]
+      "location": "Rainbow Bridge",
+      "coordinates": [48.3869590710999, -122.5024658735103]
     },
     {
       "src": "../../img/travel/Seattle/photo5.jpg",
-      "location": "The Gum Wall",
-      "coordinates": [47.6094, -122.3421]
+      "location": "San Juan Island",
+      "coordinates": [48.55817982634147, -123.03207839861246]
     },
     {
       "src": "../../img/travel/Seattle/photo6.jpg",
-      "location": "Original Starbucks",
-      "coordinates": [47.6101, -122.3426]
+      "location": "That NW Bus",
+      "coordinates": [46.75901577106102, -118.30552887358326]
     },
     {
       "src": "../../img/travel/Seattle/photo7.jpg",
-      "location": "Seattle Great Wheel",
-      "coordinates": [47.6062, -122.3425]
+      "location": "Palouse Falls State Park",
+      "coordinates": [46.66389592993672, -118.2273076297017]
     },
     {
       "src": "../../img/travel/Seattle/photo8.jpg",
-      "location": "Seattle Waterfront",
-      "coordinates": [47.6050, -122.3410]
+      "location": "Kite Park",
+      "coordinates": [47.14272958720224, -122.17315073597]
     },
     {
       "src": "../../img/travel/Seattle/photo9.jpg",
-      "location": "Kerry Park",
-      "coordinates": [47.6295, -122.3600]
+      "location": "Rainbow Bridge",
+      "coordinates": [48.3869590710999, -122.5024658735103]
     },
     {
       "src": "../../img/travel/Seattle/photo10.jpg",
-      "location": "Kerry Park",
-      "coordinates": [47.6295, -122.3600]
+      "location": "Palouse",
+      "coordinates": [46.91093903269479, -117.07674262534437]
     },
     {
       "src": "../../img/travel/Seattle/photo11.jpg",
-      "location": "The Spheres",
-      "coordinates": [47.6160, -122.3370]
+      "location": "Olympic National Park",
+      "coordinates": [47.81945288387286, -123.60315277327165]
     },
     {
       "src": "../../img/travel/Seattle/photo12.jpg",
-      "location": "Amazon Headquarters",
-      "coordinates": [47.6160, -122.3370]
+      "location": "Olympic National Park",
+      "coordinates": [47.81945288387286, -123.60315277327165]
     },
     {
       "src": "../../img/travel/Seattle/photo13.jpg",
-      "location": "Gas Works Park",
-      "coordinates": [47.6456, -122.3344]
+      "location": "Olympic National Park",
+      "coordinates": [47.81945288387286, -123.60315277327165]
     },
     {
       "src": "../../img/travel/Seattle/photo14.jpg",
-      "location": "Gas Works Park",
-      "coordinates": [47.6456, -122.3344]
+      "location": "San Juan Island",
+      "coordinates": [48.55817982634147, -123.03207839861246]
     },
     {
       "src": "../../img/travel/Seattle/photo15.jpg",
-      "location": "University of Washington (Suzzallo Library)",
-      "coordinates": [47.6558, -122.3078]
+      "location": "Wild Horses Monument",
+      "coordinates": [46.96607590982232, -119.96149340240996]
     }
   ]
 }
