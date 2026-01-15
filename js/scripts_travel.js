@@ -1,9 +1,9 @@
 // ==========================================
-// Script for Travel Page (Fixed: No Scroll on Map Click)
+// Script for Travel Page (Fixed: Grouped Markers & Lightbox Data Source)
 // ==========================================
 
 let allTravelData = [];
-let currentGalleryPhotos = [];
+let currentGalleryPhotos = []; // 全局相册数据源
 let currentPhotoIndex = 0;
 let map; // Leaflet map instance
 let tileLayer; // Keep track of the tile layer to switch languages
@@ -131,13 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (place.coordinates) {
         const marker = L.marker(place.coordinates).addTo(map);
         
-        // --- 修复点：移除了触发滚动的代码 ---
+        // 点击城市标记：进入城市视图
         marker.on('click', function() {
           showCityOnMap(place);
-          // 之前这里有一行 dispatchEvent('focus-card') 导致了页面跳转，现已删除
         });
 
-        // 鼠标悬停显示简单提示
         marker.bindTooltip(place.name, {
             permanent: false, 
             direction: 'top',
@@ -154,37 +152,69 @@ document.addEventListener("DOMContentLoaded", function () {
     markers = [];
   }
 
-  // --- City Map Logic ---
+  // --- City Map Logic (Fixed Overlap & Data Source) ---
 
   function showCityOnMap(placeData) {
     if (!map || !placeData.coordinates) return;
     
+    // 1. 关键修复：立即更新全局相册数据源，这样 Lightbox 才能找到正确的图片
+    currentGalleryPhotos = placeData.photos || [];
+
     isCityView = true;
     clearMarkers(); // Clear global markers
-    resetMapBtn.classList.remove("hidden-btn"); // Show back button
+    resetMapBtn.classList.remove("hidden-btn");
 
     // Fly to city
     map.flyTo(placeData.coordinates, 13, { duration: 1.5 });
 
-    // Add markers for photos if they exist and have coordinates
-    if (placeData.photos && placeData.photos.length > 0) {
-      placeData.photos.forEach((photo, index) => {
-        if (typeof photo === 'object' && photo.coordinates) {
-          const marker = L.marker(photo.coordinates).addTo(map);
-          
-          // Popup with thumbnail and location name
-          const popupContent = `
-            <div style="text-align:center">
-              <img src="${photo.src}" class="popup-photo-thumb" onclick="document.dispatchEvent(new CustomEvent('open-lightbox-index', {detail: ${index}}))">
-              <div class="popup-location-name">${photo.location || 'Photo Location'}</div>
-            </div>
-          `;
-          
-          marker.bindPopup(popupContent);
-          markers.push(marker);
+    if (!placeData.photos || placeData.photos.length === 0) return;
+
+    // 2. 关键修复：按坐标分组照片，解决重叠问题
+    const groupedPhotos = {};
+
+    placeData.photos.forEach((photo, index) => {
+      if (typeof photo === 'object' && photo.coordinates) {
+        // 将坐标转换为字符串作为 Key (例如 "52.5,13.4")
+        const coordKey = photo.coordinates.join(',');
+        
+        if (!groupedPhotos[coordKey]) {
+          groupedPhotos[coordKey] = {
+            coords: photo.coordinates,
+            locationName: photo.location || 'Location',
+            items: []
+          };
         }
+        // 保存照片信息和它在原始数组中的索引
+        groupedPhotos[coordKey].items.push({ ...photo, originalIndex: index });
+      }
+    });
+
+    // 3. 渲染分组后的标记
+    Object.values(groupedPhotos).forEach(group => {
+      const marker = L.marker(group.coords).addTo(map);
+
+      // 构建 Popup 内容：如果有多张图片，横向排列
+      let imagesHtml = '<div class="popup-gallery-container">';
+      group.items.forEach(item => {
+        imagesHtml += `
+          <img src="${item.src}" 
+               class="popup-photo-thumb" 
+               title="${item.location || ''}"
+               onclick="document.dispatchEvent(new CustomEvent('open-lightbox-index', {detail: ${item.originalIndex}}))">
+        `;
       });
-    }
+      imagesHtml += '</div>';
+
+      const popupContent = `
+        <div style="text-align:center">
+          ${imagesHtml}
+          <div class="popup-location-name">${group.locationName} ${group.items.length > 1 ? `(${group.items.length})` : ''}</div>
+        </div>
+      `;
+
+      marker.bindPopup(popupContent, { minWidth: 160, maxWidth: 300 });
+      markers.push(marker);
+    });
   }
 
   function exitCityMode() {
@@ -199,7 +229,6 @@ document.addEventListener("DOMContentLoaded", function () {
         map.flyTo(view.center, view.zoom, { duration: 1.5 });
     }
 
-    // Re-render global markers
     updateView();
   }
 
@@ -487,19 +516,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (prevBtn) prevBtn.addEventListener("click", (e) => { e.stopPropagation(); showPrevPhoto(); });
   if (nextBtn) nextBtn.addEventListener("click", (e) => { e.stopPropagation(); showNextPhoto(); });
-
-  // Map Popup Focus Logic (Global Map) - Only used for manual focus, not click
-  document.addEventListener('focus-card', function(e) {
-    const placeName = e.detail;
-    const cards = document.querySelectorAll('.place-card');
-    cards.forEach(card => {
-      if (card.getAttribute('data-name') === placeName) {
-        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        card.classList.add('highlight-card'); 
-        setTimeout(() => card.classList.remove('highlight-card'), 2000);
-      }
-    });
-  });
 
   loadTravelData();
 });
