@@ -129,6 +129,8 @@
                 <option value="newest">Date (Newest)</option>
                 <option value="oldest">Date (Oldest)</option>
                 <option value="az">Name (A-Z)</option>
+                <!-- 新增 Z-A 选项 -->
+                <option value="za">Name (Z-A)</option>
               </select>
             </div>
           </div>
@@ -156,7 +158,8 @@
         </div>
       </div>
 
-      <div class="travel-grid" id="travel-grid">
+      <!-- 主容器：JS 将在这里动态生成两个区域 -->
+      <div id="travel-grid">
         <p class="loading-text">Loading world map & memories...</p>
       </div>
     </section>
