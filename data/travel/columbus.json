@@ -3,18 +3,48 @@
   "name": "Columbus",
   "country": "🇺🇸 USA",
   "state": "OH",
+  "continent": "namerica",
   "date": "2025-10-25",
   "date_display": "Oct 25-26, 2025",
   "video": "",
+  "status": "visited",
   "cover": "../../img/travel/Columbus/cover.jpg",
+  "coordinates": [39.9612, -82.9988],
   "photos": [
-    "../../img/travel/Columbus/photo1.jpg",
-    "../../img/travel/Columbus/photo2.jpg",
-    "../../img/travel/Columbus/photo3.jpg",
-    "../../img/travel/Columbus/photo4.jpg",
-    "../../img/travel/Columbus/photo5.jpg",
-    "../../img/travel/Columbus/photo6.jpg",
-    "../../img/travel/Columbus/photo7.jpg"
+    {
+      "src": "../../img/travel/Columbus/photo1.jpg",
+      "location": "Ohio Stadium",
+      "coordinates": [40.00258491514626, -83.01970467575818]
+    },
+    {
+      "src": "../../img/travel/Columbus/photo2.jpg",
+      "location": "The Dublin Link",
+      "coordinates": [40.102419899113876, -83.11160913345442]
+    },
+    {
+      "src": "../../img/travel/Columbus/photo3.jpg",
+      "location": "German Village",
+      "coordinates": [39.94289137217575, -82.99356502897652]
+    },
+    {
+      "src": "../../img/travel/Columbus/photo4.jpg",
+      "location": "German Village",
+      "coordinates": [39.94289137217575, -82.99356502897652]
+    },
+    {
+      "src": "../../img/travel/Columbus/photo5.jpg",
+      "location": "German Village",
+      "coordinates": [39.94289137217575, -82.99356502897652]
+    },
+    {
+      "src": "../../img/travel/Columbus/photo6.jpg",
+      "location": "Columbus Zoo and Aquarium",
+      "coordinates": [40.15637279640708, -83.11725325852262]
+    },
+    {
+      "src": "../../img/travel/Columbus/photo7.jpg",
+      "location": "Columbus Zoo and Aquarium",
+      "coordinates": [40.15637279640708, -83.11725325852262]
+    }
   ]
 }
-
