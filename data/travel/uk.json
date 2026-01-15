@@ -1,0 +1,13 @@
+{
+  "id": "uk",
+  "name": "United Kingdom",
+  "country": "🇬🇧 United Kingdom",
+  "continent": "europe",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/UK/cover.jpg",
+  "coordinates": [51.5074, -0.1278],
+  "photos": []
+}

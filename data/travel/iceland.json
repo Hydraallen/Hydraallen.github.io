@@ -1,0 +1,13 @@
+{
+  "id": "iceland",
+  "name": "Iceland",
+  "country": "🇮🇸 Iceland",
+  "continent": "europe",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Iceland/cover.jpg",
+  "coordinates": [64.1466, -21.9426],
+  "photos": []
+}

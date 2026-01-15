@@ -1,0 +1,13 @@
+{
+  "id": "dubai",
+  "name": "Dubai",
+  "country": "🇦🇪 UAE",
+  "continent": "asia",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Dubai/cover.jpg",
+  "coordinates": [25.1972, 55.2744],
+  "photos": []
+}

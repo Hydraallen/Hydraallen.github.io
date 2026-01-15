@@ -1,0 +1,13 @@
+{
+  "id": "istanbul",
+  "name": "Istanbul",
+  "country": "🇹🇷 Turkey",
+  "continent": "europe",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Istanbul/cover.jpg",
+  "coordinates": [41.0082, 28.9784],
+  "photos": []
+}

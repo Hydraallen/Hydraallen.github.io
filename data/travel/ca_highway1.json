@@ -1,0 +1,14 @@
+{
+  "id": "ca_highway1",
+  "name": "California Highway 1",
+  "country": "🇺🇸 USA",
+  "state": "CA",
+  "continent": "namerica",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/CAHighway1/cover.jpg",
+  "coordinates": [36.3714, -121.9017],
+  "photos": []
+}

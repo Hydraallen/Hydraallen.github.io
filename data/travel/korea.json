@@ -1,0 +1,13 @@
+{
+  "id": "korea",
+  "name": "South Korea",
+  "country": "🇰🇷 South Korea",
+  "continent": "asia",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Korea/cover.jpg",
+  "coordinates": [37.5665, 126.9780],
+  "photos": []
+}

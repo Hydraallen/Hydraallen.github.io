@@ -1,0 +1,13 @@
+{
+  "id": "inner_mongolia",
+  "name": "Inner Mongolia",
+  "country": "🇨🇳 China",
+  "continent": "asia",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/InnerMongolia/cover.jpg",
+  "coordinates": [49.2116, 119.7427],
+  "photos": []
+}

@@ -1,0 +1,13 @@
+{
+  "id": "france",
+  "name": "France",
+  "country": "🇫🇷 France",
+  "continent": "europe",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/France/cover.jpg",
+  "coordinates": [48.8566, 2.3522],
+  "photos": []
+}

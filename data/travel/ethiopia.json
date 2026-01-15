@@ -1,0 +1,13 @@
+{
+  "id": "ethiopia",
+  "name": "Ethiopia",
+  "country": "🇪🇹 Ethiopia",
+  "continent": "africa",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Ethiopia/cover.jpg",
+  "coordinates": [9.0054, 38.7636],
+  "photos": []
+}

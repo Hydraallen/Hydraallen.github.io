@@ -1,0 +1,13 @@
+{
+  "id": "xinjiang",
+  "name": "Xinjiang",
+  "country": "🇨🇳 China",
+  "continent": "asia",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Xinjiang/cover.jpg",
+  "coordinates": [43.8256, 87.6168],
+  "photos": []
+}

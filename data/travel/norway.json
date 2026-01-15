@@ -1,0 +1,13 @@
+{
+  "id": "norway",
+  "name": "Norway",
+  "country": "🇳🇴 Norway",
+  "continent": "europe",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Norway/cover.jpg",
+  "coordinates": [67.9302, 13.0884],
+  "photos": []
+}
