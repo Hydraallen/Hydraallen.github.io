@@ -3,31 +3,118 @@
   "name": "New York City",
   "country": "🇺🇸 USA",
   "state": "NY",
+  "continent": "namerica",
   "date": "2025-01-10",
   "date_display": "Jan 10-14, 2025",
   "video": "",
+  "status": "visited",
   "cover": "../../img/travel/NYC/cover.jpg",
+  "coordinates": [40.7128, -74.0060],
   "photos": [
-    "../../img/travel/NYC/photo1.jpg",
-    "../../img/travel/NYC/photo2.jpg",
-    "../../img/travel/NYC/photo3.jpg",
-    "../../img/travel/NYC/photo4.jpg",
-    "../../img/travel/NYC/photo5.jpg",
-    "../../img/travel/NYC/photo6.jpg",
-    "../../img/travel/NYC/photo7.jpg",
-    "../../img/travel/NYC/photo8.jpg",
-    "../../img/travel/NYC/photo9.jpg",
-    "../../img/travel/NYC/photo10.jpg",
-    "../../img/travel/NYC/photo11.jpg",
-    "../../img/travel/NYC/photo12.jpg",
-    "../../img/travel/NYC/photo13.jpg",
-    "../../img/travel/NYC/photo14.jpg",
-    "../../img/travel/NYC/photo15.jpg",
-    "../../img/travel/NYC/photo16.jpg",
-    "../../img/travel/NYC/photo17.jpg",
-    "../../img/travel/NYC/photo18.jpg",
-    "../../img/travel/NYC/photo19.jpg",
-    "../../img/travel/NYC/photo20.jpg",
-    "../../img/travel/NYC/photo21.jpg"
+    {
+      "src": "../../img/travel/NYC/photo1.jpg",
+      "location": "Empire State Building",
+      "coordinates": [40.748594902847515, -73.98573950452256]
+    },
+    {
+      "src": "../../img/travel/NYC/photo2.jpg",
+      "location": "Manhattan Bridge",
+      "coordinates": [40.707655427780615, -73.99073486669887]
+    },
+    {
+      "src": "../../img/travel/NYC/photo3.jpg",
+      "location": "Times Square",
+      "coordinates": [40.75811275333038, -73.98547824486978]
+    },
+    {
+      "src": "../../img/travel/NYC/photo4.jpg",
+      "location": "Central Park",
+      "coordinates": [40.782635909431896, -73.96557267383415]
+    },
+    {
+      "src": "../../img/travel/NYC/photo5.jpg",
+      "location": "Times Square",
+      "coordinates": [40.75811275333038, -73.98547824486978]
+    },
+    {
+      "src": "../../img/travel/NYC/photo6.jpg",
+      "location": "Times Square",
+      "coordinates": [40.75811275333038, -73.98547824486978]
+    },
+    {
+      "src": "../../img/travel/NYC/photo7.jpg",
+      "location": "Brooklyn Public Library",
+      "coordinates": [40.67260050739543, -73.96821074674398]
+    },
+    {
+      "src": "../../img/travel/NYC/photo8.jpg",
+      "location": "Manhattan Bridge",
+      "coordinates": [40.707655427780615, -73.99073486669887]
+    },
+    {
+      "src": "../../img/travel/NYC/photo9.jpg",
+      "location": "Central Park",
+      "coordinates": [40.782635909431896, -73.96557267383415]
+    },
+    {
+      "src": "../../img/travel/NYC/photo10.jpg",
+      "location": "Central Park",
+      "coordinates": [40.782635909431896, -73.96557267383415]
+    },
+    {
+      "src": "../../img/travel/NYC/photo11.jpg",
+      "location": "Bryant Park",
+      "coordinates": [40.7536829636716, -73.98297436034291]
+    },
+    {
+      "src": "../../img/travel/NYC/photo12.jpg",
+      "location": "Central Park",
+      "coordinates": [40.782635909431896, -73.96557267383415]
+    },
+    {
+      "src": "../../img/travel/NYC/photo13.jpg",
+      "location": "Brooklyn Public Library",
+      "coordinates": [40.67260050739543, -73.96821074674398]
+    },
+    {
+      "src": "../../img/travel/NYC/photo14.jpg",
+      "location": "Brooklyn Public Library",
+      "coordinates": [40.67260050739543, -73.96821074674398]
+    },
+    {
+      "src": "../../img/travel/NYC/photo15.jpg",
+      "location": "Queensbridge Park",
+      "coordinates": [40.7568373376519, -73.9485896449992]
+    },
+    {
+      "src": "../../img/travel/NYC/photo16.jpg",
+      "location": "Queensbridge Park",
+      "coordinates": [40.7568373376519, -73.9485896449992]
+    },
+    {
+      "src": "../../img/travel/NYC/photo17.jpg",
+      "location": "Queensbridge Park",
+      "coordinates": [40.7568373376519, -73.9485896449992]
+    },
+    {
+      "src": "../../img/travel/NYC/photo18.jpg",
+      "location": "AMC Empire 25",
+      "coordinates": [40.757777243615905, -73.98960441535347]
+    },
+    {
+      "src": "../../img/travel/NYC/photo19.jpg",
+      "location": "SUMMIT One Vanderbilt",
+      "coordinates": [40.752880154394525, -73.97867167370714]
+    },
+    {
+      "src": "../../img/travel/NYC/photo20.jpg",
+      "location": "Manhattan Bridge View",
+      "coordinates": [40.703544208833804, -73.98956980267302]
+    },
+    {
+      "src": "../../img/travel/NYC/photo21.jpg",
+      "location": "The Museum of Modern Art",
+      "coordinates": [40.76234284975832, -73.97762160054347]
+    }
   ]
 }

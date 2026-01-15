@@ -3,12 +3,18 @@
   "name": "Ithaca",
   "country": "🇺🇸 USA",
   "state": "NY",
+  "continent": "namerica",
   "date": "2025-01-15",
   "date_display": "Jan 15 - May 17, 2025",
   "video": "https://b23.tv/ayqV0VW",
+  "status": "visited",
   "cover": "../../img/travel/Ithaca/cover.jpg",
+  "coordinates": [42.4440, -76.5019],
   "photos": [
-    "../../img/travel/Ithaca/photo1.jpg"
+    {
+      "src": "../../img/travel/Ithaca/photo1.jpg",
+      "location": "Libe Slope",
+      "coordinates": [42.44876070351446, -76.48634298911044]
+    }
   ]
 }
-

@@ -3,26 +3,88 @@
   "name": "Seattle",
   "country": "🇺🇸 USA",
   "state": "WA",
+  "continent": "namerica",
   "date": "2025-05-18",
   "date_display": "May 18-26, 2025",
   "video": "",
+  "status": "visited",
   "cover": "../../img/travel/Seattle/cover.jpg",
+  "coordinates": [47.6062, -122.3321],
   "photos": [
-    "../../img/travel/Seattle/photo1.jpg",
-    "../../img/travel/Seattle/photo2.jpg",
-    "../../img/travel/Seattle/photo3.jpg",
-    "../../img/travel/Seattle/photo4.jpg",
-    "../../img/travel/Seattle/photo5.jpg",
-    "../../img/travel/Seattle/photo6.jpg",
-    "../../img/travel/Seattle/photo7.jpg",
-    "../../img/travel/Seattle/photo8.jpg",
-    "../../img/travel/Seattle/photo9.jpg",
-    "../../img/travel/Seattle/photo10.jpg",
-    "../../img/travel/Seattle/photo11.jpg",
-    "../../img/travel/Seattle/photo12.jpg",
-    "../../img/travel/Seattle/photo13.jpg",
-    "../../img/travel/Seattle/photo14.jpg",
-    "../../img/travel/Seattle/photo15.jpg"
+    {
+      "src": "../../img/travel/Seattle/photo1.jpg",
+      "location": "Space Needle",
+      "coordinates": [47.6205, -122.3493]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo2.jpg",
+      "location": "Chihuly Garden and Glass",
+      "coordinates": [47.6215, -122.3504]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo3.jpg",
+      "location": "Museum of Pop Culture (MoPOP)",
+      "coordinates": [47.6215, -122.3481]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo4.jpg",
+      "location": "Pike Place Market",
+      "coordinates": [47.6097, -122.3422]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo5.jpg",
+      "location": "The Gum Wall",
+      "coordinates": [47.6094, -122.3421]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo6.jpg",
+      "location": "Original Starbucks",
+      "coordinates": [47.6101, -122.3426]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo7.jpg",
+      "location": "Seattle Great Wheel",
+      "coordinates": [47.6062, -122.3425]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo8.jpg",
+      "location": "Seattle Waterfront",
+      "coordinates": [47.6050, -122.3410]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo9.jpg",
+      "location": "Kerry Park",
+      "coordinates": [47.6295, -122.3600]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo10.jpg",
+      "location": "Kerry Park",
+      "coordinates": [47.6295, -122.3600]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo11.jpg",
+      "location": "The Spheres",
+      "coordinates": [47.6160, -122.3370]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo12.jpg",
+      "location": "Amazon Headquarters",
+      "coordinates": [47.6160, -122.3370]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo13.jpg",
+      "location": "Gas Works Park",
+      "coordinates": [47.6456, -122.3344]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo14.jpg",
+      "location": "Gas Works Park",
+      "coordinates": [47.6456, -122.3344]
+    },
+    {
+      "src": "../../img/travel/Seattle/photo15.jpg",
+      "location": "University of Washington (Suzzallo Library)",
+      "coordinates": [47.6558, -122.3078]
+    }
   ]
 }
-

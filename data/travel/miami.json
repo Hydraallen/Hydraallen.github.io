@@ -3,14 +3,28 @@
   "name": "Miami",
   "country": "🇺🇸 USA",
   "state": "FL",
+  "continent": "namerica",
   "date": "2025-02-14",
   "date_display": "Feb 14-19, 2025",
   "video": "",
+  "status": "visited",
   "cover": "../../img/travel/Miami/cover.jpg",
+  "coordinates": [25.7617, -80.1918],
   "photos": [
-    "../../img/travel/Miami/photo1.jpg",
-    "../../img/travel/Miami/photo2.jpg",
-    "../../img/travel/Miami/photo3.jpg"
+    {
+      "src": "../../img/travel/Miami/photo1.jpg",
+      "location": "Key West",
+      "coordinates": [24.55750807843742, -81.78188273203574]
+    },
+    {
+      "src": "../../img/travel/Miami/photo2.jpg",
+      "location": "Key West",
+      "coordinates": [24.55750807843742, -81.78188273203574]
+    },
+    {
+      "src": "../../img/travel/Miami/photo3.jpg",
+      "location": "Key West",
+      "coordinates": [24.55750807843742, -81.78188273203574]
+    }
   ]
 }
-
