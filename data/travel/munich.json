@@ -2,17 +2,43 @@
   "id": "munich",
   "name": "Munich",
   "country": "🇩🇪 Germany",
+  "continent": "europe",
   "date": "2024-01-06",
   "date_display": "Jan 6-7, 2024",
   "video": "",
+  "status": "visited",
   "cover": "../../img/travel/Munich/cover.jpg",
+  "coordinates": [48.1371, 11.5761],
   "photos": [
-    "../../img/travel/Munich/photo1.jpg",
-    "../../img/travel/Munich/photo2.jpg",
-    "../../img/travel/Munich/photo3.jpg",
-    "../../img/travel/Munich/photo4.jpg",
-    "../../img/travel/Munich/photo5.jpg",
-    "../../img/travel/Munich/photo6.jpg"
+    {
+      "src": "../../img/travel/Munich/photo1.jpg",
+      "location": "Zugspitze",
+      "coordinates": [47.42809039600125, 10.985271213866017]
+    },
+    {
+      "src": "../../img/travel/Munich/photo2.jpg",
+      "location": "Asamkirche",
+      "coordinates": [48.135193492383564, 11.569686255314128]
+    },
+    {
+      "src": "../../img/travel/Munich/photo3.jpg",
+      "location": "Zugspitze",
+      "coordinates": [47.42809039600125, 10.985271213866017]
+    },
+    {
+      "src": "../../img/travel/Munich/photo4.jpg",
+      "location": "Allianz Arena",
+      "coordinates": [48.21893836679732, 11.624710241932954]
+    },
+    {
+      "src": "../../img/travel/Munich/photo5.jpg",
+      "location": "Zugspitze",
+      "coordinates": [47.42809039600125, 10.985271213866017]
+    },
+    {
+      "src": "../../img/travel/Munich/photo6.jpg",
+      "location": "BMW Museum",
+      "coordinates": [48.17692428992866, 11.559086394224774]
+    }
   ]
 }
-

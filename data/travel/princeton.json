@@ -3,23 +3,73 @@
   "name": "Princeton",
   "country": "🇺🇸 USA",
   "state": "NJ",
+  "continent": "namerica",
   "date": "2025-03-09",
   "date_display": "Mar 9, 2025",
   "video": "",
+  "status": "visited",
   "cover": "../../img/travel/Princeton/cover.jpg",
+  "coordinates": [40.3439, -74.6514],
   "photos": [
-    "../../img/travel/Princeton/photo1.jpg",
-    "../../img/travel/Princeton/photo2.jpg",
-    "../../img/travel/Princeton/photo3.jpg",
-    "../../img/travel/Princeton/photo4.jpg",
-    "../../img/travel/Princeton/photo5.jpg",
-    "../../img/travel/Princeton/photo6.jpg",
-    "../../img/travel/Princeton/photo7.jpg",
-    "../../img/travel/Princeton/photo8.jpg",
-    "../../img/travel/Princeton/photo9.jpg",
-    "../../img/travel/Princeton/photo10.jpg",
-    "../../img/travel/Princeton/photo11.jpg",
-    "../../img/travel/Princeton/photo12.jpg"
+    {
+      "src": "../../img/travel/Princeton/photo1.jpg",
+      "location": "Institute for Advanced Study",
+      "coordinates": [40.33180863061383, -74.66806184501601]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo2.jpg",
+      "location": "97 Olden Lane",
+      "coordinates": [40.33538984539774, -74.66846566035944]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo3.jpg",
+      "location": "Institute for Advanced Study",
+      "coordinates": [40.33180863061383, -74.66806184501601]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo4.jpg",
+      "location": "Princeton University",
+      "coordinates": [40.34325771768744, -74.65509536035908]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo5.jpg",
+      "location": "Institute for Advanced Study",
+      "coordinates": [40.33180863061383, -74.66806184501601]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo6.jpg",
+      "location": "East Pyne Hall",
+      "coordinates": [40.34888325076971, -74.658582931523]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo7.jpg",
+      "location": "Institute for Advanced Study",
+      "coordinates": [40.33180863061383, -74.66806184501601]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo8.jpg",
+      "location": "Princeton University",
+      "coordinates": [40.34325771768744, -74.65509536035908]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo9.jpg",
+      "location": "Princeton University",
+      "coordinates": [40.34325771768744, -74.65509536035908]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo10.jpg",
+      "location": "Firestone Library",
+      "coordinates": [40.34970093582933, -74.65737503972832]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo11.jpg",
+      "location": "McCosh Hall",
+      "coordinates": [40.34863802797285, -74.65596900268709]
+    },
+    {
+      "src": "../../img/travel/Princeton/photo12.jpg",
+      "location": "Princeton University",
+      "coordinates": [40.34325771768744, -74.65509536035908]
+    }
   ]
 }
-

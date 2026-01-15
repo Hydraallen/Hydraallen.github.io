@@ -3,34 +3,128 @@
   "name": "Northern Michigan",
   "country": "🇺🇸 USA",
   "state": "MI",
+  "continent": "namerica",
   "date": "2025-10-10",
   "date_display": "Oct 10-14, 2025",
   "video": "https://b23.tv/hdmv7FP",
+  "status": "visited",
   "cover": "../../img/travel/Michigan/cover.jpg",
+  "coordinates": [44.7631, -85.6206],
   "photos": [
-    "../../img/travel/Michigan/photo1.jpg",
-    "../../img/travel/Michigan/photo2.jpg",
-    "../../img/travel/Michigan/photo3.jpg",
-    "../../img/travel/Michigan/photo4.jpg",
-    "../../img/travel/Michigan/photo5.jpg",
-    "../../img/travel/Michigan/photo6.jpg",
-    "../../img/travel/Michigan/photo7.jpg",
-    "../../img/travel/Michigan/photo8.jpg",
-    "../../img/travel/Michigan/photo9.jpg",
-    "../../img/travel/Michigan/photo10.jpg",
-    "../../img/travel/Michigan/photo11.jpg",
-    "../../img/travel/Michigan/photo12.jpg",
-    "../../img/travel/Michigan/photo13.jpg",
-    "../../img/travel/Michigan/photo14.jpg",
-    "../../img/travel/Michigan/photo15.jpg",
-    "../../img/travel/Michigan/photo16.jpg",
-    "../../img/travel/Michigan/photo17.jpg",
-    "../../img/travel/Michigan/photo18.jpg",
-    "../../img/travel/Michigan/photo19.jpg",
-    "../../img/travel/Michigan/photo20.jpg",
-    "../../img/travel/Michigan/photo21.jpg",
-    "../../img/travel/Michigan/photo22.jpg",
-    "../../img/travel/Michigan/photo23.jpg"
+    {
+      "src": "../../img/travel/Michigan/photo1.jpg",
+      "location": "Tahquamenon Falls",
+      "coordinates": [46.57545549717454, -85.25716009733263]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo2.jpg",
+      "location": "Cross Village Beach",
+      "coordinates": [45.65072009933873, -85.03931471903141]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo3.jpg",
+      "location": "Mackinac Bridge",
+      "coordinates": [45.81988944224485, -84.72827803626781]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo4.jpg",
+      "location": "Cross Village Beach",
+      "coordinates": [45.65072009933873, -85.03931471903141]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo5.jpg",
+      "location": "SkyBridge Michigan",
+      "coordinates": [45.163864747597515, -84.93186987365281]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo6.jpg",
+      "location": "Tahquamenon Falls",
+      "coordinates": [46.57545549717454, -85.25716009733263]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo7.jpg",
+      "location": "Tahquamenon Falls",
+      "coordinates": [46.57545549717454, -85.25716009733263]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo8.jpg",
+      "location": "Tahquamenon Falls",
+      "coordinates": [46.57545549717454, -85.25716009733263]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo9.jpg",
+      "location": "Kitch-iti-kipi",
+      "coordinates": [46.00429894267227, -86.38190197222588]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo10.jpg",
+      "location": "Porcupine Mountains Wilderness State Park",
+      "coordinates": [46.743469730497225, -89.80246347358397]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo11.jpg",
+      "location": "Cut River Bridge",
+      "coordinates": [46.053044297098296, -85.12191857236144]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo12.jpg",
+      "location": "Cut River Bridge",
+      "coordinates": [46.053044297098296, -85.12191857236144]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo13.jpg",
+      "location": "Arch Rock",
+      "coordinates": [45.87490598220916, -84.61531488495177]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo14.jpg",
+      "location": "Marquette",
+      "coordinates": [46.59576400090223, -87.38226016177671]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo15.jpg",
+      "location": "Houghton",
+      "coordinates": [47.13681704393036, -88.57534737541779]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo16.jpg",
+      "location": "Arch Rock",
+      "coordinates": [45.87490598220916, -84.61531488495177]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo17.jpg",
+      "location": "Arch Rock",
+      "coordinates": [45.87490598220916, -84.61531488495177]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo18.jpg",
+      "location": "Cross Village Beach",
+      "coordinates": [45.65072009933873, -85.03931471903141]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo19.jpg",
+      "location": "SkyBridge Michigan",
+      "coordinates": [45.163864747597515, -84.93186987365281]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo20.jpg",
+      "location": "Marquette",
+      "coordinates": [46.59576400090223, -87.38226016177671]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo21.jpg",
+      "location": "Kitch-iti-kipi",
+      "coordinates": [46.00429894267227, -86.38190197222588]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo22.jpg",
+      "location": "Porcupine Mountains Wilderness State Park",
+      "coordinates": [46.743469730497225, -89.80246347358397]
+    },
+    {
+      "src": "../../img/travel/Michigan/photo23.jpg",
+      "location": "SkyBridge Michigan",
+      "coordinates": [45.163864747597515, -84.93186987365281]
+    }
   ]
 }
-

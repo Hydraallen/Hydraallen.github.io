@@ -2,17 +2,43 @@
   "id": "karlovy",
   "name": "Karlovy Vary",
   "country": "🇨🇿 Czech Republic",
+  "continent": "europe",
   "date": "2024-01-20",
   "date_display": "Jan 20-21, 2024",
   "video": "",
+  "status": "visited",
   "cover": "../../img/travel/Karlovy/cover.jpg",
+  "coordinates": [50.2318, 12.8719],
   "photos": [
-    "../../img/travel/Karlovy/photo1.jpg",
-    "../../img/travel/Karlovy/photo2.jpg",
-    "../../img/travel/Karlovy/photo3.jpg",
-    "../../img/travel/Karlovy/photo4.jpg",
-    "../../img/travel/Karlovy/photo5.jpg",
-    "../../img/travel/Karlovy/photo6.jpg"
+    {
+      "src": "../../img/travel/Karlovy/photo1.jpg",
+      "location": "Karlovy Vary",
+      "coordinates": [50.21906971432293, 12.879786958683116]
+    },
+    {
+      "src": "../../img/travel/Karlovy/photo2.jpg",
+      "location": "Karlovy Vary",
+      "coordinates": [50.21906971432293, 12.879786958683116]
+    },
+    {
+      "src": "../../img/travel/Karlovy/photo3.jpg",
+      "location": "Karlovy Vary",
+      "coordinates": [50.21906971432293, 12.879786958683116]
+    },
+    {
+      "src": "../../img/travel/Karlovy/photo4.jpg",
+      "location": "Karlovy Vary",
+      "coordinates": [50.21906971432293, 12.879786958683116]
+    },
+    {
+      "src": "../../img/travel/Karlovy/photo5.jpg",
+      "location": "Karlovy Vary",
+      "coordinates": [50.21906971432293, 12.879786958683116]
+    },
+    {
+      "src": "../../img/travel/Karlovy/photo6.jpg",
+      "location": "Karlovy Vary",
+      "coordinates": [50.21906971432293, 12.879786958683116]
+    }
   ]
 }
-
