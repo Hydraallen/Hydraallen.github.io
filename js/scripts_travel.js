@@ -1,6 +1,7 @@
 // ==========================================
 // Script for Travel Page
 // Features: Persistent Global Markers, Auto-Bounds, Colored Markers (Visited/Planned)
+// Modified: Orange markers for TODO, Split sorting logic
 // ==========================================
 
 let allTravelData = [];
@@ -27,7 +28,8 @@ const MarkerIcons = {
     shadowSize: [41, 41]
   }),
   planned: new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+    // [修改] 将 planned 图标链接改为橙色 (orange)
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
@@ -146,10 +148,11 @@ document.addEventListener("DOMContentLoaded", function () {
         renderGlobalMarkers(filteredData);
     }
     
+    // 触发排序事件以重新渲染网格
     sortSelect.dispatchEvent(new Event("change"));
   }
 
-  // 4. Render Global Map Markers (Cities) - 关键修改：应用颜色逻辑
+  // 4. Render Global Map Markers (Cities)
   function renderGlobalMarkers(data) {
     if (!map) return;
     
@@ -187,8 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cityMarkers = [];
   }
 
-  // --- City Map Logic ---
-
+  // --- City Map Logic ---\n
   function showCityOnMap(placeData) {
     if (!map || !placeData.coordinates) return;
     
@@ -396,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (visitedCheckbox) visitedCheckbox.addEventListener("change", updateView);
   if (plannedCheckbox) plannedCheckbox.addEventListener("change", updateView);
 
-  // 7. Sorting Logic
+  // 7. Sorting Logic [修改：分离 Visited 和 Planned 排序]
   sortSelect.addEventListener("change", function () {
     const sortType = this.value;
     const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
@@ -404,6 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const showVisited = visitedCheckbox.checked;
     const showPlanned = plannedCheckbox.checked;
 
+    // 1. 筛选数据
     let dataToSort = allTravelData.filter(place => {
       if (targetContinent !== "all" && place.continent !== targetContinent) return false;
       const isPlanned = place.status === 'planned';
@@ -412,7 +415,25 @@ document.addEventListener("DOMContentLoaded", function () {
       return true;
     });
 
+    // 2. 排序逻辑
     const sortedData = [...dataToSort].sort((a, b) => {
+      const isAPlanned = a.status === 'planned';
+      const isBPlanned = b.status === 'planned';
+
+      // 优先级 1: 状态 (Visited 永远在 Planned 前面)
+      // 如果 A 是 Planned 但 B 不是，A 排在后面 (返回 1)
+      if (isAPlanned && !isBPlanned) return 1;
+      // 如果 A 不是 Planned 但 B 是，A 排在前面 (返回 -1)
+      if (!isAPlanned && isBPlanned) return -1;
+
+      // 优先级 2: 同类内部排序
+      
+      // 情况 A: 两个都是 Planned -> 强制 A-Z 排序
+      if (isAPlanned && isBPlanned) {
+         return a.name.localeCompare(b.name);
+      }
+
+      // 情况 B: 两个都是 Visited -> 遵循下拉菜单选择 (sortType)
       const dateA = a.date;
       const dateB = b.date;
       const nameA = a.name;
