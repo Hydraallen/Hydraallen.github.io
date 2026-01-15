@@ -1,5 +1,5 @@
 // ==========================================
-// Script for Travel Page (Fixed: Auto-Bounds for City View)
+// Script for Travel Page (Fixed: Persistent Global Markers & Auto-Bounds)
 // ==========================================
 
 let allTravelData = [];
@@ -7,7 +7,11 @@ let currentGalleryPhotos = []; // 全局相册数据源
 let currentPhotoIndex = 0;
 let map; // Leaflet map instance
 let tileLayer; // Keep track of the tile layer to switch languages
-let markers = []; // Array to store map markers
+
+// 关键修改：分离全局标记和城市详情标记
+let globalMarkers = []; // 存放所有城市/区域的主标记 (始终显示)
+let cityMarkers = [];   // 存放当前进入的城市内部的照片标记 (仅在 City View 显示)
+
 let currentLanguage = 'en'; // Default language: English
 let isCityView = false; // Track if we are in city view mode
 
@@ -103,8 +107,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Helper: Centralized View Update
   function updateView() {
-    if (isCityView) return; 
-
+    // 如果在城市视图下切换了筛选条件（如点击了 Visited），我们暂时保持在城市视图，
+    // 或者你可以选择强制退出城市视图。这里我们只更新列表，不强制重绘地图全局标记，除非不在城市视图。
+    
     const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
     const targetContinent = activeBtn ? activeBtn.getAttribute("data-continent") : "all";
     const showVisited = visitedCheckbox.checked;
@@ -118,14 +123,26 @@ document.addEventListener("DOMContentLoaded", function () {
       return true;
     });
 
-    renderMapMarkers(filteredData);
+    // 仅当不在城市详细视图时，才重绘全局标记
+    // 这样可以防止在查看某个城市时，背景的全局标记突然消失
+    if (!isCityView) {
+        renderGlobalMarkers(filteredData);
+    }
+    
+    // 列表总是更新
     sortSelect.dispatchEvent(new Event("change"));
   }
 
   // 3. Render Global Map Markers (Cities)
-  function renderMapMarkers(data) {
+  function renderGlobalMarkers(data) {
     if (!map) return;
-    clearMarkers();
+    
+    // 清除旧的全局标记
+    globalMarkers.forEach(marker => map.removeLayer(marker));
+    globalMarkers = [];
+    
+    // 同时也清除城市详情标记（因为这是重置视图的操作）
+    clearCityMarkers();
 
     data.forEach(place => {
       if (place.coordinates) {
@@ -142,44 +159,45 @@ document.addEventListener("DOMContentLoaded", function () {
             offset: [0, -20]
         });
 
-        markers.push(marker);
+        globalMarkers.push(marker);
       }
     });
   }
 
-  function clearMarkers() {
-    markers.forEach(marker => map.removeLayer(marker));
-    markers = [];
+  // 辅助：清除城市详情标记
+  function clearCityMarkers() {
+    cityMarkers.forEach(marker => map.removeLayer(marker));
+    cityMarkers = [];
   }
 
-  // --- City Map Logic (Fixed: Auto Bounds & Grouped Markers) ---
+  // --- City Map Logic (Fixed: Persistent Global Markers) ---
 
   function showCityOnMap(placeData) {
     if (!map || !placeData.coordinates) return;
     
-    // 1. 更新全局相册数据源
+    // 1. 切换状态
+    isCityView = true;
+    resetMapBtn.classList.remove("hidden-btn");
+    
+    // 2. 清除上一个城市的详情标记（如果有），但保留 globalMarkers
+    clearCityMarkers();
+    
+    // 3. 更新相册数据源
     currentGalleryPhotos = placeData.photos || [];
 
-    isCityView = true;
-    clearMarkers(); // Clear global markers
-    resetMapBtn.classList.remove("hidden-btn");
-
+    // 如果没有照片，仅飞向中心点
     if (!placeData.photos || placeData.photos.length === 0) {
-        // 如果没有照片，仅飞向中心点
         map.flyTo(placeData.coordinates, 13, { duration: 1.5 });
         return;
     }
 
-    // 2. 按坐标分组照片，并收集所有坐标以计算边界
+    // 4. 按坐标分组照片
     const groupedPhotos = {};
-    const bounds = L.latLngBounds(); // 创建边界对象
+    const bounds = L.latLngBounds(); // 用于自动缩放
 
     placeData.photos.forEach((photo, index) => {
       if (typeof photo === 'object' && photo.coordinates) {
-        // 收集坐标用于自动缩放
         bounds.extend(photo.coordinates);
-
-        // 将坐标转换为字符串作为 Key (例如 "52.5,13.4")
         const coordKey = photo.coordinates.join(',');
         
         if (!groupedPhotos[coordKey]) {
@@ -189,16 +207,14 @@ document.addEventListener("DOMContentLoaded", function () {
             items: []
           };
         }
-        // 保存照片信息和它在原始数组中的索引
         groupedPhotos[coordKey].items.push({ ...photo, originalIndex: index });
       }
     });
 
-    // 3. 渲染分组后的标记
+    // 5. 渲染新的详情标记
     Object.values(groupedPhotos).forEach(group => {
       const marker = L.marker(group.coords).addTo(map);
 
-      // 构建 Popup 内容：如果有多张图片，横向排列
       let imagesHtml = '<div class="popup-gallery-container">';
       group.items.forEach(item => {
         imagesHtml += `
@@ -218,12 +234,13 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
 
       marker.bindPopup(popupContent, { minWidth: 160, maxWidth: 300 });
-      markers.push(marker);
+      
+      // 添加到 cityMarkers 数组，以便退出时清除
+      cityMarkers.push(marker);
     });
 
-    // 4. 关键修复：根据所有标记的边界自动调整地图视野
+    // 6. 自动调整视野
     if (bounds.isValid()) {
-        // padding: 边缘留白，maxZoom: 防止单个点时缩放过大
         map.flyToBounds(bounds, { padding: [50, 50], maxZoom: 15, duration: 1.5 });
     } else {
         map.flyTo(placeData.coordinates, 13, { duration: 1.5 });
@@ -234,6 +251,9 @@ document.addEventListener("DOMContentLoaded", function () {
     isCityView = false;
     resetMapBtn.classList.add("hidden-btn");
     
+    // 关键：只清除详情标记，保留全局标记
+    clearCityMarkers();
+    
     // Reset view to current continent
     const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
     const targetContinent = activeBtn ? activeBtn.getAttribute("data-continent") : "all";
@@ -241,7 +261,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const view = continentViews[targetContinent];
         map.flyTo(view.center, view.zoom, { duration: 1.5 });
     }
-
+    
+    // 确保全局标记是最新的（防止在 City View 期间改变了筛选）
     updateView();
   }
 
@@ -348,9 +369,11 @@ document.addEventListener("DOMContentLoaded", function () {
       continentBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
+      // 如果切换了大洲，我们通常希望退出当前的城市视图，回到大地图
       if (isCityView) {
           isCityView = false;
           resetMapBtn.classList.add("hidden-btn");
+          clearCityMarkers(); // 清除详情标记
       }
 
       const targetContinent = btn.getAttribute("data-continent");
