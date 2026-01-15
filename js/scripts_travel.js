@@ -1,7 +1,7 @@
 // ==========================================
 // Script for Travel Page
 // Features: Persistent Global Markers, Auto-Bounds, Colored Markers (Visited/Planned)
-// Modified: Orange markers for TODO, Split Sections, Independent Sorting Logic
+// Modified: Orange markers for TODO, Split Sections, Independent Sorting, Dynamic Map Bounds
 // ==========================================
 
 let allTravelData = [];
@@ -37,7 +37,8 @@ const MarkerIcons = {
   })
 };
 
-// 大洲坐标中心点配置
+// 大洲坐标中心点配置 (作为无数据时的 fallback)
+// [修改] 调整了大洋洲的默认视野，以防没有数据时也能看到新西兰
 const continentViews = {
   all: { center: [20, 0], zoom: 2 },
   asia: { center: [34.0479, 100.6197], zoom: 3 },
@@ -45,7 +46,7 @@ const continentViews = {
   namerica: { center: [54.5260, -105.2551], zoom: 3 },
   samerica: { center: [-8.7832, -55.4915], zoom: 3 },
   africa: { center: [-8.7832, 34.5085], zoom: 3 },
-  oceania: { center: [-25.2744, 133.7751], zoom: 4 },
+  oceania: { center: [-30.0, 160.0], zoom: 3 }, // [修改] 中心向东移，包含新西兰
   antarctica: { center: [-75.0000, 0.0000], zoom: 2 }
 };
 
@@ -225,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // 渲染详情标记 (照片点统一使用绿色 Visited 图标)
+    // 渲染详情标记
     Object.values(groupedPhotos).forEach(group => {
       const marker = L.marker(group.coords, { icon: MarkerIcons.visited }).addTo(map);
 
@@ -259,6 +260,38 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // [新增] 自动缩放到大洲逻辑
+  // 解决问题：根据实际数据点调整视野，确保所有图钉都在视野内
+  function autoZoomToContinent(continent) {
+    if (continent === "all") {
+      map.flyTo([20, 0], 2, { duration: 1.5 });
+      return;
+    }
+
+    // 1. 筛选该大洲的所有数据（包括 Visited 和 Planned）
+    // 这样可以确保地图视野包含你所有感兴趣的点
+    const continentData = allTravelData.filter(p => p.continent === continent && p.coordinates);
+    
+    if (continentData.length > 0) {
+      const bounds = L.latLngBounds();
+      continentData.forEach(p => bounds.extend(p.coordinates));
+      
+      if (bounds.isValid()) {
+        // 使用 flyToBounds 自动适配边界
+        // maxZoom: 5 确保如果只有一个城市，不会缩放得太近，保持大洲的上下文
+        map.flyToBounds(bounds, { padding: [50, 50], duration: 1.5, maxZoom: 5 });
+        return;
+      }
+    }
+
+    // 2. 如果没有数据，回退到硬编码的默认视图
+    if (continentViews[continent]) {
+      const view = continentViews[continent];
+      map.flyTo(view.center, view.zoom, { duration: 1.5 });
+    }
+  }
+
+  // [修改] 退出城市模式时，使用自动缩放
   function exitCityMode() {
     isCityView = false;
     resetMapBtn.classList.add("hidden-btn");
@@ -267,10 +300,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
     const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
     const targetContinent = activeBtn ? activeBtn.getAttribute("data-continent") : "all";
-    if (continentViews[targetContinent]) {
-        const view = continentViews[targetContinent];
-        map.flyTo(view.center, view.zoom, { duration: 1.5 });
-    }
+    
+    autoZoomToContinent(targetContinent); // 使用新函数
     
     updateView();
   }
@@ -286,11 +317,9 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => lightbox.classList.add("active"), 10);
   });
 
-  // 5. Render Grid Cards (Split Sections & Independent Sorting)
+  // 5. Render Grid Cards
   function renderGrid(data, sortType) {
     gridContainer.innerHTML = "";
-    
-    // 确保主容器使用 Flex 布局以便垂直排列
     gridContainer.className = "travel-wrapper"; 
 
     if (data.length === 0) {
@@ -304,14 +333,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // --- 排序逻辑 ---
     
-    // 1. Visited 排序：响应所有类型
+    // 1. Visited 排序
     visitedData.sort((a, b) => {
       const dateA = a.date;
       const dateB = b.date;
       const nameA = a.name;
       const nameB = b.name;
 
-      // 只有在按日期排序时，才处理 TBD (虽然 Visited 通常都有日期)
       if (sortType === "newest" || sortType === "oldest") {
         if (dateA === "TBD") return sortType === "newest" ? -1 : 1;
         if (dateB === "TBD") return sortType === "newest" ? 1 : -1;
@@ -325,16 +353,13 @@ document.addEventListener("DOMContentLoaded", function () {
       return 0;
     });
 
-    // 2. TODO 排序：仅响应 Z-A，其他情况 (A-Z, Newest, Oldest) 默认保持 A-Z
+    // 2. TODO 排序
     plannedData.sort((a, b) => {
       const nameA = a.name;
       const nameB = b.name;
-
       if (sortType === "za") {
-        // 如果用户明确选择了 Z-A，则倒序
         return nameB.localeCompare(nameA);
       } else {
-        // 其他情况（包括 A-Z, Newest, Oldest）都默认使用 A-Z
         return nameA.localeCompare(nameB);
       }
     });
@@ -344,31 +369,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const createSection = (title, items, isPlanned) => {
       if (items.length === 0) return;
 
-      // 1. 创建标题
       const header = document.createElement("h3");
       header.className = "travel-section-title";
       header.textContent = title;
       header.style.borderLeftColor = isPlanned ? '#ff9800' : '#00695c';
 
-      // 2. 创建网格容器
       const gridDiv = document.createElement("div");
       gridDiv.className = "travel-grid"; 
 
-      // 3. 填充卡片
       items.forEach(place => {
         const card = createCard(place, isPlanned);
         gridDiv.appendChild(card);
       });
 
-      // 4. 添加到主容器
       gridContainer.appendChild(header);
       gridContainer.appendChild(gridDiv);
     };
 
-    // 渲染 Visited 区域
     createSection("Visited Places", visitedData, false);
-
-    // 渲染 TODO 区域
     createSection("TODO List", plannedData, true);
   }
 
@@ -462,10 +480,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const targetContinent = btn.getAttribute("data-continent");
-      if (continentViews[targetContinent]) {
-        const view = continentViews[targetContinent];
-        map.flyTo(view.center, view.zoom, { duration: 1.5 });
-      }
+      
+      // [修改] 使用自动缩放逻辑
+      autoZoomToContinent(targetContinent);
       
       updateView();
     });
@@ -482,7 +499,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const showVisited = visitedCheckbox.checked;
     const showPlanned = plannedCheckbox.checked;
 
-    // 1. 筛选数据
     let filteredData = allTravelData.filter(place => {
       if (targetContinent !== "all" && place.continent !== targetContinent) return false;
       const isPlanned = place.status === 'planned';
@@ -491,7 +507,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return true;
     });
 
-    // 2. 传递数据和排序类型给 Render 函数
     renderGrid(filteredData, sortType);
   });
 
