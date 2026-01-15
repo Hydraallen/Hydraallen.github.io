@@ -3,18 +3,48 @@
   "name": "Cleveland",
   "country": "🇺🇸 USA",
   "state": "OH",
+  "continent": "namerica",
   "date": "2025-11-29",
   "date_display": "Nov 29-30, 2025",
   "video": "",
+  "status": "visited",
   "cover": "../../img/travel/Cleveland/cover.jpg",
+  "coordinates": [41.4993, -81.6944],
   "photos": [
-    "../../img/travel/Cleveland/photo1.jpg",
-    "../../img/travel/Cleveland/photo2.jpg",
-    "../../img/travel/Cleveland/photo3.jpg",
-    "../../img/travel/Cleveland/photo4.jpg",
-    "../../img/travel/Cleveland/photo5.jpg",
-    "../../img/travel/Cleveland/photo6.jpg",
-    "../../img/travel/Cleveland/photo7.jpg"
+    {
+      "src": "../../img/travel/Cleveland/photo1.jpg",
+      "location": "The Arcade",
+      "coordinates": [41.500025948053974, -81.69022556795254]
+    },
+    {
+      "src": "../../img/travel/Cleveland/photo2.jpg",
+      "location": "The Arcade",
+      "coordinates": [41.500025948053974, -81.69022556795254]
+    },
+    {
+      "src": "../../img/travel/Cleveland/photo3.jpg",
+      "location": "The Arcade",
+      "coordinates": [41.500025948053974, -81.69022556795254]
+    },
+    {
+      "src": "../../img/travel/Cleveland/photo4.jpg",
+      "location": "The Arcade",
+      "coordinates": [41.500025948053974, -81.69022556795254]
+    },
+    {
+      "src": "../../img/travel/Cleveland/photo5.jpg",
+      "location": "The Arcade",
+      "coordinates": [41.500025948053974, -81.69022556795254]
+    },
+    {
+      "src": "../../img/travel/Cleveland/photo6.jpg",
+      "location": "Cleveland Public Square",
+      "coordinates": [41.49976279833361, -81.69368744750652]
+    },
+    {
+      "src": "../../img/travel/Cleveland/photo7.jpg",
+      "location": "Edgewater Park",
+      "coordinates": [41.49074079344627, -81.7357009372824]
+    }
   ]
 }
-
