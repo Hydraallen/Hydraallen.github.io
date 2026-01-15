@@ -1,0 +1,13 @@
+{
+  "id": "spain",
+  "name": "Spain",
+  "country": "🇪🇸 Spain",
+  "continent": "europe",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Spain/cover.jpg",
+  "coordinates": [40.4168, -3.7038],
+  "photos": []
+}

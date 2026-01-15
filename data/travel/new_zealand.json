@@ -1,0 +1,13 @@
+{
+  "id": "new_zealand",
+  "name": "New Zealand",
+  "country": "🇳🇿 New Zealand",
+  "continent": "oceania",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/NewZealand/cover.jpg",
+  "coordinates": [-45.0312, 168.6626],
+  "photos": []
+}

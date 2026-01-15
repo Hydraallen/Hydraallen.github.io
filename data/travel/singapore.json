@@ -1,0 +1,13 @@
+{
+  "id": "singapore",
+  "name": "Singapore",
+  "country": "🇸🇬 Singapore",
+  "continent": "asia",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Singapore/cover.jpg",
+  "coordinates": [1.2868, 103.8545],
+  "photos": []
+}

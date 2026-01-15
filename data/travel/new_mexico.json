@@ -1,0 +1,14 @@
+{
+  "id": "new_mexico",
+  "name": "New Mexico",
+  "country": "🇺🇸 USA",
+  "state": "NM",
+  "continent": "namerica",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/NewMexico/cover.jpg",
+  "coordinates": [32.7797, -106.1717],
+  "photos": []
+}

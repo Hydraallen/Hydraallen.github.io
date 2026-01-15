@@ -1,0 +1,13 @@
+{
+  "id": "antarctica",
+  "name": "Antarctica",
+  "country": "🇦🇶 Antarctica",
+  "continent": "antarctica",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Antarctica/cover.jpg",
+  "coordinates": [-64.8500, -62.8833],
+  "photos": []
+}

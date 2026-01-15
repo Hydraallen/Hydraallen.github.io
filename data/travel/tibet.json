@@ -1,0 +1,13 @@
+{
+  "id": "tibet",
+  "name": "Tibet",
+  "country": "🇨🇳 China",
+  "continent": "asia",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Tibet/cover.jpg",
+  "coordinates": [29.6525, 91.1172],
+  "photos": []
+}

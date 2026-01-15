@@ -1,0 +1,13 @@
+{
+  "id": "japan",
+  "name": "Japan",
+  "country": "🇯🇵 Japan",
+  "continent": "asia",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Japan/cover.jpg",
+  "coordinates": [35.6762, 139.6503],
+  "photos": []
+}

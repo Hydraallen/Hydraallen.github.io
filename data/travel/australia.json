@@ -1,0 +1,13 @@
+{
+  "id": "australia",
+  "name": "Australia",
+  "country": "🇦🇺 Australia",
+  "continent": "oceania",
+  "date": "TBD",
+  "date_display": "TODO List",
+  "video": "",
+  "status": "planned",
+  "cover": "../../img/travel/Australia/cover.jpg",
+  "coordinates": [-33.8568, 151.2153],
+  "photos": []
+}
