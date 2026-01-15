@@ -1,5 +1,6 @@
 // ==========================================
-// Script for Travel Page (Fixed: Persistent Global Markers & Auto-Bounds)
+// Script for Travel Page
+// Features: Persistent Global Markers, Auto-Bounds, Colored Markers (Visited/Planned)
 // ==========================================
 
 let allTravelData = [];
@@ -14,6 +15,26 @@ let cityMarkers = [];   // 存放当前进入的城市内部的照片标记 (仅
 
 let currentLanguage = 'en'; // Default language: English
 let isCityView = false; // Track if we are in city view mode
+
+// --- 1. 定义自定义颜色的图钉 ---
+const MarkerIcons = {
+  visited: new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  }),
+  planned: new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  })
+};
 
 // 大洲坐标中心点配置
 const continentViews = {
@@ -51,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
 
-  // 1. Initialize Map
+  // 2. Initialize Map
   function initMap() {
     if (document.getElementById('map-container')) {
       map = L.map('map-container').setView([20, 0], 2);
@@ -83,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }).addTo(map);
   }
 
-  // 2. Load Data
+  // 3. Load Data
   async function loadTravelData() {
     try {
       initMap();
@@ -107,9 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Helper: Centralized View Update
   function updateView() {
-    // 如果在城市视图下切换了筛选条件（如点击了 Visited），我们暂时保持在城市视图，
-    // 或者你可以选择强制退出城市视图。这里我们只更新列表，不强制重绘地图全局标记，除非不在城市视图。
-    
     const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
     const targetContinent = activeBtn ? activeBtn.getAttribute("data-continent") : "all";
     const showVisited = visitedCheckbox.checked;
@@ -124,16 +142,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // 仅当不在城市详细视图时，才重绘全局标记
-    // 这样可以防止在查看某个城市时，背景的全局标记突然消失
     if (!isCityView) {
         renderGlobalMarkers(filteredData);
     }
     
-    // 列表总是更新
     sortSelect.dispatchEvent(new Event("change"));
   }
 
-  // 3. Render Global Map Markers (Cities)
+  // 4. Render Global Map Markers (Cities) - 关键修改：应用颜色逻辑
   function renderGlobalMarkers(data) {
     if (!map) return;
     
@@ -141,12 +157,14 @@ document.addEventListener("DOMContentLoaded", function () {
     globalMarkers.forEach(marker => map.removeLayer(marker));
     globalMarkers = [];
     
-    // 同时也清除城市详情标记（因为这是重置视图的操作）
     clearCityMarkers();
 
     data.forEach(place => {
       if (place.coordinates) {
-        const marker = L.marker(place.coordinates).addTo(map);
+        // 根据状态选择图标颜色
+        const iconType = (place.status === 'planned') ? MarkerIcons.planned : MarkerIcons.visited;
+
+        const marker = L.marker(place.coordinates, { icon: iconType }).addTo(map);
         
         // 点击城市标记：进入城市视图
         marker.on('click', function() {
@@ -156,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
         marker.bindTooltip(place.name, {
             permanent: false, 
             direction: 'top',
-            offset: [0, -20]
+            offset: [0, -40] // 调整 Tooltip 位置以适应新图标高度
         });
 
         globalMarkers.push(marker);
@@ -164,36 +182,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 辅助：清除城市详情标记
   function clearCityMarkers() {
     cityMarkers.forEach(marker => map.removeLayer(marker));
     cityMarkers = [];
   }
 
-  // --- City Map Logic (Fixed: Persistent Global Markers) ---
+  // --- City Map Logic ---
 
   function showCityOnMap(placeData) {
     if (!map || !placeData.coordinates) return;
     
-    // 1. 切换状态
     isCityView = true;
     resetMapBtn.classList.remove("hidden-btn");
     
-    // 2. 清除上一个城市的详情标记（如果有），但保留 globalMarkers
     clearCityMarkers();
     
-    // 3. 更新相册数据源
     currentGalleryPhotos = placeData.photos || [];
 
-    // 如果没有照片，仅飞向中心点
     if (!placeData.photos || placeData.photos.length === 0) {
         map.flyTo(placeData.coordinates, 13, { duration: 1.5 });
         return;
     }
 
-    // 4. 按坐标分组照片
+    // 按坐标分组照片
     const groupedPhotos = {};
-    const bounds = L.latLngBounds(); // 用于自动缩放
+    const bounds = L.latLngBounds();
 
     placeData.photos.forEach((photo, index) => {
       if (typeof photo === 'object' && photo.coordinates) {
@@ -211,9 +224,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // 5. 渲染新的详情标记
+    // 渲染详情标记 (照片点统一使用绿色 Visited 图标)
     Object.values(groupedPhotos).forEach(group => {
-      const marker = L.marker(group.coords).addTo(map);
+      const marker = L.marker(group.coords, { icon: MarkerIcons.visited }).addTo(map);
 
       let imagesHtml = '<div class="popup-gallery-container">';
       group.items.forEach(item => {
@@ -234,12 +247,10 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
 
       marker.bindPopup(popupContent, { minWidth: 160, maxWidth: 300 });
-      
-      // 添加到 cityMarkers 数组，以便退出时清除
       cityMarkers.push(marker);
     });
 
-    // 6. 自动调整视野
+    // 自动调整视野
     if (bounds.isValid()) {
         map.flyToBounds(bounds, { padding: [50, 50], maxZoom: 15, duration: 1.5 });
     } else {
@@ -251,10 +262,8 @@ document.addEventListener("DOMContentLoaded", function () {
     isCityView = false;
     resetMapBtn.classList.add("hidden-btn");
     
-    // 关键：只清除详情标记，保留全局标记
     clearCityMarkers();
     
-    // Reset view to current continent
     const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
     const targetContinent = activeBtn ? activeBtn.getAttribute("data-continent") : "all";
     if (continentViews[targetContinent]) {
@@ -262,7 +271,6 @@ document.addEventListener("DOMContentLoaded", function () {
         map.flyTo(view.center, view.zoom, { duration: 1.5 });
     }
     
-    // 确保全局标记是最新的（防止在 City View 期间改变了筛选）
     updateView();
   }
 
@@ -277,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => lightbox.classList.add("active"), 10);
   });
 
-  // 4. Render Grid Cards
+  // 5. Render Grid Cards
   function renderGrid(data) {
     grid.innerHTML = "";
     if (data.length === 0) {
@@ -363,17 +371,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // 5. Filtering Logic
+  // 6. Filtering Logic
   continentBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       continentBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
-      // 如果切换了大洲，我们通常希望退出当前的城市视图，回到大地图
       if (isCityView) {
           isCityView = false;
           resetMapBtn.classList.add("hidden-btn");
-          clearCityMarkers(); // 清除详情标记
+          clearCityMarkers();
       }
 
       const targetContinent = btn.getAttribute("data-continent");
@@ -389,7 +396,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (visitedCheckbox) visitedCheckbox.addEventListener("change", updateView);
   if (plannedCheckbox) plannedCheckbox.addEventListener("change", updateView);
 
-  // 6. Sorting Logic
+  // 7. Sorting Logic
   sortSelect.addEventListener("change", function () {
     const sortType = this.value;
     const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
@@ -423,7 +430,7 @@ document.addEventListener("DOMContentLoaded", function () {
     renderGrid(sortedData);
   });
 
-  // 7. Language Logic
+  // 8. Language Logic
   if (langSelect) {
     langSelect.addEventListener("change", function() {
       currentLanguage = this.value;
