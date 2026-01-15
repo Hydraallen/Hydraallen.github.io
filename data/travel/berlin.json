@@ -17,12 +17,12 @@
     },
     {
       "src": "../../img/travel/Berlin/photo2.jpg",
-      "location": "Zoo Palast Inside",
+      "location": "Zoo Palast",
       "coordinates": [52.506013583204016, 13.334247432347683]
     },
     {
       "src": "../../img/travel/Berlin/photo3.jpg",
-      "location": "Zoo Palast Poster Wall",
+      "location": "Zoo Palast",
       "coordinates": [52.506013583204016, 13.334247432347683]
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "src": "../../img/travel/Berlin/photo5.jpg",
-      "location": "Deutsche Kinemathek Inside",
+      "location": "Deutsche Kinemathek",
       "coordinates": [52.50871275229468, 13.387193713190094] 
     }
   ]

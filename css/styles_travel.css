@@ -1,3 +1,5 @@
+/* ... (保留之前的样式) ... */
+
 .travel-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -273,14 +275,14 @@
   object-fit: cover;
 }
 
-/* --- Lightbox Styling (Beautified) --- */
+/* --- Lightbox Styling --- */
 .lightbox {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.92); /* Slightly darker background */
+  background-color: rgba(0, 0, 0, 0.92);
   z-index: 3000;
   display: flex;
   justify-content: center;
@@ -295,7 +297,6 @@
   pointer-events: auto;
 }
 
-/* Lightbox Container for Flex Layout */
 .lightbox-container {
   display: flex;
   flex-direction: column;
@@ -306,12 +307,12 @@
 }
 
 .lightbox-content {
-  max-height: 75vh; /* Don't fill screen, leave room for text */
+  max-height: 75vh;
   width: auto;
   max-width: 100%;
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Nice shadow */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .lightbox-caption {
@@ -349,7 +350,7 @@
   padding: 10px;
   user-select: none;
   z-index: 3001;
-  background: rgba(255, 255, 255, 0.1); /* Subtle background */
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -383,7 +384,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 1000; /* Above Map */
+  z-index: 1000;
   background-color: white;
   color: #00695c;
   border: 2px solid #00695c;
@@ -401,28 +402,49 @@
   color: white;
 }
 
-/* Map Popup Styling */
+/* Map Popup Styling (Updated for Gallery) */
 .leaflet-popup-content {
   text-align: center;
 }
+
+/* 新增：Popup 内部的横向滚动容器 */
+.popup-gallery-container {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  max-width: 250px;
+  padding-bottom: 5px;
+  justify-content: center; /* 如果只有一张，居中 */
+}
+
+/* 隐藏滚动条但保留功能 */
+.popup-gallery-container::-webkit-scrollbar {
+  height: 4px;
+}
+.popup-gallery-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
+}
+
 .popup-photo-thumb {
-  width: 100%;
-  max-width: 150px;
-  height: 100px;
+  width: 100px; /* 稍微缩小一点以便并排 */
+  height: 80px;
   object-fit: cover;
   border-radius: 4px;
-  margin-bottom: 5px;
   cursor: pointer;
   transition: opacity 0.2s;
+  flex-shrink: 0; /* 防止被挤压 */
 }
 .popup-photo-thumb:hover { opacity: 0.8; }
+
 .popup-location-name {
   font-weight: bold;
   font-size: 12px;
   color: #333;
+  margin-top: 5px;
 }
 
-/* Continent Tabs */
+/* Continent Tabs & Controls (Rest unchanged) */
 .continent-tabs {
   display: flex;
   justify-content: center;
@@ -453,7 +475,6 @@
   border-color: #00695c;
 }
 
-/* --- Controls Area Styling --- */
 .travel-controls {
   display: flex;
   justify-content: space-between;
