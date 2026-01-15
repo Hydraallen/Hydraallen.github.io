@@ -1,5 +1,5 @@
 // ==========================================
-// Script for Travel Page (Fixed: Grouped Markers & Lightbox Data Source)
+// Script for Travel Page (Fixed: Auto-Bounds for City View)
 // ==========================================
 
 let allTravelData = [];
@@ -152,28 +152,33 @@ document.addEventListener("DOMContentLoaded", function () {
     markers = [];
   }
 
-  // --- City Map Logic (Fixed Overlap & Data Source) ---
+  // --- City Map Logic (Fixed: Auto Bounds & Grouped Markers) ---
 
   function showCityOnMap(placeData) {
     if (!map || !placeData.coordinates) return;
     
-    // 1. 关键修复：立即更新全局相册数据源，这样 Lightbox 才能找到正确的图片
+    // 1. 更新全局相册数据源
     currentGalleryPhotos = placeData.photos || [];
 
     isCityView = true;
     clearMarkers(); // Clear global markers
     resetMapBtn.classList.remove("hidden-btn");
 
-    // Fly to city
-    map.flyTo(placeData.coordinates, 13, { duration: 1.5 });
+    if (!placeData.photos || placeData.photos.length === 0) {
+        // 如果没有照片，仅飞向中心点
+        map.flyTo(placeData.coordinates, 13, { duration: 1.5 });
+        return;
+    }
 
-    if (!placeData.photos || placeData.photos.length === 0) return;
-
-    // 2. 关键修复：按坐标分组照片，解决重叠问题
+    // 2. 按坐标分组照片，并收集所有坐标以计算边界
     const groupedPhotos = {};
+    const bounds = L.latLngBounds(); // 创建边界对象
 
     placeData.photos.forEach((photo, index) => {
       if (typeof photo === 'object' && photo.coordinates) {
+        // 收集坐标用于自动缩放
+        bounds.extend(photo.coordinates);
+
         // 将坐标转换为字符串作为 Key (例如 "52.5,13.4")
         const coordKey = photo.coordinates.join(',');
         
@@ -215,6 +220,14 @@ document.addEventListener("DOMContentLoaded", function () {
       marker.bindPopup(popupContent, { minWidth: 160, maxWidth: 300 });
       markers.push(marker);
     });
+
+    // 4. 关键修复：根据所有标记的边界自动调整地图视野
+    if (bounds.isValid()) {
+        // padding: 边缘留白，maxZoom: 防止单个点时缩放过大
+        map.flyToBounds(bounds, { padding: [50, 50], maxZoom: 15, duration: 1.5 });
+    } else {
+        map.flyTo(placeData.coordinates, 13, { duration: 1.5 });
+    }
   }
 
   function exitCityMode() {
