@@ -3,20 +3,48 @@
   "name": "Washington DC",
   "country": "🇺🇸 USA",
   "state": "DC",
-  "date": "2025-05-09",
-  "date_display": "May 9-11, 2025",
+  "continent": "namerica",
+  "date": "2025-05-10",
+  "date_display": "May 10-11, 2025",
   "video": "",
+  "status": "visited",
   "cover": "../../img/travel/DC/cover.jpg",
+  "coordinates": [38.9072, -77.0369],
   "photos": [
-    "../../img/travel/DC/photo1.jpg",
-    "../../img/travel/DC/photo2.jpg",
-    "../../img/travel/DC/photo3.jpg",
-    "../../img/travel/DC/photo4.jpg",
-    "../../img/travel/DC/photo5.jpg",
-    "../../img/travel/DC/photo6.jpg",
-    "../../img/travel/DC/photo7.jpg",
-    "../../img/travel/DC/photo8.jpg"
-    
+    {
+      "src": "../../img/travel/DC/photo1.jpg",
+      "location": "Lincoln Memorial",
+      "coordinates": [38.88938548429602, -77.05021891808714]
+    },
+    {
+      "src": "../../img/travel/DC/photo2.jpg",
+      "location": "Treasury Building",
+      "coordinates": [38.89768247063728, -77.03427283157917]
+    },
+    {
+      "src": "../../img/travel/DC/photo3.jpg",
+      "location": "The White House",
+      "coordinates": [38.89780152035702, -77.03656198925096]
+    },
+    {
+      "src": "../../img/travel/DC/photo4.jpg",
+      "location": "United States Capitol",
+      "coordinates": [38.89012104546956, -77.00900638528191]
+    },
+    {
+      "src": "../../img/travel/DC/photo6.jpg",
+      "location": "Lincoln Memorial",
+      "coordinates": [38.88938548429602, -77.05021891808714]
+    },
+    {
+      "src": "../../img/travel/DC/photo7.jpg",
+      "location": "Lincoln Memorial",
+      "coordinates": [38.88938548429602, -77.05021891808714]
+    },
+    {
+      "src": "../../img/travel/DC/photo8.jpg",
+      "location": "Lincoln Memorial",
+      "coordinates": [38.88938548429602, -77.05021891808714]
+    }
   ]
 }
-
