@@ -12,23 +12,28 @@
   "photos": [
     {
       "src": "../../img/travel/Berlin/photo1.jpg",
-      "location": "Brandenburg Gate",
-      "coordinates": [52.516275, 13.377704]
+      "location": "Zoo Palast",
+      "coordinates": [52.506013583204016, 13.334247432347683]
     },
     {
       "src": "../../img/travel/Berlin/photo2.jpg",
-      "location": "Fernsehturm Berlin",
-      "coordinates": [52.520815, 13.409419]
+      "location": "Zoo Palast Inside",
+      "coordinates": [52.506013583204016, 13.334247432347683]
     },
     {
       "src": "../../img/travel/Berlin/photo3.jpg",
-      "location": "Museum Island",
-      "coordinates": [52.516934, 13.397835]
+      "location": "Zoo Palast Poster Wall",
+      "coordinates": [52.506013583204016, 13.334247432347683]
     },
     {
       "src": "../../img/travel/Berlin/photo4.jpg",
-      "location": "Museum Island (Detail)",
-      "coordinates": [52.516934, 13.397835] 
+      "location": "Deutsche Kinemathek",
+      "coordinates": [52.50871275229468, 13.387193713190094] 
+    },
+    {
+      "src": "../../img/travel/Berlin/photo5.jpg",
+      "location": "Deutsche Kinemathek Inside",
+      "coordinates": [52.50871275229468, 13.387193713190094] 
     }
   ]
 }
