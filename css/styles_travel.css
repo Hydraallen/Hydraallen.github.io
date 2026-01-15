@@ -1,19 +1,43 @@
 /* ... (保留之前的样式) ... */
 
+/* [修改] 移除 .travel-grid 的 min-height，因为现在它是子容器 */
 .travel-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 20px; /* 稍微减小底部 padding */
+}
+
+/* [新增] 外部包裹容器，用于垂直排列 Visited 和 TODO 区域 */
+.travel-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   min-height: 200px;
+  padding-bottom: 40px;
+}
+
+/* [新增] 分区标题样式 */
+.travel-section-title {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  border-left: 6px solid #ccc; /* 默认颜色，JS会覆盖 */
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .loading-text {
   text-align: center;
   width: 100%;
   color: #666;
+  padding-top: 40px;
 }
 
+/* ... (保留 .place-card 及之后的所有样式) ... */
 .place-card {
   background: transparent;
   border-radius: 16px;

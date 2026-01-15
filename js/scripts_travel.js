@@ -1,7 +1,7 @@
 // ==========================================
 // Script for Travel Page
 // Features: Persistent Global Markers, Auto-Bounds, Colored Markers (Visited/Planned)
-// Modified: Orange markers for TODO, Split sorting logic
+// Modified: Orange markers for TODO, Split Sections, Independent Sorting Logic
 // ==========================================
 
 let allTravelData = [];
@@ -28,7 +28,6 @@ const MarkerIcons = {
     shadowSize: [41, 41]
   }),
   planned: new L.Icon({
-    // [修改] 将 planned 图标链接改为橙色 (orange)
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
@@ -51,8 +50,8 @@ const continentViews = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  const grid = document.getElementById("travel-grid");
-  if (!grid) return;
+  const gridContainer = document.getElementById("travel-grid"); // Main container
+  if (!gridContainer) return;
 
   const sortSelect = document.getElementById("place-sort");
   const langSelect = document.getElementById("lang-select");
@@ -124,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
     } catch (error) {
       console.error("Error loading travel data:", error);
-      grid.innerHTML = `<p style="text-align:center; color:red;">Error loading data.</p>`;
+      gridContainer.innerHTML = `<p style="text-align:center; color:red;">Error loading data.</p>`;
     }
   }
 
@@ -190,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cityMarkers = [];
   }
 
-  // --- City Map Logic ---\n
+  // --- City Map Logic ---
   function showCityOnMap(placeData) {
     if (!map || !placeData.coordinates) return;
     
@@ -287,90 +286,167 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => lightbox.classList.add("active"), 10);
   });
 
-  // 5. Render Grid Cards
-  function renderGrid(data) {
-    grid.innerHTML = "";
+  // 5. Render Grid Cards (Split Sections & Independent Sorting)
+  function renderGrid(data, sortType) {
+    gridContainer.innerHTML = "";
+    
+    // 确保主容器使用 Flex 布局以便垂直排列
+    gridContainer.className = "travel-wrapper"; 
+
     if (data.length === 0) {
-      grid.innerHTML = "<p>No places found matching your filters.</p>";
+      gridContainer.innerHTML = "<p style='text-align:center; width:100%'>No places found matching your filters.</p>";
       return;
     }
 
-    data.forEach((place) => {
-      let displayName = place.name;
-      if (place.country.toLowerCase() === "usa" && place.state) {
-        displayName += `, ${place.state}`;
-      }
+    // 分离数据
+    const visitedData = data.filter(p => p.status !== 'planned');
+    const plannedData = data.filter(p => p.status === 'planned');
 
-      const isPlanned = place.status === "planned";
-      const hasVideo = place.video && place.video.trim() !== "";
+    // --- 排序逻辑 ---
+    
+    // 1. Visited 排序：响应所有类型
+    visitedData.sort((a, b) => {
+      const dateA = a.date;
+      const dateB = b.date;
+      const nameA = a.name;
+      const nameB = b.name;
+
+      // 只有在按日期排序时，才处理 TBD (虽然 Visited 通常都有日期)
+      if (sortType === "newest" || sortType === "oldest") {
+        if (dateA === "TBD") return sortType === "newest" ? -1 : 1;
+        if (dateB === "TBD") return sortType === "newest" ? 1 : -1;
+        if (sortType === "newest") return new Date(dateB) - new Date(dateA);
+        if (sortType === "oldest") return new Date(dateA) - new Date(dateB);
+      }
       
-      let buttonsHtml = "";
-      if (!isPlanned) {
-        buttonsHtml += `<button class="action-btn photo-btn">View Photos</button>`;
-      } else {
-        buttonsHtml += `<span style="color:white; font-weight:bold;">Coming Soon</span>`;
-      }
+      if (sortType === "az") return nameA.localeCompare(nameB);
+      if (sortType === "za") return nameB.localeCompare(nameA);
       
-      if (hasVideo) {
-        buttonsHtml += `<a href="${place.video}" target="_blank" class="action-btn video-btn-overlay">Play Video</a>`;
-      }
-
-      const card = document.createElement("div");
-      card.className = `place-card ${isPlanned ? 'planned' : ''}`;
-      card.setAttribute("tabindex", "0");
-      card.setAttribute("data-continent", place.continent || "other");
-      card.setAttribute("data-name", place.name);
-      card.setAttribute("data-date", place.date); 
-
-      card.innerHTML = `
-        <div class="place-image-wrapper">
-          <img src="${place.cover}" alt="${displayName}" loading="lazy">
-          <div class="hover-actions">
-            ${buttonsHtml}
-          </div>
-        </div>
-        <div class="place-info">
-          <div class="place-country">${place.country}</div>
-          <h3 class="place-city">${displayName}</h3>
-          <div class="place-date">${place.date_display}</div>
-        </div>
-      `;
-
-      if (!isPlanned) {
-        const openGalleryLogic = () => {
-          showCityOnMap(place);
-          const isLargeScreen = window.innerWidth > 768;
-          if (isLargeScreen) {
-            openLightboxDirectly(place);
-          } else {
-            openGalleryScroll(place);
-          }
-        };
-
-        card.addEventListener("click", openGalleryLogic);
-        card.addEventListener("keydown", (e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            openGalleryLogic();
-          }
-        });
-
-        const photoBtn = card.querySelector(".photo-btn");
-        if (photoBtn) {
-          photoBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            openGalleryLogic();
-          });
-        }
-      }
-
-      const videoBtn = card.querySelector(".video-btn-overlay");
-      if (videoBtn) {
-        videoBtn.addEventListener("click", (e) => e.stopPropagation());
-      }
-
-      grid.appendChild(card);
+      return 0;
     });
+
+    // 2. TODO 排序：仅响应 Z-A，其他情况 (A-Z, Newest, Oldest) 默认保持 A-Z
+    plannedData.sort((a, b) => {
+      const nameA = a.name;
+      const nameB = b.name;
+
+      if (sortType === "za") {
+        // 如果用户明确选择了 Z-A，则倒序
+        return nameB.localeCompare(nameA);
+      } else {
+        // 其他情况（包括 A-Z, Newest, Oldest）都默认使用 A-Z
+        return nameA.localeCompare(nameB);
+      }
+    });
+
+    // --- 渲染逻辑 ---
+
+    const createSection = (title, items, isPlanned) => {
+      if (items.length === 0) return;
+
+      // 1. 创建标题
+      const header = document.createElement("h3");
+      header.className = "travel-section-title";
+      header.textContent = title;
+      header.style.borderLeftColor = isPlanned ? '#ff9800' : '#00695c';
+
+      // 2. 创建网格容器
+      const gridDiv = document.createElement("div");
+      gridDiv.className = "travel-grid"; 
+
+      // 3. 填充卡片
+      items.forEach(place => {
+        const card = createCard(place, isPlanned);
+        gridDiv.appendChild(card);
+      });
+
+      // 4. 添加到主容器
+      gridContainer.appendChild(header);
+      gridContainer.appendChild(gridDiv);
+    };
+
+    // 渲染 Visited 区域
+    createSection("Visited Places", visitedData, false);
+
+    // 渲染 TODO 区域
+    createSection("TODO List", plannedData, true);
+  }
+
+  // 创建卡片的逻辑
+  function createCard(place, isPlanned) {
+    let displayName = place.name;
+    if (place.country.toLowerCase() === "usa" && place.state) {
+      displayName += `, ${place.state}`;
+    }
+
+    const hasVideo = place.video && place.video.trim() !== "";
+    
+    let buttonsHtml = "";
+    if (!isPlanned) {
+      buttonsHtml += `<button class="action-btn photo-btn">View Photos</button>`;
+    } else {
+      buttonsHtml += `<span style="color:white; font-weight:bold;">Coming Soon</span>`;
+    }
+    
+    if (hasVideo) {
+      buttonsHtml += `<a href="${place.video}" target="_blank" class="action-btn video-btn-overlay">Play Video</a>`;
+    }
+
+    const card = document.createElement("div");
+    card.className = `place-card ${isPlanned ? 'planned' : ''}`;
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("data-continent", place.continent || "other");
+    card.setAttribute("data-name", place.name);
+    card.setAttribute("data-date", place.date); 
+
+    card.innerHTML = `
+      <div class="place-image-wrapper">
+        <img src="${place.cover}" alt="${displayName}" loading="lazy">
+        <div class="hover-actions">
+          ${buttonsHtml}
+        </div>
+      </div>
+      <div class="place-info">
+        <div class="place-country">${place.country}</div>
+        <h3 class="place-city">${displayName}</h3>
+        <div class="place-date">${place.date_display}</div>
+      </div>
+    `;
+
+    if (!isPlanned) {
+      const openGalleryLogic = () => {
+        showCityOnMap(place);
+        const isLargeScreen = window.innerWidth > 768;
+        if (isLargeScreen) {
+          openLightboxDirectly(place);
+        } else {
+          openGalleryScroll(place);
+        }
+      };
+
+      card.addEventListener("click", openGalleryLogic);
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openGalleryLogic();
+        }
+      });
+
+      const photoBtn = card.querySelector(".photo-btn");
+      if (photoBtn) {
+        photoBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          openGalleryLogic();
+        });
+      }
+    }
+
+    const videoBtn = card.querySelector(".video-btn-overlay");
+    if (videoBtn) {
+      videoBtn.addEventListener("click", (e) => e.stopPropagation());
+    }
+
+    return card;
   }
 
   // 6. Filtering Logic
@@ -398,7 +474,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (visitedCheckbox) visitedCheckbox.addEventListener("change", updateView);
   if (plannedCheckbox) plannedCheckbox.addEventListener("change", updateView);
 
-  // 7. Sorting Logic [修改：分离 Visited 和 Planned 排序]
+  // 7. Sorting Logic
   sortSelect.addEventListener("change", function () {
     const sortType = this.value;
     const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
@@ -407,7 +483,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const showPlanned = plannedCheckbox.checked;
 
     // 1. 筛选数据
-    let dataToSort = allTravelData.filter(place => {
+    let filteredData = allTravelData.filter(place => {
       if (targetContinent !== "all" && place.continent !== targetContinent) return false;
       const isPlanned = place.status === 'planned';
       if (isPlanned && !showPlanned) return false;
@@ -415,40 +491,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return true;
     });
 
-    // 2. 排序逻辑
-    const sortedData = [...dataToSort].sort((a, b) => {
-      const isAPlanned = a.status === 'planned';
-      const isBPlanned = b.status === 'planned';
-
-      // 优先级 1: 状态 (Visited 永远在 Planned 前面)
-      // 如果 A 是 Planned 但 B 不是，A 排在后面 (返回 1)
-      if (isAPlanned && !isBPlanned) return 1;
-      // 如果 A 不是 Planned 但 B 是，A 排在前面 (返回 -1)
-      if (!isAPlanned && isBPlanned) return -1;
-
-      // 优先级 2: 同类内部排序
-      
-      // 情况 A: 两个都是 Planned -> 强制 A-Z 排序
-      if (isAPlanned && isBPlanned) {
-         return a.name.localeCompare(b.name);
-      }
-
-      // 情况 B: 两个都是 Visited -> 遵循下拉菜单选择 (sortType)
-      const dateA = a.date;
-      const dateB = b.date;
-      const nameA = a.name;
-      const nameB = b.name;
-
-      if (dateA === "TBD") return sortType === "newest" ? -1 : 1;
-      if (dateB === "TBD") return sortType === "newest" ? 1 : -1;
-
-      if (sortType === "az") return nameA.localeCompare(nameB);
-      if (sortType === "newest") return new Date(dateB) - new Date(dateA);
-      if (sortType === "oldest") return new Date(dateA) - new Date(dateB);
-      return 0;
-    });
-
-    renderGrid(sortedData);
+    // 2. 传递数据和排序类型给 Render 函数
+    renderGrid(filteredData, sortType);
   });
 
   // 8. Language Logic
