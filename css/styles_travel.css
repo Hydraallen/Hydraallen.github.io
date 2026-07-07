@@ -357,9 +357,15 @@
   color: white;
   font-size: 40px;
   font-weight: bold;
+  line-height: 1;
   cursor: pointer;
   z-index: 3001;
   transition: transform 0.2s;
+  /* Button reset: keep the original text-glyph appearance. */
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-family: inherit;
 }
 .close-lightbox:hover { transform: scale(1.1); }
 
@@ -370,11 +376,13 @@
   color: white;
   font-size: 30px;
   font-weight: bold;
+  line-height: 1;
   cursor: pointer;
   padding: 10px;
   user-select: none;
   z-index: 3001;
   background: rgba(255, 255, 255, 0.1);
+  border: none;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -383,6 +391,7 @@
   justify-content: center;
   transition: all 0.3s;
   backdrop-filter: blur(5px);
+  font-family: inherit;
 }
 
 .lightbox-btn:hover {

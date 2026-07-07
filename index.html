@@ -4,10 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hydraallen Portfolio</title>
+  <title>Home | Hydraallen</title>
+  <meta name="description"
+    content="Hydraallen (Rui Wang) is a Master of Science in Information student at the University of Michigan and a passionate programmer working on Agent AI, machine learning, and online judge platforms.">
+  <meta property="og:title" content="Home | Hydraallen">
+  <meta property="og:description"
+    content="Portfolio of Hydraallen (Rui Wang): projects, experience, skills, and education in Agent AI and machine learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hydraallen.github.io/">
+  <meta property="og:image" content="https://hydraallen.github.io/img/avatar.jpg">
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/scripts.js"></script>
 </head>
 
 <body>
@@ -15,8 +22,9 @@
 
   <header>
     <div class="hamburger-menu-wrapper">
-      <h1>Hydraallen</h1>
-      <button class="hamburger-menu" aria-label="Toggle navigation">
+      <p class="logo">Hydraallen</p>
+      <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="primary-nav">
         <span></span>
         <span></span>
         <span></span>
@@ -28,7 +36,7 @@
     <div class="typing-svg">
       <img
         src="https://readme-typing-svg.herokuapp.com?color=%23FFFF00&center=false&vCenter=true&width=400&lines=Hi+there+👋,+I+am+Hydraallen;+Welcome+to+My+Profile!;Over+some+years+of;programming+experience;Always+learning+new+things+;Machine+learning+enthusiast+"
-        alt="Typing SVG">
+        alt="" aria-hidden="true">
     </div>
 
     <p class="intro">
@@ -38,104 +46,58 @@
 
     <div class="social-icons">
       <!-- GitHub -->
-      <a href="https://github.com/Hydraallen" target="_blank">
+      <a href="https://github.com/Hydraallen" target="_blank" rel="noopener noreferrer"
+        aria-label="GitHub profile (opens in new tab)">
         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon">
       </a>
       <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/rui-wang-546099392/" target="_blank">
+      <a href="https://www.linkedin.com/in/rui-wang-546099392/" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn profile (opens in new tab)">
         <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon">
       </a>
       <!-- Facebook -->
-      <a href="https://www.facebook.com/hydra.allen.2025/" target="_blank">
+      <a href="https://www.facebook.com/hydra.allen.2025/" target="_blank" rel="noopener noreferrer"
+        aria-label="Facebook profile (opens in new tab)">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="icon">
       </a>
       <!-- Instagram -->
-      <a href="https://www.instagram.com/hydraallen6/" target="_blank">
+      <a href="https://www.instagram.com/hydraallen6/" target="_blank" rel="noopener noreferrer"
+        aria-label="Instagram profile (opens in new tab)">
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="icon">
       </a>
       <!-- Twitter -->
-      <a href="https://x.com/allen92451109" target="_blank">
+      <a href="https://x.com/allen92451109" target="_blank" rel="noopener noreferrer"
+        aria-label="Twitter/X profile (opens in new tab)">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" class="icon">
       </a>
       <!-- Xiaohongshu -->
-      <a href="https://xhslink.com/m/4Ka90xNTlt9" target="_blank">
+      <a href="https://xhslink.com/m/4Ka90xNTlt9" target="_blank" rel="noopener noreferrer"
+        aria-label="Xiaohongshu profile (opens in new tab)">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDo2rHHxrkOzsL4RvHn_fsCt6SIVtdCNH0TQ&s"
           alt="Xiaohongshu" class="icon">
       </a>
       <!-- Bilibili -->
-      <a href="https://space.bilibili.com/397325796" target="_blank">
+      <a href="https://space.bilibili.com/397325796" target="_blank" rel="noopener noreferrer"
+        aria-label="Bilibili profile (opens in new tab)">
         <img src="https://img.icons8.com/color/96/bilibili.png" alt="Bilibili" class="icon">
       </a>
       <!-- Email -->
-      <a href="mailto:wangruiallen@gmail.com" target="_blank">
+      <a href="mailto:wangruiallen@gmail.com" aria-label="Send an email">
         <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="icon">
       </a>
     </div>
 
     <!-- CV Button Section -->
     <div class="cv-container">
-      <a href="https://hydraallen.github.io/CV/CV.pdf" target="_blank" class="cv-btn">
-        <img src="https://img.icons8.com/ios-filled/50/000000/open-resume.png" alt="CV Icon" class="cv-icon">
+      <a href="https://hydraallen.github.io/CV/CV.pdf" target="_blank" rel="noopener noreferrer" class="cv-btn">
+        <img src="https://img.icons8.com/ios-filled/50/000000/open-resume.png" alt="" aria-hidden="true" class="cv-icon">
         <span>Resume</span>
       </a>
     </div>
   </header>
 
-  <nav class="hidden-nav">
-    <div class="profile-picture">
-      <img src="./img/avatar.jpg" alt="My Profile Picture">
-    </div>
-    <ul class="navigation">
-      <li>
-        <a href="#about">
-          <img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="About Icon">
-          About
-        </a>
-      </li>
-      <li>
-        <a href="#experience">
-          <img src="https://img.icons8.com/ios-filled/50/000000/briefcase.png" alt="Experience Icon">
-          Experience
-        </a>
-      </li>
-      <li>
-        <a href="#projects">
-          <img src="https://img.icons8.com/ios-filled/50/000000/task.png" alt="Projects Icon">
-          Projects
-        </a>
-      </li>
-      <li>
-        <a href="#skills">
-          <img src="https://img.icons8.com/ios-filled/50/000000/combo-chart.png" alt="Skills Icon">
-          Skills
-        </a>
-      </li>
-      <li>
-        <a href="#education">
-          <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="Education Icon">
-          Education
-        </a>
-      </li>
-      <li>
-        <a href="movies.html">
-          <img src="https://img.icons8.com/ios-filled/50/000000/film-reel.png" alt="Movies Icon">
-          Movies
-        </a>
-      </li>
-      <li>
-        <a href="travel.html">
-          <img src="https://img.icons8.com/ios-filled/50/000000/camera.png" alt="Travel Icon">
-          Travel
-        </a>
-      </li>
-      <li>
-        <a href="#contact">
-          <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Contact Icon">
-          Contact
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <!-- Primary navigation is injected here by js/nav.js (single source of truth) -->
+  <div id="nav-placeholder"></div>
 
   <main id="main-content">
     <section id="about">
@@ -162,7 +124,7 @@
       </p>
 
       <div class="about-skills">
-        <h2>Skills</h2>
+        <h3>Languages &amp; Tools</h3>
         <ul>
           <li>
             <strong>Languages:</strong> Python, R, C/C++, Go, Matlab, SQL,
@@ -196,8 +158,8 @@
               </li>
               <li>
                 Paper: <em>OSGym: Super-Scalable Distributed Data Engine for Generalizable Computer Agents</em> (<a
-                  href="https://arxiv.org/abs/2511.11672" target="_blank"
-                  style="color: #00695c; text-decoration: underline;">arXiv:2511.11672</a>).
+                  href="https://arxiv.org/abs/2511.11672" target="_blank" rel="noopener noreferrer"
+                  class="inline-link">arXiv:2511.11672</a>).
               </li>
             </ul>
           </div>
@@ -252,7 +214,7 @@
             The world's best computer use model and developer toolkit.
           </p>
           <div class="project-links">
-            <a href="https://www.agiopen.org/" target="_blank" class="btn live-site-btn">
+            <a href="https://www.agiopen.org/" target="_blank" rel="noopener noreferrer" class="btn live-site-btn">
               <img src="https://cdn-icons-png.flaticon.com/128/2406/2406849.png" alt="Live Site Icon" class="btn-icon">
               Live Site
             </a>
@@ -266,7 +228,7 @@
             efficiently. Based on Go and Git.
           </p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/JOJ3/tree/master" target="_blank" class="btn">
+            <a href="https://github.com/Hydraallen/JOJ3/tree/master" target="_blank" rel="noopener noreferrer" class="btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -277,7 +239,7 @@
           <h3>SurgicalSAM2</h3>
           <p>Automatically segment surgical instruments in surgery videos.</p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/SurgicalSAM2" target="_blank" class="btn">
+            <a href="https://github.com/Hydraallen/SurgicalSAM2" target="_blank" rel="noopener noreferrer" class="btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -291,7 +253,7 @@
             analysis and visualization.
           </p>
           <div class="project-links">
-            <a href="https://hydraallen.github.io/MoneyFlow/" target="_blank" class="btn live-site-btn">
+            <a href="https://hydraallen.github.io/MoneyFlow/" target="_blank" rel="noopener noreferrer" class="btn live-site-btn">
               <img src="https://cdn-icons-png.flaticon.com/128/2406/2406849.png" alt="Live Site Icon" class="btn-icon">
               Live Site
             </a>
@@ -304,7 +266,7 @@
             A project for recording user actions and reproduce their workflow.
           </p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/ScreenRecorder" target="_blank" class="btn">
+            <a href="https://github.com/Hydraallen/ScreenRecorder" target="_blank" rel="noopener noreferrer" class="btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -319,7 +281,7 @@
             OSWorld's dataset.
           </p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/OS_Validator" target="_blank" class="btn">
+            <a href="https://github.com/Hydraallen/OS_Validator" target="_blank" rel="noopener noreferrer" class="btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -330,7 +292,7 @@
           <h3>Vid2Frames</h3>
           <p>Automatically extract keyframes from videos and images.</p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/Vid2Frames" target="_blank" class="btn">
+            <a href="https://github.com/Hydraallen/Vid2Frames" target="_blank" rel="noopener noreferrer" class="btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -345,7 +307,7 @@
             gravity-driven puzzles.
           </p>
           <div class="project-links">
-            <a href="https://focs.ji.sjtu.edu.cn/silverfocs/demo/2023/p1team01/" target="_blank"
+            <a href="https://focs.ji.sjtu.edu.cn/silverfocs/demo/2023/p1team01/" target="_blank" rel="noopener noreferrer"
               class="btn live-site-btn">
               <img src="https://cdn-icons-png.flaticon.com/128/2406/2406849.png" alt="Live Site Icon" class="btn-icon">
               Live Site
@@ -361,7 +323,7 @@
             (MCP) to provide real-time weather data.
           </p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/Weather_MCP_Server" target="_blank" class="btn github-btn">
+            <a href="https://github.com/Hydraallen/Weather_MCP_Server" target="_blank" rel="noopener noreferrer" class="btn github-btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -376,7 +338,7 @@
             chaotic environments.
           </p>
           <div class="project-links">
-            <a href="https://focs.ji.sjtu.edu.cn/silverfocs/project/2023/p2" target="_blank" class="btn live-site-btn">
+            <a href="https://focs.ji.sjtu.edu.cn/silverfocs/project/2023/p2" target="_blank" rel="noopener noreferrer" class="btn live-site-btn">
               <img src="https://cdn-icons-png.flaticon.com/128/2406/2406849.png" alt="Live Site Icon" class="btn-icon">
               Live Site
             </a>
@@ -388,7 +350,7 @@
           <h3>Git Workshop</h3>
           <p>Workshop materials and slides for beginners to learn Git.</p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/Basic_Git_wksp" target="_blank" class="btn github-btn">
+            <a href="https://github.com/Hydraallen/Basic_Git_wksp" target="_blank" rel="noopener noreferrer" class="btn github-btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -400,7 +362,7 @@
           <h3>Vim Workshop</h3>
           <p>Workshop materials and slides for beginners to learn Vim.</p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/Vim_wksp_2023" target="_blank" class="btn github-btn">
+            <a href="https://github.com/Hydraallen/Vim_wksp_2023" target="_blank" rel="noopener noreferrer" class="btn github-btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -415,7 +377,7 @@
             VS Code.
           </p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/Latex-vscode" target="_blank" class="btn">
+            <a href="https://github.com/Hydraallen/Latex-vscode" target="_blank" rel="noopener noreferrer" class="btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -430,7 +392,7 @@
             configuration files.
           </p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/Rime" target="_blank" class="btn">
+            <a href="https://github.com/Hydraallen/Rime" target="_blank" rel="noopener noreferrer" class="btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -445,7 +407,7 @@
             enhance efficiency for developers.
           </p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/lvim" target="_blank" class="btn">
+            <a href="https://github.com/Hydraallen/lvim" target="_blank" rel="noopener noreferrer" class="btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -459,7 +421,7 @@
             Configuration files for Yabai, a tiling window manager for macOS.
           </p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/yabai" target="_blank" class="btn github-btn">
+            <a href="https://github.com/Hydraallen/yabai" target="_blank" rel="noopener noreferrer" class="btn github-btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -474,7 +436,7 @@
             for macOS.
           </p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/hammerspoon" target="_blank" class="btn github-btn">
+            <a href="https://github.com/Hydraallen/hammerspoon" target="_blank" rel="noopener noreferrer" class="btn github-btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -488,7 +450,7 @@
             and track faces in real-time.
           </p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/Face-recognition" target="_blank" class="btn github-btn">
+            <a href="https://github.com/Hydraallen/Face-recognition" target="_blank" rel="noopener noreferrer" class="btn github-btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -500,7 +462,7 @@
           <h3>Election For TechJI</h3>
           <p>A project for building an election vote counter,.</p>
           <div class="project-links">
-            <a href="https://github.com/Hydraallen/ElectionForTechJI" target="_blank" class="btn">
+            <a href="https://github.com/Hydraallen/ElectionForTechJI" target="_blank" rel="noopener noreferrer" class="btn">
               <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
               GitHub
             </a>
@@ -508,16 +470,21 @@
         </div>
       </div>
 
-      <button id="toggleProjectsBtn" class="btn">Show More</button>
+      <button id="toggleProjectsBtn" class="btn" type="button" aria-expanded="false"
+        aria-controls="projects">Show More</button>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
-      <div class="skills-tabs">
-        <button class="tab-btn active" data-target="backend">Backend</button>
-        <button class="tab-btn" data-target="frontend">Frontend</button>
-        <button class="tab-btn" data-target="devops">DevOps</button>
-        <button class="tab-btn" data-target="tools">Tools</button>
+      <div class="skills-tabs" role="tablist" aria-label="Skill categories">
+        <button class="tab-btn active" type="button" role="tab" aria-selected="true"
+          data-target="backend">Backend</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false"
+          data-target="frontend">Frontend</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false"
+          data-target="devops">DevOps</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false"
+          data-target="tools">Tools</button>
       </div>
 
       <div class="skills-grid">
@@ -689,7 +656,8 @@
           </div>
         </div>
       </div>
-      <button id="toggleEduBtn" class="btn">Show More</button>
+      <button id="toggleEduBtn" class="btn" type="button" aria-expanded="false"
+        aria-controls="education">Show More</button>
     </section>
 
     <section id="contact">
@@ -715,7 +683,7 @@
           <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
         </div>
         <button type="submit" class="btn submit-btn">Send Message</button>
-        <p id="form-status" class="form-status"></p>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
@@ -726,6 +694,10 @@
       reserved.
     </p>
   </footer>
+
+  <script src="js/lib.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

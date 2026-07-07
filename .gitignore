@@ -5,3 +5,17 @@
 *.bbl
 *.out
 *.gz
+
+# Node dev dependencies (test harness only)
+node_modules/
+
+# Python test/cache artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Verification/tooling artifacts (Playwright smoke test output)
+.playwright-mcp/
+/index.png
+/movies.png
+/travel-lightbox.png

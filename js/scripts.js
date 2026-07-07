@@ -1,38 +1,70 @@
-// Script to update the year in the footer
-document.addEventListener("DOMContentLoaded", function () {
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) {
-    yearSpan.innerHTML = new Date().getFullYear();
-  }
-});
+// ==========================================
+// js/scripts.js
+// Dual-environment:
+//   - Browser: relies on js/lib.js being loaded FIRST (global helpers) and
+//     registers DOMContentLoaded listeners at the bottom.
+//   - Node (tests): requires ./lib.js and exports the testable DOM functions;
+//     top-level DOM side effects are guarded by `typeof document`.
+// ==========================================
 
-// Script for Hamburger Menu
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburgerMenu = document.querySelector(".hamburger-menu");
-  const nav = document.querySelector("nav");
-  if (!hamburgerMenu || !nav) return;
+// --- Resolve shared pure helpers (Node require vs browser globals) ---
+var _lib =
+  typeof module !== "undefined" && module.exports
+    ? require("./lib.js")
+    : {
+        escapeHtml: escapeHtml,
+        getPosterSrc: getPosterSrc,
+        buildMovieCardHtml: buildMovieCardHtml,
+      };
+var escapeHtmlFn = _lib.escapeHtml;
+var getPosterSrcFn = _lib.getPosterSrc;
+var buildMovieCardHtmlFn = _lib.buildMovieCardHtml;
+
+// ---------------------------------------------------------------------------
+// Footer year
+// ---------------------------------------------------------------------------
+function setFooterYear(doc) {
+  const yearSpan = doc.getElementById("year");
+  if (yearSpan) {
+    // textContent (not innerHTML): a year is plain text, never markup.
+    yearSpan.textContent = String(new Date().getFullYear());
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Hamburger menu (returns controls so it is unit-testable via jsdom)
+// ---------------------------------------------------------------------------
+function setupHamburgerMenu(doc) {
+  const hamburgerMenu = doc.querySelector(".hamburger-menu");
+  const nav = doc.querySelector("nav");
+  if (!hamburgerMenu || !nav) return null;
+
   nav.classList.add("hidden-nav");
   hamburgerMenu.classList.remove("toggle");
+
   const focusableNavElements = nav.querySelectorAll(
     'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
   );
   const firstFocusableElement = focusableNavElements[0];
   const lastFocusableElement =
     focusableNavElements[focusableNavElements.length - 1];
+
   function openMenu() {
     nav.classList.remove("hidden-nav");
     hamburgerMenu.classList.add("toggle");
     hamburgerMenu.setAttribute("aria-expanded", "true");
     setTimeout(() => {
-      firstFocusableElement.focus();
+      // Guard: nav may contain no focusable elements -> element is undefined.
+      if (firstFocusableElement) firstFocusableElement.focus();
     }, 100);
-    document.addEventListener("keydown", trapTabKey);
+    doc.addEventListener("keydown", trapTabKey);
   }
+
   function closeMenu() {
     nav.classList.add("hidden-nav");
     hamburgerMenu.classList.remove("toggle");
     hamburgerMenu.setAttribute("aria-expanded", "false");
-    document.removeEventListener("keydown", trapTabKey);
+    doc.removeEventListener("keydown", trapTabKey);
     hamburgerMenu.focus();
   }
 
@@ -43,21 +75,22 @@ document.addEventListener("DOMContentLoaded", () => {
       closeMenu();
       return;
     }
-    if (!isTabPressed) {
-      return;
-    }
+    if (!isTabPressed) return;
+    if (!firstFocusableElement || !lastFocusableElement) return;
+
     if (e.shiftKey) {
-      if (document.activeElement === firstFocusableElement) {
+      if (doc.activeElement === firstFocusableElement) {
         e.preventDefault();
         lastFocusableElement.focus();
       }
     } else {
-      if (document.activeElement === lastFocusableElement) {
+      if (doc.activeElement === lastFocusableElement) {
         e.preventDefault();
         firstFocusableElement.focus();
       }
     }
   }
+
   hamburgerMenu.addEventListener("click", () => {
     const isClosed = nav.classList.contains("hidden-nav");
     if (isClosed) {
@@ -66,152 +99,141 @@ document.addEventListener("DOMContentLoaded", () => {
       closeMenu();
     }
   });
-  const navLinks = nav.querySelectorAll("a");
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      closeMenu();
-    });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => closeMenu());
   });
-});
 
-// Script for Projects Section
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleProjectsBtn = document.getElementById("toggleProjectsBtn");
-  const hiddenProjects = document.querySelectorAll(
-    ".project-panel.hidden_project"
-  );
+  return { openMenu, closeMenu };
+}
 
-  if (toggleProjectsBtn && hiddenProjects.length > 0) {
-    toggleProjectsBtn.addEventListener("click", function () {
-      const isHidden = hiddenProjects[0].classList.contains("hidden_project");
+// ---------------------------------------------------------------------------
+// Contact form status helpers (XSS-safe: always textContent, never innerHTML)
+// ---------------------------------------------------------------------------
+function showFormStatus(statusEl, message, type) {
+  if (!statusEl) return;
+  statusEl.textContent = message;
+  statusEl.className = "form-status " + type;
+}
 
-      if (isHidden) {
-        hiddenProjects.forEach((project) => {
-          project.classList.remove("hidden_project");
-        });
-        toggleProjectsBtn.textContent = "Show Less";
+// Renders backend-provided error data. The backend response is UNTRUSTED, so
+// messages are written with textContent to prevent HTML/script injection.
+function showFormErrors(statusEl, errorData) {
+  if (!statusEl) return;
+  let message = "Oops! There was a problem submitting your form.";
+  if (
+    errorData &&
+    Object.hasOwn(errorData, "errors") &&
+    Array.isArray(errorData.errors)
+  ) {
+    message = errorData.errors.map((error) => error.message).join(", ");
+  }
+  statusEl.textContent = message;
+  statusEl.className = "form-status error";
+}
+
+function setupContactForm(doc, fetchImpl) {
+  const form = doc.getElementById("contact-form");
+  const status = doc.getElementById("form-status");
+  if (!form) return;
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const submitBtn = form.querySelector(".submit-btn");
+    const originalBtnText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+      const doFetch =
+        fetchImpl || (typeof fetch !== "undefined" ? fetch : null);
+      const response = await doFetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        showFormStatus(
+          status,
+          "Thanks for your message! I'll get back to you soon.",
+          "success"
+        );
+        form.reset();
       } else {
-        hiddenProjects.forEach((project) => {
-          project.classList.add("hidden_project");
-        });
-        toggleProjectsBtn.textContent = "Show More";
+        const errorData = await response.json();
+        showFormErrors(status, errorData);
+      }
+    } catch (error) {
+      // Log detail server-side/console; show a generic message to the user.
+      console.error("Contact form submission failed:", error);
+      showFormStatus(
+        status,
+        "Oops! There was a problem submitting your form.",
+        "error"
+      );
+    } finally {
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+    }
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Generic "Show More / Show Less" toggle (projects, education)
+// ---------------------------------------------------------------------------
+function setupToggle(doc, btnId, hiddenSelector, hiddenClass) {
+  const toggleBtn = doc.getElementById(btnId);
+  const hiddenItems = doc.querySelectorAll(hiddenSelector);
+  if (!toggleBtn || hiddenItems.length === 0) return;
+
+  toggleBtn.addEventListener("click", function () {
+    const isHidden = hiddenItems[0].classList.contains(hiddenClass);
+    hiddenItems.forEach((item) => {
+      if (isHidden) {
+        item.classList.remove(hiddenClass);
+      } else {
+        item.classList.add(hiddenClass);
       }
     });
-  }
-});
+    toggleBtn.textContent = isHidden ? "Show Less" : "Show More";
+  });
+}
 
-// Script for Skills Section
-document.addEventListener("DOMContentLoaded", function () {
-  const tabBtns = document.querySelectorAll(".tab-btn");
-  const skillCards = document.querySelectorAll(".skill-card");
+// ---------------------------------------------------------------------------
+// Skills section tabs
+// ---------------------------------------------------------------------------
+function setupSkillsTabs(doc) {
+  const tabBtns = doc.querySelectorAll(".tab-btn");
+  const skillCards = doc.querySelectorAll(".skill-card");
+  if (tabBtns.length === 0) return;
 
-  if (tabBtns.length > 0) {
-    tabBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        tabBtns.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
+  tabBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      tabBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      const target = btn.getAttribute("data-target");
 
-        const target = btn.getAttribute("data-target");
-
-        skillCards.forEach((card) => {
-          const cardCategory = card.getAttribute("data-category");
-          if (target === "all" || cardCategory === target) {
-            card.classList.remove("hidden-skill");
-            card.classList.add("transparent-skill");
-            void card.offsetWidth;
-            card.classList.remove("transparent-skill");
-          } else {
-            card.classList.add("hidden-skill");
-          }
-        });
+      skillCards.forEach((card) => {
+        const cardCategory = card.getAttribute("data-category");
+        if (target === "all" || cardCategory === target) {
+          card.classList.remove("hidden-skill");
+          card.classList.add("transparent-skill");
+          void card.offsetWidth;
+          card.classList.remove("transparent-skill");
+        } else {
+          card.classList.add("hidden-skill");
+        }
       });
     });
-  }
-});
+  });
+}
 
-// Script for Contact Form
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
-
-  if (form) {
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault();
-      const data = new FormData(event.target);
-      const submitBtn = form.querySelector(".submit-btn");
-      const originalBtnText = submitBtn.textContent;
-
-      submitBtn.textContent = "Sending...";
-      submitBtn.disabled = true;
-
-      try {
-        const response = await fetch(event.target.action, {
-          method: form.method,
-          body: data,
-          headers: {
-            Accept: "application/json",
-          },
-        });
-
-        if (response.ok) {
-          status.innerHTML =
-            "Thanks for your message! I'll get back to you soon.";
-          status.className = "form-status success";
-          form.reset();
-        } else {
-          const errorData = await response.json();
-          if (Object.hasOwn(errorData, "errors")) {
-            status.innerHTML = errorData["errors"]
-              .map((error) => error["message"])
-              .join(", ");
-          } else {
-            status.innerHTML =
-              "Oops! There was a problem submitting your form.";
-          }
-          status.className = "form-status error";
-        }
-      } catch (error) {
-        status.innerHTML = "Oops! There was a problem submitting your form.";
-        status.className = "form-status error";
-      } finally {
-        submitBtn.textContent = originalBtnText;
-        submitBtn.disabled = false;
-      }
-    });
-  }
-});
-
-// Script for Education Section
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleEduBtn = document.getElementById("toggleEduBtn");
-  const hiddenEduCards = document.querySelectorAll(".hidden-edu");
-
-  if (toggleEduBtn && hiddenEduCards.length > 0) {
-    toggleEduBtn.addEventListener("click", function () {
-      const isHidden = hiddenEduCards[0].classList.contains("hidden-edu");
-
-      if (isHidden) {
-        hiddenEduCards.forEach((card) => {
-          card.classList.remove("hidden-edu");
-        });
-        toggleEduBtn.textContent = "Show Less";
-      } else {
-        hiddenEduCards.forEach((card) => {
-          card.classList.add("hidden-edu");
-        });
-        toggleEduBtn.textContent = "Show More";
-      }
-    });
-  }
-});
-
-// Script for Movies Page
-document.addEventListener("DOMContentLoaded", function () {
-  const timelineRoot = document.getElementById("timeline-root");
-  if (timelineRoot) {
-    loadMovies(timelineRoot);
-  }
-});
+// ---------------------------------------------------------------------------
+// Movies page
+// ---------------------------------------------------------------------------
 async function loadMovies(timelineRoot) {
   try {
     timelineRoot.innerHTML =
@@ -220,7 +242,7 @@ async function loadMovies(timelineRoot) {
     if (!indexResponse.ok) {
       throw new Error(`Failed to load index.json: ${indexResponse.status}`);
     }
-    const fileList = await indexResponse.json(); // 得到 ["2022", "2023", ...]
+    const fileList = await indexResponse.json();
     const dataPromises = fileList.map(async (fileName) => {
       const res = await fetch(`../data/movies/${fileName}.json`);
       if (!res.ok) {
@@ -236,11 +258,11 @@ async function loadMovies(timelineRoot) {
     timelineRoot.innerHTML = "";
     renderTimeline(moviesData, timelineRoot);
   } catch (error) {
+    // Detailed error to console only; user sees a generic, friendly message.
     console.error("Could not load movie data:", error);
     timelineRoot.innerHTML = `
       <div style="text-align:center; color:red; padding:20px;">
         <p>Error loading movie data.</p>
-        <p>Details: ${error.message}</p>
         <p>Note: Ensure you are running on a Local Server (http://) not file://</p>
       </div>
     `;
@@ -264,18 +286,23 @@ function renderTimeline(data, rootElement) {
 
     if (hasMoreMovies) {
       contentDiv.setAttribute("role", "button");
-      contentDiv.setAttribute("aria-label", `Expand movie list for ${yearData.year}`);
+      contentDiv.setAttribute(
+        "aria-label",
+        `Expand movie list for ${yearData.year}`
+      );
     } else {
       contentDiv.style.cursor = "default";
     }
 
     const headerDiv = document.createElement("div");
     headerDiv.className = "timeline-header";
-    const arrowHtml = hasMoreMovies ? '<span class="toggle-icon">▼</span>' : '';
+    const arrowHtml = hasMoreMovies
+      ? '<span class="toggle-icon">▼</span>'
+      : "";
 
     headerDiv.innerHTML = `
       <div>
-        <h3 class="timeline-year">${yearData.year}</h3>
+        <h3 class="timeline-year">${escapeHtmlFn(yearData.year)}</h3>
         <p class="timeline-stats" style="margin:5px 0 0 0; font-size:14px; color:#666;">
            Watched: ${movies.length} movies
         </p>
@@ -297,22 +324,13 @@ function renderTimeline(data, rootElement) {
         favSection.style.paddingBottom = "0";
       }
 
-      const posterSrc = favMovie.poster
-        ? favMovie.poster
-        : "https://via.placeholder.com/200x300?text=No+Image";
-
-      favSection.innerHTML = `
-        <div class="favorite-label-large">🏆 Best of ${yearData.year}</div>
-        <div class="favorite-card">
-          <div class="poster-wrapper">
-            <img src="${posterSrc}" alt="${favMovie.title}" loading="lazy">
-          </div>
-          <div class="movie-info">
-            <h4 class="movie-title">${favMovie.title}</h4>
-            <p class="movie-date">${favMovie.date}</p>
-          </div>
-        </div>
-      `;
+      favSection.innerHTML =
+        '<div class="favorite-label-large">🏆 Best of ' +
+        escapeHtmlFn(yearData.year) +
+        "</div>" +
+        '<div class="favorite-card">' +
+        buildMovieCardHtmlFn(favMovie) +
+        "</div>";
       contentDiv.appendChild(favSection);
     }
 
@@ -331,18 +349,7 @@ function renderTimeline(data, rootElement) {
       otherMovies.forEach((movie) => {
         const card = document.createElement("div");
         card.className = "movie-card";
-        const posterSrc = movie.poster
-          ? movie.poster
-          : "https://via.placeholder.com/200x300?text=No+Image";
-        card.innerHTML = `
-          <div class="poster-wrapper">
-            <img src="${posterSrc}" alt="${movie.title}" loading="lazy">
-          </div>
-          <div class="movie-info">
-            <h4 class="movie-title">${movie.title}</h4>
-            <p class="movie-date">${movie.date}</p>
-          </div>
-        `;
+        card.innerHTML = buildMovieCardHtmlFn(movie);
         scrollWrapper.appendChild(card);
       });
       movieListContainer.appendChild(scrollWrapper);
@@ -359,9 +366,7 @@ function renderTimeline(data, rootElement) {
 
     if (hasMoreMovies) {
       contentDiv.addEventListener("click", function (e) {
-        if (e.target.closest(".vertical-scroll-wrapper")) {
-          return;
-        }
+        if (e.target.closest(".vertical-scroll-wrapper")) return;
 
         const parent = this.parentElement;
         const container = parent.querySelector(".movie-list-container");
@@ -392,4 +397,48 @@ function renderTimeline(data, rootElement) {
       });
     }
   });
+}
+
+// ---------------------------------------------------------------------------
+// Browser bootstrap (guarded so Node `require` never touches the DOM)
+// ---------------------------------------------------------------------------
+if (typeof document !== "undefined") {
+  document.addEventListener("DOMContentLoaded", () => setFooterYear(document));
+  document.addEventListener("DOMContentLoaded", () =>
+    setupHamburgerMenu(document)
+  );
+  document.addEventListener("DOMContentLoaded", () =>
+    setupToggle(
+      document,
+      "toggleProjectsBtn",
+      ".project-panel.hidden_project",
+      "hidden_project"
+    )
+  );
+  document.addEventListener("DOMContentLoaded", () => setupSkillsTabs(document));
+  document.addEventListener("DOMContentLoaded", () =>
+    setupContactForm(document)
+  );
+  document.addEventListener("DOMContentLoaded", () =>
+    setupToggle(document, "toggleEduBtn", ".hidden-edu", "hidden-edu")
+  );
+  document.addEventListener("DOMContentLoaded", () => {
+    const timelineRoot = document.getElementById("timeline-root");
+    if (timelineRoot) loadMovies(timelineRoot);
+  });
+}
+
+// --- Node export guard ---
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    setFooterYear,
+    setupHamburgerMenu,
+    showFormStatus,
+    showFormErrors,
+    setupContactForm,
+    setupToggle,
+    setupSkillsTabs,
+    renderTimeline,
+    loadMovies,
+  };
 }

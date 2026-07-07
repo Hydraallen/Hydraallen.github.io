@@ -4,6 +4,62 @@
 // Modified: Orange markers for TODO, Split Sections, Independent Sorting, Dynamic Map Bounds
 // ==========================================
 
+// --- Shared pure helpers (js/lib.js) ---
+// Browser: lib.js is loaded BEFORE this file, exposing helpers as globals.
+// Node (tests): require the module. This accessor bridges both environments
+// without breaking the browser direct-include.
+var lib =
+  typeof module !== "undefined" && module.exports
+    ? require("./lib.js")
+    : {
+        escapeHtml: escapeHtml,
+        getDisplayName: getDisplayName,
+        getLightboxSrc: getLightboxSrc,
+        getLightboxCaption: getLightboxCaption,
+        compareVisited: compareVisited,
+        comparePlanned: comparePlanned,
+        nextIndex: nextIndex,
+        prevIndex: prevIndex,
+      };
+
+// Fetch every travel data file with per-file fault tolerance: a single 404 or
+// non-JSON response is warned about and skipped (returned as null then filtered
+// out) instead of rejecting the whole Promise.all and blanking the map + grid.
+// `fetchFn` is injected so this stays testable without a real network / Leaflet.
+async function fetchTravelFiles(fileList, fetchFn) {
+  const dataPromises = fileList.map(async (filename) => {
+    try {
+      const res = await fetchFn(`../data/travel/${filename}.json`);
+      if (!res.ok) {
+        console.warn(`Warning: Could not load ${filename}.json`);
+        return null;
+      }
+      return await res.json();
+    } catch (err) {
+      console.warn(`Warning: Could not load ${filename}.json`, err);
+      return null;
+    }
+  });
+  const rawData = await Promise.all(dataPromises);
+  return rawData.filter(Boolean);
+}
+
+// Apply a photo to the lightbox DOM: sets image src AND keeps alt/caption in
+// sync with the current photo. Extracted (module-level) so it is unit-testable
+// with jsdom without needing Leaflet / the DOMContentLoaded closure.
+function applyLightboxPhoto(imgEl, captionEl, photo) {
+  const src = lib.getLightboxSrc(photo);
+  const caption = lib.getLightboxCaption(photo);
+  if (imgEl) {
+    imgEl.src = src;
+    imgEl.alt = caption || "Travel photo";
+  }
+  if (captionEl) {
+    captionEl.textContent = caption;
+    captionEl.style.display = caption ? "block" : "none";
+  }
+}
+
 let allTravelData = [];
 let currentGalleryPhotos = []; // 全局相册数据源
 let currentPhotoIndex = 0;
@@ -18,7 +74,9 @@ let currentLanguage = 'en'; // Default language: English
 let isCityView = false; // Track if we are in city view mode
 
 // --- 1. 定义自定义颜色的图钉 ---
-const MarkerIcons = {
+// Guard against a missing Leaflet global so this module can be required in Node
+// tests (where `L` is absent); in the browser `L` is always defined by this point.
+const MarkerIcons = typeof L === "undefined" ? {} : {
   visited: new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -50,6 +108,9 @@ const continentViews = {
   antarctica: { center: [-75.0000, 0.0000], zoom: 2 }
 };
 
+// Guarded so the module can be required in Node tests without a `document`
+// global; in the browser this registers the page bootstrap as before.
+if (typeof document !== "undefined") {
 document.addEventListener("DOMContentLoaded", function () {
   const gridContainer = document.getElementById("travel-grid"); // Main container
   if (!gridContainer) return;
@@ -89,10 +150,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let attribution = '';
 
     if (lang === 'cn') {
-      url = 'http://mt0.google.com/vt/lyrs=m&hl=zh-CN&x={x}&y={y}&z={z}';
+      url = 'https://mt0.google.com/vt/lyrs=m&hl=zh-CN&x={x}&y={y}&z={z}';
       attribution = '&copy; Google Maps';
     } else if (lang === 'en') {
-      url = 'http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}';
+      url = 'https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}';
       attribution = '&copy; Google Maps';
     } else {
       url = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -111,15 +172,15 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       initMap();
       
+      // Path unified to `../data/travel/...` for both index and data files,
+      // matching the convention in scripts.js (loadMovies). Browsers clamp the
+      // leading `../` at the site root, so this resolves to /data/travel/...
       const indexResponse = await fetch("../data/travel/index.json");
       if (!indexResponse.ok) throw new Error("Failed to load index.json");
       const fileList = await indexResponse.json();
-      
-      const fetchPromises = fileList.map((filename) =>
-        fetch(`./data/travel/${filename}.json`).then((res) => res.json())
-      );
-      
-      allTravelData = await Promise.all(fetchPromises);
+
+      // Per-file fault tolerance: one bad file no longer blanks the whole page.
+      allTravelData = await fetchTravelFiles(fileList, fetch);
       updateView();
       
     } catch (error) {
@@ -232,11 +293,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let imagesHtml = '<div class="popup-gallery-container">';
       group.items.forEach(item => {
+        // Escape all interpolated, data-derived values to avoid HTML/attribute
+        // injection. originalIndex is coerced to an integer (not string-escaped).
+        const src = lib.escapeHtml(lib.getLightboxSrc(item));
+        const title = lib.escapeHtml(item.location || '');
+        const idx = Number(item.originalIndex);
         imagesHtml += `
-          <img src="${item.src}" 
-               class="popup-photo-thumb" 
-               title="${item.location || ''}"
-               onclick="document.dispatchEvent(new CustomEvent('open-lightbox-index', {detail: ${item.originalIndex}}))">
+          <img src="${src}"
+               class="popup-photo-thumb"
+               title="${title}"
+               onclick="document.dispatchEvent(new CustomEvent('open-lightbox-index', {detail: ${idx}}))">
         `;
       });
       imagesHtml += '</div>';
@@ -244,7 +310,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const popupContent = `
         <div style="text-align:center">
           ${imagesHtml}
-          <div class="popup-location-name">${group.locationName} ${group.items.length > 1 ? `(${group.items.length})` : ''}</div>
+          <div class="popup-location-name">${lib.escapeHtml(group.locationName)} ${group.items.length > 1 ? `(${group.items.length})` : ''}</div>
         </div>
       `;
 
@@ -331,38 +397,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const visitedData = data.filter(p => p.status !== 'planned');
     const plannedData = data.filter(p => p.status === 'planned');
 
-    // --- 排序逻辑 ---
-    
-    // 1. Visited 排序
-    visitedData.sort((a, b) => {
-      const dateA = a.date;
-      const dateB = b.date;
-      const nameA = a.name;
-      const nameB = b.name;
+    // --- 排序逻辑 (comparators reused from lib.js) ---
 
-      if (sortType === "newest" || sortType === "oldest") {
-        if (dateA === "TBD") return sortType === "newest" ? -1 : 1;
-        if (dateB === "TBD") return sortType === "newest" ? 1 : -1;
-        if (sortType === "newest") return new Date(dateB) - new Date(dateA);
-        if (sortType === "oldest") return new Date(dateA) - new Date(dateB);
-      }
-      
-      if (sortType === "az") return nameA.localeCompare(nameB);
-      if (sortType === "za") return nameB.localeCompare(nameA);
-      
-      return 0;
-    });
+    // 1. Visited 排序
+    visitedData.sort(lib.compareVisited(sortType));
 
     // 2. TODO 排序
-    plannedData.sort((a, b) => {
-      const nameA = a.name;
-      const nameB = b.name;
-      if (sortType === "za") {
-        return nameB.localeCompare(nameA);
-      } else {
-        return nameA.localeCompare(nameB);
-      }
-    });
+    plannedData.sort(lib.comparePlanned(sortType));
 
     // --- 渲染逻辑 ---
 
@@ -392,10 +433,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 创建卡片的逻辑
   function createCard(place, isPlanned) {
-    let displayName = place.name;
-    if (place.country.toLowerCase() === "usa" && place.state) {
-      displayName += `, ${place.state}`;
-    }
+    const displayName = lib.getDisplayName(place);
 
     const hasVideo = place.video && place.video.trim() !== "";
     
@@ -407,7 +445,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     if (hasVideo) {
-      buttonsHtml += `<a href="${place.video}" target="_blank" class="action-btn video-btn-overlay">Play Video</a>`;
+      buttonsHtml += `<a href="${lib.escapeHtml(place.video)}" target="_blank" rel="noopener noreferrer" class="action-btn video-btn-overlay">Play Video</a>`;
     }
 
     const card = document.createElement("div");
@@ -419,15 +457,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     card.innerHTML = `
       <div class="place-image-wrapper">
-        <img src="${place.cover}" alt="${displayName}" loading="lazy">
+        <img src="${lib.escapeHtml(place.cover)}" alt="${lib.escapeHtml(displayName)}" loading="lazy">
         <div class="hover-actions">
           ${buttonsHtml}
         </div>
       </div>
       <div class="place-info">
-        <div class="place-country">${place.country}</div>
-        <h3 class="place-city">${displayName}</h3>
-        <div class="place-date">${place.date_display}</div>
+        <div class="place-country">${lib.escapeHtml(place.country)}</div>
+        <h3 class="place-city">${lib.escapeHtml(displayName)}</h3>
+        <div class="place-date">${lib.escapeHtml(place.date_display)}</div>
       </div>
     `;
 
@@ -535,35 +573,27 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateLightboxImage() {
     if (currentGalleryPhotos.length > 0) {
       const photo = currentGalleryPhotos[currentPhotoIndex];
-      const src = typeof photo === 'object' ? photo.src : photo;
-      const location = (typeof photo === 'object' && photo.location) ? photo.location : "";
-      
-      lightboxImg.src = src;
-      if (lightboxCaption) {
-        lightboxCaption.textContent = location;
-        lightboxCaption.style.display = location ? 'block' : 'none';
-      }
+      // Keeps src, alt, and caption in sync (alt was previously stuck on the
+      // static "Travel Photo" from the HTML for every image).
+      applyLightboxPhoto(lightboxImg, lightboxCaption, photo);
     }
   }
 
   function showNextPhoto() {
     if (currentGalleryPhotos.length === 0) return;
-    currentPhotoIndex = (currentPhotoIndex + 1) % currentGalleryPhotos.length;
+    currentPhotoIndex = lib.nextIndex(currentPhotoIndex, currentGalleryPhotos.length);
     updateLightboxImage();
   }
 
   function showPrevPhoto() {
     if (currentGalleryPhotos.length === 0) return;
-    currentPhotoIndex = (currentPhotoIndex - 1 + currentGalleryPhotos.length) % currentGalleryPhotos.length;
+    currentPhotoIndex = lib.prevIndex(currentPhotoIndex, currentGalleryPhotos.length);
     updateLightboxImage();
   }
 
   function openGalleryScroll(placeData) {
     const photos = placeData.photos;
-    let title = placeData.name;
-    if (placeData.country.toLowerCase() === "usa" && placeData.state) {
-      title += `, ${placeData.state}`;
-    }
+    const title = lib.getDisplayName(placeData);
     galleryTitle.textContent = title;
 
     if (placeData.video && placeData.video.trim() !== "") {
@@ -583,7 +613,8 @@ document.addEventListener("DOMContentLoaded", function () {
         div.setAttribute("role", "button");
         
         const img = document.createElement("img");
-        img.src = typeof photo === 'object' ? photo.src : photo;
+        img.src = lib.getLightboxSrc(photo);
+        img.alt = lib.getLightboxCaption(photo) || "Travel photo";
         img.loading = "lazy";
         
         const openPhoto = () => {
@@ -642,3 +673,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadTravelData();
 });
+}
+
+// --- Node export guard (tests only; no-op in the browser) ---
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    fetchTravelFiles: fetchTravelFiles,
+    applyLightboxPhoto: applyLightboxPhoto,
+  };
+}
