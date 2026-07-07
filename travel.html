@@ -4,7 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hydraallen - Travel</title>
+  <title>Travel | Hydraallen</title>
+  <meta name="description"
+    content="Explore Hydraallen's travel journey through an interactive world map and photo galleries capturing places visited across every continent.">
+  <meta property="og:title" content="Travel | Hydraallen">
+  <meta property="og:description"
+    content="An interactive map and photo gallery of Hydraallen's travels around the world.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hydraallen.github.io/travel.html">
+  <meta property="og:image" content="https://hydraallen.github.io/img/avatar.jpg">
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/styles_travel.css">
@@ -17,8 +25,9 @@
 
   <header class="movie-header">
     <div class="hamburger-menu-wrapper">
-      <h1>Hydraallen</h1>
-      <button class="hamburger-menu" aria-label="Toggle navigation">
+      <p class="logo">Hydraallen</p>
+      <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="primary-nav">
         <span></span>
         <span></span>
         <span></span>
@@ -32,67 +41,14 @@
 
     <div class="cv-container">
       <a href="index.html" class="cv-btn">
-        <img src="https://img.icons8.com/ios-filled/50/000000/home.png" alt="Home" class="cv-icon">
+        <img src="https://img.icons8.com/ios-filled/50/000000/home.png" alt="" aria-hidden="true" class="cv-icon">
         <span>Back to Home</span>
       </a>
     </div>
   </header>
 
-  <nav class="hidden-nav">
-    <div class="profile-picture">
-      <img src="./img/avatar.jpg" alt="My Profile Picture">
-    </div>
-    <ul class="navigation">
-      <li>
-        <a href="index.html#about">
-          <img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="About Icon">
-          About
-        </a>
-      </li>
-      <li>
-        <a href="index.html#experience">
-          <img src="https://img.icons8.com/ios-filled/50/000000/briefcase.png" alt="Experience Icon">
-          Experience
-        </a>
-      </li>
-      <li>
-        <a href="index.html#projects">
-          <img src="https://img.icons8.com/ios-filled/50/000000/task.png" alt="Projects Icon">
-          Projects
-        </a>
-      </li>
-      <li>
-        <a href="index.html#skills">
-          <img src="https://img.icons8.com/ios-filled/50/000000/combo-chart.png" alt="Skills Icon">
-          Skills
-        </a>
-      </li>
-      <li>
-        <a href="index.html#education">
-          <img src="https://img.icons8.com/ios-filled/50/000000/graduation-cap.png" alt="Education Icon">
-          Education
-        </a>
-      </li>
-      <li>
-        <a href="movies.html">
-          <img src="https://img.icons8.com/ios-filled/50/000000/film-reel.png" alt="Movies Icon">
-          Movies
-        </a>
-      </li>
-      <li>
-        <a href="#" class="active-nav-item">
-          <img src="https://img.icons8.com/ios-filled/50/000000/camera.png" alt="Travel Icon">
-          Travel
-        </a>
-      </li>
-      <li>
-        <a href="index.html#contact">
-          <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Contact Icon">
-          Contact
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <!-- Primary navigation is injected here by js/nav.js (single source of truth) -->
+  <div id="nav-placeholder"></div>
 
   <main id="main-content">
     <section id="travel-gallery">
@@ -108,15 +64,23 @@
       </div>
 
       <!-- 3. 大洲筛选 Tab -->
-      <div class="continent-tabs">
-        <button class="tab-btn active" data-continent="all">All World</button>
-        <button class="tab-btn" data-continent="asia">Asia</button>
-        <button class="tab-btn" data-continent="europe">Europe</button>
-        <button class="tab-btn" data-continent="namerica">North America</button>
-        <button class="tab-btn" data-continent="samerica">South America</button>
-        <button class="tab-btn" data-continent="africa">Africa</button>
-        <button class="tab-btn" data-continent="oceania">Oceania</button>
-        <button class="tab-btn" data-continent="antarctica">Antarctica</button>
+      <div class="continent-tabs" role="tablist" aria-label="Filter places by continent">
+        <button class="tab-btn active" type="button" role="tab" aria-selected="true"
+          data-continent="all">All World</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false"
+          data-continent="asia">Asia</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false"
+          data-continent="europe">Europe</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false"
+          data-continent="namerica">North America</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false"
+          data-continent="samerica">South America</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false"
+          data-continent="africa">Africa</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false"
+          data-continent="oceania">Oceania</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false"
+          data-continent="antarctica">Antarctica</button>
       </div>
 
       <!-- 4. 控制区域 -->
@@ -159,7 +123,7 @@
       </div>
 
       <!-- 主容器：JS 将在这里动态生成两个区域 -->
-      <div id="travel-grid">
+      <div id="travel-grid" aria-live="polite">
         <p class="loading-text">Loading world map & memories...</p>
       </div>
     </section>
@@ -174,7 +138,8 @@
         </div>
         <div class="header-center">
           <h2 id="gallery-title">City Name</h2>
-          <a id="gallery-video-btn" href="#" target="_blank" class="video-btn hidden-btn">
+          <a id="gallery-video-btn" href="#" target="_blank" rel="noopener noreferrer"
+            class="video-btn hidden-btn">
             ▶ Watch Video
           </a>
         </div>
@@ -185,9 +150,9 @@
 
   <!-- Lightbox (Updated Structure) -->
   <div id="lightbox" class="lightbox hidden-modal">
-    <span id="close-lightbox" class="close-lightbox">&times;</span>
-    <div id="prev-btn" class="lightbox-btn prev-btn">&#10094;</div>
-    <div id="next-btn" class="lightbox-btn next-btn">&#10095;</div>
+    <button id="close-lightbox" type="button" class="close-lightbox" aria-label="Close">&times;</button>
+    <button id="prev-btn" type="button" class="lightbox-btn prev-btn" aria-label="Previous photo">&#10094;</button>
+    <button id="next-btn" type="button" class="lightbox-btn next-btn" aria-label="Next photo">&#10095;</button>
     
     <!-- 新增容器，用于包裹图片和文字 -->
     <div class="lightbox-container">
@@ -202,6 +167,8 @@
       reserved.
     </p>
   </footer>
+  <script src="js/lib.js"></script>
+  <script src="js/nav.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="js/scripts_travel.js"></script>

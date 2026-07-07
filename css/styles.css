@@ -175,9 +175,10 @@ footer {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.hamburger-menu-wrapper h1 {
+.hamburger-menu-wrapper .logo {
   margin: 0;
   font-size: 25px;
+  font-weight: bold;
   color: rgb(0, 75, 0);
 }
 
@@ -185,7 +186,7 @@ footer {
   display: flex;
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: 5px;
   transform: translateY(-50%);
   width: 30px;
   height: 24px;
@@ -196,7 +197,9 @@ footer {
   background: none;
   border: none;
   transition: all 0.3s ease;
-  padding: 0;
+  /* Keep the 30x24 icon visual but enlarge the hit target to >=44x44 (WCAG). */
+  padding: 10px;
+  box-sizing: content-box;
 }
 
 .hamburger-menu span {
@@ -278,6 +281,12 @@ nav ul li a:hover {
   padding-left: 16px;
 }
 
+nav ul li a.active-nav-item {
+  background-color: #e0f2f1;
+  border-left: 4px solid #00695c;
+  font-weight: bold;
+}
+
 .profile-picture {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -325,11 +334,31 @@ section strong {
   margin-top: 20px;
 }
 
-.about-skills h2 {
+.about-skills h3 {
   color: #00695c;
   font-size: 25px;
   margin-bottom: 15px;
   border-bottom: none;
+}
+
+.inline-link {
+  color: #00695c;
+  text-decoration: underline;
+}
+
+.btn-icon-sm {
+  width: 20px;
+  height: 20px;
+}
+
+/* 404 page: header only hosts the fixed hamburger bar, so it must not take the
+   full-viewport teal treatment used by the content pages. */
+.minimal-header {
+  min-height: 0;
+  margin-top: 0;
+  padding: 0;
+  background-color: transparent;
+  display: block;
 }
 
 .about-skills ul {
@@ -889,7 +918,7 @@ section strong {
     height: 150px;
   }
 
-  .about-skills h2 {
+  .about-skills h3 {
     font-size: 30px;
   }
 
