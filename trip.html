@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip | Hydraallen</title>
+  <meta name="description"
+    content="A day-by-day trip journal from Hydraallen's travels: itinerary, route map and photos for a single destination.">
+  <meta property="og:title" content="Trip | Hydraallen">
+  <meta property="og:description"
+    content="Day-by-day itinerary, route map and photo wall for a single destination.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hydraallen.github.io/trip.html">
+  <meta property="og:image" content="https://hydraallen.github.io/img/avatar.jpg">
+  <link rel="stylesheet" href="css/html5reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles_travel.css">
+  <link rel="stylesheet" href="css/styles_trip.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+
+<body>
+  <div class="skip"><a href="#main-content">Skip to Main Content</a></div>
+
+  <header>
+    <div class="hamburger-menu-wrapper">
+      <p class="logo">Hydraallen</p>
+      <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <h1>Trip <strong>Journal</strong></h1>
+    <p class="intro">
+      One destination, day by day.
+      <br>Where I went, what I ate, what I shot.
+    </p>
+
+    <div class="cv-container">
+      <a href="index.html" class="cv-btn">
+        <img src="https://img.icons8.com/ios-filled/50/000000/home.png" alt="" aria-hidden="true" class="cv-icon">
+        <span>Back to Home</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Primary navigation is injected here by js/nav.js (single source of truth) -->
+  <div id="nav-placeholder"></div>
+
+  <main id="main-content">
+    <a class="trip-back" href="travel.html">← All destinations</a>
+
+    <!-- 行程详情主体：全部内容由 js/scripts_trip.js 在运行时从 JSON 渲染 -->
+    <section id="trip-page" class="trip-page">
+      <div class="trip-hero">
+        <img class="trip-hero-cover" src="" alt="" loading="lazy">
+        <div class="trip-hero-body">
+          <p class="trip-country"></p>
+          <h2 class="trip-place"></h2>
+          <p class="trip-dates"></p>
+          <p class="trip-summary"></p>
+          <a class="trip-video-btn hidden-btn" href="#" target="_blank" rel="noopener noreferrer">▶ Watch Video</a>
+        </div>
+      </div>
+
+      <!-- 每日路线地图 -->
+      <div class="trip-map-wrapper">
+        <div id="trip-map"></div>
+      </div>
+
+      <!-- 逐日行程 -->
+      <div id="trip-itinerary" class="trip-itinerary"></div>
+
+      <!-- 照片墙 -->
+      <h3 class="trip-section-heading">Photos</h3>
+      <div id="trip-photo-wall" class="trip-photo-wall"></div>
+    </section>
+
+    <p id="trip-error" class="trip-error hidden-btn"></p>
+  </main>
+
+  <!-- Lightbox (shares the markup and styles of the travel page) -->
+  <div id="lightbox" class="lightbox hidden-modal">
+    <button id="close-lightbox" type="button" class="close-lightbox" aria-label="Close">&times;</button>
+    <button id="prev-btn" type="button" class="lightbox-btn prev-btn" aria-label="Previous photo">&#10094;</button>
+    <button id="next-btn" type="button" class="lightbox-btn next-btn" aria-label="Next photo">&#10095;</button>
+
+    <div class="lightbox-container">
+      <img class="lightbox-content" id="lightbox-img" alt="Travel Photo" src="./img/avatar.jpg">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      &copy; Copyrights <span id="year"></span> by Hydraallen. All rights
+      reserved.
+    </p>
+  </footer>
+  <script src="js/lib.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/scripts_trip.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

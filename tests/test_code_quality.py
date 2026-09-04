@@ -56,3 +56,35 @@ def test_process_directory_excludes_git(tmp_path):
     # 被排除目录内容未改动
     assert (tmp_path / ".git" / "bad.html").read_text(encoding="utf-8") == "<br/>"
     assert (tmp_path / "good.html").read_text(encoding="utf-8") == "<br>"
+
+
+def test_multiline_html_tag_still_fixed():
+    # HTML 里合法的跨行属性列表仍应被修正
+    content = '<img\n  src="a.png"\n  alt="x"\n/>'
+    new_content, count = fix_content(content)
+    assert count == 1
+    assert new_content == '<img\n  src="a.png"\n  alt="x">'
+
+
+def test_js_string_literal_not_swallowed_across_lines():
+    # A `<img` inside a JS string literal must not be joined to an unrelated `/>`
+    # several lines below: the attribute grammar stops at the closing quote.
+    content = (
+        "assert.ok(html.includes('<img class=\"stop-photo\" src=\"p.jpg\"'));\n"
+        "assert.ok(html.includes('data-photo-index=\"3\"'));\n"
+        "assert.ok(html.includes('loading=\"lazy\"'));\n"
+        'assert.ok(!html.includes("/>"));\n'
+    )
+    new_content, count = fix_content(content)
+    assert count == 0
+    # 中间几行不能被吞掉
+    assert new_content == content
+
+
+def test_fix_content_is_idempotent():
+    # 跑第二遍不应再产生任何改动
+    once, first_count = fix_content('<p>a<br/>b</p><img src="x.png" />')
+    twice, second_count = fix_content(once)
+    assert first_count == 2
+    assert second_count == 0
+    assert twice == once

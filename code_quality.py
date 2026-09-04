@@ -17,6 +17,20 @@ VOID_TAGS = [
 EXCLUDED_DIRS = {".git", "node_modules", "dist"}
 
 
+# One HTML attribute: a name, optionally followed by a quoted or bare value.
+# Matching the attribute grammar (instead of a loose "anything up to />") is what
+# keeps the tag body from running past the end of the tag: a quoted value cannot
+# contain its own quote, and two attributes must be separated by whitespace. In a
+# JS file, an `<img` inside a string literal is therefore not joined to some
+# unrelated `/>` several lines below.
+ATTRIBUTE_PATTERN = (
+    r"""[^\s"'>/=]+"""            # name
+    r"""(?:\s*=\s*"""             # optional value
+    r"""(?:"[^"]*"|'[^']*'|[^\s"'`=<>]+)"""
+    r""")?"""
+)
+
+
 def fix_content(content: str) -> Tuple[str, int]:
     """把 void 标签的自闭合 `<tag/>` 修正为 `<tag>`。
 
@@ -25,8 +39,9 @@ def fix_content(content: str) -> Tuple[str, int]:
     tags_pattern = "|".join(VOID_TAGS)
     # 注意:`(?:...)` 是非捕获组;之前误写成 `(?::...)` 导致只有 area 分支
     # 需要前置冒号,从而永远匹配不到 <area/>。
-    pattern = rf"(<(?:{tags_pattern})\b[^>]*?)\s*/>"
-    return re.subn(pattern, r"\1>", content, flags=re.IGNORECASE | re.DOTALL)
+    # `\s` spans newlines, so an attribute list wrapped across lines still matches.
+    pattern = rf"(<(?:{tags_pattern})\b(?:\s+{ATTRIBUTE_PATTERN})*)\s*/>"
+    return re.subn(pattern, r"\1>", content, flags=re.IGNORECASE)
 
 
 def process_directory(root_dir: str) -> Tuple[int, int]:

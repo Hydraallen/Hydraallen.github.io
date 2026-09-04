@@ -2,7 +2,7 @@
 import json
 import os
 
-from generate_index import generate_index
+from generate_index import TARGET_FOLDERS, generate_index
 
 
 def _write(folder, name, data=None):
@@ -54,3 +54,17 @@ def test_ascending_sort(tmp_path):
     generate_index(str(tmp_path), reverse=False)
     result = json.loads((tmp_path / "index.json").read_text(encoding="utf-8"))
     assert result == ["amsterdam", "paris", "tokyo"]
+
+
+def test_trips_folder_registered():
+    # trips 目录必须接线到批量生成里(generate_indexes 依赖相对 cwd,无法直接测)
+    assert "./trips" in TARGET_FOLDERS
+
+
+def test_trips_ascending_sort(tmp_path):
+    # 行程与 travel 一样按升序排列
+    for name in ("tokyo_2024", "nyc_2025", "amsterdam_2023"):
+        _write(str(tmp_path), f"{name}.json")
+    generate_index(str(tmp_path), reverse=False)
+    result = json.loads((tmp_path / "index.json").read_text(encoding="utf-8"))
+    assert result == ["amsterdam_2023", "nyc_2025", "tokyo_2024"]

@@ -14,12 +14,8 @@ var lib =
     : {
         escapeHtml: escapeHtml,
         getDisplayName: getDisplayName,
-        getLightboxSrc: getLightboxSrc,
-        getLightboxCaption: getLightboxCaption,
         compareVisited: compareVisited,
         comparePlanned: comparePlanned,
-        nextIndex: nextIndex,
-        prevIndex: prevIndex,
       };
 
 // Fetch every travel data file with per-file fault tolerance: a single 404 or
@@ -44,34 +40,21 @@ async function fetchTravelFiles(fileList, fetchFn) {
   return rawData.filter(Boolean);
 }
 
-// Apply a photo to the lightbox DOM: sets image src AND keeps alt/caption in
-// sync with the current photo. Extracted (module-level) so it is unit-testable
-// with jsdom without needing Leaflet / the DOMContentLoaded closure.
-function applyLightboxPhoto(imgEl, captionEl, photo) {
-  const src = lib.getLightboxSrc(photo);
-  const caption = lib.getLightboxCaption(photo);
-  if (imgEl) {
-    imgEl.src = src;
-    imgEl.alt = caption || "Travel photo";
-  }
-  if (captionEl) {
-    captionEl.textContent = caption;
-    captionEl.style.display = caption ? "block" : "none";
-  }
+// Build the trip detail-page URL for a place. The id is percent-encoded so an
+// id containing spaces or reserved characters cannot break out of the query
+// string. Module-level so it is unit-testable without Leaflet / the DOM.
+function tripUrl(place) {
+  return `trip.html?place=${encodeURIComponent(place.id)}`;
 }
 
 let allTravelData = [];
-let currentGalleryPhotos = []; // 全局相册数据源
-let currentPhotoIndex = 0;
 let map; // Leaflet map instance
 let tileLayer; // Keep track of the tile layer to switch languages
 
-// 关键修改：分离全局标记和城市详情标记
-let globalMarkers = []; // 存放所有城市/区域的主标记 (始终显示)
-let cityMarkers = [];   // 存放当前进入的城市内部的照片标记 (仅在 City View 显示)
+// 全局标记：所有城市/区域的主标记
+let globalMarkers = [];
 
 let currentLanguage = 'en'; // Default language: English
-let isCityView = false; // Track if we are in city view mode
 
 // --- 1. 定义自定义颜色的图钉 ---
 // Guard against a missing Leaflet global so this module can be required in Node
@@ -120,20 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const continentBtns = document.querySelectorAll(".continent-tabs .tab-btn");
   const visitedCheckbox = document.getElementById("filter-visited");
   const plannedCheckbox = document.getElementById("filter-planned");
-  const resetMapBtn = document.getElementById("reset-map-btn");
-
-  // Gallery & Lightbox Elements
-  const galleryModal = document.getElementById("gallery-modal");
-  const galleryGrid = document.getElementById("gallery-grid");
-  const galleryTitle = document.getElementById("gallery-title");
-  const galleryVideoBtn = document.getElementById("gallery-video-btn");
-  const closeGalleryBtn = document.getElementById("close-gallery");
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const lightboxCaption = document.getElementById("lightbox-caption");
-  const closeLightboxBtn = document.getElementById("close-lightbox");
-  const prevBtn = document.getElementById("prev-btn");
-  const nextBtn = document.getElementById("next-btn");
 
   // 2. Initialize Map
   function initMap() {
@@ -204,11 +173,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return true;
     });
 
-    // 仅当不在城市详细视图时，才重绘全局标记
-    if (!isCityView) {
-        renderGlobalMarkers(filteredData);
-    }
-    
+    renderGlobalMarkers(filteredData);
+
     // 触发排序事件以重新渲染网格
     sortSelect.dispatchEvent(new Event("change"));
   }
@@ -220,8 +186,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // 清除旧的全局标记
     globalMarkers.forEach(marker => map.removeLayer(marker));
     globalMarkers = [];
-    
-    clearCityMarkers();
 
     data.forEach(place => {
       if (place.coordinates) {
@@ -230,9 +194,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const marker = L.marker(place.coordinates, { icon: iconType }).addTo(map);
         
-        // 点击城市标记：进入城市视图
+        // 点击城市标记：进入该地点的行程详情页
         marker.on('click', function() {
-          showCityOnMap(place);
+          window.location.href = tripUrl(place);
         });
 
         marker.bindTooltip(place.name, {
@@ -244,86 +208,6 @@ document.addEventListener("DOMContentLoaded", function () {
         globalMarkers.push(marker);
       }
     });
-  }
-
-  function clearCityMarkers() {
-    cityMarkers.forEach(marker => map.removeLayer(marker));
-    cityMarkers = [];
-  }
-
-  // --- City Map Logic ---
-  function showCityOnMap(placeData) {
-    if (!map || !placeData.coordinates) return;
-    
-    isCityView = true;
-    resetMapBtn.classList.remove("hidden-btn");
-    
-    clearCityMarkers();
-    
-    currentGalleryPhotos = placeData.photos || [];
-
-    if (!placeData.photos || placeData.photos.length === 0) {
-        map.flyTo(placeData.coordinates, 13, { duration: 1.5 });
-        return;
-    }
-
-    // 按坐标分组照片
-    const groupedPhotos = {};
-    const bounds = L.latLngBounds();
-
-    placeData.photos.forEach((photo, index) => {
-      if (typeof photo === 'object' && photo.coordinates) {
-        bounds.extend(photo.coordinates);
-        const coordKey = photo.coordinates.join(',');
-        
-        if (!groupedPhotos[coordKey]) {
-          groupedPhotos[coordKey] = {
-            coords: photo.coordinates,
-            locationName: photo.location || 'Location',
-            items: []
-          };
-        }
-        groupedPhotos[coordKey].items.push({ ...photo, originalIndex: index });
-      }
-    });
-
-    // 渲染详情标记
-    Object.values(groupedPhotos).forEach(group => {
-      const marker = L.marker(group.coords, { icon: MarkerIcons.visited }).addTo(map);
-
-      let imagesHtml = '<div class="popup-gallery-container">';
-      group.items.forEach(item => {
-        // Escape all interpolated, data-derived values to avoid HTML/attribute
-        // injection. originalIndex is coerced to an integer (not string-escaped).
-        const src = lib.escapeHtml(lib.getLightboxSrc(item));
-        const title = lib.escapeHtml(item.location || '');
-        const idx = Number(item.originalIndex);
-        imagesHtml += `
-          <img src="${src}"
-               class="popup-photo-thumb"
-               title="${title}"
-               onclick="document.dispatchEvent(new CustomEvent('open-lightbox-index', {detail: ${idx}}))">
-        `;
-      });
-      imagesHtml += '</div>';
-
-      const popupContent = `
-        <div style="text-align:center">
-          ${imagesHtml}
-          <div class="popup-location-name">${lib.escapeHtml(group.locationName)} ${group.items.length > 1 ? `(${group.items.length})` : ''}</div>
-        </div>
-      `;
-
-      marker.bindPopup(popupContent, { minWidth: 160, maxWidth: 300 });
-      cityMarkers.push(marker);
-    });
-
-    // 自动调整视野
-    if (bounds.isValid()) {
-        map.flyToBounds(bounds, { padding: [50, 50], maxZoom: 15, duration: 1.5 });
-    } else {
-        map.flyTo(placeData.coordinates, 13, { duration: 1.5 });
-    }
   }
 
   // [新增] 自动缩放到大洲逻辑
@@ -356,32 +240,6 @@ document.addEventListener("DOMContentLoaded", function () {
       map.flyTo(view.center, view.zoom, { duration: 1.5 });
     }
   }
-
-  // [修改] 退出城市模式时，使用自动缩放
-  function exitCityMode() {
-    isCityView = false;
-    resetMapBtn.classList.add("hidden-btn");
-    
-    clearCityMarkers();
-    
-    const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
-    const targetContinent = activeBtn ? activeBtn.getAttribute("data-continent") : "all";
-    
-    autoZoomToContinent(targetContinent); // 使用新函数
-    
-    updateView();
-  }
-
-  resetMapBtn.addEventListener("click", exitCityMode);
-
-  // Listen for popup click to open lightbox
-  document.addEventListener('open-lightbox-index', function(e) {
-    const index = e.detail;
-    currentPhotoIndex = index;
-    updateLightboxImage();
-    lightbox.classList.remove("hidden-modal");
-    setTimeout(() => lightbox.classList.add("active"), 10);
-  });
 
   // 5. Render Grid Cards
   function renderGrid(data, sortType) {
@@ -436,71 +294,42 @@ document.addEventListener("DOMContentLoaded", function () {
     const displayName = lib.getDisplayName(place);
 
     const hasVideo = place.video && place.video.trim() !== "";
-    
-    let buttonsHtml = "";
-    if (!isPlanned) {
-      buttonsHtml += `<button class="action-btn photo-btn">View Photos</button>`;
-    } else {
-      buttonsHtml += `<span style="color:white; font-weight:bold;">Coming Soon</span>`;
+
+    // Overlay content. The video link is a real <a> to an external host, so it
+    // must stay a sibling of the card link — nesting <a> inside <a> is invalid
+    // HTML; it sits above the stretched link via z-index (see .hover-actions).
+    let overlayHtml = "";
+    if (isPlanned) {
+      overlayHtml += `<span class="hover-note">Coming Soon</span>`;
     }
-    
     if (hasVideo) {
-      buttonsHtml += `<a href="${lib.escapeHtml(place.video)}" target="_blank" rel="noopener noreferrer" class="action-btn video-btn-overlay">Play Video</a>`;
+      overlayHtml += `<a href="${lib.escapeHtml(place.video)}" target="_blank" rel="noopener noreferrer" class="action-btn video-btn-overlay">Play Video</a>`;
     }
 
     const card = document.createElement("div");
     card.className = `place-card ${isPlanned ? 'planned' : ''}`;
-    card.setAttribute("tabindex", "0");
     card.setAttribute("data-continent", place.continent || "other");
     card.setAttribute("data-name", place.name);
-    card.setAttribute("data-date", place.date); 
+    card.setAttribute("data-date", place.date);
 
+    // The place name is a genuine link; `.place-card-link::after` stretches its
+    // hit area over the whole card, so keyboard focus, middle-click and
+    // open-in-new-tab all come for free without a hand-rolled key handler.
     card.innerHTML = `
       <div class="place-image-wrapper">
         <img src="${lib.escapeHtml(place.cover)}" alt="${lib.escapeHtml(displayName)}" loading="lazy">
         <div class="hover-actions">
-          ${buttonsHtml}
+          ${overlayHtml}
         </div>
       </div>
       <div class="place-info">
         <div class="place-country">${lib.escapeHtml(place.country)}</div>
-        <h3 class="place-city">${lib.escapeHtml(displayName)}</h3>
+        <h3 class="place-city">
+          <a class="place-card-link" href="${lib.escapeHtml(tripUrl(place))}">${lib.escapeHtml(displayName)}</a>
+        </h3>
         <div class="place-date">${lib.escapeHtml(place.date_display)}</div>
       </div>
     `;
-
-    if (!isPlanned) {
-      const openGalleryLogic = () => {
-        showCityOnMap(place);
-        const isLargeScreen = window.innerWidth > 768;
-        if (isLargeScreen) {
-          openLightboxDirectly(place);
-        } else {
-          openGalleryScroll(place);
-        }
-      };
-
-      card.addEventListener("click", openGalleryLogic);
-      card.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          openGalleryLogic();
-        }
-      });
-
-      const photoBtn = card.querySelector(".photo-btn");
-      if (photoBtn) {
-        photoBtn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          openGalleryLogic();
-        });
-      }
-    }
-
-    const videoBtn = card.querySelector(".video-btn-overlay");
-    if (videoBtn) {
-      videoBtn.addEventListener("click", (e) => e.stopPropagation());
-    }
 
     return card;
   }
@@ -510,12 +339,6 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", () => {
       continentBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
-
-      if (isCityView) {
-          isCityView = false;
-          resetMapBtn.classList.add("hidden-btn");
-          clearCityMarkers();
-      }
 
       const targetContinent = btn.getAttribute("data-continent");
       
@@ -556,121 +379,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Lightbox Logic ---
-  
-  function openLightboxDirectly(placeData) {
-    if (!placeData.photos || placeData.photos.length === 0) {
-      alert("No photos available.");
-      return;
-    }
-    currentGalleryPhotos = placeData.photos;
-    currentPhotoIndex = 0;
-    updateLightboxImage();
-    lightbox.classList.remove("hidden-modal");
-    setTimeout(() => lightbox.classList.add("active"), 10);
-  }
-
-  function updateLightboxImage() {
-    if (currentGalleryPhotos.length > 0) {
-      const photo = currentGalleryPhotos[currentPhotoIndex];
-      // Keeps src, alt, and caption in sync (alt was previously stuck on the
-      // static "Travel Photo" from the HTML for every image).
-      applyLightboxPhoto(lightboxImg, lightboxCaption, photo);
-    }
-  }
-
-  function showNextPhoto() {
-    if (currentGalleryPhotos.length === 0) return;
-    currentPhotoIndex = lib.nextIndex(currentPhotoIndex, currentGalleryPhotos.length);
-    updateLightboxImage();
-  }
-
-  function showPrevPhoto() {
-    if (currentGalleryPhotos.length === 0) return;
-    currentPhotoIndex = lib.prevIndex(currentPhotoIndex, currentGalleryPhotos.length);
-    updateLightboxImage();
-  }
-
-  function openGalleryScroll(placeData) {
-    const photos = placeData.photos;
-    const title = lib.getDisplayName(placeData);
-    galleryTitle.textContent = title;
-
-    if (placeData.video && placeData.video.trim() !== "") {
-      galleryVideoBtn.href = placeData.video;
-      galleryVideoBtn.classList.remove("hidden-btn");
-    } else {
-      galleryVideoBtn.href = "#";
-      galleryVideoBtn.classList.add("hidden-btn");
-    }
-
-    galleryGrid.innerHTML = "";
-    if (photos && photos.length > 0) {
-      photos.forEach((photo, index) => {
-        const div = document.createElement("div");
-        div.className = "gallery-item";
-        div.setAttribute("tabindex", "0");
-        div.setAttribute("role", "button");
-        
-        const img = document.createElement("img");
-        img.src = lib.getLightboxSrc(photo);
-        img.alt = lib.getLightboxCaption(photo) || "Travel photo";
-        img.loading = "lazy";
-        
-        const openPhoto = () => {
-          currentGalleryPhotos = photos;
-          currentPhotoIndex = index;
-          updateLightboxImage();
-          lightbox.classList.remove("hidden-modal");
-          setTimeout(() => lightbox.classList.add("active"), 10);
-        };
-        
-        div.addEventListener("click", openPhoto);
-        div.addEventListener("keydown", (e) => {
-            if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                openPhoto();
-            }
-        });
-        div.appendChild(img);
-        galleryGrid.appendChild(div);
-      });
-      galleryModal.classList.remove("hidden-modal");
-      document.body.style.overflow = "hidden";
-      
-      if (closeGalleryBtn) setTimeout(() => closeGalleryBtn.focus(), 100);
-    } else {
-      alert("No photos available yet!");
-    }
-  }
-
-  // Event Listeners for Modals
-  closeGalleryBtn.addEventListener("click", function () {
-    galleryModal.classList.add("hidden-modal");
-    document.body.style.overflow = "auto";
-  });
-
-  function closeLightbox() {
-    lightbox.classList.remove("active");
-    setTimeout(() => lightbox.classList.add("hidden-modal"), 300);
-  }
-
-  closeLightboxBtn.addEventListener("click", closeLightbox);
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (!lightbox.classList.contains("hidden-modal")) {
-      if (e.key === "ArrowLeft") showPrevPhoto();
-      if (e.key === "ArrowRight") showNextPhoto();
-      if (e.key === "Escape") closeLightbox();
-    }
-  });
-
-  if (prevBtn) prevBtn.addEventListener("click", (e) => { e.stopPropagation(); showPrevPhoto(); });
-  if (nextBtn) nextBtn.addEventListener("click", (e) => { e.stopPropagation(); showNextPhoto(); });
-
   loadTravelData();
 });
 }
@@ -679,6 +387,6 @@ document.addEventListener("DOMContentLoaded", function () {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
     fetchTravelFiles: fetchTravelFiles,
-    applyLightboxPhoto: applyLightboxPhoto,
+    tripUrl: tripUrl,
   };
 }
