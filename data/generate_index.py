@@ -7,7 +7,7 @@ from typing import List
 
 logger = logging.getLogger(__name__)
 
-TARGET_FOLDERS = ["./movies", "./travel"]
+TARGET_FOLDERS = ["./movies", "./travel", "./trips"]
 EXCLUDED_FILES = {"index.json", "backup.json"}
 _JSON_SUFFIX = ".json"
 

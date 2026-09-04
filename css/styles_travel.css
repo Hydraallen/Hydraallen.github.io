@@ -39,6 +39,7 @@
 
 /* ... (保留 .place-card 及之后的所有样式) ... */
 .place-card {
+  position: relative;
   background: transparent;
   border-radius: 16px;
   overflow: hidden;
@@ -75,19 +76,15 @@
   z-index: 1;
 }
 
-.place-card:focus-visible,
 .place-card:focus-within {
   transform: translateY(-8px);
   outline: 3px solid #02ddc3;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.place-card:focus-visible .place-image-wrapper::after,
-.place-card:focus-visible .hover-actions,
 .place-card:focus-within .place-image-wrapper::after,
 .place-card:focus-within .hover-actions {
   opacity: 1;
-  pointer-events: auto;
 }
 
 .hover-actions {
@@ -100,14 +97,24 @@
   gap: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 2;
+  z-index: 4;
   width: 80%;
   pointer-events: none;
 }
 
 .place-card:hover .hover-actions {
   opacity: 1;
+}
+
+.place-card:hover .hover-actions .action-btn,
+.place-card:focus-within .hover-actions .action-btn {
   pointer-events: auto;
+}
+
+.hover-note {
+  text-align: center;
+  color: white;
+  font-weight: bold;
 }
 
 .place-card:hover .place-image-wrapper::after {
@@ -148,6 +155,24 @@
   line-height: 1.2;
 }
 
+/* Stretched card link: keeps a single real <a> around the place name while its
+   ::after makes the whole card clickable. z-index stays below .hover-actions so
+   the external video link on top of the cover image remains reachable. */
+.place-card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.place-card-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
 .place-date {
   font-size: 16px;
   color: #00695c;
@@ -176,16 +201,6 @@
   transform: scale(1.05);
 }
 
-.photo-btn {
-  background-color: white;
-  color: #00695c;
-  border: none;
-}
-
-.photo-btn:hover {
-  background-color: #f0f0f0;
-}
-
 .video-btn-overlay {
   background-color: #00aeec;
   color: #000000;
@@ -201,102 +216,8 @@
   display: none !important;
 }
 
-.gallery-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f9f9f9;
-  z-index: 2000;
-  overflow-y: auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.gallery-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 20px;
-}
-
-.gallery-header {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 30px;
-  gap: 20px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 20px;
-  flex-direction: column;
-}
-
-.header-center {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.back-btn {
-  background: none;
-  border: 2px solid #00695c;
-  color: #00695c;
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-  white-space: nowrap;
-  font-size: 1rem;
-}
-
-.back-btn:hover {
-  background: #00695c;
-  color: white;
-}
-
-.video-btn {
-  display: inline-block;
-  background-color: #00aeec;
-  color: #000000;
-  padding: 8px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  align-self: flex-start;
-}
-
-.video-btn:hover {
-  background-color: #008bbd;
-  color: white;
-}
-
 .hidden-btn {
   display: none;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.gallery-item {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.gallery-item:hover {
-  transform: scale(1.03);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* --- Lightbox Styling --- */
@@ -410,71 +331,6 @@
   margin-bottom: 30px;
   z-index: 1;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Map Reset Button */
-.map-reset-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  background-color: white;
-  color: #00695c;
-  border: 2px solid #00695c;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  transition: all 0.3s;
-  font-size: 14px;
-}
-
-.map-reset-btn:hover {
-  background-color: #00695c;
-  color: white;
-}
-
-/* Map Popup Styling (Updated for Gallery) */
-.leaflet-popup-content {
-  text-align: center;
-}
-
-/* 新增：Popup 内部的横向滚动容器 */
-.popup-gallery-container {
-  display: flex;
-  gap: 5px;
-  overflow-x: auto;
-  max-width: 250px;
-  padding-bottom: 5px;
-  justify-content: center; /* 如果只有一张，居中 */
-}
-
-/* 隐藏滚动条但保留功能 */
-.popup-gallery-container::-webkit-scrollbar {
-  height: 4px;
-}
-.popup-gallery-container::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 2px;
-}
-
-.popup-photo-thumb {
-  width: 100px; /* 稍微缩小一点以便并排 */
-  height: 80px;
-  object-fit: cover;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-  flex-shrink: 0; /* 防止被挤压 */
-}
-.popup-photo-thumb:hover { opacity: 0.8; }
-
-.popup-location-name {
-  font-weight: bold;
-  font-size: 12px;
-  color: #333;
-  margin-top: 5px;
 }
 
 /* Continent Tabs & Controls (Rest unchanged) */

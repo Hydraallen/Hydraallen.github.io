@@ -20,6 +20,15 @@ test("getCurrentPage maps pathnames to page keys", () => {
   assert.strictEqual(nav.getCurrentPage(""), "index.html");
 });
 
+test("getCurrentPage maps trip.html to the travel page key", () => {
+  assert.strictEqual(nav.getCurrentPage("/trip.html"), "travel.html");
+
+  // The trip detail page keeps the Travel nav entry highlighted.
+  const html = nav.buildNavHtml(nav.getCurrentPage("/trip.html"));
+  assert.ok(html.includes('href="travel.html" class="active-nav-item" aria-current="page"'));
+  assert.ok(!html.includes('href="movies.html" class="active-nav-item"'));
+});
+
 // ---------------------------------------------------------------------------
 // buildNavHtml: single source of truth for nav markup
 // ---------------------------------------------------------------------------

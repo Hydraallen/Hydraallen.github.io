@@ -2,7 +2,6 @@
 
 const { test } = require("node:test");
 const assert = require("node:assert");
-const { JSDOM } = require("jsdom");
 
 // Require BEFORE any global.document is set so the DOMContentLoaded bootstrap
 // (guarded by `typeof document`) is skipped, and MarkerIcons is skipped too
@@ -75,36 +74,13 @@ test("fetchTravelFiles returns [] when every file fails", async () => {
 });
 
 // ---------------------------------------------------------------------------
-// FIX #3: lightbox alt text updates per photo (was stuck on "Travel Photo").
+// Card / marker navigation: place ids are percent-encoded into the trip URL.
 // ---------------------------------------------------------------------------
-test("applyLightboxPhoto updates src, alt, and caption per photo", () => {
-  const dom = new JSDOM(
-    '<!DOCTYPE html><html><body>' +
-      '<img id="lightbox-img" src="" alt="Travel Photo">' +
-      '<div id="lightbox-caption"></div>' +
-      "</body></html>"
+test("tripUrl percent-encodes the place id", () => {
+  assert.strictEqual(travel.tripUrl({ id: "nyc" }), "trip.html?place=nyc");
+  assert.strictEqual(
+    travel.tripUrl({ id: "san jose&x=1" }),
+    "trip.html?place=san%20jose%26x%3D1",
+    "spaces and query separators must not break out of the query string"
   );
-  const doc = dom.window.document;
-  const img = doc.getElementById("lightbox-img");
-  const caption = doc.getElementById("lightbox-caption");
-
-  // Photo with a location -> alt + caption reflect it.
-  travel.applyLightboxPhoto(img, caption, { src: "a.jpg", location: "Denali" });
-  assert.strictEqual(img.getAttribute("src"), "a.jpg");
-  assert.strictEqual(img.getAttribute("alt"), "Denali");
-  assert.strictEqual(caption.textContent, "Denali");
-  assert.strictEqual(caption.style.display, "block");
-
-  // Switching to a different photo updates the alt (regression guard).
-  travel.applyLightboxPhoto(img, caption, { src: "b.jpg", location: "Kyoto" });
-  assert.strictEqual(img.getAttribute("src"), "b.jpg");
-  assert.strictEqual(img.getAttribute("alt"), "Kyoto");
-  assert.strictEqual(caption.textContent, "Kyoto");
-
-  // Plain-string photo (no location) -> alt falls back, caption hidden.
-  travel.applyLightboxPhoto(img, caption, "c.jpg");
-  assert.strictEqual(img.getAttribute("src"), "c.jpg");
-  assert.strictEqual(img.getAttribute("alt"), "Travel photo");
-  assert.strictEqual(caption.textContent, "");
-  assert.strictEqual(caption.style.display, "none");
 });

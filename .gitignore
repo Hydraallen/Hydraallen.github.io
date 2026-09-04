@@ -19,3 +19,6 @@ __pycache__/
 /index.png
 /movies.png
 /travel-lightbox.png
+
+# Local working file for data/movies/movie_cleaner.py (not published to the site)
+data/movies/backup.json

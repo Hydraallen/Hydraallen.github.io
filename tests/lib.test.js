@@ -30,8 +30,8 @@ test("escapeHtml handles null/undefined as empty string", () => {
 
 test("getPosterSrc returns poster when present, placeholder otherwise", () => {
   assert.strictEqual(lib.getPosterSrc({ poster: "p.jpg" }), "p.jpg");
-  assert.strictEqual(lib.getPosterSrc({ poster: "" }), lib.NO_IMAGE_PLACEHOLDER);
-  assert.strictEqual(lib.getPosterSrc({}), lib.NO_IMAGE_PLACEHOLDER);
+  assert.strictEqual(lib.getPosterSrc({ poster: "" }), lib.NO_POSTER_SRC);
+  assert.strictEqual(lib.getPosterSrc({}), lib.NO_POSTER_SRC);
 });
 
 test("buildMovieCardHtml escapes title and date, includes poster", () => {
@@ -48,7 +48,7 @@ test("buildMovieCardHtml escapes title and date, includes poster", () => {
 
 test("buildMovieCardHtml uses placeholder when no poster", () => {
   const html = lib.buildMovieCardHtml({ title: "T", date: "D" });
-  assert.ok(html.includes(lib.NO_IMAGE_PLACEHOLDER));
+  assert.ok(html.includes(lib.NO_POSTER_SRC));
 });
 
 test("getDisplayName appends state only for USA", () => {
@@ -68,6 +68,35 @@ test("getDisplayName appends state only for USA", () => {
     lib.getDisplayName({ name: "Austin", country: "USA" }),
     "Austin"
   );
+});
+
+test("getDisplayName handles the flag-emoji country shape used in data/travel", () => {
+  // 真实数据形态:country 带国旗 emoji
+  assert.strictEqual(
+    lib.getDisplayName({ name: "Boston", country: "\u{1F1FA}\u{1F1F8} USA", state: "MA" }),
+    "Boston, MA"
+  );
+  assert.strictEqual(
+    lib.getDisplayName({ name: "New York City", country: "\u{1F1FA}\u{1F1F8} USA", state: "NY" }),
+    "New York City, NY"
+  );
+  assert.strictEqual(
+    lib.getDisplayName({ name: "Reykjavik", country: "\u{1F1EE}\u{1F1F8} Iceland" }),
+    "Reykjavik"
+  );
+  // A country merely containing "usa" must not be treated as the USA
+  assert.strictEqual(
+    lib.getDisplayName({ name: "Somewhere", country: "Usaland", state: "ZZ" }),
+    "Somewhere"
+  );
+});
+
+test("getDisplayName never emits a dangling comma or undefined", () => {
+  assert.strictEqual(
+    lib.getDisplayName({ name: "Honolulu", country: "\u{1F1FA}\u{1F1F8} USA" }),
+    "Honolulu"
+  );
+  assert.strictEqual(lib.getDisplayName({ name: "Kyoto" }), "Kyoto");
 });
 
 test("getLightboxSrc / getLightboxCaption handle string and object photos", () => {

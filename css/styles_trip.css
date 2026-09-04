@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap");
+
+/* ===== 变量：纸感配色与尺寸 ===== */
+:root {
+  /* 纸张 */
+  --trip-paper: #faf6ee;          /* 页面纸底（米白） */
+  --trip-paper-card: #fffdf8;     /* 卡片纸面 */
+  --trip-paper-line: #e6ded0;     /* 纸上的浅色线条 */
+  --trip-paper-edge: #d9cfbd;     /* 纸边、分隔虚线 */
+  --trip-route-line: #c4b49a;     /* 每日动线的虚线 */
+  --trip-stub: #fdf3dd;           /* 票根底色 */
+
+  /* 文字 */
+  --trip-ink: #33302b;            /* 正文 */
+  --trip-ink-soft: #6b6459;       /* 次要文字 */
+  --trip-ink-faint: #8d8578;      /* 更弱的说明文字 */
+
+  /* 站点主色（沿用全站青绿/橙） */
+  --trip-accent: #00695c;
+  --trip-accent-soft: #e0f2f1;
+  --trip-warm: #ff9800;
+
+  /* 形状 */
+  --trip-radius: 12px;
+  --trip-radius-sm: 8px;
+  --trip-shadow: 0 4px 14px rgba(70, 58, 40, 0.08);
+  --trip-shadow-lift: 0 8px 20px rgba(70, 58, 40, 0.16);
+
+  /* 字体 */
+  --trip-hand: "Caveat", "Xingkai SC", "STXingkai", "STKaiti", "KaiTi",
+    "Kaiti SC", "楷体", cursive, sans-serif;
+  --trip-body: "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --trip-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+}
+
+/* ===== 返回链接 ===== */
+.trip-back {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 6px 16px;
+  border: 2px solid var(--trip-accent);
+  border-radius: 25px;
+  color: var(--trip-accent);
+  background-color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.trip-back:hover {
+  background-color: var(--trip-accent);
+  color: #ffffff;
+}
+
+/* ===== 页面纸底 ===== */
+/* 极淡的横向纹理模拟纸张，纯 CSS，不引外部图片 */
+.trip-page {
+  background-color: var(--trip-paper);
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(120, 100, 70, 0.028) 0,
+      rgba(120, 100, 70, 0.028) 1px,
+      transparent 1px,
+      transparent 6px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(120, 100, 70, 0.02) 0,
+      rgba(120, 100, 70, 0.02) 1px,
+      transparent 1px,
+      transparent 7px
+    );
+  border: 1px solid var(--trip-paper-edge);
+  border-radius: var(--trip-radius);
+  box-shadow: var(--trip-shadow);
+  padding: 28px;
+  color: var(--trip-ink);
+  font-family: var(--trip-body);
+}
+
+/* ===== 顶部 hero ===== */
+.trip-hero {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 26px;
+  border-bottom: 2px dashed var(--trip-paper-edge);
+}
+
+.trip-hero-cover {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  /* 相纸白边 */
+  background-color: #ffffff;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: var(--trip-shadow-lift);
+}
+
+.trip-hero-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.trip-country {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--trip-ink-soft);
+}
+
+/* 手写风只用于标题 */
+.trip-place {
+  margin: 0;
+  font-family: var(--trip-hand);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--trip-accent);
+  /* 覆盖 styles.css 中 section h2 的下划线样式 */
+  border-bottom: none;
+  display: block;
+  padding-bottom: 0;
+}
+
+.trip-dates {
+  margin: 0;
+  font-family: var(--trip-mono);
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: var(--trip-ink-soft);
+}
+
+.trip-summary {
+  margin: 8px 0 0;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--trip-ink);
+  max-width: 46em;
+}
+
+.trip-video-btn {
+  margin-top: 12px;
+  padding: 8px 22px;
+  border-radius: 25px;
+  background-color: #00aeec;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.trip-video-btn:hover {
+  background-color: #008bbd;
+  color: #ffffff;
+}
+
+/* ===== 地图 ===== */
+.trip-map-wrapper {
+  position: relative;
+  margin-bottom: 34px;
+}
+
+#trip-map {
+  width: 100%;
+  height: 400px;
+  border-radius: var(--trip-radius);
+  border: 1px solid var(--trip-paper-edge);
+  box-shadow: var(--trip-shadow);
+  z-index: 1;
+}
+
+/* ===== 地图 popup ===== */
+/* Leaflet renders the popup markup from buildPopupHtml(), so these classes are
+   the trip page's contract with it: a horizontal strip of thumbnails that
+   scrolls when a coordinate group holds several photos, and centres when it
+   holds one. */
+.leaflet-popup-content {
+  text-align: center;
+  font-family: var(--trip-body);
+}
+
+.popup-gallery {
+  text-align: center;
+}
+
+.popup-gallery-container {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  max-width: 250px;
+  padding-bottom: 5px;
+  /* 单张照片时居中，多张溢出时从左端排开，避免居中把首图推出可滚动区域 */
+  justify-content: safe center;
+}
+
+/* 保留滚动能力，但把滚动条压到几乎不可见 */
+.popup-gallery-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.popup-gallery-container::-webkit-scrollbar-thumb {
+  background-color: var(--trip-paper-edge);
+  border-radius: 2px;
+}
+
+.popup-photo-thumb {
+  /* button 复位，保留纯图片外观 */
+  flex-shrink: 0;
+  display: block;
+  width: 100px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: var(--trip-radius-sm);
+  background-color: var(--trip-paper-card);
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.popup-photo-thumb:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.popup-photo-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popup-location-name {
+  margin-top: 6px;
+  font-family: var(--trip-hand);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--trip-accent);
+}
+
+/* ===== 行程时间轴 ===== */
+.trip-itinerary {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-bottom: 34px;
+}
+
+.trip-day {
+  /* 覆盖 styles.css 对 <section> 的通用白卡样式 */
+  background-color: var(--trip-paper-card);
+  border: 1px solid var(--trip-paper-line);
+  border-radius: var(--trip-radius);
+  box-shadow: var(--trip-shadow);
+  padding: 22px 24px 24px;
+  margin-bottom: 0;
+}
+
+/* 票根：两侧用 radial-gradient 打出半圆缺口 */
+.day-stub {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 20px;
+  background-color: transparent;
+  background-image: radial-gradient(
+      circle at 0 50%,
+      transparent 0 6px,
+      var(--trip-stub) 6px
+    ),
+    radial-gradient(circle at 100% 50%, transparent 0 6px, var(--trip-stub) 6px);
+  background-position: left center, right center;
+  background-size: 51% 100%, 51% 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 1px 2px rgba(70, 58, 40, 0.18));
+}
+
+.day-badge {
+  padding-right: 12px;
+  border-right: 1px dashed var(--trip-paper-edge);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--trip-accent);
+}
+
+.day-date {
+  font-family: var(--trip-mono);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: var(--trip-ink-soft);
+}
+
+.day-title {
+  margin: 12px 0 18px;
+  font-family: var(--trip-hand);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--trip-ink);
+}
+
+/* ===== 每日动线：虚线串起来的 stop 列表 ===== */
+.stop-list {
+  list-style: none;
+  margin: 0 0 0 9px;
+  padding: 4px 0 4px 26px;
+  border-left: 2px dashed var(--trip-route-line);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.stop {
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  grid-template-areas: "type body photo";
+  align-items: start;
+  gap: 6px 14px;
+}
+
+/* 动线上的圆点，颜色跟随该 stop 的类型色 */
+.stop::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -33px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: var(--stop-color);
+  border: 2px solid var(--trip-paper-card);
+  box-shadow: 0 0 0 1px var(--stop-color);
+}
+
+/* 贴纸式类型标签 */
+.stop-type {
+  grid-area: type;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 11px;
+  border-radius: 20px;
+  background-color: var(--stop-tint);
+  color: var(--stop-color);
+  border: 1px solid var(--stop-color);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+
+.stop-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.stop-body {
+  grid-area: body;
+  min-width: 0;
+}
+
+.stop-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--trip-ink);
+}
+
+.stop-note {
+  margin: 3px 0 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--trip-ink-soft);
+}
+
+.stop-photo-btn {
+  /* button 复位，保留相纸白边的外观 */
+  grid-area: photo;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.stop-photo {
+  width: 104px;
+  height: 78px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--trip-radius-sm);
+  background-color: #ffffff;
+  border: 3px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(70, 58, 40, 0.18);
+}
+
+/* ===== 类型配色（含未知类型兜底） ===== */
+.stop,
+.stop-default {
+  --stop-color: #5f6b70;
+  --stop-tint: #eef1f2;
+}
+
+.stop-sight {
+  --stop-color: #00695c;
+  --stop-tint: #e0f2f1;
+}
+
+.stop-food {
+  --stop-color: #b85c07;
+  --stop-tint: #fdf0e0;
+}
+
+.stop-hotel {
+  --stop-color: #63499b;
+  --stop-tint: #efeaf9;
+}
+
+.stop-transport {
+  --stop-color: #14608f;
+  --stop-tint: #e4eff8;
+}
+
+/* ===== 可点击的照片元素 ===== */
+[data-photo-index] {
+  cursor: pointer;
+}
+
+.stop-photo {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stop-photo-btn:hover .stop-photo,
+.stop-photo-btn:focus-visible .stop-photo {
+  transform: scale(1.05);
+  box-shadow: var(--trip-shadow-lift);
+}
+
+/* ===== 照片墙 ===== */
+.trip-section-heading {
+  margin: 0 0 16px;
+  font-family: var(--trip-hand);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--trip-accent);
+}
+
+.trip-photo-wall {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.wall-item {
+  /* button 复位，保留纯图片外观 */
+  padding: 5px;
+  margin: 0;
+  border: none;
+  background-color: #ffffff;
+  border-radius: var(--trip-radius-sm);
+  box-shadow: 0 2px 8px rgba(70, 58, 40, 0.14);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wall-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--trip-shadow-lift);
+}
+
+.wall-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ===== 错误提示 ===== */
+.trip-error {
+  margin-top: 24px;
+  padding: 16px 20px;
+  border-radius: var(--trip-radius-sm);
+  border: 1px dashed var(--trip-warm);
+  background-color: #fff6e8;
+  color: #8a4b00;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ===== 响应式（沿用 768 断点） ===== */
+@media (max-width: 768px) {
+  .trip-page {
+    padding: 18px;
+  }
+
+  .trip-hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .trip-place {
+    font-size: 36px;
+  }
+
+  .trip-summary {
+    font-size: 16px;
+  }
+
+  #trip-map {
+    height: 260px;
+  }
+
+  .trip-day {
+    padding: 18px 16px 20px;
+  }
+
+  .day-stub {
+    /* 票根内容较窄时不能被挤爆 */
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    padding: 7px 16px;
+  }
+
+  .day-badge {
+    padding-right: 10px;
+  }
+
+  .day-title {
+    font-size: 27px;
+  }
+
+  .stop-list {
+    margin-left: 5px;
+    padding-left: 18px;
+    gap: 20px;
+  }
+
+  .stop::before {
+    left: -25px;
+  }
+
+  .stop {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas:
+      "type type"
+      "body photo";
+    gap: 8px 12px;
+  }
+
+  .stop-type {
+    justify-self: start;
+  }
+
+  .stop-photo-btn {
+    align-self: center;
+  }
+
+  .stop-photo {
+    width: 76px;
+    height: 76px;
+  }
+
+  .trip-section-heading {
+    font-size: 28px;
+  }
+
+  .trip-photo-wall {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

@@ -147,7 +147,7 @@ function renderTimelineGlobalSafe(root) {
   assert.ok(root.querySelector(".vertical-scroll-wrapper"));
   // Placeholder used for the poster-less favorite.
   const favImg = root.querySelector(".favorite-card img");
-  assert.ok(favImg.getAttribute("src").includes("placeholder"));
+  assert.ok(favImg.getAttribute("src").startsWith("data:image/svg+xml"));
   // Malicious title rendered as text, not markup.
   assert.ok(root.textContent.includes("<img src=x onerror=alert(1)>"));
 }

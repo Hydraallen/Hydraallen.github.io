@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/styles_travel.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 
 <body>
@@ -55,12 +55,8 @@
       <h2>Travel Journey</h2>
 
       <!-- 2. 地图容器 -->
-      <div class="map-wrapper" style="position: relative;">
+      <div class="map-wrapper">
         <div id="map-container"></div>
-        <!-- 返回世界地图按钮 (默认隐藏) -->
-        <button id="reset-map-btn" class="map-reset-btn hidden-btn">
-          ← Back to World Map
-        </button>
       </div>
 
       <!-- 3. 大洲筛选 Tab -->
@@ -128,38 +124,6 @@
       </div>
     </section>
   </main>
-
-  <!-- Gallery Modal -->
-  <div id="gallery-modal" class="gallery-modal hidden-modal">
-    <div class="gallery-content">
-      <div class="gallery-header">
-        <div class="header-left">
-          <button id="close-gallery" class="back-btn">← Back</button>
-        </div>
-        <div class="header-center">
-          <h2 id="gallery-title">City Name</h2>
-          <a id="gallery-video-btn" href="#" target="_blank" rel="noopener noreferrer"
-            class="video-btn hidden-btn">
-            ▶ Watch Video
-          </a>
-        </div>
-      </div>
-      <div class="gallery-grid" id="gallery-grid"></div>
-    </div>
-  </div>
-
-  <!-- Lightbox (Updated Structure) -->
-  <div id="lightbox" class="lightbox hidden-modal">
-    <button id="close-lightbox" type="button" class="close-lightbox" aria-label="Close">&times;</button>
-    <button id="prev-btn" type="button" class="lightbox-btn prev-btn" aria-label="Previous photo">&#10094;</button>
-    <button id="next-btn" type="button" class="lightbox-btn next-btn" aria-label="Next photo">&#10095;</button>
-    
-    <!-- 新增容器，用于包裹图片和文字 -->
-    <div class="lightbox-container">
-      <img class="lightbox-content" id="lightbox-img" alt="Travel Photo" src="./img/avatar.jpg">
-      <div id="lightbox-caption" class="lightbox-caption"></div>
-    </div>
-  </div>
 
   <footer>
     <p>

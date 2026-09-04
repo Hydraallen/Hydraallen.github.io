@@ -27,10 +27,13 @@ var ICON = {
 };
 
 // Normalize a location.pathname into one of the known page keys.
+// trip.html is a detail view under Travel in the information architecture, so it
+// maps to the same key and keeps the Travel entry highlighted (no extra item).
 function getCurrentPage(pathname) {
   var path = pathname || "";
   if (/movies\.html$/.test(path)) return "movies.html";
   if (/travel\.html$/.test(path)) return "travel.html";
+  if (/trip\.html$/.test(path)) return "travel.html";
   if (/404\.html$/.test(path)) return "404";
   return "index.html";
 }
