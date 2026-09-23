@@ -1,11 +1,14 @@
 {
   "id": "cleveland",
-  "name": "Cleveland",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Cleveland",
+    "zh": "克利夫兰"
+  },
+  "country_code": "US",
   "state": "OH",
   "continent": "namerica",
   "date": "2025-11-29",
-  "date_display": "Nov 29-30, 2025",
+  "date_end": "2025-11-30",
   "video": "",
   "status": "visited",
   "cover": "../../img/travel/Cleveland/cover.jpg",
@@ -13,37 +16,58 @@
   "photos": [
     {
       "src": "../../img/travel/Cleveland/photo1.jpg",
-      "location": "The Arcade",
+      "location": {
+        "en": "The Arcade",
+        "zh": "克利夫兰拱廊"
+      },
       "coordinates": [41.500025948053974, -81.69022556795254]
     },
     {
       "src": "../../img/travel/Cleveland/photo2.jpg",
-      "location": "The Arcade",
+      "location": {
+        "en": "The Arcade",
+        "zh": "克利夫兰拱廊"
+      },
       "coordinates": [41.500025948053974, -81.69022556795254]
     },
     {
       "src": "../../img/travel/Cleveland/photo3.jpg",
-      "location": "The Arcade",
+      "location": {
+        "en": "The Arcade",
+        "zh": "克利夫兰拱廊"
+      },
       "coordinates": [41.500025948053974, -81.69022556795254]
     },
     {
       "src": "../../img/travel/Cleveland/photo4.jpg",
-      "location": "The Arcade",
+      "location": {
+        "en": "The Arcade",
+        "zh": "克利夫兰拱廊"
+      },
       "coordinates": [41.500025948053974, -81.69022556795254]
     },
     {
       "src": "../../img/travel/Cleveland/photo5.jpg",
-      "location": "The Arcade",
+      "location": {
+        "en": "The Arcade",
+        "zh": "克利夫兰拱廊"
+      },
       "coordinates": [41.500025948053974, -81.69022556795254]
     },
     {
       "src": "../../img/travel/Cleveland/photo6.jpg",
-      "location": "Cleveland Public Square",
+      "location": {
+        "en": "Cleveland Public Square",
+        "zh": "克利夫兰公共广场"
+      },
       "coordinates": [41.49976279833361, -81.69368744750652]
     },
     {
       "src": "../../img/travel/Cleveland/photo7.jpg",
-      "location": "Edgewater Park",
+      "location": {
+        "en": "Edgewater Park",
+        "zh": "埃奇沃特公园"
+      },
       "coordinates": [41.49074079344627, -81.7357009372824]
     }
   ]

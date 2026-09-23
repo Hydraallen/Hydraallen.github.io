@@ -1,11 +1,14 @@
 {
   "id": "princeton",
-  "name": "Princeton",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Princeton",
+    "zh": "普林斯顿"
+  },
+  "country_code": "US",
   "state": "NJ",
   "continent": "namerica",
   "date": "2025-03-09",
-  "date_display": "Mar 9, 2025",
+  "date_end": "2025-03-09",
   "video": "",
   "status": "visited",
   "cover": "../../img/travel/Princeton/cover.jpg",
@@ -13,67 +16,106 @@
   "photos": [
     {
       "src": "../../img/travel/Princeton/photo1.jpg",
-      "location": "Institute for Advanced Study",
+      "location": {
+        "en": "Institute for Advanced Study",
+        "zh": "普林斯顿高等研究院"
+      },
       "coordinates": [40.33180863061383, -74.66806184501601]
     },
     {
       "src": "../../img/travel/Princeton/photo2.jpg",
-      "location": "97 Olden Lane",
+      "location": {
+        "en": "97 Olden Lane",
+        "zh": "奥尔登巷 97 号"
+      },
       "coordinates": [40.33538984539774, -74.66846566035944]
     },
     {
       "src": "../../img/travel/Princeton/photo3.jpg",
-      "location": "Institute for Advanced Study",
+      "location": {
+        "en": "Institute for Advanced Study",
+        "zh": "普林斯顿高等研究院"
+      },
       "coordinates": [40.33180863061383, -74.66806184501601]
     },
     {
       "src": "../../img/travel/Princeton/photo4.jpg",
-      "location": "Princeton University",
+      "location": {
+        "en": "Princeton University",
+        "zh": "普林斯顿大学"
+      },
       "coordinates": [40.34325771768744, -74.65509536035908]
     },
     {
       "src": "../../img/travel/Princeton/photo5.jpg",
-      "location": "Institute for Advanced Study",
+      "location": {
+        "en": "Institute for Advanced Study",
+        "zh": "普林斯顿高等研究院"
+      },
       "coordinates": [40.33180863061383, -74.66806184501601]
     },
     {
       "src": "../../img/travel/Princeton/photo6.jpg",
-      "location": "East Pyne Hall",
+      "location": {
+        "en": "East Pyne Hall",
+        "zh": "东派恩楼"
+      },
       "coordinates": [40.34888325076971, -74.658582931523]
     },
     {
       "src": "../../img/travel/Princeton/photo7.jpg",
-      "location": "Institute for Advanced Study",
+      "location": {
+        "en": "Institute for Advanced Study",
+        "zh": "普林斯顿高等研究院"
+      },
       "coordinates": [40.33180863061383, -74.66806184501601]
     },
     {
       "src": "../../img/travel/Princeton/photo8.jpg",
-      "location": "Princeton University",
+      "location": {
+        "en": "Princeton University",
+        "zh": "普林斯顿大学"
+      },
       "coordinates": [40.34325771768744, -74.65509536035908]
     },
     {
       "src": "../../img/travel/Princeton/photo9.jpg",
-      "location": "Princeton University",
+      "location": {
+        "en": "Princeton University",
+        "zh": "普林斯顿大学"
+      },
       "coordinates": [40.34325771768744, -74.65509536035908]
     },
     {
       "src": "../../img/travel/Princeton/photo10.jpg",
-      "location": "Firestone Library",
+      "location": {
+        "en": "Firestone Library",
+        "zh": "费尔斯通图书馆"
+      },
       "coordinates": [40.34970093582933, -74.65737503972832]
     },
     {
       "src": "../../img/travel/Princeton/photo11.jpg",
-      "location": "McCosh Hall",
+      "location": {
+        "en": "McCosh Hall",
+        "zh": "麦科什楼"
+      },
       "coordinates": [40.34863802797285, -74.65596900268709]
     },
     {
       "src": "../../img/travel/Princeton/photo12.jpg",
-      "location": "Princeton University",
+      "location": {
+        "en": "Princeton University",
+        "zh": "普林斯顿大学"
+      },
       "coordinates": [40.34325771768744, -74.65509536035908]
     },
     {
       "src": "../../img/travel/Princeton/photo13.jpg",
-      "location": "Rockefeller College",
+      "location": {
+        "en": "Rockefeller College",
+        "zh": "洛克菲勒学院"
+      },
       "coordinates": [40.34945588327674, -74.6623115205555]
     }
   ]

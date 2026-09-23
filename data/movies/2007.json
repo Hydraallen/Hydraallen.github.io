@@ -6,76 +6,91 @@
   "movies": [
     {
       "title": "Ghost Rider",
+      "title_zh": "恶灵骑士",
       "date": "Feb 16, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzIyNDE5ODI1OV5BMl5BanBnXkFtZTcwNTIyNDE0MQ@@._V1_.jpg"
     },
     {
       "title": "TMNT",
+      "title_zh": "忍者神龟",
       "date": "Mar 23, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjE1MzcwNTE5OV5BMl5BanBnXkFtZTcwMTIxNzQ0MQ@@._V1_.jpg"
     },
     {
       "title": "Shooter",
+      "title_zh": "生死狙击",
       "date": "Mar 23, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmE0NWZiMjktY2U4MC00MDVmLTljMGMtMWZiMThiNjczNzViXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Wind that Shakes the Barley",
+      "title_zh": "风吹麦浪",
       "date": "Mar 23, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjA0NDhkZDMtM2E2ZS00ZjY1LTgxN2UtMjNhN2NlMGQ5ZGIxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Spider-Man 3",
+      "title_zh": "蜘蛛侠3",
       "date": "May 4, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BODE2NzNhMDctYjUzMC00Y2M5LWI2Y2EtODJkZTFjN2Y5ODlmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Pirates of the Caribbean: At World's End",
+      "title_zh": "加勒比海盗3：世界的尽头",
       "date": "May 25, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjIyNjkxNzEyMl5BMl5BanBnXkFtZTYwMjc3MDE3._V1_.jpg"
     },
     {
       "title": "Fantastic Four: Rise of the Silver Surfer",
+      "title_zh": "神奇四侠2",
       "date": "Jun 15, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BNmZmMTU0OGQtOWRmNS00ZjA1LWJkM2EtYmUwNGEzMjIyZDM1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Transformers",
+      "title_zh": "变形金刚",
       "date": "Jul 3, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BZjM3ZDA2YmItMzhiMi00ZGI3LTg3ZGQtOTk3Nzk0MDY0ZDZhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Harry Potter and the Order of the Phoenix",
+      "title_zh": "哈利·波特与凤凰社",
       "date": "Jul 11, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWJmM2M1YzItMjY1Ni00YzRmLTg5YWYtNDFmNTJjNzQ0ODkyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Bourne Ultimatum",
+      "title_zh": "谍影重重3",
       "date": "Aug 3, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzE3ZGM4MzctZjU5MC00NWE2LTg5ZjYtMDFiM2ZlMWQ1MjkwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Rush Hour 3",
+      "title_zh": "尖峰时刻3",
       "date": "Aug 10, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTA0Nzg5NjQ0MDBeQTJeQWpwZ15BbWU3MDE4Mzg5NDE@._V1_.jpg"
     },
     {
       "title": "Mr. Bean's Holiday",
+      "title_zh": "憨豆的黄金周",
       "date": "Aug 24, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTFlZTIxMzYtZTU4Ny00YjZiLTg0OGMtOTFmNmI1ZDVmODQ3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Resident Evil: Extinction",
+      "title_zh": "生化危机3：灭绝",
       "date": "Sep 21, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzk4YjU4ZTItNTYwNi00ZjZkLTlhMzEtODkyMWEwN2JkN2Q4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Golden Compass",
+      "title_zh": "黑暗物质三部曲之金罗盘",
       "date": "Dec 7, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTM2NDkxMjQxMV5BMl5BanBnXkFtZTYwNTMxMDM4._V1_.jpg"
     },
     {
       "title": "Aliens vs. Predator: Requiem",
+      "title_zh": "异形大战铁血战士2",
       "date": "Dec 25, 2007",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTI5NDY2NDUwM15BMl5BanBnXkFtZTYwNzQxMTA3._V1_.jpg"
     }

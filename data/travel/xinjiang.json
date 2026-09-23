@@ -1,10 +1,13 @@
 {
   "id": "xinjiang",
-  "name": "Xinjiang",
-  "country": "🇨🇳 China",
+  "name": {
+    "en": "Xinjiang",
+    "zh": "新疆"
+  },
+  "country_code": "CN",
   "continent": "asia",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Xinjiang/cover.jpg",

@@ -1,178 +1,312 @@
 {
   "id": "nyc_2025",
   "places": ["nyc"],
-  "title": "纽约五日",
-  "date_display": "Jan 10-14, 2025",
-  "summary": "冬天的纽约，五天从曼哈顿中城一路走到布鲁克林和皇后区，靠地铁和步行串起来。",
+  "title": {
+    "en": "Five Days in New York",
+    "zh": "纽约五日"
+  },
+  "summary": {
+    "en": "New York in winter: five days working outward from Midtown Manhattan to Brooklyn and Queens, getting around by subway and on foot.",
+    "zh": "冬天的纽约，五天从曼哈顿中城一路走到布鲁克林和皇后区，靠地铁和步行串起来。"
+  },
   "days": [
     {
       "day": 1,
       "date": "2025-01-10",
-      "title": "抵达 · 曼哈顿中城",
+      "title": {
+        "en": "Arrival · Midtown Manhattan",
+        "zh": "抵达 · 曼哈顿中城"
+      },
       "stops": [
         {
           "type": "transport",
-          "name": "JFK → 曼哈顿",
-          "note": "AirTrain 转 E 线地铁，约 1 小时，比打车便宜太多"
+          "name": {
+            "en": "JFK → Manhattan",
+            "zh": "JFK → 曼哈顿"
+          },
+          "note": {
+            "en": "AirTrain to the E train: about 1 hour, and far cheaper than a taxi",
+            "zh": "AirTrain 转 E 线地铁，约 1 小时，比打车便宜太多"
+          }
         },
         {
           "type": "hotel",
           "name": "Pod 51 Hotel",
-          "note": "东 51 街，房间很小但位置好，走到地铁 5 分钟"
+          "note": {
+            "en": "On East 51st St: tiny rooms but a great location, a 5-minute walk from the subway",
+            "zh": "东 51 街，房间很小但位置好，走到地铁 5 分钟"
+          }
         },
         {
           "type": "sight",
-          "name": "帝国大厦",
-          "note": "傍晚上观景台，日落前半小时排队人最少",
+          "name": {
+            "en": "Empire State Building",
+            "zh": "帝国大厦"
+          },
+          "note": {
+            "en": "Went up to the observation deck in the early evening; the line is shortest half an hour before sunset",
+            "zh": "傍晚上观景台，日落前半小时排队人最少"
+          },
           "photo": "../../img/travel/NYC/photo1.jpg"
         },
         {
           "type": "food",
           "name": "Los Tacos No.1",
-          "note": "Chelsea Market 店，Adobada 玉米饼两个刚好"
+          "note": {
+            "en": "The Chelsea Market branch; two adobada tacos are just right",
+            "zh": "Chelsea Market 店，Adobada 玉米饼两个刚好"
+          }
         }
       ]
     },
     {
       "day": 2,
       "date": "2025-01-11",
-      "title": "时代广场 · 博物馆日",
+      "title": {
+        "en": "Times Square · Museum Day",
+        "zh": "时代广场 · 博物馆日"
+      },
       "stops": [
         {
           "type": "sight",
-          "name": "时代广场",
-          "note": "早上九点人还不多，适合拍照",
+          "name": {
+            "en": "Times Square",
+            "zh": "时代广场"
+          },
+          "note": {
+            "en": "Not crowded yet at 9 a.m., a good time for photos",
+            "zh": "早上九点人还不多，适合拍照"
+          },
           "photo": "../../img/travel/NYC/photo3.jpg"
         },
         {
           "type": "sight",
-          "name": "现代艺术博物馆 MoMA",
-          "note": "《星月夜》在五楼，进门先直奔那层再往回逛",
+          "name": {
+            "en": "Museum of Modern Art (MoMA)",
+            "zh": "现代艺术博物馆 MoMA"
+          },
+          "note": {
+            "en": "The Starry Night is on the fifth floor; head straight there, then work your way back down",
+            "zh": "《星月夜》在五楼，进门先直奔那层再往回逛"
+          },
           "photo": "../../img/travel/NYC/photo21.jpg"
         },
         {
           "type": "food",
           "name": "Joe's Pizza",
-          "note": "百老汇店，站着吃一角 pizza"
+          "note": {
+            "en": "The Broadway location; grab a slice and eat it standing up",
+            "zh": "百老汇店，站着吃一角 pizza"
+          }
         },
         {
           "type": "sight",
           "name": "SUMMIT One Vanderbilt",
-          "note": "镜面观景台，预约的是黄昏场，能同时看到天亮和亮灯",
+          "note": {
+            "en": "Mirrored observation deck; I booked the dusk slot to catch both daylight and the city lights coming on",
+            "zh": "镜面观景台，预约的是黄昏场，能同时看到天亮和亮灯"
+          },
           "photo": "../../img/travel/NYC/photo19.jpg"
         },
         {
           "type": "sight",
           "name": "AMC Empire 25",
-          "note": "晚场电影，老剧院改的影院，大厅值得看看",
+          "note": {
+            "en": "An evening movie in a converted old theater; the lobby is worth a look",
+            "zh": "晚场电影，老剧院改的影院，大厅值得看看"
+          },
           "photo": "../../img/travel/NYC/photo18.jpg"
         },
         {
           "type": "hotel",
           "name": "Pod 51 Hotel",
-          "note": "步行回酒店，十几分钟"
+          "note": {
+            "en": "Walked back to the hotel, a little over ten minutes",
+            "zh": "步行回酒店，十几分钟"
+          }
         }
       ]
     },
     {
       "day": 3,
       "date": "2025-01-12",
-      "title": "中央公园 · 城市绿地",
+      "title": {
+        "en": "Central Park · Urban Green Space",
+        "zh": "中央公园 · 城市绿地"
+      },
       "stops": [
         {
           "type": "transport",
-          "name": "地铁 6 号线到 77 街",
-          "note": "从东侧进公园，比南门清静"
+          "name": {
+            "en": "6 train to 77th St",
+            "zh": "地铁 6 号线到 77 街"
+          },
+          "note": {
+            "en": "Entered the park from the east side, which is quieter than the south end",
+            "zh": "从东侧进公园，比南门清静"
+          }
         },
         {
           "type": "sight",
-          "name": "中央公园",
-          "note": "从 Bethesda Terrace 一路走到 The Ramble，走了三个多小时",
+          "name": {
+            "en": "Central Park",
+            "zh": "中央公园"
+          },
+          "note": {
+            "en": "Walked from Bethesda Terrace all the way to The Ramble, which took more than three hours",
+            "zh": "从 Bethesda Terrace 一路走到 The Ramble，走了三个多小时"
+          },
           "photo": "../../img/travel/NYC/photo4.jpg"
         },
         {
           "type": "food",
           "name": "Levain Bakery",
-          "note": "西 74 街，核桃巧克力曲奇趁热吃"
+          "note": {
+            "en": "On West 74th St; eat the chocolate chip walnut cookie while it's warm",
+            "zh": "西 74 街，核桃巧克力曲奇趁热吃"
+          }
         },
         {
           "type": "sight",
-          "name": "布莱恩特公园",
-          "note": "冬天有露天溜冰场，晚上灯串全亮",
+          "name": {
+            "en": "Bryant Park",
+            "zh": "布莱恩特公园"
+          },
+          "note": {
+            "en": "An open-air ice rink in winter, with the string lights all lit up at night",
+            "zh": "冬天有露天溜冰场，晚上灯串全亮"
+          },
           "photo": "../../img/travel/NYC/photo11.jpg"
         },
         {
           "type": "hotel",
           "name": "Pod 51 Hotel",
-          "note": "连住，没换房"
+          "note": {
+            "en": "Stayed another night in the same room",
+            "zh": "连住，没换房"
+          }
         }
       ]
     },
     {
       "day": 4,
       "date": "2025-01-13",
-      "title": "布鲁克林一日",
+      "title": {
+        "en": "A Day in Brooklyn",
+        "zh": "布鲁克林一日"
+      },
       "stops": [
         {
           "type": "transport",
-          "name": "B 线到 Brooklyn Bridge–City Hall",
-          "note": "走曼哈顿桥回程，桥上人行道在南侧"
+          "name": {
+            "en": "4/5/6 train to Brooklyn Bridge–City Hall",
+            "zh": "4/5/6 线到 Brooklyn Bridge–City Hall"
+          },
+          "note": {
+            "en": "Walked back over the Manhattan Bridge; the pedestrian path is on the south side",
+            "zh": "走曼哈顿桥回程，桥上人行道在南侧"
+          }
         },
         {
           "type": "sight",
-          "name": "曼哈顿桥",
-          "note": "从桥上往下看东河，风很大记得戴帽子",
+          "name": {
+            "en": "Manhattan Bridge",
+            "zh": "曼哈顿桥"
+          },
+          "note": {
+            "en": "Looking down on the East River from the bridge; it's very windy, so wear a hat",
+            "zh": "从桥上往下看东河，风很大记得戴帽子"
+          },
           "photo": "../../img/travel/NYC/photo2.jpg"
         },
         {
           "type": "sight",
-          "name": "DUMBO washington street",
-          "note": "经典的桥洞机位，早上光线顺",
+          "name": {
+            "en": "DUMBO, Washington Street",
+            "zh": "DUMBO 华盛顿街"
+          },
+          "note": {
+            "en": "The classic shot of the bridge framed between buildings; the light is best in the morning",
+            "zh": "经典的桥洞机位，早上光线顺"
+          },
           "photo": "../../img/travel/NYC/photo20.jpg"
         },
         {
           "type": "food",
           "name": "Juliana's Pizza",
-          "note": "煤炉薄底，比隔壁 Grimaldi's 队短"
+          "note": {
+            "en": "Coal-oven thin crust, with a shorter line than Grimaldi's next door",
+            "zh": "煤炉薄底，比隔壁 Grimaldi's 队短"
+          }
         },
         {
           "type": "sight",
-          "name": "布鲁克林公共图书馆",
-          "note": "门口的金色浮雕值得站着看一会儿，里面可以随便进",
+          "name": {
+            "en": "Brooklyn Public Library",
+            "zh": "布鲁克林公共图书馆"
+          },
+          "note": {
+            "en": "The gilded reliefs at the entrance are worth stopping to look at, and you're free to wander inside",
+            "zh": "门口的金色浮雕值得站着看一会儿，里面可以随便进"
+          },
           "photo": "../../img/travel/NYC/photo7.jpg"
         },
         {
           "type": "hotel",
           "name": "Pod 51 Hotel",
-          "note": "晚上十点才回，前台 24 小时"
+          "note": {
+            "en": "Didn't get back until 10 p.m.; the front desk is open 24 hours",
+            "zh": "晚上十点才回，前台 24 小时"
+          }
         }
       ]
     },
     {
       "day": 5,
       "date": "2025-01-14",
-      "title": "皇后区 · 返程",
+      "title": {
+        "en": "Queens · Heading Home",
+        "zh": "皇后区 · 返程"
+      },
       "stops": [
         {
           "type": "hotel",
           "name": "Pod 51 Hotel",
-          "note": "退房寄存行李，下午回来取"
+          "note": {
+            "en": "Checked out and left my bags at the hotel, then came back for them in the afternoon",
+            "zh": "退房寄存行李，下午回来取"
+          }
         },
         {
           "type": "sight",
-          "name": "皇后桥公园",
-          "note": "看曼哈顿天际线的角度很好，游客几乎没有",
+          "name": {
+            "en": "Queensbridge Park",
+            "zh": "皇后桥公园"
+          },
+          "note": {
+            "en": "A great angle on the Manhattan skyline, with almost no tourists",
+            "zh": "看曼哈顿天际线的角度很好，游客几乎没有"
+          },
           "photo": "../../img/travel/NYC/photo15.jpg"
         },
         {
           "type": "food",
           "name": "Tacos El Bronco",
-          "note": "皇后区的路边墨西哥摊，现金结账"
+          "note": {
+            "en": "A roadside Mexican stand in Sunset Park, Brooklyn, cash only",
+            "zh": "布鲁克林日落公园的路边墨西哥摊，现金结账"
+          }
         },
         {
           "type": "transport",
-          "name": "曼哈顿 → JFK",
-          "note": "留了两个半小时，赶上晚高峰刚好不慌"
+          "name": {
+            "en": "Manhattan → JFK",
+            "zh": "曼哈顿 → JFK"
+          },
+          "note": {
+            "en": "Allowed two and a half hours; with the evening rush hour, that was just enough to avoid a scramble",
+            "zh": "留了两个半小时，赶上晚高峰刚好不慌"
+          }
         }
       ]
     }

@@ -6,81 +6,97 @@
   "movies": [
     {
       "title": "Jumper",
+      "title_zh": "时空骇客",
       "date": "Feb 14, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWQ3NjA3NTYtNDJiYi00ZTE0LWFmNzMtZjc0NTUxNjk2YTFkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Iron Man",
+      "title_zh": "钢铁侠 (游戏)",
       "date": "May 2, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_.jpg"
     },
     {
       "title": "The Chronicles of Narnia: Prince Caspian",
+      "title_zh": "纳尼亚传奇：凯斯宾王子",
       "date": "May 16, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTBiYzYyYWYtYTZlMC00OGYyLTg1ZTYtYWU4OGY4NTRhMzg4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Indiana Jones and the Kingdom of the Crystal Skull",
+      "title_zh": "夺宝奇兵4：水晶头骨王国",
       "date": "May 22, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BYTFiMDk2NzItZDU5Ni00ZjBjLTkzYWQtYzcwZDIwMWZjMmZiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Kung Fu Panda",
+      "title_zh": "功夫熊猫",
       "date": "Jun 6, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDU5MDNiMGItYjVmZi00NDUxLTg2OTktNGE0NzNlNzM4NzgyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Incredible Hulk",
+      "title_zh": "无敌浩克",
       "date": "Jun 13, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_.jpg"
     },
     {
       "title": "WALL·E",
+      "title_zh": "机器人总动员",
       "date": "Jun 27, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_.jpg"
     },
     {
       "title": "Hellboy II: The Golden Army",
+      "title_zh": "地狱男爵2：黄金军团",
       "date": "Jul 11, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjA5NzgyMjc2Nl5BMl5BanBnXkFtZTcwOTU3MDI3MQ@@._V1_.jpg"
     },
     {
       "title": "The Dark Knight",
+      "title_zh": "蝙蝠侠：黑暗骑士",
       "date": "Jul 18, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg"
     },
     {
       "title": "Encounters at the End of the World",
+      "title_zh": "在世界尽头相遇",
       "date": "Jul 18, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTI3NjkyNjY2OV5BMl5BanBnXkFtZTcwOTUwMTU3MQ@@._V1_.jpg"
     },
     {
       "title": "The Mummy: Tomb of the Dragon Emperor",
+      "title_zh": "木乃伊3",
       "date": "Aug 1, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU4NDIzMDY1OV5BMl5BanBnXkFtZTcwNjQxMzk3MQ@@._V1_.jpg"
     },
     {
       "title": "Star Wars: The Clone Wars",
+      "title_zh": "星球大战：克隆人战争",
       "date": "Aug 15, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjExN2YwZmYtODlkNy00MTMzLWIwOTMtNDZlYWEzNjMxODBmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Madagascar: Escape 2 Africa",
+      "title_zh": "马达加斯加2：逃往非洲",
       "date": "Nov 7, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjExMDA4NDcwMl5BMl5BanBnXkFtZTcwODAxNTQ3MQ@@._V1_.jpg"
     },
     {
       "title": "Quantum of Solace",
+      "title_zh": "007：大破量子危机",
       "date": "Nov 14, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmMwZTA3MTAtNWU0Yy00NGZmLTg0YmItZTVkZGFjZTI1ZWJiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Twilight",
+      "title_zh": "暮光之城",
       "date": "Nov 21, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQ2NzUxMTAxN15BMl5BanBnXkFtZTcwMzEyMTIwMg@@._V1_.jpg"
     },
     {
       "title": "The Curious Case of Benjamin Button",
+      "title_zh": "返老还童",
       "date": "Dec 25, 2008",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjIyNDExOWItM2Y4ZC00NmY3LWFlN2ItYTJlZDQ1NTJlZTUwXkEyXkFqcGc@._V1_.jpg"
     }

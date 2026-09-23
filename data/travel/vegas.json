@@ -1,11 +1,14 @@
 {
   "id": "vegas",
-  "name": "Las Vegas",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Las Vegas",
+    "zh": "拉斯维加斯"
+  },
+  "country_code": "US",
   "state": "NV",
   "continent": "namerica",
   "date": "2025-03-28",
-  "date_display": "Mar 28 - Apr 7, 2025",
+  "date_end": "2025-04-07",
   "video": "",
   "status": "visited",
   "cover": "../../img/travel/Vegas/cover.jpg",
@@ -13,147 +16,234 @@
   "photos": [
     {
       "src": "../../img/travel/Vegas/photo1.jpg",
-      "location": "Ship Rock",
+      "location": {
+        "en": "Ship Rock",
+        "zh": "船岩"
+      },
       "coordinates": [36.69358752967542, -108.83658324098373]
     },
     {
       "src": "../../img/travel/Vegas/photo2.jpg",
-      "location": "Lower Antelope",
+      "location": {
+        "en": "Lower Antelope",
+        "zh": "下羚羊峡谷"
+      },
       "coordinates": [36.901450065162905, -111.41025227398174]
     },
     {
       "src": "../../img/travel/Vegas/photo3.jpg",
-      "location": "Ship Rock",
+      "location": {
+        "en": "Ship Rock",
+        "zh": "船岩"
+      },
       "coordinates": [36.69358752967542, -108.83658324098373]
     },
     {
       "src": "../../img/travel/Vegas/photo4.jpg",
-      "location": "Monument Valley",
+      "location": {
+        "en": "Monument Valley",
+        "zh": "纪念碑谷"
+      },
       "coordinates": [36.93873363107835, -110.09156992980104]
     },
     {
       "src": "../../img/travel/Vegas/photo5.jpg",
-      "location": "Ship Rock",
+      "location": {
+        "en": "Ship Rock",
+        "zh": "船岩"
+      },
       "coordinates": [36.69358752967542, -108.83658324098373]
     },
     {
       "src": "../../img/travel/Vegas/photo6.jpg",
-      "location": "Bryce Canyon National Park",
+      "location": {
+        "en": "Bryce Canyon National Park",
+        "zh": "布莱斯峡谷国家公园"
+      },
       "coordinates": [37.60550159391935, -112.18945041205747]
     },
     {
       "src": "../../img/travel/Vegas/photo7.jpg",
-      "location": "Lower Antelope",
+      "location": {
+        "en": "Lower Antelope",
+        "zh": "下羚羊峡谷"
+      },
       "coordinates": [36.901450065162905, -111.41025227398174]
     },
     {
       "src": "../../img/travel/Vegas/photo8.jpg",
-      "location": "Grand Canyon National Park",
+      "location": {
+        "en": "Grand Canyon National Park",
+        "zh": "大峡谷国家公园"
+      },
       "coordinates": [36.29452973617615, -112.35167930116049]
     },
     {
       "src": "../../img/travel/Vegas/photo9.jpg",
-      "location": "Grand Canyon National Park",
+      "location": {
+        "en": "Grand Canyon National Park",
+        "zh": "大峡谷国家公园"
+      },
       "coordinates": [36.29452973617615, -112.35167930116049]
     },
     {
       "src": "../../img/travel/Vegas/photo10.jpg",
-      "location": "Grand Canyon National Park",
+      "location": {
+        "en": "Grand Canyon National Park",
+        "zh": "大峡谷国家公园"
+      },
       "coordinates": [36.29452973617615, -112.35167930116049]
     },
     {
       "src": "../../img/travel/Vegas/photo11.jpg",
-      "location": "Zion National Park",
+      "location": {
+        "en": "Zion National Park",
+        "zh": "锡安国家公园"
+      },
       "coordinates": [37.3099638382033, -113.02539346267292]
     },
     {
       "src": "../../img/travel/Vegas/photo12.jpg",
-      "location": "Glen Canyon Dam Overlook",
+      "location": {
+        "en": "Glen Canyon Dam Overlook",
+        "zh": "格伦峡谷大坝观景台"
+      },
       "coordinates": [36.925087363271025, -111.47851138201511]
     },
     {
       "src": "../../img/travel/Vegas/photo13.jpg",
-      "location": "Sedona",
+      "location": {
+        "en": "Sedona",
+        "zh": "塞多纳"
+      },
       "coordinates": [34.87554254715354, -111.70812746370981]
     },
     {
       "src": "../../img/travel/Vegas/photo14.jpg",
-      "location": "Sedona",
+      "location": {
+        "en": "Sedona",
+        "zh": "塞多纳"
+      },
       "coordinates": [34.86354667922129, -111.80169038754674]
     },
     {
       "src": "../../img/travel/Vegas/photo15.jpg",
-      "location": "Four Corners Monument",
+      "location": {
+        "en": "Four Corners Monument",
+        "zh": "四角纪念碑"
+      },
       "coordinates": [36.99913090583766, -109.04523597582944]
     },
     {
       "src": "../../img/travel/Vegas/photo16.jpg",
-      "location": "Four Corners Monument",
+      "location": {
+        "en": "Four Corners Monument",
+        "zh": "四角纪念碑"
+      },
       "coordinates": [36.99913090583766, -109.04523597582944]
     },
     {
       "src": "../../img/travel/Vegas/photo17.jpg",
-      "location": "Chapel of the Holy Cross",
+      "location": {
+        "en": "Chapel of the Holy Cross",
+        "zh": "圣十字教堂"
+      },
       "coordinates": [34.8321793037566, -111.76666867220415]
     },
     {
       "src": "../../img/travel/Vegas/photo18.jpg",
-      "location": "Chapel of the Holy Cross",
+      "location": {
+        "en": "Chapel of the Holy Cross",
+        "zh": "圣十字教堂"
+      },
       "coordinates": [34.8321793037566, -111.76666867220415]
     },
     {
       "src": "../../img/travel/Vegas/photo19.jpg",
-      "location": "Sedona",
+      "location": {
+        "en": "Sedona",
+        "zh": "塞多纳"
+      },
       "coordinates": [34.86354667922129, -111.80169038754674]
     },
     {
       "src": "../../img/travel/Vegas/photo20.jpg",
-      "location": "Monument Valley",
+      "location": {
+        "en": "Monument Valley",
+        "zh": "纪念碑谷"
+      },
       "coordinates": [36.93873363107835, -110.09156992980104]
     },
     {
       "src": "../../img/travel/Vegas/photo21.jpg",
-      "location": "Zion National Park",
+      "location": {
+        "en": "Zion National Park",
+        "zh": "锡安国家公园"
+      },
       "coordinates": [37.3099638382033, -113.02539346267292]
     },
     {
       "src": "../../img/travel/Vegas/photo22.jpg",
-      "location": "Monument Valley",
+      "location": {
+        "en": "Monument Valley",
+        "zh": "纪念碑谷"
+      },
       "coordinates": [36.93873363107835, -110.09156992980104]
     },
     {
       "src": "../../img/travel/Vegas/photo23.jpg",
-      "location": "Monument Valley",
+      "location": {
+        "en": "Monument Valley",
+        "zh": "纪念碑谷"
+      },
       "coordinates": [36.93873363107835, -110.09156992980104]
     },
     {
       "src": "../../img/travel/Vegas/photo24.jpg",
-      "location": "Monument Valley",
+      "location": {
+        "en": "Monument Valley",
+        "zh": "纪念碑谷"
+      },
       "coordinates": [36.93873363107835, -110.09156992980104]
     },
     {
       "src": "../../img/travel/Vegas/photo25.jpg",
-      "location": "Hoover Dam",
+      "location": {
+        "en": "Hoover Dam",
+        "zh": "胡佛水坝"
+      },
       "coordinates": [36.01616085992932, -114.73777543443838]
     },
     {
       "src": "../../img/travel/Vegas/photo26.jpg",
-      "location": "Hoover Dam",
+      "location": {
+        "en": "Hoover Dam",
+        "zh": "胡佛水坝"
+      },
       "coordinates": [36.01616085992932, -114.73777543443838]
     },
     {
       "src": "../../img/travel/Vegas/photo27.jpg",
-      "location": "Hoover Dam",
+      "location": {
+        "en": "Hoover Dam",
+        "zh": "胡佛水坝"
+      },
       "coordinates": [36.01616085992932, -114.73777543443838]
     },
     {
       "src": "../../img/travel/Vegas/photo28.jpg",
-      "location": "Hoover Dam",
+      "location": {
+        "en": "Hoover Dam",
+        "zh": "胡佛水坝"
+      },
       "coordinates": [36.01616085992932, -114.73777543443838]
     },
     {
       "src": "../../img/travel/Vegas/photo29.jpg",
-      "location": "Hoover Dam",
+      "location": {
+        "en": "Hoover Dam",
+        "zh": "胡佛水坝"
+      },
       "coordinates": [36.01616085992932, -114.73777543443838]
     }
   ]

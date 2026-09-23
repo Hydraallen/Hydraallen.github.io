@@ -135,18 +135,20 @@ test("groupPhotosByLocation does not mutate the source photos", () => {
 // STOP_TYPES / getStopType
 // ---------------------------------------------------------------------------
 
-test("STOP_TYPES exposes the four categories with label and icon", () => {
+test("STOP_TYPES exposes the four categories with an icon; labels come from the dictionary", () => {
   ["sight", "food", "hotel", "transport"].forEach((key) => {
     assert.ok(lib.STOP_TYPES[key], `${key} must exist`);
-    assert.ok(lib.STOP_TYPES[key].label, `${key} needs a label`);
     assert.ok(lib.STOP_TYPES[key].icon, `${key} needs an icon`);
   });
-  assert.strictEqual(lib.STOP_TYPES.hotel.label, "Stay");
-  assert.strictEqual(lib.STOP_TYPES.transport.label, "Transit");
+  assert.strictEqual(lib.getStopType("hotel").label, "Stay");
+  assert.strictEqual(lib.getStopType("transport").label, "Transit");
+  assert.strictEqual(lib.getStopType("hotel", "zh").label, "住宿");
+  assert.strictEqual(lib.getStopType("transport", "zh").label, "交通");
 });
 
 test("getStopType falls back instead of returning undefined", () => {
   assert.strictEqual(lib.getStopType("food").label, "Food");
+  assert.deepStrictEqual(lib.getStopType("museum", "zh"), { label: "站点", icon: "•" });
   assert.deepStrictEqual(lib.getStopType("museum"), { label: "Stop", icon: "•" });
   assert.deepStrictEqual(lib.getStopType(undefined), { label: "Stop", icon: "•" });
   assert.deepStrictEqual(
@@ -184,6 +186,24 @@ test("buildStopHtml renders name, note and type sticker", () => {
   assert.ok(html.includes(">Food<"));
   assert.ok(html.includes('<h4 class="stop-name">Katz&#39;s</h4>'));
   assert.ok(html.includes('<p class="stop-note">pastrami</p>'));
+});
+
+test("buildStopHtml picks localized name/note and labels in the page language", () => {
+  const stop = {
+    type: "sight",
+    name: { en: "Central Park", zh: "中央公园" },
+    note: { en: "Walked for hours", zh: "走了三个多小时" },
+    photo: "p.jpg",
+  };
+  const zh = lib.buildStopHtml(stop, 0, "zh");
+  assert.ok(zh.includes('<h4 class="stop-name">中央公园</h4>'));
+  assert.ok(zh.includes('<p class="stop-note">走了三个多小时</p>'));
+  assert.ok(zh.includes(">景点<"), "zh type label");
+  assert.ok(zh.includes('aria-label="中央公园的照片"'));
+  const en = lib.buildStopHtml(stop, 0);
+  assert.ok(en.includes('<h4 class="stop-name">Central Park</h4>'), "defaults to English");
+  assert.ok(en.includes('aria-label="Photo of Central Park"'));
+  assert.ok(!en.includes("[object Object]"));
 });
 
 test("buildStopHtml omits the note element when there is no note", () => {
@@ -295,10 +315,21 @@ test("buildDayHtml renders the date stub, title and stop list", () => {
   );
   assert.ok(html.includes('<section class="trip-day">'));
   assert.ok(html.includes('<span class="day-badge">Day 2</span>'));
-  assert.ok(html.includes('<span class="day-date">2025-01-11</span>'));
+  assert.ok(html.includes('<span class="day-date">Jan 11, 2025</span>'), "ISO date is localized");
   assert.ok(html.includes('<h3 class="day-title">Downtown</h3>'));
   assert.ok(html.includes('<ol class="stop-list">'));
   assert.ok(html.includes("Joe&#39;s"));
+});
+
+test("buildDayHtml renders the badge, date and title in Chinese", () => {
+  const html = lib.buildDayHtml(
+    { day: 3, date: "2025-01-12", title: { en: "Central Park", zh: "中央公园" }, stops: [] },
+    [],
+    "zh"
+  );
+  assert.ok(html.includes('<span class="day-badge">第 3 天</span>'));
+  assert.ok(html.includes('<span class="day-date">2025.01.12</span>'));
+  assert.ok(html.includes('<h3 class="day-title">中央公园</h3>'));
 });
 
 test("buildDayHtml maps each stop photo to its gallery index", () => {
@@ -392,6 +423,22 @@ test("buildPopupHtml makes popup thumbnails keyboard reachable", () => {
   assert.ok(!html.includes('role="button"'), "no ARIA role stands in for a button");
 });
 
+test("buildPopupHtml picks localized locations", () => {
+  const loc = { en: "Central Park", zh: "中央公园" };
+  const group = {
+    locationName: loc,
+    items: [
+      { src: "a.jpg", location: loc, originalIndex: 0 },
+      { src: "b.jpg", location: loc, originalIndex: 1 },
+    ],
+  };
+  const zh = trip.buildPopupHtml(group, "zh");
+  assert.ok(zh.includes('<div class="popup-location-name">中央公园 (2)</div>'));
+  assert.ok(zh.includes('aria-label="中央公园的照片"'));
+  assert.ok(zh.includes('title="中央公园"'));
+  assert.ok(trip.buildPopupHtml(group).includes("Central Park (2)"), "defaults to English");
+});
+
 test("buildPopupHtml escapes location and src, and coerces the index", () => {
   const html = trip.buildPopupHtml({
     locationName: '<script>x</script>',
@@ -407,4 +454,65 @@ test("buildPopupHtml escapes location and src, and coerces the index", () => {
   assert.ok(!html.includes('onerror="evil()'), "src must not break out of its attribute");
   assert.ok(!html.includes('onmouseover="evil()'), "location must not break out of its attribute");
   assert.ok(!html.includes("onload"), "a string index must not reach the attribute");
+});
+
+// ---------------------------------------------------------------------------
+// Page-level helpers: dates, photo wall, error path, tiles (bilingual)
+// ---------------------------------------------------------------------------
+const PLACE = {
+  id: "nyc",
+  name: { en: "New York City", zh: "纽约" },
+  country_code: "US",
+  state: "NY",
+  status: "visited",
+  date: "2025-01-10",
+  date_end: "2025-01-14",
+};
+
+test("getTripDateDisplay prefers the trip's day range, then the place dates", () => {
+  const t = { days: [{ date: "2025-01-11" }, { date: "2025-01-13" }] };
+  assert.strictEqual(trip.getTripDateDisplay(PLACE, t), "Jan 11–13, 2025");
+  assert.strictEqual(trip.getTripDateDisplay(PLACE, t, "zh"), "2025.01.11 – 01.13");
+  assert.strictEqual(trip.getTripDateDisplay(PLACE, null, "zh"), "2025.01.10 – 01.14");
+  assert.strictEqual(trip.getTripDateDisplay(PLACE, { days: [] }), "Jan 10–14, 2025");
+  assert.strictEqual(trip.getTripDateDisplay(null, null), "");
+});
+
+test("buildPhotoWallHtml uses localized captions and a localized fallback alt", () => {
+  const photos = [{ src: "a.jpg", location: { en: "Times Square", zh: "时代广场" } }, "b.jpg"];
+  const zh = trip.buildPhotoWallHtml(photos, "zh");
+  assert.ok(zh.includes('alt="时代广场"'));
+  assert.ok(zh.includes('alt="旅行照片"'), "string photo gets the zh fallback");
+  const en = trip.buildPhotoWallHtml(photos);
+  assert.ok(en.includes('alt="Times Square"'));
+  assert.ok(en.includes('alt="Travel photo"'));
+});
+
+test("tripTileUrl follows the site language", () => {
+  assert.ok(trip.tripTileUrl("en").includes("hl=en"));
+  assert.ok(trip.tripTileUrl("zh").includes("hl=zh-CN"));
+  assert.ok(trip.tripTileUrl().includes("hl=en"), "defaults to English");
+});
+
+function fakeErrorDoc() {
+  const nodes = {
+    "trip-page": { classList: { add() {} } },
+    "trip-error": {
+      innerHTML: "",
+      classList: { removed: [], remove(c) { this.removed.push(c); } },
+    },
+  };
+  return { nodes, getElementById: (id) => nodes[id] || null };
+}
+
+test("showTripError localizes the back link and keeps the language", () => {
+  const doc = fakeErrorDoc();
+  trip.showTripError(doc, "找不到", "zh");
+  const html = doc.nodes["trip-error"].innerHTML;
+  assert.ok(html.includes('href="travel.html?lang=zh"'), html);
+  assert.ok(html.includes(">返回所有目的地</a>"));
+  const docEn = fakeErrorDoc();
+  trip.showTripError(docEn, '<b>x</b>');
+  assert.ok(docEn.nodes["trip-error"].innerHTML.startsWith("&lt;b&gt;x&lt;/b&gt;"), "message escaped");
+  assert.ok(docEn.nodes["trip-error"].innerHTML.includes(">Back to all destinations</a>"));
 });

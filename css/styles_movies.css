@@ -315,3 +315,35 @@
     left: 0;
   }
 }
+/* --- Rendered by js/scripts.js (formerly inline styles) / 原内联样式 --- */
+.timeline-header .timeline-stats {
+  margin: 5px 0 0 0;
+}
+
+.timeline-content--static {
+  cursor: default;
+}
+
+.favorite-section {
+  margin-bottom: 20px;
+}
+
+.favorite-section--solo {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.movies-status {
+  text-align: center;
+  padding: 20px;
+}
+
+.movies-error {
+  color: red;
+}
+
+.movies-empty {
+  padding: 10px;
+  text-align: center;
+}

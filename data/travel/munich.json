@@ -1,10 +1,13 @@
 {
   "id": "munich",
-  "name": "Munich",
-  "country": "🇩🇪 Germany",
+  "name": {
+    "en": "Munich",
+    "zh": "慕尼黑"
+  },
+  "country_code": "DE",
   "continent": "europe",
   "date": "2024-01-06",
-  "date_display": "Jan 6-7, 2024",
+  "date_end": "2024-01-07",
   "video": "",
   "status": "visited",
   "cover": "../../img/travel/Munich/cover.jpg",
@@ -12,32 +15,50 @@
   "photos": [
     {
       "src": "../../img/travel/Munich/photo1.jpg",
-      "location": "Zugspitze",
+      "location": {
+        "en": "Zugspitze",
+        "zh": "楚格峰"
+      },
       "coordinates": [47.42809039600125, 10.985271213866017]
     },
     {
       "src": "../../img/travel/Munich/photo2.jpg",
-      "location": "Asamkirche",
+      "location": {
+        "en": "Asamkirche",
+        "zh": "阿萨姆教堂"
+      },
       "coordinates": [48.135193492383564, 11.569686255314128]
     },
     {
       "src": "../../img/travel/Munich/photo3.jpg",
-      "location": "Zugspitze",
+      "location": {
+        "en": "Zugspitze",
+        "zh": "楚格峰"
+      },
       "coordinates": [47.42809039600125, 10.985271213866017]
     },
     {
       "src": "../../img/travel/Munich/photo4.jpg",
-      "location": "Allianz Arena",
+      "location": {
+        "en": "Allianz Arena",
+        "zh": "安联球场"
+      },
       "coordinates": [48.21893836679732, 11.624710241932954]
     },
     {
       "src": "../../img/travel/Munich/photo5.jpg",
-      "location": "Zugspitze",
+      "location": {
+        "en": "Zugspitze",
+        "zh": "楚格峰"
+      },
       "coordinates": [47.42809039600125, 10.985271213866017]
     },
     {
       "src": "../../img/travel/Munich/photo6.jpg",
-      "location": "BMW Museum",
+      "location": {
+        "en": "BMW Museum",
+        "zh": "宝马博物馆"
+      },
       "coordinates": [48.17692428992866, 11.559086394224774]
     }
   ]

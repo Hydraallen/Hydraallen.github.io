@@ -6,81 +6,97 @@
   "movies": [
     {
       "title": "Brokeback Mountain",
+      "title_zh": "断背山",
       "date": "Jan 13, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzM4OWFjMTMtZjNjOS00YmU3LTlhY2MtNjFiMTVkN2Y1OTZlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Underworld: Evolution",
+      "title_zh": "黑夜传说2：进化",
       "date": "Jan 20, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjEzNDY1OTQwOV5BMl5BanBnXkFtZTcwNjcxMTIzMw@@._V1_.jpg"
     },
     {
       "title": "Ice Age: The Meltdown",
+      "title_zh": "冰川时代2",
       "date": "Mar 31, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjAwODg3OTAxMl5BMl5BanBnXkFtZTcwMjg2NjYyMw@@._V1_.jpg"
     },
     {
       "title": "Mission: Impossible III",
+      "title_zh": "碟中谍3",
       "date": "May 5, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzY1MzdjMjYtNDJiZS00N2U4LWI0MWQtZTRiZWYxMzU3ZmI4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "X-Men: The Last Stand",
+      "title_zh": "X战警3：最后之战",
       "date": "May 26, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BMThmOWE3OWEtODJmNC00ZDEzLTk4MWUtNzEzM2RiNmJiZmU3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Cars",
+      "title_zh": "赛车总动员",
       "date": "Jun 9, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTg5NzY0MzA2MV5BMl5BanBnXkFtZTYwNDc3NTc2._V1_.jpg"
     },
     {
       "title": "The Fast and the Furious: Tokyo Drift",
+      "title_zh": "速度与激情：东京漂移",
       "date": "Jun 16, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQ2NTMxODEyNV5BMl5BanBnXkFtZTcwMDgxMjA0MQ@@._V1_.jpg"
     },
     {
       "title": "Superman Returns",
+      "title_zh": "超人归来",
       "date": "Jun 30, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjg1ZGRiMTEtYmU4Zi00NTkwLWJmODQtMjU3MTAyMGQ2OGZlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Pirates of the Caribbean: Dead Man's Chest",
+      "title_zh": "加勒比海盗2：聚魂棺",
       "date": "Jul 7, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTcwODc1MTMxM15BMl5BanBnXkFtZTYwMDg1NzY3._V1_.jpg"
     },
     {
       "title": "Rob-B-Hood",
+      "title_zh": "宝贝计划",
       "date": "Sep 29, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTk1ZjQyZjMtOTgxYy00YmUyLWE3MGYtY2Y4MDdjY2MzODAxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Superman II: The Richard Donner Cut",
+      "title_zh": "超人2：理查德·唐纳剪辑版",
       "date": "Nov 15, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYwYzI1ODgtOWM1NC00MWIyLWFlYmMtYjdhMmYzNGViZmEzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Happy Feet",
+      "title_zh": "快乐的大脚",
       "date": "Nov 17, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjViZDZhNjctM2MwOS00MDdhLWIwMTYtNjNmNGY2OGMzZWZhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Casino Royale",
+      "title_zh": "007：大战皇家赌场",
       "date": "Nov 17, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWQ1ZDM4NDktMWY0NC00MjcxLWJlMDMtNmE2MGVhYzRjMWQ0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Holiday",
+      "title_zh": "恋爱假期",
       "date": "Dec 8, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BZmEwNDg0M2QtMDdiNy00YTliLTk4ZjctOThjZjczODVmMTdkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Pursuit of Happyness",
+      "title_zh": "当幸福来敲门",
       "date": "Dec 15, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQ5NjQ0NDI3NF5BMl5BanBnXkFtZTcwNDI0MjEzMw@@._V1_.jpg"
     },
     {
       "title": "Night at the Museum",
+      "title_zh": "博物馆奇妙夜",
       "date": "Dec 22, 2006",
       "poster": "https://m.media-amazon.com/images/M/MV5BNGMyYjYyZDAtNzRiZC00ZjRkLTkwYjktODkxODQzNTFiMTVmXkEyXkFqcGc@._V1_.jpg"
     }

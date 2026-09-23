@@ -6,6 +6,7 @@
   "movies": [
     {
       "title": "Bad Boys",
+      "title_zh": "绝地战警",
       "date": "Apr 7, 1995",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWNjZWEwNDMtMWE1ZC00MTgwLTk2YzAtYmE0NTkwOWVhMDI0XkEyXkFqcGc@._V1_.jpg"
     }

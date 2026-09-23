@@ -6,26 +6,31 @@
   "movies": [
     {
       "title": "The Matrix",
+      "title_zh": "黑客帝国",
       "date": "Mar 31, 1999",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Mummy",
+      "title_zh": "木乃伊",
       "date": "May 7, 1999",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY4YWE0OGMtNjU0Yi00YzIwLTk3NTktM2ZiYWQwNjM4MmMxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Star Wars: Episode I - The Phantom Menace",
+      "title_zh": "星球大战前传1：幽灵的威胁",
       "date": "May 19, 1999",
       "poster": "https://m.media-amazon.com/images/M/MV5BODVhNGIxOGItYWNlMi00YTA0LWI3NTctZmQxZGUwZDEyZWI4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Fight Club",
+      "title_zh": "搏击俱乐部",
       "date": "Oct 15, 1999",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Toy Story 2",
+      "title_zh": "玩具总动员2",
       "date": "Nov 24, 1999",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzVmODlhMDEtY2YxZi00OTVjLTlkNTktN2Q2OTRlM2I4M2FhXkEyXkFqcGc@._V1_.jpg"
     }

@@ -1,11 +1,14 @@
 {
   "id": "dc",
-  "name": "Washington DC",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Washington DC",
+    "zh": "华盛顿特区"
+  },
+  "country_code": "US",
   "state": "DC",
   "continent": "namerica",
   "date": "2025-05-10",
-  "date_display": "May 10-11, 2025",
+  "date_end": "2025-05-11",
   "video": "",
   "status": "visited",
   "cover": "../../img/travel/DC/cover.jpg",
@@ -13,37 +16,58 @@
   "photos": [
     {
       "src": "../../img/travel/DC/photo1.jpg",
-      "location": "Lincoln Memorial",
+      "location": {
+        "en": "Lincoln Memorial",
+        "zh": "林肯纪念堂"
+      },
       "coordinates": [38.88938548429602, -77.05021891808714]
     },
     {
       "src": "../../img/travel/DC/photo2.jpg",
-      "location": "Treasury Building",
+      "location": {
+        "en": "Treasury Building",
+        "zh": "美国财政部大楼"
+      },
       "coordinates": [38.89768247063728, -77.03427283157917]
     },
     {
       "src": "../../img/travel/DC/photo3.jpg",
-      "location": "The White House",
+      "location": {
+        "en": "The White House",
+        "zh": "白宫"
+      },
       "coordinates": [38.89780152035702, -77.03656198925096]
     },
     {
       "src": "../../img/travel/DC/photo4.jpg",
-      "location": "United States Capitol",
+      "location": {
+        "en": "United States Capitol",
+        "zh": "美国国会大厦"
+      },
       "coordinates": [38.89012104546956, -77.00900638528191]
     },
     {
       "src": "../../img/travel/DC/photo6.jpg",
-      "location": "Lincoln Memorial",
+      "location": {
+        "en": "Lincoln Memorial",
+        "zh": "林肯纪念堂"
+      },
       "coordinates": [38.88938548429602, -77.05021891808714]
     },
     {
       "src": "../../img/travel/DC/photo7.jpg",
-      "location": "Lincoln Memorial",
+      "location": {
+        "en": "Lincoln Memorial",
+        "zh": "林肯纪念堂"
+      },
       "coordinates": [38.88938548429602, -77.05021891808714]
     },
     {
       "src": "../../img/travel/DC/photo8.jpg",
-      "location": "Lincoln Memorial",
+      "location": {
+        "en": "Lincoln Memorial",
+        "zh": "林肯纪念堂"
+      },
       "coordinates": [38.88938548429602, -77.05021891808714]
     }
   ]

@@ -6,156 +6,187 @@
   "movies": [
     {
       "title": "Jack Ryan: Shadow Recruit",
+      "title_zh": "一触即发",
       "date": "Jan 17, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY2MDkxNzYwNl5BMl5BanBnXkFtZTgwOTM2MjE5MDE@._V1_.jpg"
     },
     {
       "title": "RoboCop",
+      "title_zh": "机械战警",
       "date": "Feb 12, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjAyOTUzMTcxN15BMl5BanBnXkFtZTgwMjkyOTc1MDE@._V1_.jpg"
     },
     {
       "title": "Tarzan",
+      "title_zh": "丛林之王",
       "date": "Feb 20, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQyODEwMTM2Nl5BMl5BanBnXkFtZTgwMTg1MTA3MDE@._V1_.jpg"
     },
     {
       "title": "3 Days to Kill",
+      "title_zh": "特务杀很大",
       "date": "Feb 21, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzM0MjE0Nzg1N15BMl5BanBnXkFtZTgwODA4ODE4MDE@._V1_.jpg"
     },
     {
       "title": "Divergent",
+      "title_zh": "分歧者：异类觉醒",
       "date": "Mar 21, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYxMzYwODE4OV5BMl5BanBnXkFtZTgwNDE5MzE2MDE@._V1_.jpg"
     },
     {
       "title": "Noah",
+      "title_zh": "诺亚方舟：创世之旅",
       "date": "Mar 28, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjI2OTgyNTc0Ml5BMl5BanBnXkFtZTgwNDM1NTQxMTE@._V1_.jpg"
     },
     {
       "title": "The Grand Budapest Hotel",
+      "title_zh": "布达佩斯大饭店",
       "date": "Mar 28, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_.jpg"
     },
     {
       "title": "Captain America: The Winter Soldier",
+      "title_zh": "美国队长2",
       "date": "Apr 4, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BNWY1NjFmNDItZDhmOC00NjI1LWE0ZDItMTM0MjBjZThiOTQ2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Amazing Spider-Man 2",
+      "title_zh": "超凡蜘蛛侠2",
       "date": "May 2, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTA5NDYxNTg0OV5BMl5BanBnXkFtZTgwODE5NzU1MTE@._V1_.jpg"
     },
     {
       "title": "Godzilla",
+      "title_zh": "哥斯拉",
       "date": "May 16, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BODE2NTdmMmYtY2U1OS00MjExLWIwNjQtYjQ5NTA0ZDZmZjZiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "X-Men: Days of Future Past",
+      "title_zh": "X战警：逆转未来",
       "date": "May 23, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzNiYWE4NjMtMTU4OS00NmM4LWE4ZjAtYmE5OTA5NjkzODExXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Maleficent",
+      "title_zh": "沉睡魔咒",
       "date": "May 30, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjAwMzAzMzExOF5BMl5BanBnXkFtZTgwOTcwMDA5MTE@._V1_.jpg"
     },
     {
       "title": "The Fault in Our Stars",
+      "title_zh": "星运里的错",
       "date": "Jun 6, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BYTA4ODg5YWUtYmZiYy00Y2M4LWE0NjEtODE5MzhkYmJmZGEwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Edge of Tomorrow",
+      "title_zh": "明日边缘",
       "date": "Jun 6, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTc5OTk4MTM3M15BMl5BanBnXkFtZTgwODcxNjg3MDE@._V1_.jpg"
     },
     {
       "title": "How to Train Your Dragon 2",
+      "title_zh": "驯龙高手2",
       "date": "Jun 13, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_.jpg"
     },
     {
       "title": "Transformers: Age of Extinction",
+      "title_zh": "变形金刚4：绝迹重生",
       "date": "Jun 27, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjEwNTg1MTA5Nl5BMl5BanBnXkFtZTgwOTg2OTM4MTE@._V1_.jpg"
     },
     {
       "title": "Blue Ruin",
+      "title_zh": "蓝色废墟",
       "date": "Jul 9, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY4NTM2MDg5OV5BMl5BanBnXkFtZTgwMDA3OTAwMTE@._V1_.jpg"
     },
     {
       "title": "Dawn of the Planet of the Apes",
+      "title_zh": "猩球崛起：黎明之战",
       "date": "Jul 11, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BNWNjYzQ4ZGItZTg1My00NTM2LTg1NDUtYThjOTQwMTYyNjU1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Begin Again",
+      "title_zh": "再次出发之纽约遇见你",
       "date": "Jul 11, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjAxMTI4MTgzMV5BMl5BanBnXkFtZTgwOTAwODEwMjE@._V1_.jpg"
     },
     {
       "title": "Lucy",
+      "title_zh": "超体",
       "date": "Jul 25, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BODcxMzY3ODY1NF5BMl5BanBnXkFtZTgwNzg1NDY4MTE@._V1_.jpg"
     },
     {
       "title": "Guardians of the Galaxy",
+      "title_zh": "银河护卫队",
       "date": "Aug 1, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BM2ZmNjQ2MzAtNDlhNi00MmQyLWJhZDMtNmJiMjFlOWY4MzcxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Teenage Mutant Ninja Turtles",
+      "title_zh": "忍者神龟：变种时代",
       "date": "Aug 8, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjUzODQ5MDY5NV5BMl5BanBnXkFtZTgwOTc1NzcyMjE@._V1_.jpg"
     },
     {
       "title": "The Maze Runner",
+      "title_zh": "移动迷宫",
       "date": "Sep 19, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjUyNTA3MTAyM15BMl5BanBnXkFtZTgwOTEyMTkyMjE@._V1_.jpg"
     },
     {
       "title": "Camp X-Ray",
+      "title_zh": "X射线营地",
       "date": "Oct 17, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU5NjI1MjEwMV5BMl5BanBnXkFtZTgwNjc2Mzc3MjE@._V1_.jpg"
     },
     {
       "title": "Fury",
+      "title_zh": "狂怒",
       "date": "Oct 17, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjA4MDU0NTUyN15BMl5BanBnXkFtZTgwMzQxMzY4MjE@._V1_.jpg"
     },
     {
       "title": "John Wick",
+      "title_zh": "疾速追杀",
       "date": "Oct 24, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_.jpg"
     },
     {
       "title": "Interstellar",
+      "title_zh": "星际穿越",
       "date": "Nov 7, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Hunger Games: Mockingjay - Part 1",
+      "title_zh": "饥饿游戏3：嘲笑鸟（上）",
       "date": "Nov 21, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTcxNDI2NDAzNl5BMl5BanBnXkFtZTgwODM3MTc2MjE@._V1_.jpg"
     },
     {
       "title": "Penguins of Madagascar",
+      "title_zh": "马达加斯加的企鹅",
       "date": "Nov 26, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTEyMDg4MDU4MjdeQTJeQWpwZ15BbWU4MDQyOTc3MjIx._V1_.jpg"
     },
     {
       "title": "The Hobbit: The Battle of the Five Armies",
+      "title_zh": "霍比特人：五军之战",
       "date": "Dec 17, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYzNDE3OTQ3MF5BMl5BanBnXkFtZTgwODczMTg4MjE@._V1_.jpg"
     },
     {
       "title": "Night at the Museum: Secret of the Tomb",
+      "title_zh": "博物馆奇妙夜3",
       "date": "Dec 19, 2014",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjI1MzM2ODEyMV5BMl5BanBnXkFtZTgwNTIzODAwMzE@._V1_.jpg"
     }

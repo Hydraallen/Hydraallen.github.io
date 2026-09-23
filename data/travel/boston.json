@@ -1,11 +1,14 @@
 {
   "id": "boston",
-  "name": "Boston",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Boston",
+    "zh": "波士顿"
+  },
+  "country_code": "US",
   "state": "MA",
   "continent": "namerica",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Boston/cover.jpg",

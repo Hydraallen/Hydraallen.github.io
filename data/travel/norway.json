@@ -1,10 +1,13 @@
 {
   "id": "norway",
-  "name": "Norway",
-  "country": "🇳🇴 Norway",
+  "name": {
+    "en": "Norway",
+    "zh": "挪威"
+  },
+  "country_code": "NO",
   "continent": "europe",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Norway/cover.jpg",

@@ -1,11 +1,14 @@
 {
   "id": "alaska",
-  "name": "Alaska",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Alaska",
+    "zh": "阿拉斯加"
+  },
+  "country_code": "US",
   "state": "AK",
   "continent": "namerica",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Alaska/cover.jpg",

@@ -1,11 +1,14 @@
 {
   "id": "new_mexico",
-  "name": "New Mexico",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "New Mexico",
+    "zh": "新墨西哥"
+  },
+  "country_code": "US",
   "state": "NM",
   "continent": "namerica",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/NewMexico/cover.jpg",

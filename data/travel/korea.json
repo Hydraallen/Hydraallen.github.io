@@ -1,13 +1,16 @@
 {
   "id": "korea",
-  "name": "South Korea",
-  "country": "🇰🇷 South Korea",
+  "name": {
+    "en": "South Korea",
+    "zh": "韩国"
+  },
+  "country_code": "KR",
   "continent": "asia",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Korea/cover.jpg",
-  "coordinates": [37.5665, 126.9780],
+  "coordinates": [37.5665, 126.978],
   "photos": []
 }

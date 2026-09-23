@@ -1,40 +1,57 @@
 {
   "id": "berlin",
-  "name": "Berlin",
-  "country": "🇩🇪 Germany",
+  "name": {
+    "en": "Berlin",
+    "zh": "柏林"
+  },
+  "country_code": "DE",
   "continent": "europe",
   "date": "2024-01-02",
-  "date_display": "Jan 02 - Feb 03 2024",
-  "cover": "../../img/travel/Berlin/cover.jpg",
+  "date_end": "2024-02-03",
   "video": "",
   "status": "visited",
-  "coordinates": [52.5200, 13.4050],
+  "cover": "../../img/travel/Berlin/cover.jpg",
+  "coordinates": [52.52, 13.405],
   "photos": [
     {
       "src": "../../img/travel/Berlin/photo1.jpg",
-      "location": "Zoo Palast",
+      "location": {
+        "en": "Zoo Palast",
+        "zh": "动物园宫电影院"
+      },
       "coordinates": [52.506013583204016, 13.334247432347683]
     },
     {
       "src": "../../img/travel/Berlin/photo2.jpg",
-      "location": "Zoo Palast",
+      "location": {
+        "en": "Zoo Palast",
+        "zh": "动物园宫电影院"
+      },
       "coordinates": [52.506013583204016, 13.334247432347683]
     },
     {
       "src": "../../img/travel/Berlin/photo3.jpg",
-      "location": "Zoo Palast",
+      "location": {
+        "en": "Zoo Palast",
+        "zh": "动物园宫电影院"
+      },
       "coordinates": [52.506013583204016, 13.334247432347683]
     },
     {
       "src": "../../img/travel/Berlin/photo4.jpg",
-      "location": "Deutsche Kinemathek",
-      "coordinates": [52.50871275229468, 13.387193713190094] 
+      "location": {
+        "en": "Deutsche Kinemathek",
+        "zh": "德国电影资料馆"
+      },
+      "coordinates": [52.50871275229468, 13.387193713190094]
     },
     {
       "src": "../../img/travel/Berlin/photo5.jpg",
-      "location": "Deutsche Kinemathek",
-      "coordinates": [52.50871275229468, 13.387193713190094] 
+      "location": {
+        "en": "Deutsche Kinemathek",
+        "zh": "德国电影资料馆"
+      },
+      "coordinates": [52.50871275229468, 13.387193713190094]
     }
   ]
 }
-

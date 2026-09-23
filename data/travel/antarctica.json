@@ -1,13 +1,16 @@
 {
   "id": "antarctica",
-  "name": "Antarctica",
-  "country": "🇦🇶 Antarctica",
+  "name": {
+    "en": "Antarctica",
+    "zh": "南极洲"
+  },
+  "country_code": "AQ",
   "continent": "antarctica",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Antarctica/cover.jpg",
-  "coordinates": [-64.8500, -62.8833],
+  "coordinates": [-64.85, -62.8833],
   "photos": []
 }

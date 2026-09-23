@@ -1,120 +1,186 @@
 {
   "id": "nyc",
-  "name": "New York City",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "New York City",
+    "zh": "纽约"
+  },
+  "country_code": "US",
   "state": "NY",
   "continent": "namerica",
   "date": "2025-01-10",
-  "date_display": "Jan 10-14, 2025",
+  "date_end": "2025-01-14",
   "video": "",
   "status": "visited",
   "trip": "nyc_2025",
   "cover": "../../img/travel/NYC/cover.jpg",
-  "coordinates": [40.7128, -74.0060],
+  "coordinates": [40.7128, -74.006],
   "photos": [
     {
       "src": "../../img/travel/NYC/photo1.jpg",
-      "location": "Empire State Building",
+      "location": {
+        "en": "Empire State Building",
+        "zh": "帝国大厦"
+      },
       "coordinates": [40.748594902847515, -73.98573950452256]
     },
     {
       "src": "../../img/travel/NYC/photo2.jpg",
-      "location": "Manhattan Bridge",
+      "location": {
+        "en": "Manhattan Bridge",
+        "zh": "曼哈顿桥"
+      },
       "coordinates": [40.707655427780615, -73.99073486669887]
     },
     {
       "src": "../../img/travel/NYC/photo3.jpg",
-      "location": "Times Square",
+      "location": {
+        "en": "Times Square",
+        "zh": "时代广场"
+      },
       "coordinates": [40.75811275333038, -73.98547824486978]
     },
     {
       "src": "../../img/travel/NYC/photo4.jpg",
-      "location": "Central Park",
+      "location": {
+        "en": "Central Park",
+        "zh": "中央公园"
+      },
       "coordinates": [40.782635909431896, -73.96557267383415]
     },
     {
       "src": "../../img/travel/NYC/photo5.jpg",
-      "location": "Times Square",
+      "location": {
+        "en": "Times Square",
+        "zh": "时代广场"
+      },
       "coordinates": [40.75811275333038, -73.98547824486978]
     },
     {
       "src": "../../img/travel/NYC/photo6.jpg",
-      "location": "Times Square",
+      "location": {
+        "en": "Times Square",
+        "zh": "时代广场"
+      },
       "coordinates": [40.75811275333038, -73.98547824486978]
     },
     {
       "src": "../../img/travel/NYC/photo7.jpg",
-      "location": "Brooklyn Public Library",
+      "location": {
+        "en": "Brooklyn Public Library",
+        "zh": "布鲁克林公共图书馆"
+      },
       "coordinates": [40.67260050739543, -73.96821074674398]
     },
     {
       "src": "../../img/travel/NYC/photo8.jpg",
-      "location": "Manhattan Bridge",
+      "location": {
+        "en": "Manhattan Bridge",
+        "zh": "曼哈顿桥"
+      },
       "coordinates": [40.707655427780615, -73.99073486669887]
     },
     {
       "src": "../../img/travel/NYC/photo9.jpg",
-      "location": "Central Park",
+      "location": {
+        "en": "Central Park",
+        "zh": "中央公园"
+      },
       "coordinates": [40.782635909431896, -73.96557267383415]
     },
     {
       "src": "../../img/travel/NYC/photo10.jpg",
-      "location": "Central Park",
+      "location": {
+        "en": "Central Park",
+        "zh": "中央公园"
+      },
       "coordinates": [40.782635909431896, -73.96557267383415]
     },
     {
       "src": "../../img/travel/NYC/photo11.jpg",
-      "location": "Bryant Park",
+      "location": {
+        "en": "Bryant Park",
+        "zh": "布莱恩特公园"
+      },
       "coordinates": [40.7536829636716, -73.98297436034291]
     },
     {
       "src": "../../img/travel/NYC/photo12.jpg",
-      "location": "Central Park",
+      "location": {
+        "en": "Central Park",
+        "zh": "中央公园"
+      },
       "coordinates": [40.782635909431896, -73.96557267383415]
     },
     {
       "src": "../../img/travel/NYC/photo13.jpg",
-      "location": "Brooklyn Public Library",
+      "location": {
+        "en": "Brooklyn Public Library",
+        "zh": "布鲁克林公共图书馆"
+      },
       "coordinates": [40.67260050739543, -73.96821074674398]
     },
     {
       "src": "../../img/travel/NYC/photo14.jpg",
-      "location": "Brooklyn Public Library",
+      "location": {
+        "en": "Brooklyn Public Library",
+        "zh": "布鲁克林公共图书馆"
+      },
       "coordinates": [40.67260050739543, -73.96821074674398]
     },
     {
       "src": "../../img/travel/NYC/photo15.jpg",
-      "location": "Queensbridge Park",
+      "location": {
+        "en": "Queensbridge Park",
+        "zh": "皇后桥公园"
+      },
       "coordinates": [40.7568373376519, -73.9485896449992]
     },
     {
       "src": "../../img/travel/NYC/photo16.jpg",
-      "location": "Queensbridge Park",
+      "location": {
+        "en": "Queensbridge Park",
+        "zh": "皇后桥公园"
+      },
       "coordinates": [40.7568373376519, -73.9485896449992]
     },
     {
       "src": "../../img/travel/NYC/photo17.jpg",
-      "location": "Queensbridge Park",
+      "location": {
+        "en": "Queensbridge Park",
+        "zh": "皇后桥公园"
+      },
       "coordinates": [40.7568373376519, -73.9485896449992]
     },
     {
       "src": "../../img/travel/NYC/photo18.jpg",
-      "location": "AMC Empire 25",
+      "location": {
+        "en": "AMC Empire 25",
+        "zh": "AMC Empire 25 影院"
+      },
       "coordinates": [40.757777243615905, -73.98960441535347]
     },
     {
       "src": "../../img/travel/NYC/photo19.jpg",
-      "location": "SUMMIT One Vanderbilt",
+      "location": {
+        "en": "SUMMIT One Vanderbilt",
+        "zh": "SUMMIT One Vanderbilt 观景台"
+      },
       "coordinates": [40.752880154394525, -73.97867167370714]
     },
     {
       "src": "../../img/travel/NYC/photo20.jpg",
-      "location": "Manhattan Bridge View",
+      "location": {
+        "en": "Manhattan Bridge View",
+        "zh": "曼哈顿桥观景点"
+      },
       "coordinates": [40.703544208833804, -73.98956980267302]
     },
     {
       "src": "../../img/travel/NYC/photo21.jpg",
-      "location": "The Museum of Modern Art",
+      "location": {
+        "en": "The Museum of Modern Art",
+        "zh": "现代艺术博物馆"
+      },
       "coordinates": [40.76234284975832, -73.97762160054347]
     }
   ]

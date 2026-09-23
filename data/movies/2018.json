@@ -6,186 +6,223 @@
   "movies": [
     {
       "title": "Paddington 2",
+      "title_zh": "帕丁顿熊2",
       "date": "Jan 12, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTk1YzlhMTUtZmU5MC00NmRmLTlkZjItYzQ0NTY4Y2NiNzc4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "12 Strong",
+      "title_zh": "12勇士",
       "date": "Jan 19, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTEzMjk3NzkxMV5BMl5BanBnXkFtZTgwNjY2NDczNDM@._V1_.jpg"
     },
     {
       "title": "Den of Thieves",
+      "title_zh": "贼巢",
       "date": "Jan 19, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzYyODcwMDAyM15BMl5BanBnXkFtZTgwOTA4MjIwNDI@._V1_.jpg"
     },
     {
       "title": "Call Me by Your Name",
+      "title_zh": "请以你的名字呼唤我",
       "date": "Jan 19, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_.jpg"
     },
     {
       "title": "Braven",
+      "title_zh": "雪光之灾",
       "date": "Feb 2, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjM1ODUzMTU1NV5BMl5BanBnXkFtZTgwMzcwMzY1NDM@._V1_.jpg"
     },
     {
       "title": "Fifty Shades Freed",
+      "title_zh": "五十度飞",
       "date": "Feb 9, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYxOTQ1MzI0Nl5BMl5BanBnXkFtZTgwMzgwMzIxNDM@._V1_.jpg"
     },
     {
       "title": "Black Panther",
+      "title_zh": "黑豹",
       "date": "Feb 16, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg"
     },
     {
       "title": "Annihilation",
+      "title_zh": "湮灭",
       "date": "Feb 23, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk2Mjc2NzYxNl5BMl5BanBnXkFtZTgwMTA2OTA1NDM@._V1_.jpg"
     },
     {
       "title": "Red Sparrow",
+      "title_zh": "红雀",
       "date": "Mar 2, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTA3MDkxOTc4NDdeQTJeQWpwZ15BbWU4MDAxNzgyNTQz._V1_.jpg"
     },
     {
       "title": "Tomb Raider",
+      "title_zh": "古墓丽影：源起之战",
       "date": "Mar 16, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTIwNWU2NTEtMDQ0Yi00MjFkLThhN2UtMjJhOGVjN2UyYzFkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Pacific Rim: Uprising",
+      "title_zh": "环太平洋2：雷霆再起",
       "date": "Mar 23, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjI3Nzg0MTM5NF5BMl5BanBnXkFtZTgwOTE2MTgwNTM@._V1_.jpg"
     },
     {
       "title": "I Kill Giants",
+      "title_zh": "杀死巨人的女孩",
       "date": "Mar 23, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjM1MTc3ODcwMV5BMl5BanBnXkFtZTgwNTU2MjA4NDM@._V1_.jpg"
     },
     {
       "title": "Ready Player One",
+      "title_zh": "头号玩家",
       "date": "Mar 29, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzVkMTgzODQtMWIwZC00NzE4LTgzZjYtMzAwM2I5OGZhNjE4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Avengers: Infinity War",
+      "title_zh": "复仇者联盟3：无限战争",
       "date": "Apr 27, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_.jpg"
     },
     {
       "title": "Deadpool 2",
+      "title_zh": "死侍2",
       "date": "May 18, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BNGY3N2ZhYmMtYTlmYi00ZWIzLWJiZWMtMjgxMjljYTk3MDAwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Fahrenheit 451",
+      "title_zh": "华氏451度",
       "date": "May 20, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmY0YWQ1NjktYzkyOS00MTVhLTljZGUtZTc3MTE0ZTQyZjk2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Solo: A Star Wars Story",
+      "title_zh": "游侠索罗：星球大战外传",
       "date": "May 25, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTM2NTI3NTc3Nl5BMl5BanBnXkFtZTgwNzM1OTQyNTM@._V1_.jpg"
     },
     {
       "title": "Attraction",
+      "title_zh": "吸引力",
       "date": "Jun 13, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTMwNDc0YjktNmE3ZS00ZDdiLTg4Y2EtYmI1NGMzMDQzZDg0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Incredibles 2",
+      "title_zh": "超人总动员2",
       "date": "Jun 15, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTEzNzY0OTg0NTdeQTJeQWpwZ15BbWU4MDU3OTg3MjUz._V1_.jpg"
     },
     {
       "title": "Jurassic World: Fallen Kingdom",
+      "title_zh": "侏罗纪世界2",
       "date": "Jun 22, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzIxMjYwNDEwN15BMl5BanBnXkFtZTgwMzk5MDI3NTM@._V1_.jpg"
     },
     {
       "title": "Sicario: Day of the Soldado",
+      "title_zh": "边境杀手2：边境战士",
       "date": "Jun 29, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTEzNjM2NTYxMjReQTJeQWpwZ15BbWU4MDU2NzAxNTUz._V1_.jpg"
     },
     {
       "title": "Ant-Man and the Wasp",
+      "title_zh": "蚁人2：黄蜂女现身",
       "date": "Jul 6, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BODVkY2ZmZTAtYzFhMi00YzZlLWE2YWMtMDBiYjY2OTU4ZWM0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Skyscraper",
+      "title_zh": "摩天营救",
       "date": "Jul 13, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BNWYyYTExNWMtZGYyYy00YTEzLTg5MzEtY2YyMDI3MDNlMjcwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Mission: Impossible - Fallout",
+      "title_zh": "碟中谍6：全面瓦解",
       "date": "Jul 27, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BZmUwZTg2YmMtMmZjOS00ZDYwLWI2ZDgtZDcyY2ZmMWMwZDdlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Meg",
+      "title_zh": "巨齿鲨",
       "date": "Aug 10, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWZjYjgxMzEtYTE1MS00M2RlLWJjOTUtZDA5ODM2YWQ4Y2FhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Smallfoot",
+      "title_zh": "雪怪大冒险",
       "date": "Sep 28, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BZjBjYWQxMTQtMThiZS00NjZkLWE1ZjctMzE2ZTgxZmJmMWQ1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "A Star Is Born",
+      "title_zh": "一个明星的诞生",
       "date": "Oct 5, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BNGUxZTc0NTAtNzQwMy00MmM2LTgzMGYtZWIyY2E1MGFjYmM5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Venom",
+      "title_zh": "毒液：致命守护者",
       "date": "Oct 5, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTYwMDg5MDItNjhmZi00NmVmLThjNWItMmNkMjVkMWRhNzI2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Johnny English Strikes Again",
+      "title_zh": "憨豆特工3",
       "date": "Oct 26, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMmNlZDRlODAtNzE1Zi00NjUzLThiZWQtOTk1ZTFjMjRhMjg5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Fantastic Beasts: The Crimes of Grindelwald",
+      "title_zh": "神奇动物：格林德沃之罪",
       "date": "Nov 16, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BZGIyZjk5ODctNDg3MC00YTgyLThmYTAtNjZkNzk4Y2JhMDRhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Green Book",
+      "title_zh": "绿皮书",
       "date": "Nov 16, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDU5YTNmMmItN2QxNy00OGQ0LTg5MTctNzFmYjEzZjcwN2UwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Creed II",
+      "title_zh": "奎迪：英雄再起",
       "date": "Nov 21, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTBmYTg3YTItZjUzYi00MGU2LThiNDUtMDA3NjNmMTFiYzZkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Free Solo",
+      "title_zh": "徒手攀岩",
       "date": "Dec 13, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjA2YTAxMzMtNzA2Mi00NTcyLTg4NzUtODIxYzFiYzdiNWNlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Spider-Man: Into the Spider-Verse",
+      "title_zh": "蜘蛛侠：平行宇宙",
       "date": "Dec 14, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg"
     },
     {
       "title": "Vox Lux",
+      "title_zh": "光之声",
       "date": "Dec 20, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDJkOGJhZjQtOTFlMS00MGNkLWE1MTktZDdlZjc2NTRkMWE0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Aquaman",
+      "title_zh": "海王",
       "date": "Dec 21, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_.jpg"
     },
     {
       "title": "Bumblebee",
+      "title_zh": "大黄蜂",
       "date": "Dec 21, 2018",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjUwNjU5NDMyNF5BMl5BanBnXkFtZTgwNzgxNjM2NzM@._V1_.jpg"
     }

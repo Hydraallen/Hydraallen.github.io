@@ -6,21 +6,25 @@
   "movies": [
     {
       "title": "The Lost World: Jurassic Park",
+      "title_zh": "侏罗纪公园：失落的世界",
       "date": "May 22, 1997",
       "poster": "https://m.media-amazon.com/images/M/MV5BMGI3NDg5N2ItZGIyZi00ZWNkLWFlODUtZDA1Y2Q1M2U4NGM2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Men in Black",
+      "title_zh": "黑衣人",
       "date": "Jul 2, 1997",
       "poster": "https://m.media-amazon.com/images/M/MV5BZmQ0YTdhYzEtMjIxZC00MGFiLTlmNjktZmFlOWE2M2QxOTRhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Alien: Resurrection",
+      "title_zh": "异形4",
       "date": "Nov 26, 1997",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDMyNmU5ZGQtNzhiZi00NjRjLTk3NGUtMmQ5YWU4ODlkNTBhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Titanic",
+      "title_zh": "泰坦尼克号",
       "date": "Dec 19, 1997",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzYyN2FiZmUtYWYzMy00MzViLWJkZTMtOGY1ZjgzNWMwN2YxXkEyXkFqcGc@._V1_.jpg"
     }

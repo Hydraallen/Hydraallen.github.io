@@ -27,7 +27,19 @@ var lib =
         groupPhotosByLocation: groupPhotosByLocation,
         getTripDays: getTripDays,
         buildDayHtml: buildDayHtml,
+        getCountryLabel: getCountryLabel,
       };
+
+// --- i18n (js/i18n.js is loaded in <head>; Node requires it) ---
+// Every renderer takes a trailing `lang` (default "en"); the bootstrap passes getLang().
+// 所有渲染函数末尾接收 lang 参数（默认 "en"），启动时传入 getLang()。
+var _tripI18n =
+  typeof module !== "undefined" && module.exports
+    ? require("./i18n.js")
+    : { t: t, pick: pick, getLang: getLang, formatDayRange: formatDayRange, withLangParam: withLangParam };
+
+// Google tiles in the page language; the trip page has no tile-language picker.
+var TRIP_TILE_URL = "https://mt0.google.com/vt/lyrs=m&hl={hl}&x={x}&y={y}&z={z}";
 
 // Day route colours, cycled per day so consecutive days stay distinguishable.
 var DAY_COLORS = ["#00695c", "#ef6c00", "#5e35b1", "#c2185b", "#0277bd", "#558b2f"];
@@ -76,7 +88,7 @@ async function loadTrip(placeId, fetchFn) {
 // Hide the page body and show a friendly message with a way back.
 // `message` is data-derived (it can quote the ?place= id, which is untrusted
 // URL input), so it is escaped before being written as HTML.
-function showTripError(doc, message) {
+function showTripError(doc, message, lang = "en") {
   var page = doc.getElementById("trip-page");
   if (page) page.classList.add("hidden-btn");
 
@@ -85,7 +97,11 @@ function showTripError(doc, message) {
 
   errorEl.innerHTML =
     lib.escapeHtml(message) +
-    ' <a href="travel.html">Back to all destinations</a>';
+    ' <a href="' +
+    lib.escapeHtml(_tripI18n.withLangParam("travel.html", lang)) +
+    '">' +
+    lib.escapeHtml(_tripI18n.t("trip.error.back", lang)) +
+    "</a>";
   errorEl.classList.remove("hidden-btn");
   return errorEl;
 }
@@ -94,14 +110,18 @@ function showTripError(doc, message) {
 // 3. Hero
 // ==========================================
 
-// Dates prefer the trip's own label and fall back to the place's.
-function getTripDateDisplay(place, trip) {
-  if (trip && trip.date_display) return trip.date_display;
-  return place && place.date_display ? place.date_display : "";
+// Dates prefer the trip's own day range and fall back to the place's visit dates.
+function getTripDateDisplay(place, trip, lang = "en") {
+  var days = lib.getTripDays(trip);
+  if (days.length > 0) {
+    return _tripI18n.formatDayRange(days[0].date, days[days.length - 1].date, lang);
+  }
+  if (!place || !place.date) return "";
+  return _tripI18n.formatDayRange(place.date, place.date_end, lang);
 }
 
-function renderHero(doc, place, trip) {
-  var displayName = lib.getDisplayName(place);
+function renderHero(doc, place, trip, lang = "en") {
+  var displayName = lib.getDisplayName(place, lang);
 
   var cover = doc.querySelector(".trip-hero-cover");
   if (cover) {
@@ -110,17 +130,17 @@ function renderHero(doc, place, trip) {
   }
 
   var countryEl = doc.querySelector(".trip-country");
-  if (countryEl) countryEl.textContent = place.country || "";
+  if (countryEl) countryEl.textContent = lib.getCountryLabel(place, lang);
 
   var placeEl = doc.querySelector(".trip-place");
   if (placeEl) placeEl.textContent = displayName;
 
   var datesEl = doc.querySelector(".trip-dates");
-  if (datesEl) datesEl.textContent = getTripDateDisplay(place, trip);
+  if (datesEl) datesEl.textContent = getTripDateDisplay(place, trip, lang);
 
   var summaryEl = doc.querySelector(".trip-summary");
   if (summaryEl) {
-    var summary = trip && trip.summary ? trip.summary : "";
+    var summary = trip ? _tripI18n.pick(trip.summary, lang) : "";
     summaryEl.textContent = summary;
     summaryEl.classList.toggle("hidden-btn", summary === "");
   }
@@ -144,7 +164,7 @@ function renderHero(doc, place, trip) {
 
 // Renders nothing (and hides the container) when there is no itinerary, rather
 // than showing placeholder copy.
-function renderItinerary(doc, trip, photos) {
+function renderItinerary(doc, trip, photos, lang = "en") {
   var container = doc.getElementById("trip-itinerary");
   if (!container) return null;
 
@@ -157,7 +177,7 @@ function renderItinerary(doc, trip, photos) {
 
   container.innerHTML = days
     .map(function (day) {
-      return lib.buildDayHtml(day, photos);
+      return lib.buildDayHtml(day, photos, lang);
     })
     .join("");
   container.classList.remove("hidden-btn");
@@ -171,12 +191,12 @@ function renderItinerary(doc, trip, photos) {
 // A <button> (not a div) so keyboard activation and focus come for free.
 // The index is emitted as a data attribute and read back through event
 // delegation; it is coerced to a number rather than string-escaped.
-function buildPhotoWallHtml(photos) {
+function buildPhotoWallHtml(photos, lang = "en") {
   if (!Array.isArray(photos)) return "";
   return photos
     .map(function (photo, index) {
       var src = lib.escapeHtml(lib.getLightboxSrc(photo));
-      var caption = lib.getLightboxCaption(photo) || "Travel photo";
+      var caption = lib.getLightboxCaption(photo, lang) || _tripI18n.t("trip.photo_fallback", lang);
       return (
         '<button class="wall-item" type="button" data-photo-index="' +
         Number(index) +
@@ -192,7 +212,7 @@ function buildPhotoWallHtml(photos) {
     .join("");
 }
 
-function renderPhotoWall(doc, photos) {
+function renderPhotoWall(doc, photos, lang = "en") {
   var wall = doc.getElementById("trip-photo-wall");
   var heading = doc.querySelector(".trip-section-heading");
   var hasPhotos = Array.isArray(photos) && photos.length > 0;
@@ -200,7 +220,7 @@ function renderPhotoWall(doc, photos) {
   if (heading) heading.classList.toggle("hidden-btn", !hasPhotos);
   if (!wall) return null;
 
-  wall.innerHTML = hasPhotos ? buildPhotoWallHtml(photos) : "";
+  wall.innerHTML = hasPhotos ? buildPhotoWallHtml(photos, lang) : "";
   wall.classList.toggle("hidden-btn", !hasPhotos);
   return wall;
 }
@@ -236,17 +256,18 @@ function getDayRoutes(trip, photos) {
 // Each thumbnail is a <button> so it is reachable by Tab inside the popup and
 // responds to Enter/Space; the accessible name lives on the button, so the
 // <img> is labelled empty to keep the location from being announced twice.
-function buildPopupHtml(group) {
+function buildPopupHtml(group, lang = "en") {
   var thumbs = group.items
     .map(function (item) {
-      var location = lib.escapeHtml(item.location || "");
+      var name = _tripI18n.pick(item.location, lang);
+      var location = lib.escapeHtml(name);
       return (
         '<button class="popup-photo-thumb" type="button" data-photo-index="' +
         Number(item.originalIndex) +
         '" title="' +
         location +
-        '" aria-label="Photo of ' +
-        location +
+        '" aria-label="' +
+        lib.escapeHtml(_tripI18n.t("travel.photo_of", lang, { name: name })) +
         '">' +
         '<img src="' +
         lib.escapeHtml(lib.getLightboxSrc(item)) +
@@ -263,7 +284,7 @@ function buildPopupHtml(group) {
     thumbs +
     "</div>" +
     '<div class="popup-location-name">' +
-    lib.escapeHtml(group.locationName) +
+    lib.escapeHtml(_tripI18n.pick(group.locationName, lang)) +
     count +
     "</div>" +
     "</div>"
@@ -272,15 +293,19 @@ function buildPopupHtml(group) {
 
 // Build the trip map. Returns null when Leaflet is absent (Node tests) or the
 // container is missing, so requiring this module never needs a browser.
-function initTripMap(doc, place, trip) {
+function tripTileUrl(lang = "en") {
+  return TRIP_TILE_URL.replace("{hl}", lang === "zh" ? "zh-CN" : "en");
+}
+
+function initTripMap(doc, place, trip, lang = "en") {
   if (typeof L === "undefined") return null;
   var container = doc.getElementById("trip-map");
   if (!container) return null;
 
   var map = L.map("trip-map");
 
-  // The trip page has no language selector, so the English tiles are fixed.
-  L.tileLayer("https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}", {
+  // 地图瓦片语言跟随页面语言
+  L.tileLayer(tripTileUrl(lang), {
     attribution: "&copy; Google Maps",
     maxZoom: 20,
   }).addTo(map);
@@ -292,7 +317,7 @@ function initTripMap(doc, place, trip) {
     bounds.extend(group.coordinates);
     L.marker(group.coordinates)
       .addTo(map)
-      .bindPopup(buildPopupHtml(group), { minWidth: 160, maxWidth: 300 });
+      .bindPopup(buildPopupHtml(group, lang), { minWidth: 160, maxWidth: 300 });
   });
 
   // 每日路线：一天一条虚线，一天一个颜色，按天分组便于整体控制
@@ -326,12 +351,12 @@ function initTripMap(doc, place, trip) {
 // ==========================================
 
 // Apply a photo to the lightbox DOM, keeping src, alt and caption in sync.
-function applyLightboxPhoto(imgEl, captionEl, photo) {
+function applyLightboxPhoto(imgEl, captionEl, photo, lang = "en") {
   var src = lib.getLightboxSrc(photo);
-  var caption = lib.getLightboxCaption(photo);
+  var caption = lib.getLightboxCaption(photo, lang);
   if (imgEl) {
     imgEl.src = src;
-    imgEl.alt = caption || "Travel photo";
+    imgEl.alt = caption || _tripI18n.t("trip.photo_fallback", lang);
   }
   if (captionEl) {
     captionEl.textContent = caption;
@@ -342,7 +367,7 @@ function applyLightboxPhoto(imgEl, captionEl, photo) {
 // Wire the lightbox and return a controller. `photos` is the place gallery;
 // every entry point (photo wall, itinerary thumbnails, map popups) opens it by
 // gallery index.
-function setupLightbox(doc, photos) {
+function setupLightbox(doc, photos, lang = "en") {
   var lightbox = doc.getElementById("lightbox");
   if (!lightbox) return null;
 
@@ -359,7 +384,7 @@ function setupLightbox(doc, photos) {
 
   function update() {
     if (gallery.length === 0) return;
-    applyLightboxPhoto(imgEl, captionEl, gallery[currentIndex]);
+    applyLightboxPhoto(imgEl, captionEl, gallery[currentIndex], lang);
   }
 
   function isOpen() {
@@ -456,7 +481,13 @@ function delegatePhotoClicks(root, controller) {
 // 8. 页面装配
 // ==========================================
 
-async function initTripPage(doc, fetchFn, search) {
+// Keep the static "← All destinations" link in the page language.
+function localizeBackLink(doc, lang) {
+  var back = doc.querySelector ? doc.querySelector(".trip-back") : null;
+  if (back) back.setAttribute("href", _tripI18n.withLangParam("travel.html", lang));
+}
+
+async function initTripPage(doc, fetchFn, search, lang = "en") {
   var fetcher = fetchFn || (typeof fetch !== "undefined" ? fetch : null);
   var searchString =
     typeof search === "string"
@@ -465,12 +496,13 @@ async function initTripPage(doc, fetchFn, search) {
         ? window.location.search
         : "";
 
+  localizeBackLink(doc, lang);
   var placeId = lib.getPlaceIdFromSearch(searchString);
   if (!placeId) {
-    return showTripError(doc, "No destination selected.");
+    return showTripError(doc, _tripI18n.t("trip.error.no_place", lang), lang);
   }
   if (!fetcher) {
-    return showTripError(doc, "Could not load this destination.");
+    return showTripError(doc, _tripI18n.t("trip.error.load", lang), lang);
   }
 
   var data;
@@ -478,22 +510,22 @@ async function initTripPage(doc, fetchFn, search) {
     data = await loadTrip(placeId, fetcher);
   } catch (err) {
     console.error("Error loading trip data:", err);
-    return showTripError(doc, 'Could not find the destination "' + placeId + '".');
+    return showTripError(doc, _tripI18n.t("trip.error.not_found", lang, { id: placeId }), lang);
   }
 
   var place = data.place;
   if (!place || !place.id) {
-    return showTripError(doc, 'Could not find the destination "' + placeId + '".');
+    return showTripError(doc, _tripI18n.t("trip.error.not_found", lang, { id: placeId }), lang);
   }
 
   var photos = Array.isArray(place.photos) ? place.photos : [];
 
-  renderHero(doc, place, data.trip);
-  renderItinerary(doc, data.trip, photos);
-  renderPhotoWall(doc, photos);
-  initTripMap(doc, place, data.trip);
+  renderHero(doc, place, data.trip, lang);
+  renderItinerary(doc, data.trip, photos, lang);
+  renderPhotoWall(doc, photos, lang);
+  initTripMap(doc, place, data.trip, lang);
 
-  var controller = setupLightbox(doc, photos);
+  var controller = setupLightbox(doc, photos, lang);
   delegatePhotoClicks(doc.getElementById("trip-photo-wall"), controller);
   delegatePhotoClicks(doc.getElementById("trip-itinerary"), controller);
   delegatePhotoClicks(doc.getElementById("trip-map"), controller);
@@ -504,7 +536,7 @@ async function initTripPage(doc, fetchFn, search) {
 // --- Browser bootstrap (guarded so Node `require` never touches the DOM) ---
 if (typeof document !== "undefined") {
   document.addEventListener("DOMContentLoaded", function () {
-    initTripPage(document);
+    initTripPage(document, undefined, undefined, _tripI18n.getLang());
   });
 }
 
@@ -520,6 +552,8 @@ if (typeof module !== "undefined" && module.exports) {
     buildPhotoWallHtml: buildPhotoWallHtml,
     renderPhotoWall: renderPhotoWall,
     getDayRoutes: getDayRoutes,
+    tripTileUrl: tripTileUrl,
+    localizeBackLink: localizeBackLink,
     buildPopupHtml: buildPopupHtml,
     initTripMap: initTripMap,
     applyLightboxPhoto: applyLightboxPhoto,

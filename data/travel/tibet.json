@@ -1,10 +1,13 @@
 {
   "id": "tibet",
-  "name": "Tibet",
-  "country": "🇨🇳 China",
+  "name": {
+    "en": "Tibet",
+    "zh": "西藏"
+  },
+  "country_code": "CN",
   "continent": "asia",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Tibet/cover.jpg",

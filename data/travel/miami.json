@@ -1,11 +1,14 @@
 {
   "id": "miami",
-  "name": "Miami",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Miami",
+    "zh": "迈阿密"
+  },
+  "country_code": "US",
   "state": "FL",
   "continent": "namerica",
   "date": "2025-02-14",
-  "date_display": "Feb 14-19, 2025",
+  "date_end": "2025-02-19",
   "video": "",
   "status": "visited",
   "cover": "../../img/travel/Miami/cover.jpg",
@@ -13,17 +16,26 @@
   "photos": [
     {
       "src": "../../img/travel/Miami/photo1.jpg",
-      "location": "Key West",
+      "location": {
+        "en": "Key West",
+        "zh": "基韦斯特"
+      },
       "coordinates": [24.55750807843742, -81.78188273203574]
     },
     {
       "src": "../../img/travel/Miami/photo2.jpg",
-      "location": "Key West",
+      "location": {
+        "en": "Key West",
+        "zh": "基韦斯特"
+      },
       "coordinates": [24.55750807843742, -81.78188273203574]
     },
     {
       "src": "../../img/travel/Miami/photo3.jpg",
-      "location": "Key West",
+      "location": {
+        "en": "Key West",
+        "zh": "基韦斯特"
+      },
       "coordinates": [24.55750807843742, -81.78188273203574]
     }
   ]

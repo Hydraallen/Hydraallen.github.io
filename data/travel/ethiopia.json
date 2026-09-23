@@ -1,10 +1,13 @@
 {
   "id": "ethiopia",
-  "name": "Ethiopia",
-  "country": "🇪🇹 Ethiopia",
+  "name": {
+    "en": "Ethiopia",
+    "zh": "埃塞俄比亚"
+  },
+  "country_code": "ET",
   "continent": "africa",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Ethiopia/cover.jpg",

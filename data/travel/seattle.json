@@ -1,11 +1,14 @@
 {
   "id": "seattle",
-  "name": "Seattle",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Seattle",
+    "zh": "西雅图"
+  },
+  "country_code": "US",
   "state": "WA",
   "continent": "namerica",
   "date": "2025-05-18",
-  "date_display": "May 18-26, 2025",
+  "date_end": "2025-05-26",
   "video": "",
   "status": "visited",
   "cover": "../../img/travel/Seattle/cover.jpg",
@@ -13,77 +16,122 @@
   "photos": [
     {
       "src": "../../img/travel/Seattle/photo1.jpg",
-      "location": "Kerry Park",
+      "location": {
+        "en": "Kerry Park",
+        "zh": "凯瑞公园"
+      },
       "coordinates": [47.62959201363168, -122.35991168708254]
     },
     {
       "src": "../../img/travel/Seattle/photo2.jpg",
-      "location": "Deception Pass State Park",
+      "location": {
+        "en": "Deception Pass State Park",
+        "zh": "欺骗隘口州立公园"
+      },
       "coordinates": [48.40653448248842, -122.64490374467353]
     },
     {
       "src": "../../img/travel/Seattle/photo3.jpg",
-      "location": "San Juan Island",
+      "location": {
+        "en": "San Juan Island",
+        "zh": "圣胡安岛"
+      },
       "coordinates": [48.55817982634147, -123.03207839861246]
     },
     {
       "src": "../../img/travel/Seattle/photo4.jpg",
-      "location": "Rainbow Bridge",
+      "location": {
+        "en": "Rainbow Bridge",
+        "zh": "彩虹桥"
+      },
       "coordinates": [48.3869590710999, -122.5024658735103]
     },
     {
       "src": "../../img/travel/Seattle/photo5.jpg",
-      "location": "San Juan Island",
+      "location": {
+        "en": "San Juan Island",
+        "zh": "圣胡安岛"
+      },
       "coordinates": [48.55817982634147, -123.03207839861246]
     },
     {
       "src": "../../img/travel/Seattle/photo6.jpg",
-      "location": "That NW Bus",
+      "location": {
+        "en": "That NW Bus",
+        "zh": "那辆涂鸦巴士"
+      },
       "coordinates": [46.75901577106102, -118.30552887358326]
     },
     {
       "src": "../../img/travel/Seattle/photo7.jpg",
-      "location": "Palouse Falls State Park",
+      "location": {
+        "en": "Palouse Falls State Park",
+        "zh": "帕卢斯瀑布州立公园"
+      },
       "coordinates": [46.66389592993672, -118.2273076297017]
     },
     {
       "src": "../../img/travel/Seattle/photo8.jpg",
-      "location": "Kite Park",
+      "location": {
+        "en": "Kite Park",
+        "zh": "风筝公园"
+      },
       "coordinates": [47.14272958720224, -122.17315073597]
     },
     {
       "src": "../../img/travel/Seattle/photo9.jpg",
-      "location": "Rainbow Bridge",
+      "location": {
+        "en": "Rainbow Bridge",
+        "zh": "彩虹桥"
+      },
       "coordinates": [48.3869590710999, -122.5024658735103]
     },
     {
       "src": "../../img/travel/Seattle/photo10.jpg",
-      "location": "Palouse",
+      "location": {
+        "en": "Palouse",
+        "zh": "帕卢斯"
+      },
       "coordinates": [46.91093903269479, -117.07674262534437]
     },
     {
       "src": "../../img/travel/Seattle/photo11.jpg",
-      "location": "Olympic National Park",
+      "location": {
+        "en": "Olympic National Park",
+        "zh": "奥林匹克国家公园"
+      },
       "coordinates": [47.81945288387286, -123.60315277327165]
     },
     {
       "src": "../../img/travel/Seattle/photo12.jpg",
-      "location": "Olympic National Park",
+      "location": {
+        "en": "Olympic National Park",
+        "zh": "奥林匹克国家公园"
+      },
       "coordinates": [47.81945288387286, -123.60315277327165]
     },
     {
       "src": "../../img/travel/Seattle/photo13.jpg",
-      "location": "Olympic National Park",
+      "location": {
+        "en": "Olympic National Park",
+        "zh": "奥林匹克国家公园"
+      },
       "coordinates": [47.81945288387286, -123.60315277327165]
     },
     {
       "src": "../../img/travel/Seattle/photo14.jpg",
-      "location": "San Juan Island",
+      "location": {
+        "en": "San Juan Island",
+        "zh": "圣胡安岛"
+      },
       "coordinates": [48.55817982634147, -123.03207839861246]
     },
     {
       "src": "../../img/travel/Seattle/photo15.jpg",
-      "location": "Wild Horses Monument",
+      "location": {
+        "en": "Wild Horses Monument",
+        "zh": "野马纪念雕塑"
+      },
       "coordinates": [46.96607590982232, -119.96149340240996]
     }
   ]

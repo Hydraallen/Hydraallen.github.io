@@ -6,81 +6,97 @@
   "movies": [
     {
       "title": "Journey 2: The Mysterious Island",
+      "title_zh": "地心历险记2：神秘岛",
       "date": "Feb 10, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjA5MTE1MjQyNV5BMl5BanBnXkFtZTcwODI4NDMwNw@@._V1_.jpg"
     },
     {
       "title": "The Hunger Games",
+      "title_zh": "饥饿游戏",
       "date": "Mar 23, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWI1OGM4YjQtNmIxNi00YmE2LWJkNTAtY2Q0YjU4NTI5NWQyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Avengers",
+      "title_zh": "复仇者联盟",
       "date": "May 4, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Battleship",
+      "title_zh": "超级战舰",
       "date": "May 18, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjI5NTM5MDA2N15BMl5BanBnXkFtZTcwNjkwMzQxNw@@._V1_.jpg"
     },
     {
       "title": "Men in Black³",
+      "title_zh": "黑衣人3",
       "date": "May 25, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU2NTYxODcwMF5BMl5BanBnXkFtZTcwNDk1NDY0Nw@@._V1_.jpg"
     },
     {
       "title": "Snow White and the Huntsman",
+      "title_zh": "白雪公主与猎人",
       "date": "Jun 1, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BY2JjYWUyZjUtMDg3OS00MGIyLTgyN2QtYjIyY2VlYzViYThlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Prometheus",
+      "title_zh": "普罗米修斯",
       "date": "Jun 8, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY3NzIyNTA2NV5BMl5BanBnXkFtZTcwNzE2NjI4Nw@@._V1_.jpg"
     },
     {
       "title": "The Amazing Spider-Man",
+      "title_zh": "超凡蜘蛛侠",
       "date": "Jul 3, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjMyOTM4MDMxNV5BMl5BanBnXkFtZTcwNjIyNzExOA@@._V1_.jpg"
     },
     {
       "title": "Ice Age: Continental Drift",
+      "title_zh": "冰川时代4",
       "date": "Jul 13, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTM3NDM5MzY5Ml5BMl5BanBnXkFtZTcwNjExMDUwOA@@._V1_.jpg"
     },
     {
       "title": "The Dark Knight Rises",
+      "title_zh": "蝙蝠侠：黑暗骑士崛起",
       "date": "Jul 20, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_.jpg"
     },
     {
       "title": "The Expendables 2",
+      "title_zh": "敢死队2",
       "date": "Aug 17, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTkwZGYyYzktNmEzMS00ZDkzLTlkMjEtYTdiOWExM2Y2ZjE4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Resident Evil: Retribution",
+      "title_zh": "生化危机5：惩罚",
       "date": "Sep 14, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BNGJhZTNlNmYtN2YwNi00OWQwLThhNTUtY2NlOTYwZTQ5ZjNiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Skyfall",
+      "title_zh": "007：大破天幕杀机",
       "date": "Nov 9, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjAzMWNkODUtM2FlMi00NzgyLWJhMGUtMWEyNDYyZGFiN2RlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Twilight Saga: Breaking Dawn - Part 2",
+      "title_zh": "暮光之城4：破晓（下）",
       "date": "Nov 16, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTcyMzUyMzY1OF5BMl5BanBnXkFtZTcwNDQ4ODk1OA@@._V1_.jpg"
     },
     {
       "title": "The Hobbit: An Unexpected Journey",
+      "title_zh": "霍比特人：意外之旅",
       "date": "Dec 14, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTcwNTE4MTUxMl5BMl5BanBnXkFtZTcwMDIyODM4OA@@._V1_.jpg"
     },
     {
       "title": "Les Misérables",
+      "title_zh": "悲惨世界",
       "date": "Dec 25, 2012",
       "poster": "https://m.media-amazon.com/images/M/MV5BY2Q1YjIxZTAtZTU0YS00ZmE5LWEwODEtY2IyYWM2ZTJlOWE1XkEyXkFqcGc@._V1_.jpg"
     }

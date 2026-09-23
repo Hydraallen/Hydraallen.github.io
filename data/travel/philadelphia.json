@@ -1,11 +1,14 @@
 {
   "id": "philadelphia",
-  "name": "Philadelphia",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Philadelphia",
+    "zh": "费城"
+  },
+  "country_code": "US",
   "state": "PA",
   "continent": "namerica",
   "date": "2025-05-09",
-  "date_display": "May 9, 2025",
+  "date_end": "2025-05-09",
   "video": "",
   "status": "visited",
   "cover": "../../img/travel/DC/cover2.jpg",
@@ -13,7 +16,10 @@
   "photos": [
     {
       "src": "../../img/travel/DC/photo5.jpg",
-      "location": "Independence Hall",
+      "location": {
+        "en": "Independence Hall",
+        "zh": "独立厅"
+      },
       "coordinates": [39.94903684472071, -75.15004563153865]
     }
   ]

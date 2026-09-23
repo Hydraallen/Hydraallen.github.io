@@ -1,19 +1,25 @@
 {
   "id": "ithaca",
-  "name": "Ithaca",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Ithaca",
+    "zh": "伊萨卡"
+  },
+  "country_code": "US",
   "state": "NY",
   "continent": "namerica",
   "date": "2025-01-15",
-  "date_display": "Jan 15 - May 17, 2025",
+  "date_end": "2025-05-17",
   "video": "https://b23.tv/ayqV0VW",
   "status": "visited",
   "cover": "../../img/travel/Ithaca/cover.jpg",
-  "coordinates": [42.4440, -76.5019],
+  "coordinates": [42.444, -76.5019],
   "photos": [
     {
       "src": "../../img/travel/Ithaca/photo1.jpg",
-      "location": "Libe Slope",
+      "location": {
+        "en": "Libe Slope",
+        "zh": "康奈尔图书馆坡"
+      },
       "coordinates": [42.44876070351446, -76.48634298911044]
     }
   ]

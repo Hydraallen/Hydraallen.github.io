@@ -1,10 +1,13 @@
 {
   "id": "dubai",
-  "name": "Dubai",
-  "country": "🇦🇪 UAE",
+  "name": {
+    "en": "Dubai",
+    "zh": "迪拜"
+  },
+  "country_code": "AE",
   "continent": "asia",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Dubai/cover.jpg",

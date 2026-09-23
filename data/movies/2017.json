@@ -6,191 +6,229 @@
   "movies": [
     {
       "title": "Underworld: Blood Wars",
+      "title_zh": "黑夜传说5：血战",
       "date": "Jan 6, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjI5Njk0NTIyNV5BMl5BanBnXkFtZTgwNjU4MjY5MDI@._V1_.jpg"
     },
     {
       "title": "Resident Evil: The Final Chapter",
+      "title_zh": "生化危机：终章",
       "date": "Jan 27, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTc0Mzc2OTQ0Ml5BMl5BanBnXkFtZTgwOTQ5MjE4MDI@._V1_.jpg"
     },
     {
       "title": "Fifty Shades Darker",
+      "title_zh": "五十度黑",
       "date": "Feb 10, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQ5NTk0Njg2N15BMl5BanBnXkFtZTgwNzk5Nzk3MDI@._V1_.jpg"
     },
     {
       "title": "John Wick: Chapter 2",
+      "title_zh": "疾速特攻",
       "date": "Feb 10, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_.jpg"
     },
     {
       "title": "Logan",
+      "title_zh": "金刚狼3：殊死一战",
       "date": "Mar 3, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BM2JjODdkMGMtNmY2YS00OGM2LThiY2YtZGYyNzE4Nzc2ODA0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Kong: Skull Island",
+      "title_zh": "金刚：骷髅岛",
       "date": "Mar 10, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTcwMjcxYTQtYjJlOS00YTE1LWIyZGYtOGRlOTBlMWZmYTliXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ghost in the Shell",
+      "title_zh": "攻壳机动队",
       "date": "Mar 31, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzBkNjdjZTctNjdhOS00NmIyLTlkNjQtY2EwNGMwYmZjNTIxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Smurfs: The Lost Village",
+      "title_zh": "蓝精灵：寻找神秘村",
       "date": "Apr 7, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMGVlYjY0ZTQtMDVkNS00NzNlLWE5NmMtODY1MjJmNTI5MTAxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Your Name.",
+      "title_zh": "你的名字。",
       "date": "Apr 7, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjI1ODZkYTgtYTY3Yy00ZTJkLWFkOTgtZDUyYWM4MzQwNjk0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Fate of the Furious",
+      "title_zh": "速度与激情8",
       "date": "Apr 14, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjMxODI2NDM5Nl5BMl5BanBnXkFtZTgwNjgzOTk1MTI@._V1_.jpg"
     },
     {
       "title": "The Lost City of Z",
+      "title_zh": "迷失Z城",
       "date": "Apr 21, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BZmU2ODIyMWItMjU3Zi00ZmVhLWIyNDAtMWE5OWU2ZDExMGFiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Guardians of the Galaxy Vol. 2",
+      "title_zh": "银河护卫队2",
       "date": "May 5, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Pirates of the Caribbean: Dead Men Tell No Tales",
+      "title_zh": "加勒比海盗5：死无对证",
       "date": "May 26, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI@._V1_.jpg"
     },
     {
       "title": "Wonder Woman",
+      "title_zh": "神奇女侠",
       "date": "Jun 2, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjEzYmZkNjktODBmYi00NzNkLWIzMjItMjhkMWZiZTZlN2MwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Cars 3",
+      "title_zh": "赛车总动员3：极速挑战",
       "date": "Jun 16, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTc0NzU2OTYyN15BMl5BanBnXkFtZTgwMTkwOTg2MTI@._V1_.jpg"
     },
     {
       "title": "Transformers: The Last Knight",
+      "title_zh": "变形金刚5：最后的骑士",
       "date": "Jun 21, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWNlNjU3ZTItYTY3Mi00YTU1LTk4NjQtYjQ3MjFiNjcyODliXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Baby Driver",
+      "title_zh": "极盗车神",
       "date": "Jun 28, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_.jpg"
     },
     {
       "title": "Despicable Me 3",
+      "title_zh": "神偷奶爸3",
       "date": "Jun 30, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjUyNzQ2MTg3Ml5BMl5BanBnXkFtZTgwNzE4NDM3MTI@._V1_.jpg"
     },
     {
       "title": "Spider-Man: Homecoming",
+      "title_zh": "蜘蛛侠：英雄归来",
       "date": "Jul 7, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BODY2MTAzOTQ4M15BMl5BanBnXkFtZTgwNzg5MTE0MjI@._V1_.jpg"
     },
     {
       "title": "War for the Planet of the Apes",
+      "title_zh": "猩球崛起3：终极之战",
       "date": "Jul 14, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzNhMzNiZDYtMzYxYy00YTYwLTkxNmYtNTJhOGU1Yjg5ODI5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Lady Macbeth",
+      "title_zh": "麦克白夫人",
       "date": "Jul 14, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2ZmMzNmZTMtYzc2NC00YjQ3LThmNDYtZjQyNWQ0NTNkMWFhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Dunkirk",
+      "title_zh": "敦刻尔克",
       "date": "Jul 21, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTE0Mjg4MTMwMDZeQTJeQWpwZ15BbWU4MDAwMDQ1ODAy._V1_.jpg"
     },
     {
       "title": "The Hitman's Bodyguard",
+      "title_zh": "王牌保镖",
       "date": "Aug 18, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTc4NjAxMjU4OV5BMl5BanBnXkFtZTgwNzQyMzIwMjI@._V1_.jpg"
     },
     {
       "title": "Wind River",
+      "title_zh": "猎凶风河谷",
       "date": "Aug 18, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTUyMjU1OTUwM15BMl5BanBnXkFtZTgwMDg1NDQ2MjI@._V1_.jpg"
     },
     {
       "title": "Logan Lucky",
+      "title_zh": "神偷联盟",
       "date": "Aug 18, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYyODg0NDU1OV5BMl5BanBnXkFtZTgwNjcxMzU0MjI@._V1_.jpg"
     },
     {
       "title": "Kingsman: The Golden Circle",
+      "title_zh": "王牌特工2：黄金圈",
       "date": "Sep 22, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjQ3OTgzMzY4NF5BMl5BanBnXkFtZTgwOTc4OTQyMzI@._V1_.jpg"
     },
     {
       "title": "Spyder",
+      "title_zh": "谍网恢恢",
       "date": "Sep 26, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTY3NTdjOGYtNTIyMS00NzVjLWE0OTctMmJmNzc4ODczM2Y0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Blade Runner 2049",
+      "title_zh": "银翼杀手2049",
       "date": "Oct 6, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg"
     },
     {
       "title": "Overdrive",
+      "title_zh": "超速驾驶",
       "date": "Oct 6, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BODk5MTg4OWUtY2FkYy00MzgwLWI2OWYtZmZhZGVjZTNjODQyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Only the Brave",
+      "title_zh": "勇往直前",
       "date": "Oct 20, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMGI1Mzk3MmUtMTg4Ni00NzE2LTk1NzUtMmNhMDAxN2E0MWI2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Thor: Ragnarok",
+      "title_zh": "雷神3：诸神黄昏",
       "date": "Nov 3, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_.jpg"
     },
     {
       "title": "Murder on the Orient Express",
+      "title_zh": "东方快车谋杀案",
       "date": "Nov 10, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTlkYjBlZTctZjg2YS00NDMzLTlkMTMtNWExMGYyOTliMmEzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Justice League",
+      "title_zh": "正义联盟",
       "date": "Nov 17, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjM5YmQxM2YtZjI2Yy00YjhhLTg5N2MtMTEyMzdlZDU3OTVhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Coco",
+      "title_zh": "寻梦环游记",
       "date": "Nov 22, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDIyM2E2NTAtMzlhNy00ZGUxLWI1NjgtZDY5MzhiMDc5NGU3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Lady Bird",
+      "title_zh": "伯德小姐",
       "date": "Dec 1, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjk5MzcyOWQtNzE1Mi00NzdmLTlkM2QtOTdjZThhMDc2Y2NjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Star Wars: Episode VIII - The Last Jedi",
+      "title_zh": "星球大战：最后的绝地武士",
       "date": "Dec 15, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_.jpg"
     },
     {
       "title": "Jumanji: Welcome to the Jungle",
+      "title_zh": "勇敢者游戏：决战丛林",
       "date": "Dec 20, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BZjI5MzdmODctYjA4NS00ZmMxLWJlOWUtOGVhMjA0OGMxMWYzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Greatest Showman",
+      "title_zh": "马戏之王",
       "date": "Dec 20, 2017",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjI1NDYzNzY2Ml5BMl5BanBnXkFtZTgwODQwODczNTM@._V1_.jpg"
     }

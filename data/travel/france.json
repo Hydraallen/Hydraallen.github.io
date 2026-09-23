@@ -1,10 +1,13 @@
 {
   "id": "france",
-  "name": "France",
-  "country": "🇫🇷 France",
+  "name": {
+    "en": "France",
+    "zh": "法国"
+  },
+  "country_code": "FR",
   "continent": "europe",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/France/cover.jpg",

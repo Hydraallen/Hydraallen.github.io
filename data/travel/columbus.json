@@ -1,11 +1,14 @@
 {
   "id": "columbus",
-  "name": "Columbus",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Columbus",
+    "zh": "哥伦布"
+  },
+  "country_code": "US",
   "state": "OH",
   "continent": "namerica",
   "date": "2025-10-25",
-  "date_display": "Oct 25-26, 2025",
+  "date_end": "2025-10-26",
   "video": "",
   "status": "visited",
   "cover": "../../img/travel/Columbus/cover.jpg",
@@ -13,37 +16,58 @@
   "photos": [
     {
       "src": "../../img/travel/Columbus/photo1.jpg",
-      "location": "Ohio Stadium",
+      "location": {
+        "en": "Ohio Stadium",
+        "zh": "俄亥俄体育场"
+      },
       "coordinates": [40.00258491514626, -83.01970467575818]
     },
     {
       "src": "../../img/travel/Columbus/photo2.jpg",
-      "location": "The Dublin Link",
+      "location": {
+        "en": "The Dublin Link",
+        "zh": "都柏林步行桥"
+      },
       "coordinates": [40.102419899113876, -83.11160913345442]
     },
     {
       "src": "../../img/travel/Columbus/photo3.jpg",
-      "location": "German Village",
+      "location": {
+        "en": "German Village",
+        "zh": "德国村"
+      },
       "coordinates": [39.94289137217575, -82.99356502897652]
     },
     {
       "src": "../../img/travel/Columbus/photo4.jpg",
-      "location": "German Village",
+      "location": {
+        "en": "German Village",
+        "zh": "德国村"
+      },
       "coordinates": [39.94289137217575, -82.99356502897652]
     },
     {
       "src": "../../img/travel/Columbus/photo5.jpg",
-      "location": "German Village",
+      "location": {
+        "en": "German Village",
+        "zh": "德国村"
+      },
       "coordinates": [39.94289137217575, -82.99356502897652]
     },
     {
       "src": "../../img/travel/Columbus/photo6.jpg",
-      "location": "Columbus Zoo and Aquarium",
+      "location": {
+        "en": "Columbus Zoo and Aquarium",
+        "zh": "哥伦布动物园和水族馆"
+      },
       "coordinates": [40.15637279640708, -83.11725325852262]
     },
     {
       "src": "../../img/travel/Columbus/photo7.jpg",
-      "location": "Columbus Zoo and Aquarium",
+      "location": {
+        "en": "Columbus Zoo and Aquarium",
+        "zh": "哥伦布动物园和水族馆"
+      },
       "coordinates": [40.15637279640708, -83.11725325852262]
     }
   ]

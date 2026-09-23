@@ -6,171 +6,205 @@
   "movies": [
     {
       "title": "Hansel & Gretel: Witch Hunters",
+      "title_zh": "韩赛尔与格蕾特：女巫猎人",
       "date": "Jan 25, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjA4MDQwODg2NV5BMl5BanBnXkFtZTcwNTc5ODc2OA@@._V1_.jpg"
     },
     {
       "title": "A Good Day to Die Hard",
+      "title_zh": "虎胆龙威5",
       "date": "Feb 14, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTcwNzgyNzUzOV5BMl5BanBnXkFtZTcwMzAwOTA5OA@@._V1_.jpg"
     },
     {
       "title": "Snitch",
+      "title_zh": "告密者",
       "date": "Feb 22, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTM4MTYzNjA3Nl5BMl5BanBnXkFtZTcwMzcyNDA5OA@@._V1_.jpg"
     },
     {
       "title": "Olympus Has Fallen",
+      "title_zh": "奥林匹斯的陷落",
       "date": "Mar 22, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzg3Mjc0YzItZWQyOS00ODY4LTgwZjUtYWRmYzM1MDg1ZDA5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "G.I. Joe: Retaliation",
+      "title_zh": "特种部队2：全面反击",
       "date": "Mar 28, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzk5ODM0OTQ0N15BMl5BanBnXkFtZTcwODg2ODE4OA@@._V1_.jpg"
     },
     {
       "title": "Oblivion",
+      "title_zh": "遗落战境",
       "date": "Apr 19, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQwMDY0MTA4MF5BMl5BanBnXkFtZTcwNzI3MDgxOQ@@._V1_.jpg"
     },
     {
       "title": "Pain & Gain",
+      "title_zh": "付出与收获",
       "date": "Apr 26, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU0NDE5NTU0OV5BMl5BanBnXkFtZTcwMzI1OTMzOQ@@._V1_.jpg"
     },
     {
       "title": "Iron Man 3",
+      "title_zh": "钢铁侠3",
       "date": "May 3, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjIzMzAzMjQyM15BMl5BanBnXkFtZTcwNzM2NjcyOQ@@._V1_.jpg"
     },
     {
       "title": "Star Trek Into Darkness",
+      "title_zh": "星际迷航：暗黑无界",
       "date": "May 16, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk2NzczOTgxNF5BMl5BanBnXkFtZTcwODQ5ODczOQ@@._V1_.jpg"
     },
     {
       "title": "Fast & Furious 6",
+      "title_zh": "速度与激情6",
       "date": "May 24, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_.jpg"
     },
     {
       "title": "Now You See Me",
+      "title_zh": "惊天魔盗团",
       "date": "May 31, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcwOTM5NzMzOQ@@._V1_.jpg"
     },
     {
       "title": "Man of Steel",
+      "title_zh": "超人：钢铁之躯",
       "date": "Jun 14, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_.jpg"
     },
     {
       "title": "World War Z",
+      "title_zh": "僵尸世界大战",
       "date": "Jun 21, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BODg3ZTM2YWQtZDE5Ny00NGNiLTkzYjgtYWVlYjNkOTg5NDI1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "White House Down",
+      "title_zh": "惊天危机",
       "date": "Jun 28, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTZkMmRiY2EtOTljZS00MjJjLWFiNDQtNjEwYWE0NWNkYjI4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Despicable Me 2",
+      "title_zh": "神偷奶爸2",
       "date": "Jul 3, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQxNzY1MjI5NF5BMl5BanBnXkFtZTcwNTI0MDY1OQ@@._V1_.jpg"
     },
     {
       "title": "Pacific Rim",
+      "title_zh": "环太平洋",
       "date": "Jul 12, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY3MTI5NjQ4Nl5BMl5BanBnXkFtZTcwOTU1OTU0OQ@@._V1_.jpg"
     },
     {
       "title": "The Wolverine",
+      "title_zh": "金刚狼2",
       "date": "Jul 26, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BNGU0MzRhMWEtYTBkNS00NzliLWJkMmUtMDFlMjkyOTkyYmZlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Smurfs 2",
+      "title_zh": "蓝精灵2",
       "date": "Jul 31, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzNiZDYyNjctOGNiZi00Y2ZjLWJkZmUtMjM1Mjc3ZmQzN2QwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Percy Jackson: Sea of Monsters",
+      "title_zh": "波西·杰克逊与魔兽之海",
       "date": "Aug 7, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMGMyZTI2MjUtODEzMi00M2JlLWEwZGEtYWE5MmY5OWNkYTRjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Vehicle 19",
+      "title_zh": "19车",
       "date": "Aug 8, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk0NDU4ODc4OF5BMl5BanBnXkFtZTcwMjIwMTU1OQ@@._V1_.jpg"
     },
     {
       "title": "Elysium",
+      "title_zh": "极乐空间",
       "date": "Aug 9, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDc2NjU0MTcwNV5BMl5BanBnXkFtZTcwMjg4MDg2OQ@@._V1_.jpg"
     },
     {
       "title": "Empire State",
+      "title_zh": "帝国",
       "date": "Aug 30, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmM0Yzk2NGQtZTQ3NC00MjgxLWFhODAtZTYyZjc3N2EzNTBmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Colony",
+      "title_zh": "末世殖民地",
       "date": "Sep 20, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzAzNzEzNDA4OF5BMl5BanBnXkFtZTcwOTUwODA3OQ@@._V1_.jpg"
     },
     {
       "title": "Rush",
+      "title_zh": "极速风流",
       "date": "Sep 27, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTZhOGQxM2ItNGQyYy00YzE5LWI5MjMtNmMzNGQzNDE1OTUzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Gravity",
+      "title_zh": "地心引力",
       "date": "Oct 4, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjE5MzYwMzYxMF5BMl5BanBnXkFtZTcwOTk4MTk0OQ@@._V1_.jpg"
     },
     {
       "title": "Chinese Zodiac",
+      "title_zh": "十二生肖",
       "date": "Oct 18, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjQ4ODIzYTItYmNjYi00ZWYyLTlhNGUtYTZlMjQzZjg3MzA0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Blue Is the Warmest Colour",
+      "title_zh": "阿黛尔的生活",
       "date": "Oct 9, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQ5NTg5ODk4OV5BMl5BanBnXkFtZTgwODc4MTMzMDE@._V1_.jpg"
     },
     {
       "title": "Romeo & Juliet",
+      "title_zh": "罗密欧与朱丽叶",
       "date": "Oct 11, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMmRjNWViZWMtNjI3OS00MTlmLTgxZmItMDFlYzc2YjRhZjY1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ender's Game",
+      "title_zh": "安德的游戏",
       "date": "Nov 1, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjAzMzI5OTgzMl5BMl5BanBnXkFtZTgwMTU5MTAwMDE@._V1_.jpg"
     },
     {
       "title": "Thor: The Dark World",
+      "title_zh": "雷神2：黑暗世界",
       "date": "Nov 8, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_.jpg"
     },
     {
       "title": "About Time",
+      "title_zh": "时空恋旅人",
       "date": "Nov 8, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_.jpg"
     },
     {
       "title": "The Hunger Games: Catching Fire",
+      "title_zh": "饥饿游戏2：星火燎原",
       "date": "Nov 22, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTAyMjQ3OTAxMzNeQTJeQWpwZ15BbWU4MDU0NzA1MzAx._V1_.jpg"
     },
     {
       "title": "Frozen",
+      "title_zh": "冰雪奇缘",
       "date": "Nov 27, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQ1MjQwMTE5OF5BMl5BanBnXkFtZTgwNjk3MTcyMDE@._V1_.jpg"
     },
     {
       "title": "The Hobbit: The Desolation of Smaug",
+      "title_zh": "霍比特人：史矛革之战",
       "date": "Dec 13, 2013",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzU0NDY0NDEzNV5BMl5BanBnXkFtZTgwOTIxNDU1MDE@._V1_.jpg"
     }

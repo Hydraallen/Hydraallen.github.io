@@ -6,121 +6,145 @@
   "movies": [
     {
       "title": "Kung Fu Panda 3",
+      "title_zh": "功夫熊猫3",
       "date": "Jan 29, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTUyNzgxNjg2M15BMl5BanBnXkFtZTgwMTY1NDI1NjE@._V1_.jpg"
     },
     {
       "title": "Deadpool",
+      "title_zh": "死侍",
       "date": "Feb 12, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzY3ZWU5NGQtOTViNC00ZWVmLTliNjAtNzViNzlkZWQ4YzQ4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Zootopia",
+      "title_zh": "疯狂动物城",
       "date": "Mar 4, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTMyMjEyNzIzMV5BMl5BanBnXkFtZTgwNzIyNjU0NzE@._V1_.jpg"
     },
     {
       "title": "London Has Fallen",
+      "title_zh": "伦敦陷落",
       "date": "Mar 4, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY1ODY2MTgwM15BMl5BanBnXkFtZTgwOTY3Nzc3NzE@._V1_.jpg"
     },
     {
       "title": "Batman v Superman: Dawn of Justice",
+      "title_zh": "蝙蝠侠大战超人：正义黎明",
       "date": "Mar 25, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTJkYjdmYjYtOGMyNC00ZGU1LThkY2ItYTc1OTVlMmE2YWY1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Huntsman: Winter's War",
+      "title_zh": "猎神：冬日之战",
       "date": "Apr 22, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjY0YTM4ZTAtZjliYS00YzgwLTg0NWEtYzgwNWViMTNiOTQ1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Captain America: Civil War",
+      "title_zh": "美国队长3",
       "date": "May 6, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_.jpg"
     },
     {
       "title": "X-Men: Apocalypse",
+      "title_zh": "X战警：天启",
       "date": "May 27, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjVhNWY3NjItNmZjOS00NTU3LWFiZTctNzdjNGM5Y2Y0MDUwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Teenage Mutant Ninja Turtles: Out of the Shadows",
+      "title_zh": "忍者神龟2：破影而出",
       "date": "Jun 3, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDgyNWExMzUtOTAyMy00ZjkzLWFhNzgtZTFhOTBmN2RhZGJhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Me Before You",
+      "title_zh": "遇见你之前",
       "date": "Jun 3, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQ2NjE4NDE2NV5BMl5BanBnXkFtZTgwOTcwNDE5NzE@._V1_.jpg"
     },
     {
       "title": "Now You See Me 2",
+      "title_zh": "惊天魔盗团2",
       "date": "Jun 10, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTVjNTA0ZWEtNzU2Ny00Njg1LWE1MmEtZTUyZGQzYTVlY2Q5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Independence Day: Resurgence",
+      "title_zh": "独立日：卷土重来",
       "date": "Jun 24, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjIyMTg5MTg4OV5BMl5BanBnXkFtZTgwMzkzMjY5NzE@._V1_.jpg"
     },
     {
       "title": "Suicide Squad",
+      "title_zh": "自杀小队",
       "date": "Aug 5, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_.jpg"
     },
     {
       "title": "Mechanic: Resurrection",
+      "title_zh": "机械师2：复活",
       "date": "Aug 26, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjYwODExNzUwMV5BMl5BanBnXkFtZTgwNTgwNjUyOTE@._V1_.jpg"
     },
     {
       "title": "Doctor Strange",
+      "title_zh": "奇异博士",
       "date": "Nov 4, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_.jpg"
     },
     {
       "title": "Arrival",
+      "title_zh": "降临",
       "date": "Nov 11, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_.jpg"
     },
     {
       "title": "Fantastic Beasts and Where to Find Them",
+      "title_zh": "神奇动物在哪里",
       "date": "Nov 18, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjMxOTM1OTI4MV5BMl5BanBnXkFtZTgwODE5OTYxMDI@._V1_.jpg"
     },
     {
       "title": "The Edge of Seventeen",
+      "title_zh": "成长边缘",
       "date": "Nov 18, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BODE2NjE4NjYyMV5BMl5BanBnXkFtZTgwNzk3MjQ0OTE@._V1_.jpg"
     },
     {
       "title": "Moana",
+      "title_zh": "海洋奇缘",
       "date": "Nov 23, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjI4MzU5NTExNF5BMl5BanBnXkFtZTgwNzY1MTEwMDI@._V1_.jpg"
     },
     {
       "title": "Rogue One: A Star Wars Story",
+      "title_zh": "星球大战外传：侠盗一号",
       "date": "Dec 16, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@._V1_.jpg"
     },
     {
       "title": "Manchester by the Sea",
+      "title_zh": "海边的曼彻斯特",
       "date": "Dec 16, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYxMjk0NDg4Ml5BMl5BanBnXkFtZTgwODcyNjA5OTE@._V1_.jpg"
     },
     {
       "title": "Passengers",
+      "title_zh": "太空旅客",
       "date": "Dec 21, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzRjNTFmMzQtM2JhZi00ZTI0LTlhMjMtNzQ4YWRhZGVmZWRmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Dangal",
+      "title_zh": "摔跤吧！爸爸",
       "date": "Dec 21, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQ4MzQzMzM2Nl5BMl5BanBnXkFtZTgwMTQ1NzU3MDI@._V1_.jpg"
     },
     {
       "title": "La La Land",
+      "title_zh": "爱乐之城",
       "date": "Dec 25, 2016",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_.jpg"
     }

@@ -6,16 +6,19 @@
   "movies": [
     {
       "title": "Gladiator",
+      "title_zh": "角斗士",
       "date": "May 5, 2000",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWQ4YmNjYjEtOWE1Zi00Y2U4LWI4NTAtMTU0MjkxNWQ1ZmJiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Mission: Impossible II",
+      "title_zh": "碟中谍2",
       "date": "May 24, 2000",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWFjM2NhMTAtNDU1My00ODUxLTkwMzYtODQzNzM0ODM0ZWQ0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "X-Men",
+      "title_zh": "X战警",
       "date": "Jul 14, 2000",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzNjZjQwOTAtNWQ3NC00MmJlLThlZDEtZmUyMWQ3NmE4Y2Y5XkEyXkFqcGc@._V1_.jpg"
     }

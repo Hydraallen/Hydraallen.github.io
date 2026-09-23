@@ -1,11 +1,14 @@
 {
   "id": "hawaii",
-  "name": "Hawaii",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Hawaii",
+    "zh": "夏威夷"
+  },
+  "country_code": "US",
   "state": "HI",
   "continent": "namerica",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Hawaii/cover.jpg",

@@ -1,10 +1,13 @@
 {
   "id": "istanbul",
-  "name": "Istanbul",
-  "country": "🇹🇷 Turkey",
+  "name": {
+    "en": "Istanbul",
+    "zh": "伊斯坦布尔"
+  },
+  "country_code": "TR",
   "continent": "europe",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Istanbul/cover.jpg",

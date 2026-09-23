@@ -6,251 +6,301 @@
   "movies": [
     {
       "title": "M3GAN",
+      "title_zh": "梅根",
       "date": "Jan 6, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjU1ZWMxYTUtNzQ1ZC00ZTcxLTg0NTMtMzY1ZmQyZjhmYjMyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Plane",
+      "title_zh": "飞机陷落",
       "date": "Jan 13, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDAyYjZmNjctOWE2Mi00ZDBiLWE2YjEtMWM1YmM0NmYzOGQwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Son",
+      "title_zh": "困在心绪里的儿子",
       "date": "Jan 20, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjE4ZTJmMWQtNWI2My00NjhhLTkwYmEtODk5YzM0YzNkNjJjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Wandering Earth II",
+      "title_zh": "流浪地球2",
       "date": "Jan 22, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzg5MTNkZGUtNGViNS00NzFlLTg1NDYtN2Y2NzY3NWNmNzg2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ant-Man and the Wasp: Quantumania",
+      "title_zh": "蚁人与黄蜂女：量子狂潮",
       "date": "Feb 17, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMThkYWY5ZjQtYjJlMS00MDFmLWFkYzEtODEzZjg5YWFmMGY4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Creed III",
+      "title_zh": "奎迪3",
       "date": "Mar 3, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOWY0MTRmY2YtMzBlYi00NjlkLThkZWYtMmE2NzJiZmIzODFkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Shazam! Fury of the Gods",
+      "title_zh": "雷霆沙赞！众神之怒",
       "date": "Mar 17, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjdlYzAwYTMtMWJlOC00OTQ5LWJhMmYtMDhjNGY4M2RhMGU4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "John Wick: Chapter 4",
+      "title_zh": "疾速追杀4",
       "date": "Mar 24, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BY2Q2ZmI5ZjUtNWVhMC00YzJkLTlmYjMtY2RmZDhkNzEzYjZhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Dungeons & Dragons: Honor Among Thieves",
+      "title_zh": "龙与地下城：侠盗荣耀",
       "date": "Mar 31, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGRjMjQ0ZDAtODc0OS00MGY1LTkxMTMtODhhNjY5NTM4N2IwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Super Mario Bros. Movie",
+      "title_zh": "超级马力欧兄弟大电影",
       "date": "Apr 5, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGZlN2EzOTYtMzUzOS00NTM3LTg0MTQtZDVjZGM4YmJlNWNhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ghosted",
+      "title_zh": "神出鬼没",
       "date": "Apr 21, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDI0YzJjZTctNjU0MS00Y2Y3LThkNDgtNWMxYWVlZjVkYzYwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Guardians of the Galaxy Vol. 3",
+      "title_zh": "银河护卫队3",
       "date": "May 5, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Love Again",
+      "title_zh": "短信情缘",
       "date": "May 5, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BODIxY2NkYWEtNWE3ZS00NDZhLWFlMDktMTE0NDNlZDk0MzAyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Hypnotic",
+      "title_zh": "催眠",
       "date": "May 12, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzUyNzBjMjQtNmJhOS00M2U0LTg0MWEtZDVmYmNjNGY2N2U4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Fast X",
+      "title_zh": "速度与激情10",
       "date": "May 19, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzEwZjczOTktYzU1OS00YjJlLTgyY2UtNWEzODBlN2RjZDEwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Little Mermaid",
+      "title_zh": "小美人鱼",
       "date": "May 26, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTM4MWY0OTEtY2E4ZC00NDdhLThkY2ItYTlmNWQxNTNkZTRmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Spider-Man: Across the Spider-Verse",
+      "title_zh": "蜘蛛侠：纵横宇宙",
       "date": "Jun 2, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Transformers: Rise of the Beasts",
+      "title_zh": "变形金刚：超能勇士崛起",
       "date": "Jun 9, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTVkZWY5MmItYjY3OS00OWY3LTg2NWEtOWE1NmQ4NGMwZGNlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Elemental",
+      "title_zh": "疯狂元素城",
       "date": "Jun 16, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjU2MjE1OGItZjdmYS00ZmIyLTljNjYtOWI5ZGRkZjM4NDEwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Flash",
+      "title_zh": "闪电侠",
       "date": "Jun 16, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmE2NzBjNGUtNTJiMy00N2UxLWEyYzMtYzFjODFhMGZlOTgzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Extraction II",
+      "title_zh": "惊天营救2",
       "date": "Jun 16, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZGQwNDdhODAtY2Y0Ni00YzFhLTk1OGUtY2RkMDAzNzBmZjAxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "No Hard Feelings",
+      "title_zh": "不要见怪",
       "date": "Jun 23, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZjk1NmZiNzYtZGUyYi00YzEwLTgwNWQtM2VmOWFmMGIwZDM2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Run Rabbit Run",
+      "title_zh": "兔子快跑",
       "date": "Jun 28, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDUyM2FmYjItYjU5MS00NTA3LWI1NmYtOTE1ODI1OWFjYThmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Indiana Jones and the Dial of Destiny",
+      "title_zh": "夺宝奇兵：命运转盘",
       "date": "Jun 30, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWJlOWE2ZjEtZGRhOC00M2YzLWFkZGEtYzIzZWI2Zjg3NWYxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Resident Evil: Death Island",
+      "title_zh": "生化危机：死亡岛",
       "date": "Jul 7, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzg0OWYwOTMtYjVhNy00NzY0LWJiYTMtMGQ3OTczMmEwZmVhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Mission: Impossible - Dead Reckoning Part One",
+      "title_zh": "碟中谍7：致命清算",
       "date": "Jul 12, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2U4OTdmM2QtZTkxYy00ZmQyLTg2N2UtMDdmMGJmNDhlZDU1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Barbie",
+      "title_zh": "芭比",
       "date": "Jul 21, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjI3NDU0ZGYtYjA2YS00Y2RlLTgwZDAtYTE2YTM5ZjE1M2JlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Oppenheimer",
+      "title_zh": "奥本海默",
       "date": "Jul 21, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BM2RmYmVmMzctMzc5Ny00MmNiLTgxMGUtYjk1ZDRhYjA2YTU0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Hidden Strike",
+      "title_zh": "狂怒沙暴",
       "date": "Jul 28, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTk0NDZjNzAtZmZlYy00OWMwLTg2MTUtMjM3MTVjYjBlYzMzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The First Slam Dunk",
+      "title_zh": "灌篮高手",
       "date": "Jul 28, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMGViYmNmZDUtODFlNi00MjMxLWI0ZmYtYTBiMDg2OGRiODQ4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Teenage Mutant Ninja Turtles: Mutant Mayhem",
+      "title_zh": "忍者神龟：变种大乱斗",
       "date": "Aug 2, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTViNDM0MmUtOTAwMS00MWRhLWI1NDktMzFkN2YzYTI5OGVlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Meg 2: The Trench",
+      "title_zh": "巨齿鲨2：深渊",
       "date": "Aug 4, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGNiOTFkYTUtMDdiMi00YmJlLTkzOTAtMGViYWRhZjY3ODhkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Heart of Stone",
+      "title_zh": "谍之心",
       "date": "Aug 11, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTM5OTQ2ZTYtY2EzMC00Zjc3LTg3NWEtZWI4OTdlMjcwMGFlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Blue Beetle",
+      "title_zh": "蓝甲虫",
       "date": "Aug 18, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTEyYzQzOTMtMWExNi00OWNjLTgwMDUtNzY0YjhmZDBiMTk2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Gran Turismo",
+      "title_zh": "GT赛车：极速狂飙",
       "date": "Aug 25, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjA0N2YyNmYtZDk4Ny00ODE2LThmZWQtNGJiMDk0YzhiNzE5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "A Haunting in Venice",
+      "title_zh": "威尼斯惊魂夜",
       "date": "Sep 15, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTgwODdhZTMtYTFiNy00NzI1LTkwZWEtNjI2NWZiMzFmMjJlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Expendables 4",
+      "title_zh": "敢死队4：最终章",
       "date": "Sep 22, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZjgyMmRmM2EtYWY5ZC00ZTllLWJhM2QtMGRlNGEzMWEzYzllXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Creator",
+      "title_zh": "A.I.创世者",
       "date": "Sep 29, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDkxMTUxOTQtYzM4Yi00YzA2LTgzOTYtNDg2NTliODE0ZTRjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Taylor Swift: The Eras Tour",
+      "title_zh": "泰勒·斯威夫特：时代巡回演唱会",
       "date": "Oct 12, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BM2EzMzU3NTEtOWI3NC00N2VjLWFlZTMtMmJjNDc3ZWRjZTk4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Killers of the Flower Moon",
+      "title_zh": "花月杀手",
       "date": "Oct 20, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZWY5ZDVjNTUtODI5Yy00MjFhLWEyM2EtYzZjM2VjZTI0MTBjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Freelance",
+      "title_zh": "超危险保镖",
       "date": "Oct 27, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDcwYzM1YTEtYmU3YS00YjAzLTg1OGMtZjZmOWVhNTUyMmUxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Marvels",
+      "title_zh": "惊奇队长2",
       "date": "Nov 10, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzczOWM4MzItMWMyOS00ZDczLWIxMzctNzBmYTgzOTI1MzI3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
+      "title_zh": "饥饿游戏：鸣鸟与蛇之歌",
       "date": "Nov 17, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDk2YjNhYzEtYzg2ZC00OWEwLWJhYzgtMGUzMWVjNDFmYzI5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Godzilla Minus One",
+      "title_zh": "哥斯拉-1.0",
       "date": "Dec 1, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjc5MjllMGUtMDIwMS00ZDVkLWEzODQtM2NlMTMwMTZhNThmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Wonka",
+      "title_zh": "旺卡",
       "date": "Dec 15, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BM2Y1N2ZhNjctYjVhZC00MDg2LWFhNTItMzI3ZjAwZDhjYmFiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Rebel Moon - Part One: A Child of Fire",
+      "title_zh": "月球叛军：火之女",
       "date": "Dec 21, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYTRmOTk2ZDYtY2Q3Mi00MGYwLWFjNDQtYTliODc3NzM1ZjBlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Aquaman and the Lost Kingdom",
+      "title_zh": "海王2：失落的王国",
       "date": "Dec 22, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjQ1ZTUzMWMtY2VkNS00ZDRjLWEwODYtYmFkMWJiNTQxMDUzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Anyone But You",
+      "title_zh": "只想爱你",
       "date": "Dec 22, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BZWUxYTFhMzItMmE0ZC00ODgzLTkwZWItOGUwMTI1YjQwMDJjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Poor Things",
+      "title_zh": "可怜的东西",
       "date": "Dec 22, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWU2MjRjZTYtMjVkMS00MTBjLWFiMTAtYmZlYTk1YjkyMWFkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Salaar",
+      "title_zh": "萨拉尔",
       "date": "Dec 22, 2023",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzU2MzZiOTEtZTgwOS00MTdlLWJmMDQtNjdjOGIxYTA0NTYxXkEyXkFqcGc@._V1_.jpg"
     }

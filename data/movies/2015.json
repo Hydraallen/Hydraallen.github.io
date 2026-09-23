@@ -6,141 +6,169 @@
   "movies": [
     {
       "title": "Paddington",
+      "title_zh": "帕丁顿熊",
       "date": "Jan 16, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTAxOTMwOTkwNDZeQTJeQWpwZ15BbWU4MDEyMTI1NjMx._V1_.jpg"
     },
     {
       "title": "Kingsman: The Secret Service",
+      "title_zh": "王牌特工：特工学院",
       "date": "Feb 13, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BODk1MTYwNTAtYmI5Zi00OWYyLWE0MzQtOWE4NDIxZmU2MjMwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Chappie",
+      "title_zh": "超能查派",
       "date": "Mar 6, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTUyNTI4NTIwNl5BMl5BanBnXkFtZTgwMjQ4MTI0NDE@._V1_.jpg"
     },
     {
       "title": "The Divergent Series: Insurgent",
+      "title_zh": "分歧者2：绝地反击",
       "date": "Mar 20, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTgxOTYxMTg3OF5BMl5BanBnXkFtZTgwMDgyMzA2NDE@._V1_.jpg"
     },
     {
       "title": "Furious 7",
+      "title_zh": "速度与激情7",
       "date": "Apr 3, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQxOTA2NDUzOV5BMl5BanBnXkFtZTgwNzY2MTMxMzE@._V1_.jpg"
     },
     {
       "title": "Ex Machina",
+      "title_zh": "机械姬",
       "date": "Apr 24, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_.jpg"
     },
     {
       "title": "Barely Lethal",
+      "title_zh": "刺客学妹",
       "date": "Apr 30, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjM4MzYyMjI1MV5BMl5BanBnXkFtZTgwMjE0Mzg2NTE@._V1_.jpg"
     },
     {
       "title": "Avengers: Age of Ultron",
+      "title_zh": "复仇者联盟2：奥创纪元",
       "date": "May 1, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BODBhYTg1NGQtNGVmNS00ZTdiLThjYTYtZDFkNzRiNTZmNDZjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Pitch Perfect 2",
+      "title_zh": "完美音调2",
       "date": "May 15, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzk4OTM2NzMzNl5BMl5BanBnXkFtZTgwNTAzNDE0NDE@._V1_.jpg"
     },
     {
       "title": "Mad Max: Fury Road",
+      "title_zh": "疯狂的麦克斯：狂暴之路",
       "date": "May 15, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDRkODJhOTgtOTc1OC00NTgzLTk4NjItNDgxZDY4YjlmNDY2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "San Andreas",
+      "title_zh": "末日崩塌",
       "date": "May 29, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmQzNDEzMzMtM2U5OS00YTUzLWI2NDYtYjI2NjAyNWE5YzMzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Police Story: Lockdown",
+      "title_zh": "警察故事2013",
       "date": "Jun 5, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTUwODUyNDM3NV5BMl5BanBnXkFtZTgwNzk0MzA2NTE@._V1_.jpg"
     },
     {
       "title": "Jurassic World",
+      "title_zh": "侏罗纪世界",
       "date": "Jun 12, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzBhNzlkM2UtZTQyOC00NjUyLTkzMmMtNDQ1YTM5N2NmMGE5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Inside Out",
+      "title_zh": "头脑特工队",
       "date": "Jun 19, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTgxMDQwMDk0OF5BMl5BanBnXkFtZTgwNjU5OTg2NDE@._V1_.jpg"
     },
     {
       "title": "Terminator Genisys",
+      "title_zh": "终结者：创世纪",
       "date": "Jul 1, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjM1NTc0NzE4OF5BMl5BanBnXkFtZTgwNDkyNjQ1NTE@._V1_.jpg"
     },
     {
       "title": "Minions",
+      "title_zh": "小黄人大眼萌",
       "date": "Jul 10, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BODI4NzMyNjE0MF5BMl5BanBnXkFtZTgwMTcwNzI0MzE@._V1_.jpg"
     },
     {
       "title": "Ant-Man",
+      "title_zh": "蚁人",
       "date": "Jul 17, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjM2NTQ5Mzc2M15BMl5BanBnXkFtZTgwNTcxMDI2NTE@._V1_.jpg"
     },
     {
       "title": "Before We Go",
+      "title_zh": "午夜邂逅",
       "date": "Jul 21, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTMxNzE0NjY4NV5BMl5BanBnXkFtZTgwMjIxNjIzNjE@._V1_.jpg"
     },
     {
       "title": "Pixels",
+      "title_zh": "像素大战",
       "date": "Jul 24, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzIyNTc1NmUtOTBlNS00YzEwLTlkZTMtZjJkMGM2YzNkYmY3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Mission: Impossible - Rogue Nation",
+      "title_zh": "碟中谍5：神秘国度",
       "date": "Jul 31, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BZjUwZjg2ZjAtY2RhZi00YmZjLTlhNGQtOWQwNDk1MjhhM2NhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Fantastic Four",
+      "title_zh": "神奇四侠",
       "date": "Aug 7, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk0OTMyMDA0OF5BMl5BanBnXkFtZTgwMzY5NTkzNTE@._V1_.jpg"
     },
     {
       "title": "American Ultra",
+      "title_zh": "废柴特工",
       "date": "Aug 21, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTcwMTM1NDU1Ml5BMl5BanBnXkFtZTgwNDk5MTgzNjE@._V1_.jpg"
     },
     {
       "title": "The Martian",
+      "title_zh": "火星救援",
       "date": "Oct 2, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_.jpg"
     },
     {
       "title": "Sicario",
+      "title_zh": "边境杀手",
       "date": "Oct 2, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjA5NjM3NTk1M15BMl5BanBnXkFtZTgwMzg1MzU2NjE@._V1_.jpg"
     },
     {
       "title": "The Hunger Games: Mockingjay - Part 2",
+      "title_zh": "饥饿游戏3：嘲笑鸟（下）",
       "date": "Nov 20, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjQzNDI2NTU1Ml5BMl5BanBnXkFtZTgwNTAyMDQ5NjE@._V1_.jpg"
     },
     {
       "title": "Creed",
+      "title_zh": "奎迪",
       "date": "Nov 25, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BNWM3NjY2ZDctMGZiYy00OGFlLThkMTktOTY2MDM2YjE2OTliXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Spectre",
+      "title_zh": "007：幽灵党",
       "date": "Nov 6, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzA5MzFiNDAtYTI0NC00MDE5LTljYTctYTNkODk1OTZlODI5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Star Wars: Episode VII - The Force Awakens",
+      "title_zh": "星球大战：原力觉醒",
       "date": "Dec 18, 2015",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_.jpg"
     }

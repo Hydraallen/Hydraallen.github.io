@@ -1,10 +1,13 @@
 {
   "id": "australia",
-  "name": "Australia",
-  "country": "🇦🇺 Australia",
+  "name": {
+    "en": "Australia",
+    "zh": "澳大利亚"
+  },
+  "country_code": "AU",
   "continent": "oceania",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Australia/cover.jpg",

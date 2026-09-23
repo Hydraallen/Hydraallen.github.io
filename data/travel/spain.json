@@ -1,10 +1,13 @@
 {
   "id": "spain",
-  "name": "Spain",
-  "country": "🇪🇸 Spain",
+  "name": {
+    "en": "Spain",
+    "zh": "西班牙"
+  },
+  "country_code": "ES",
   "continent": "europe",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Spain/cover.jpg",

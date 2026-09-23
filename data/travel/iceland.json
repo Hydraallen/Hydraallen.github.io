@@ -1,10 +1,13 @@
 {
   "id": "iceland",
-  "name": "Iceland",
-  "country": "🇮🇸 Iceland",
+  "name": {
+    "en": "Iceland",
+    "zh": "冰岛"
+  },
+  "country_code": "IS",
   "continent": "europe",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/Iceland/cover.jpg",

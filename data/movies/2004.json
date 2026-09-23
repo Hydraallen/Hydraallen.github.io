@@ -6,81 +6,97 @@
   "movies": [
     {
       "title": "Hellboy",
+      "title_zh": "地狱男爵",
       "date": "Apr 2, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWZhODhmZjktNmIzNC00NGRmLTkyMDEtODVmMzVmNGQwYWU0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Punisher",
+      "title_zh": "惩罚者",
       "date": "Apr 16, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjI5NjcwMTQxMV5BMl5BanBnXkFtZTcwODg5ODkwNQ@@._V1_.jpg"
     },
     {
       "title": "Mean Girls",
+      "title_zh": "贱女孩",
       "date": "Apr 30, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjE1MDQ4MjI1OV5BMl5BanBnXkFtZTcwNzcwODAzMw@@._V1_.jpg"
     },
     {
       "title": "Van Helsing",
+      "title_zh": "范海辛",
       "date": "May 7, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDk3NTdlYzQtMjhiMy00MWJkLWFjNDctMzE4ZGEwZWExNGViXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Troy",
+      "title_zh": "特洛伊",
       "date": "May 14, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk5MzU1MDMwMF5BMl5BanBnXkFtZTcwNjczODMzMw@@._V1_.jpg"
     },
     {
       "title": "The Day After Tomorrow",
+      "title_zh": "后天",
       "date": "May 28, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGZmNDYyNmMtNDQyNy00OTkzLTg1OGUtYWJiNmQ5Y2Q5ZGU3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Harry Potter and the Prisoner of Azkaban",
+      "title_zh": "哈利·波特与阿兹卡班的囚徒",
       "date": "Jun 4, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY4NTIwODg0N15BMl5BanBnXkFtZTcwOTc0MjEzMw@@._V1_.jpg"
     },
     {
       "title": "Garfield: The Movie",
+      "title_zh": "加菲猫",
       "date": "Jun 11, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTIzMTc1OTUxOV5BMl5BanBnXkFtZTYwNTMxODc3._V1_.jpg"
     },
     {
       "title": "Spider-Man 2",
+      "title_zh": "蜘蛛侠2",
       "date": "Jun 30, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BNGQ0YTQyYTgtNWI2YS00NTE2LWJmNDItNTFlMTUwNmFlZTM0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "King Arthur",
+      "title_zh": "亚瑟王",
       "date": "Jul 7, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk4MTk1NjI0OV5BMl5BanBnXkFtZTcwNDQxOTUyMQ@@._V1_.jpg"
     },
     {
       "title": "I, Robot",
+      "title_zh": "我，机器人",
       "date": "Jul 16, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDdhNTY3YTgtYmQwMC00MjM1LTgzYzMtMGM1N2E0NWM1NDlkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Bourne Supremacy",
+      "title_zh": "谍影重重2",
       "date": "Jul 23, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTU4ZDgyYjgtODA0Mi00MmE3LTgzYWQtZjc1YTFiMTczZTQ3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Alien vs. Predator",
+      "title_zh": "异形大战铁血战士",
       "date": "Aug 13, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU4MjIwMTcyMl5BMl5BanBnXkFtZTYwMTYwNDA3._V1_.jpg"
     },
     {
       "title": "Resident Evil: Apocalypse",
+      "title_zh": "生化危机2：启示录",
       "date": "Sep 10, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTc1NTUxMzk0Nl5BMl5BanBnXkFtZTcwNDQ1MDIzMw@@._V1_.jpg"
     },
     {
       "title": "The Incredibles",
+      "title_zh": "超人总动员",
       "date": "Nov 5, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY5OTU0OTc2NV5BMl5BanBnXkFtZTcwMzU4MDcyMQ@@._V1_.jpg"
     },
     {
       "title": "Blade: Trinity",
+      "title_zh": "刀锋战士3",
       "date": "Dec 8, 2004",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjE0Nzg2MzI3MF5BMl5BanBnXkFtZTYwMjExODQ3._V1_.jpg"
     }

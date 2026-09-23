@@ -6,221 +6,265 @@
   "movies": [
     {
       "title": "Redemption Day",
+      "title_zh": "救赎之日",
       "date": "Jan 8, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjcwNjYzMzAtZGY3NC00NjkxLWIzYzAtMTBjYzIxODBkNjAwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Outside the Wire",
+      "title_zh": "末日激战",
       "date": "Jan 15, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTM2ZTFjMTctNmJjNS00OTkwLWIxOWEtY2NjMDI3NTJmNmMxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Our Friend",
+      "title_zh": "朋友",
       "date": "Jan 29, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzAwNjM1MmYtODhmZC00YThlLWIzNGQtNzNhMjk3ODVjZGQyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Tom & Jerry",
+      "title_zh": "猫和老鼠",
       "date": "Feb 26, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzcxMDM4OTUtZTAyZS00NWU0LWJhYWYtZTZlNzk5N2Y1MDNiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The SpongeBob Movie: Sponge on the Run",
+      "title_zh": "海绵宝宝：营救大冒险",
       "date": "Mar 4, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTBiZDQ2MWEtYzE1MC00YmMyLTg1NjUtNzE2YTZlMjI3MGUxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Chaos Walking",
+      "title_zh": "混沌行走",
       "date": "Mar 5, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BODI3NjZiZDAtZWRlZi00MzYyLWEwOTctNjFhMmQ3MzBjMGJhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Cherry",
+      "title_zh": "谢里",
       "date": "Mar 12, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTk5MmIzNmQtMjU3NC00NDA5LThlMGQtNDc4MzVmNzkwMzZmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Zack Snyder's Justice League",
+      "title_zh": "扎克·施奈德版正义联盟",
       "date": "Mar 18, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDA0MzM5YTctZTU2My00NGQ5LWE2NTEtNDM0MjZmMDBkOTZkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Courier",
+      "title_zh": "信使",
       "date": "Mar 19, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BYTJlOTIwNjItYjZiMS00Njc3LThkMDgtNWVhNGUxNzBlYWE3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Godzilla vs. Kong",
+      "title_zh": "哥斯拉大战金刚",
       "date": "Mar 31, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjZlYjUwZjItZmQ1ZS00NDU2LWFhNWMtMGRmMmZiMzliY2NhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Without Remorse",
+      "title_zh": "冷血悍将",
       "date": "Apr 30, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzE0NjU1MmUtZWUzMS00ZWRiLWE5ZjYtODk3NmRlMmExYWI1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Cruella",
+      "title_zh": "黑白魔女库伊拉",
       "date": "May 28, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWY5MjljNjctZjhjZS00MWY0LTgwYzUtZTJiYTVmMmJkM2E0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "A Quiet Place Part II",
+      "title_zh": "寂静之地2",
       "date": "May 28, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjRiYjk4ZmItNGQ5NS00MmRhLTk4Y2EtMGQ1MTYxZWJhYjU0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "F9: The Fast Saga",
+      "title_zh": "速度与激情9",
       "date": "Jun 25, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BODJkMTQ5ZmQtNzQxYy00ZWNlLWI0ZGYtYjU1NzdiMjcyNDRmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Ice Road",
+      "title_zh": "冰路营救",
       "date": "Jun 25, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDNiMjM2NTYtOGI4MC00YjZkLWE2ZjAtZjcyNDg5ZDNmYWVjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Tomorrow War",
+      "title_zh": "明日之战",
       "date": "Jul 2, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmUyNzY2YWYtNWQ0My00ODMwLTkwOTQtOTA0ZjM0MjRmYjJiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Till Death",
+      "title_zh": "至死不渝",
       "date": "Jul 2, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTljMGQ0ZDYtM2NiYy00NzA4LTk4MGEtY2Y4YWZiNDJhOGE5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Black Widow",
+      "title_zh": "黑寡妇",
       "date": "Jul 9, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTMyZTA0ZTItYjY3Yi00ODNjLWExYTgtYzgxZTk0NTg0Y2FlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Midnight in the Switchgrass",
+      "title_zh": "午夜的柳枝",
       "date": "Jul 23, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNGEzMmYzNzItNzkxZS00ZjE0LWExNzAtY2YxZmUyNWE5Mjc1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Jungle Cruise",
+      "title_zh": "丛林奇航",
       "date": "Jul 30, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWU5ZTBkMjQtMzg2Yi00ZmJlLTk4YWEtYTc0ZjU1YzE1NGNkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Suicide Squad",
+      "title_zh": "X特遣队：全员集结",
       "date": "Aug 5, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWU3Y2NlZmEtMjJjNS00ZWMxLWE1MzctYWYyMjMzMDdkNTE4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Free Guy",
+      "title_zh": "失控玩家",
       "date": "Aug 13, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2I0MGMxYjUtZTZiMS00MzMxLTkzNWYtMDUyZmUwY2ViYTljXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "CODA",
+      "title_zh": "健听女孩",
       "date": "Aug 13, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzIzOTNjOTQtM2QzOC00NjFlLTljZDUtZmI4Yjg1YTkyMTBiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Reminiscence",
+      "title_zh": "追忆迷局",
       "date": "Aug 20, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGZmNDYxMWItYWZiMi00OWUwLWIzODYtMWViOTFhNjQxYWE2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Shang-Chi and the Legend of the Ten Rings",
+      "title_zh": "尚气与十环传奇",
       "date": "Sep 3, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BZmY5MDcyNzAtYzg3MC00MGNlLTg3OGItNmRjYThkZGVlNzAyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Venom: Let There Be Carnage",
+      "title_zh": "毒液2",
       "date": "Oct 1, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BZGIxMTU1MjItM2FmMi00YmFiLTgwNDMtMTczYmVjYTBhNGZhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "No Time to Die",
+      "title_zh": "007：无暇赴死",
       "date": "Oct 8, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BZGZiOGZhZDQtZmRkNy00ZmUzLTliMGEtZGU0NjExOGMxZDVkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Worst Person in the World",
+      "title_zh": "世界上最糟糕的人",
       "date": "Oct 13, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BZGEyYzBiYmItZDM4OC00NTdmLWJlYzctODdiM2E2MjZmYTU2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Last Duel",
+      "title_zh": "最后的决斗",
       "date": "Oct 15, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BZGZiNDFkNDgtNDlmNS00NzZmLTg4MmItMzJkYjdmMjJkZDliXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Dune: Part One",
+      "title_zh": "沙丘",
       "date": "Oct 22, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNWIyNmU5MGYtZDZmNi00ZjAwLWJlYjgtZTc0ZGIxMDE4ZGYwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "After We Fell",
+      "title_zh": "之后3",
       "date": "Oct 22, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMmM0MTZhOGItZDQ3OC00MDhjLThiZjEtMWJkNjUxNzk1MGJhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Eternals",
+      "title_zh": "永恒族",
       "date": "Nov 5, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTBiZjI2M2UtZTNiNy00NmU4LWJiMjYtZjk4MDIzMzhlMjFlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Spencer",
+      "title_zh": "斯潘塞",
       "date": "Nov 5, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjcyYzIyMTItNDQzYS00ZmI5LWJlYzItZDk5ZmEyNDlhNWQ3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Finch",
+      "title_zh": "芬奇",
       "date": "Nov 5, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjhhMGVkN2MtNDA3OC00M2E5LTg3ODYtZGJiNmIwNmQwMWYyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Red Notice",
+      "title_zh": "红色通缉令",
       "date": "Nov 12, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGNjNGQ3MmItYTM5NS00NjBiLWI0ZTItZDE5ZjQyNjg3ODBjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "tick, tick... BOOM!",
+      "title_zh": "倒数时刻",
       "date": "Nov 19, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGYyNGJmNzctYzZjZi00MzUzLTg3YTYtYjk0OTNjMzA1OTE4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "House of Gucci",
+      "title_zh": "古驰家族",
       "date": "Nov 24, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMmQ3OTRiYWItMGRiOC00ZTVmLWJjMjEtNjZhNDQ5NjIxODNjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Resident Evil: Welcome to Raccoon City",
+      "title_zh": "新生化危机",
       "date": "Nov 24, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDA5MTZlZDEtYzhiYi00MWIyLWI1NWMtNTA0OGY4NWI5ZGVlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Power of the Dog",
+      "title_zh": "犬之力",
       "date": "Dec 1, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzgyMzA2NDEtZWUxNy00MDNmLTllMDYtNzZmNTU5ZWVmMzhlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Spider-Man: No Way Home",
+      "title_zh": "蜘蛛侠：英雄无归",
       "date": "Dec 17, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Nightmare Alley",
+      "title_zh": "玉面情魔",
       "date": "Dec 17, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNThlMDUzMDEtOTY1ZC00MzI3LThlOGItYjI0MTdkZDliNDEzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Matrix Resurrections",
+      "title_zh": "黑客帝国：矩阵重启",
       "date": "Dec 22, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDMyNDIzYzMtZTMyMy00NjUyLWI3Y2MtYzYzOGE1NzQ1MTBiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The King's Man",
+      "title_zh": "王牌特工：源起",
       "date": "Dec 22, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjY3YTY3MGMtMjVmYS00ZmM3LWIxMDAtYWVhZTAyZDMwNmMwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Don't Look Up",
+      "title_zh": "不要抬头",
       "date": "Dec 24, 2021",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjhhNWFjNzctYTJjOS00MDc0LThiNjItZmM0ZDVmMWViY2UzXkEyXkFqcGc@._V1_.jpg"
     }

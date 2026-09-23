@@ -6,41 +6,49 @@
   "movies": [
     {
       "title": "Elektra",
+      "title_zh": "艾丽卡",
       "date": "Jan 14, 2005",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTI3MTUwNzM5MV5BMl5BanBnXkFtZTcwNzczMDIzMw@@._V1_.jpg"
     },
     {
       "title": "Star Wars: Episode III - Revenge of the Sith",
+      "title_zh": "星球大战前传3：西斯的反击",
       "date": "May 19, 2005",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_.jpg"
     },
     {
       "title": "Mr. & Mrs. Smith",
+      "title_zh": "史密斯行动",
       "date": "Jun 10, 2005",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTUxMzcxNzQzOF5BMl5BanBnXkFtZTcwMzQxNjUyMw@@._V1_.jpg"
     },
     {
       "title": "Batman Begins",
+      "title_zh": "蝙蝠侠：侠影之谜",
       "date": "Jun 15, 2005",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzA2NDQzZDEtNDU5Ni00YTlkLTg2OWEtYmQwM2Y1YTBjMjFjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Fantastic Four",
+      "title_zh": "神奇四侠",
       "date": "Jul 8, 2005",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjY2YmZmMzUtZWY5Mi00MzI3LTljOTgtYTMwMWY1ODI5ZWY5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Island",
+      "title_zh": "逃出克隆岛",
       "date": "Jul 22, 2005",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTAwNjk0NjM1ODReQTJeQWpwZ15BbWU3MDc1NjIxMzM@._V1_.jpg"
     },
     {
       "title": "Harry Potter and the Goblet of Fire",
+      "title_zh": "哈利·波特与火焰杯",
       "date": "Nov 18, 2005",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTIzNzUzOTk2NV5BMl5BanBnXkFtZTYwNTI4MDg2._V1_.jpg"
     },
     {
       "title": "Æon Flux",
+      "title_zh": "魔力女战士",
       "date": "Dec 2, 2005",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTc2Mzg0NjA2N15BMl5BanBnXkFtZTcwOTc5NjQzMw@@._V1_.jpg"
     }

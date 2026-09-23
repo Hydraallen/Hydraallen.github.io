@@ -1,10 +1,13 @@
 {
   "id": "new_zealand",
-  "name": "New Zealand",
-  "country": "🇳🇿 New Zealand",
+  "name": {
+    "en": "New Zealand",
+    "zh": "新西兰"
+  },
+  "country_code": "NZ",
   "continent": "oceania",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/NewZealand/cover.jpg",

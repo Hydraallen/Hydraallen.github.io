@@ -6,121 +6,145 @@
   "movies": [
     {
       "title": "Shutter Island",
+      "title_zh": "禁闭岛",
       "date": "Feb 19, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2FjNWExYzEtY2YzOC00YjNlLTllMTQtNmIwM2Q1YzBhOWM1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Green Zone",
+      "title_zh": "绿区",
       "date": "Mar 12, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYzMTA1NDMyNV5BMl5BanBnXkFtZTcwMzUwODY5Mg@@._V1_.jpg"
     },
     {
       "title": "Remember Me",
+      "title_zh": "记住我",
       "date": "Mar 12, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTA4MTg1ODkwNF5BMl5BanBnXkFtZTcwMzE5ODAxMw@@._V1_.jpg"
     },
     {
       "title": "How to Train Your Dragon",
+      "title_zh": "驯龙高手",
       "date": "Mar 26, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjA5NDQyMjc2NF5BMl5BanBnXkFtZTcwMjg5ODcyMw@@._V1_.jpg"
     },
     {
       "title": "Ca$h",
+      "title_zh": "现金对决",
       "date": "Mar 26, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzk2ZDM0YTgtOWY1MC00Mjk2LWJhZjItOWExMTFkZjFlOWYwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Clash of the Titans",
+      "title_zh": "诸神之战",
       "date": "Apr 2, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYxNjg4MzU5OV5BMl5BanBnXkFtZTcwOTA3NTUwMw@@._V1_.jpg"
     },
     {
       "title": "Iron Man 2",
+      "title_zh": "钢铁侠2",
       "date": "May 7, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWYyOGQzOGYtMGQ1My00ZWYxLTgzZjktZWYzN2IwYjkxYzM0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Shrek Forever After",
+      "title_zh": "怪物史莱克4",
       "date": "May 21, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY0OTU1NzkxMl5BMl5BanBnXkFtZTcwMzI2NDUzMw@@._V1_.jpg"
     },
     {
       "title": "Prince of Persia: The Sands of Time",
+      "title_zh": "波斯王子：时之刃",
       "date": "May 28, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTMwNDg0NzcyMV5BMl5BanBnXkFtZTcwNjg4MjQyMw@@._V1_.jpg"
     },
     {
       "title": "Toy Story 3",
+      "title_zh": "玩具总动员3",
       "date": "Jun 18, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_.jpg"
     },
     {
       "title": "Jonah Hex",
+      "title_zh": "西部英雄约拿·哈克斯",
       "date": "Jun 18, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQ2NzYxNjQyMF5BMl5BanBnXkFtZTcwOTQ0OTI0Mw@@._V1_.jpg"
     },
     {
       "title": "The Twilight Saga: Eclipse",
+      "title_zh": "暮光之城3：月食",
       "date": "Jun 30, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDMwNjAzNzYwOF5BMl5BanBnXkFtZTcwMDY5NzcyMw@@._V1_.jpg"
     },
     {
       "title": "Despicable Me",
+      "title_zh": "神偷奶爸",
       "date": "Jul 9, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_.jpg"
     },
     {
       "title": "Inception",
+      "title_zh": "盗梦空间",
       "date": "Jul 16, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg"
     },
     {
       "title": "Winter's Bone",
+      "title_zh": "冬天的骨头",
       "date": "Jul 16, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjA0OTM3MDMxNF5BMl5BanBnXkFtZTcwMDY1MjI0Mw@@._V1_.jpg"
     },
     {
       "title": "Centurion",
+      "title_zh": "百夫长",
       "date": "Jul 30, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQ4NTI1MTEzM15BMl5BanBnXkFtZTcwNDc3NDc1Mw@@._V1_.jpg"
     },
     {
       "title": "Resident Evil: Afterlife",
+      "title_zh": "生化危机4：来生",
       "date": "Sep 10, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTgyZmNmNjctMTdlNC00NjEzLWIwZjAtYzRmNGQzYWIzOGFmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Flipped",
+      "title_zh": "怦然心动",
       "date": "Sep 10, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjQ1Nzc4MF5BMl5BanBnXkFtZTcwNTM0NDk1Mw@@._V1_.jpg"
     },
     {
       "title": "Detective Dee: The Mystery of the Phantom Flame",
+      "title_zh": "狄仁杰之通天帝国",
       "date": "Sep 30, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BZjQ4YzY5NjQtOWNlNS00NjVjLWE5ODQtNGI0OWUwZTJjZTg0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Harry Potter and the Deathly Hallows: Part 1",
+      "title_zh": "哈利·波特与死亡圣器（上）",
       "date": "Nov 19, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTQ2OTE1Mjk0N15BMl5BanBnXkFtZTcwODE3MDAwNA@@._V1_.jpg"
     },
     {
       "title": "Tangled",
+      "title_zh": "魔发奇缘",
       "date": "Nov 24, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTAxNDYxMjg0MjNeQTJeQWpwZ15BbWU3MDcyNTk2OTM@._V1_.jpg"
     },
     {
       "title": "Faster",
+      "title_zh": "极速复仇",
       "date": "Nov 24, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTMyOTQ5MTAxOF5BMl5BanBnXkFtZTcwOTYzMDg5Mw@@._V1_.jpg"
     },
     {
       "title": "London Boulevard",
+      "title_zh": "伦敦大道",
       "date": "Nov 26, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjA1OTk2NTI4NF5BMl5BanBnXkFtZTcwOTA5NTE5Ng@@._V1_.jpg"
     },
     {
       "title": "Tron: Legacy",
+      "title_zh": "创：战纪",
       "date": "Dec 17, 2010",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk4NTk4MTk1OF5BMl5BanBnXkFtZTcwNTE2MDIwNA@@._V1_.jpg"
     }

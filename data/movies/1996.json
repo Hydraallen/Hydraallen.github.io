@@ -6,6 +6,7 @@
   "movies": [
     {
       "title": "Mission: Impossible",
+      "title_zh": "碟中谍",
       "date": "May 22, 1996",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGZjNDlkMTYtMTJkZi00OTkzLWI4NDEtYTA2ODQyMjcwYTdlXkEyXkFqcGc@._V1_.jpg"
     }

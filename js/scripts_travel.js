@@ -14,9 +14,18 @@ var lib =
     : {
         escapeHtml: escapeHtml,
         getDisplayName: getDisplayName,
+        getCountryLabel: getCountryLabel,
+        formatPlaceDates: formatPlaceDates,
         compareVisited: compareVisited,
         comparePlanned: comparePlanned,
       };
+
+// --- i18n (js/i18n.js is loaded in <head>; Node requires it) ---
+// 文案与语言：浏览器用 i18n.js 全局函数，Node 测试中 require。
+var _travelI18n =
+  typeof module !== "undefined" && module.exports
+    ? require("./i18n.js")
+    : { t: t, pick: pick, getLang: getLang, withLangParam: withLangParam };
 
 // Fetch every travel data file with per-file fault tolerance: a single 404 or
 // non-JSON response is warned about and skipped (returned as null then filtered
@@ -42,9 +51,51 @@ async function fetchTravelFiles(fileList, fetchFn) {
 
 // Build the trip detail-page URL for a place. The id is percent-encoded so an
 // id containing spaces or reserved characters cannot break out of the query
-// string. Module-level so it is unit-testable without Leaflet / the DOM.
-function tripUrl(place) {
-  return `trip.html?place=${encodeURIComponent(place.id)}`;
+// string. When `lang` is given the link carries ?lang= so the choice survives
+// even when localStorage is blocked. Module-level so it is unit-testable.
+function tripUrl(place, lang) {
+  const url = `trip.html?place=${encodeURIComponent(place.id)}`;
+  return lang ? _travelI18n.withLangParam(url, lang) : url;
+}
+
+// Default tile language for the #lang-select picker: follows the site language.
+function mapLangFor(siteLang) {
+  return siteLang === "zh" ? "cn" : "en";
+}
+
+// Inner HTML of one place card (pure; the DOM wrapper is built by the page).
+// The video link is a real <a> to an external host, so it must stay a sibling
+// of the card link — nesting <a> inside <a> is invalid HTML; it sits above the
+// stretched link via z-index (see .hover-actions). The place name is a genuine
+// link; `.place-card-link::after` stretches its hit area over the whole card.
+function buildPlaceCardHtml(place, isPlanned, lang = "en") {
+  const esc = lib.escapeHtml;
+  const displayName = lib.getDisplayName(place, lang);
+  const hasVideo = typeof place.video === "string" && place.video.trim() !== "";
+
+  let overlayHtml = "";
+  if (isPlanned) {
+    overlayHtml += `<span class="hover-note">${esc(_travelI18n.t("travel.coming_soon", lang))}</span>`;
+  }
+  if (hasVideo) {
+    overlayHtml += `<a href="${esc(place.video)}" target="_blank" rel="noopener noreferrer" class="action-btn video-btn-overlay">${esc(_travelI18n.t("travel.play_video", lang))}</a>`;
+  }
+
+  return `
+      <div class="place-image-wrapper">
+        <img src="${esc(place.cover)}" alt="${esc(displayName)}" loading="lazy">
+        <div class="hover-actions">
+          ${overlayHtml}
+        </div>
+      </div>
+      <div class="place-info">
+        <div class="place-country">${esc(lib.getCountryLabel(place, lang))}</div>
+        <h3 class="place-city">
+          <a class="place-card-link" href="${esc(tripUrl(place, lang))}">${esc(displayName)}</a>
+        </h3>
+        <div class="place-date">${esc(lib.formatPlaceDates(place, lang))}</div>
+      </div>
+    `;
 }
 
 let allTravelData = [];
@@ -54,7 +105,7 @@ let tileLayer; // Keep track of the tile layer to switch languages
 // 全局标记：所有城市/区域的主标记
 let globalMarkers = [];
 
-let currentLanguage = 'en'; // Default language: English
+let currentLanguage = 'en'; // Tile language; set from the site language at startup
 
 // --- 1. 定义自定义颜色的图钉 ---
 // Guard against a missing Leaflet global so this module can be required in Node
@@ -103,6 +154,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const continentBtns = document.querySelectorAll(".continent-tabs .tab-btn");
   const visitedCheckbox = document.getElementById("filter-visited");
   const plannedCheckbox = document.getElementById("filter-planned");
+  const siteLang = _travelI18n.getLang();
+
+  // 地图瓦片默认语言跟随站点语言（zh -> cn），用户仍可手动切换
+  currentLanguage = mapLangFor(siteLang);
+  if (langSelect) langSelect.value = currentLanguage;
 
   // 2. Initialize Map
   function initMap() {
@@ -154,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
     } catch (error) {
       console.error("Error loading travel data:", error);
-      gridContainer.innerHTML = `<p style="text-align:center; color:red;">Error loading data.</p>`;
+      gridContainer.innerHTML = `<p style="text-align:center; color:red;">${lib.escapeHtml(_travelI18n.t("travel.error", siteLang))}</p>`;
     }
   }
 
@@ -196,10 +252,10 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // 点击城市标记：进入该地点的行程详情页
         marker.on('click', function() {
-          window.location.href = tripUrl(place);
+          window.location.href = tripUrl(place, siteLang);
         });
 
-        marker.bindTooltip(place.name, {
+        marker.bindTooltip(lib.escapeHtml(lib.getDisplayName(place, siteLang)), {
             permanent: false, 
             direction: 'top',
             offset: [0, -40] // 调整 Tooltip 位置以适应新图标高度
@@ -247,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gridContainer.className = "travel-wrapper"; 
 
     if (data.length === 0) {
-      gridContainer.innerHTML = "<p style='text-align:center; width:100%'>No places found matching your filters.</p>";
+      gridContainer.innerHTML = `<p style='text-align:center; width:100%'>${lib.escapeHtml(_travelI18n.t("travel.empty", siteLang))}</p>`;
       return;
     }
 
@@ -258,10 +314,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // --- 排序逻辑 (comparators reused from lib.js) ---
 
     // 1. Visited 排序
-    visitedData.sort(lib.compareVisited(sortType));
+    visitedData.sort(lib.compareVisited(sortType, siteLang));
 
     // 2. TODO 排序
-    plannedData.sort(lib.comparePlanned(sortType));
+    plannedData.sort(lib.comparePlanned(sortType, siteLang));
 
     // --- 渲染逻辑 ---
 
@@ -285,52 +341,18 @@ document.addEventListener("DOMContentLoaded", function () {
       gridContainer.appendChild(gridDiv);
     };
 
-    createSection("Visited Places", visitedData, false);
-    createSection("TODO List", plannedData, true);
+    createSection(_travelI18n.t("travel.section.visited", siteLang), visitedData, false);
+    createSection(_travelI18n.t("travel.section.planned", siteLang), plannedData, true);
   }
 
-  // 创建卡片的逻辑
+  // 创建卡片的逻辑（HTML 由纯函数 buildPlaceCardHtml 生成）
   function createCard(place, isPlanned) {
-    const displayName = lib.getDisplayName(place);
-
-    const hasVideo = place.video && place.video.trim() !== "";
-
-    // Overlay content. The video link is a real <a> to an external host, so it
-    // must stay a sibling of the card link — nesting <a> inside <a> is invalid
-    // HTML; it sits above the stretched link via z-index (see .hover-actions).
-    let overlayHtml = "";
-    if (isPlanned) {
-      overlayHtml += `<span class="hover-note">Coming Soon</span>`;
-    }
-    if (hasVideo) {
-      overlayHtml += `<a href="${lib.escapeHtml(place.video)}" target="_blank" rel="noopener noreferrer" class="action-btn video-btn-overlay">Play Video</a>`;
-    }
-
     const card = document.createElement("div");
     card.className = `place-card ${isPlanned ? 'planned' : ''}`;
     card.setAttribute("data-continent", place.continent || "other");
-    card.setAttribute("data-name", place.name);
-    card.setAttribute("data-date", place.date);
-
-    // The place name is a genuine link; `.place-card-link::after` stretches its
-    // hit area over the whole card, so keyboard focus, middle-click and
-    // open-in-new-tab all come for free without a hand-rolled key handler.
-    card.innerHTML = `
-      <div class="place-image-wrapper">
-        <img src="${lib.escapeHtml(place.cover)}" alt="${lib.escapeHtml(displayName)}" loading="lazy">
-        <div class="hover-actions">
-          ${overlayHtml}
-        </div>
-      </div>
-      <div class="place-info">
-        <div class="place-country">${lib.escapeHtml(place.country)}</div>
-        <h3 class="place-city">
-          <a class="place-card-link" href="${lib.escapeHtml(tripUrl(place))}">${lib.escapeHtml(displayName)}</a>
-        </h3>
-        <div class="place-date">${lib.escapeHtml(place.date_display)}</div>
-      </div>
-    `;
-
+    card.setAttribute("data-name", _travelI18n.pick(place.name, siteLang));
+    card.setAttribute("data-date", place.date || "");
+    card.innerHTML = buildPlaceCardHtml(place, isPlanned, siteLang);
     return card;
   }
 
@@ -388,5 +410,7 @@ if (typeof module !== "undefined" && module.exports) {
   module.exports = {
     fetchTravelFiles: fetchTravelFiles,
     tripUrl: tripUrl,
+    mapLangFor: mapLangFor,
+    buildPlaceCardHtml: buildPlaceCardHtml,
   };
 }

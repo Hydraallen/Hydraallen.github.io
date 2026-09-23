@@ -6,41 +6,49 @@
   "movies": [
     {
       "title": "Memento",
+      "title_zh": "记忆碎片",
       "date": "May 25, 2001",
       "poster": "https://m.media-amazon.com/images/M/MV5BMGQ3Y2Q4NjktN2E4Ny00Y2Q2LTliZDUtZTNiNjRhY2I0NGIyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Lara Croft: Tomb Raider",
+      "title_zh": "古墓丽影",
       "date": "Jun 15, 2001",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjcxYzIyZWItZWRiOS00ODliLWI3ZTEtZTA4NTg4OGQwZDY1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Fast and the Furious",
+      "title_zh": "速度与激情",
       "date": "Jun 22, 2001",
       "poster": "https://m.media-amazon.com/images/M/MV5BZGRiMDE1NTMtMThmZS00YjE4LWI1ODQtNjRkZGZlOTg2MGE1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "A.I. Artificial Intelligence",
+      "title_zh": "人工智能",
       "date": "Jun 29, 2001",
       "poster": "https://m.media-amazon.com/images/M/MV5BODA1YjhhZDctM2Y1ZS00ODkyLWFmMTAtZGY5YWEzNzRjYzA1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Jurassic Park III",
+      "title_zh": "侏罗纪公园3",
       "date": "Jul 18, 2001",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2FmMjhlZDYtNmYyMy00NTdjLTlhYzYtZWNlMDY2MmUzOGM2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Planet of the Apes",
+      "title_zh": "决战猩球",
       "date": "Jul 27, 2001",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjczODRhOTQtZjdkYi00MmM2LTg1ZmEtZDQ3YjA5MDJhODNhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Harry Potter and the Sorcerer's Stone",
+      "title_zh": "哈利·波特与魔法石",
       "date": "Nov 16, 2001",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTU1MzgyMDMtMzBlZS00YzczLThmYWEtMjU3YmFlOWEyMjE1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "title_zh": "指环王：护戒使者",
       "date": "Dec 19, 2001",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_.jpg"
     }

@@ -84,3 +84,87 @@ test("tripUrl percent-encodes the place id", () => {
     "spaces and query separators must not break out of the query string"
   );
 });
+
+test("tripUrl carries the page language when one is given", () => {
+  assert.strictEqual(travel.tripUrl({ id: "nyc" }, "zh"), "trip.html?place=nyc&lang=zh");
+  assert.strictEqual(travel.tripUrl({ id: "nyc" }, "en"), "trip.html?place=nyc&lang=en");
+});
+
+// ---------------------------------------------------------------------------
+// Map tiles follow the site language (zh -> Chinese Google tiles).
+// ---------------------------------------------------------------------------
+test("mapLangFor maps the site language to a tile language", () => {
+  assert.strictEqual(travel.mapLangFor("zh"), "cn");
+  assert.strictEqual(travel.mapLangFor("en"), "en");
+  assert.strictEqual(travel.mapLangFor(undefined), "en");
+});
+
+// ---------------------------------------------------------------------------
+// buildPlaceCardHtml: pure, bilingual card markup.
+// ---------------------------------------------------------------------------
+const VISITED = {
+  id: "ithaca",
+  name: { en: "Ithaca", zh: "伊萨卡" },
+  country_code: "US",
+  state: "NY",
+  continent: "namerica",
+  date: "2025-01-15",
+  date_end: "2025-05-17",
+  video: "https://example.com/v",
+  status: "visited",
+  cover: "c.jpg",
+};
+const PLANNED = {
+  id: "japan",
+  name: { en: "Japan", zh: "日本" },
+  country_code: "JP",
+  continent: "asia",
+  date: null,
+  date_end: null,
+  video: "",
+  status: "planned",
+  cover: "j.jpg",
+};
+
+test("buildPlaceCardHtml renders an English card by default", () => {
+  const html = travel.buildPlaceCardHtml(VISITED, false);
+  assert.ok(html.includes('<div class="place-country">\u{1F1FA}\u{1F1F8} USA</div>'));
+  assert.ok(html.includes('href="trip.html?place=ithaca&amp;lang=en">Ithaca, NY</a>'));
+  assert.ok(html.includes('<div class="place-date">Jan 15 – May 17, 2025</div>'));
+  assert.ok(html.includes('alt="Ithaca, NY"'));
+  assert.ok(html.includes(">Play Video</a>"));
+  assert.ok(!html.includes("Coming Soon"));
+});
+
+test("buildPlaceCardHtml renders a Chinese card", () => {
+  const html = travel.buildPlaceCardHtml(VISITED, false, "zh");
+  assert.ok(html.includes('<div class="place-country">\u{1F1FA}\u{1F1F8} 美国</div>'));
+  assert.ok(html.includes('href="trip.html?place=ithaca&amp;lang=zh">伊萨卡，纽约州</a>'));
+  assert.ok(html.includes('<div class="place-date">2025.01.15 – 05.17</div>'));
+  assert.ok(html.includes(">播放视频</a>"));
+});
+
+test("buildPlaceCardHtml marks planned places and never prints null", () => {
+  const en = travel.buildPlaceCardHtml(PLANNED, true, "en");
+  assert.ok(en.includes('<span class="hover-note">Coming Soon</span>'));
+  assert.ok(en.includes('<div class="place-date">TODO List</div>'));
+  assert.ok(!en.includes("Play Video"), "no video -> no button");
+  const zh = travel.buildPlaceCardHtml(PLANNED, true, "zh");
+  assert.ok(zh.includes(">即将出发</span>"));
+  assert.ok(zh.includes('<div class="place-date">待出发</div>'));
+  [en, zh].forEach((html) => {
+    assert.ok(!/null|undefined|\[object Object\]/.test(html));
+  });
+});
+
+test("buildPlaceCardHtml escapes data-derived values", () => {
+  const evil = Object.assign({}, VISITED, {
+    name: { en: "<img src=x onerror=alert(1)>", zh: "x" },
+    cover: '" onerror="evil()',
+    video: 'javascript:"><script>',
+  });
+  const html = travel.buildPlaceCardHtml(evil, false);
+  assert.ok(!html.includes("<img src=x"));
+  assert.ok(!html.includes('onerror="evil()'));
+  assert.ok(!html.includes("<script>"));
+});

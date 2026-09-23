@@ -1,11 +1,14 @@
 {
   "id": "michigan",
-  "name": "Northern Michigan",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "Northern Michigan",
+    "zh": "密歇根北部"
+  },
+  "country_code": "US",
   "state": "MI",
   "continent": "namerica",
   "date": "2025-10-10",
-  "date_display": "Oct 10-14, 2025",
+  "date_end": "2025-10-14",
   "video": "https://b23.tv/hdmv7FP",
   "status": "visited",
   "cover": "../../img/travel/Michigan/cover.jpg",
@@ -13,117 +16,186 @@
   "photos": [
     {
       "src": "../../img/travel/Michigan/photo1.jpg",
-      "location": "Tahquamenon Falls",
+      "location": {
+        "en": "Tahquamenon Falls",
+        "zh": "塔夸梅农瀑布"
+      },
       "coordinates": [46.57545549717454, -85.25716009733263]
     },
     {
       "src": "../../img/travel/Michigan/photo2.jpg",
-      "location": "Cross Village Beach",
+      "location": {
+        "en": "Cross Village Beach",
+        "zh": "克罗斯村海滩"
+      },
       "coordinates": [45.65072009933873, -85.03931471903141]
     },
     {
       "src": "../../img/travel/Michigan/photo3.jpg",
-      "location": "Mackinac Bridge",
+      "location": {
+        "en": "Mackinac Bridge",
+        "zh": "麦基诺大桥"
+      },
       "coordinates": [45.81988944224485, -84.72827803626781]
     },
     {
       "src": "../../img/travel/Michigan/photo4.jpg",
-      "location": "Cross Village Beach",
+      "location": {
+        "en": "Cross Village Beach",
+        "zh": "克罗斯村海滩"
+      },
       "coordinates": [45.65072009933873, -85.03931471903141]
     },
     {
       "src": "../../img/travel/Michigan/photo5.jpg",
-      "location": "SkyBridge Michigan",
+      "location": {
+        "en": "SkyBridge Michigan",
+        "zh": "密歇根天空桥"
+      },
       "coordinates": [45.163864747597515, -84.93186987365281]
     },
     {
       "src": "../../img/travel/Michigan/photo6.jpg",
-      "location": "Tahquamenon Falls",
+      "location": {
+        "en": "Tahquamenon Falls",
+        "zh": "塔夸梅农瀑布"
+      },
       "coordinates": [46.57545549717454, -85.25716009733263]
     },
     {
       "src": "../../img/travel/Michigan/photo7.jpg",
-      "location": "Tahquamenon Falls",
+      "location": {
+        "en": "Tahquamenon Falls",
+        "zh": "塔夸梅农瀑布"
+      },
       "coordinates": [46.57545549717454, -85.25716009733263]
     },
     {
       "src": "../../img/travel/Michigan/photo8.jpg",
-      "location": "Tahquamenon Falls",
+      "location": {
+        "en": "Tahquamenon Falls",
+        "zh": "塔夸梅农瀑布"
+      },
       "coordinates": [46.57545549717454, -85.25716009733263]
     },
     {
       "src": "../../img/travel/Michigan/photo9.jpg",
-      "location": "Kitch-iti-kipi",
+      "location": {
+        "en": "Kitch-iti-kipi",
+        "zh": "基奇蒂基皮泉"
+      },
       "coordinates": [46.00429894267227, -86.38190197222588]
     },
     {
       "src": "../../img/travel/Michigan/photo10.jpg",
-      "location": "Porcupine Mountains Wilderness State Park",
+      "location": {
+        "en": "Porcupine Mountains Wilderness State Park",
+        "zh": "豪猪山荒野州立公园"
+      },
       "coordinates": [46.743469730497225, -89.80246347358397]
     },
     {
       "src": "../../img/travel/Michigan/photo11.jpg",
-      "location": "Cut River Bridge",
+      "location": {
+        "en": "Cut River Bridge",
+        "zh": "卡特河大桥"
+      },
       "coordinates": [46.053044297098296, -85.12191857236144]
     },
     {
       "src": "../../img/travel/Michigan/photo12.jpg",
-      "location": "Cut River Bridge",
+      "location": {
+        "en": "Cut River Bridge",
+        "zh": "卡特河大桥"
+      },
       "coordinates": [46.053044297098296, -85.12191857236144]
     },
     {
       "src": "../../img/travel/Michigan/photo13.jpg",
-      "location": "Arch Rock",
+      "location": {
+        "en": "Arch Rock",
+        "zh": "拱门岩"
+      },
       "coordinates": [45.87490598220916, -84.61531488495177]
     },
     {
       "src": "../../img/travel/Michigan/photo14.jpg",
-      "location": "Marquette",
+      "location": {
+        "en": "Marquette",
+        "zh": "马凯特"
+      },
       "coordinates": [46.59576400090223, -87.38226016177671]
     },
     {
       "src": "../../img/travel/Michigan/photo15.jpg",
-      "location": "Houghton",
+      "location": {
+        "en": "Houghton",
+        "zh": "霍顿"
+      },
       "coordinates": [47.13681704393036, -88.57534737541779]
     },
     {
       "src": "../../img/travel/Michigan/photo16.jpg",
-      "location": "Arch Rock",
+      "location": {
+        "en": "Arch Rock",
+        "zh": "拱门岩"
+      },
       "coordinates": [45.87490598220916, -84.61531488495177]
     },
     {
       "src": "../../img/travel/Michigan/photo17.jpg",
-      "location": "Arch Rock",
+      "location": {
+        "en": "Arch Rock",
+        "zh": "拱门岩"
+      },
       "coordinates": [45.87490598220916, -84.61531488495177]
     },
     {
       "src": "../../img/travel/Michigan/photo18.jpg",
-      "location": "Cross Village Beach",
+      "location": {
+        "en": "Cross Village Beach",
+        "zh": "克罗斯村海滩"
+      },
       "coordinates": [45.65072009933873, -85.03931471903141]
     },
     {
       "src": "../../img/travel/Michigan/photo19.jpg",
-      "location": "SkyBridge Michigan",
+      "location": {
+        "en": "SkyBridge Michigan",
+        "zh": "密歇根天空桥"
+      },
       "coordinates": [45.163864747597515, -84.93186987365281]
     },
     {
       "src": "../../img/travel/Michigan/photo20.jpg",
-      "location": "Marquette",
+      "location": {
+        "en": "Marquette",
+        "zh": "马凯特"
+      },
       "coordinates": [46.59576400090223, -87.38226016177671]
     },
     {
       "src": "../../img/travel/Michigan/photo21.jpg",
-      "location": "Kitch-iti-kipi",
+      "location": {
+        "en": "Kitch-iti-kipi",
+        "zh": "基奇蒂基皮泉"
+      },
       "coordinates": [46.00429894267227, -86.38190197222588]
     },
     {
       "src": "../../img/travel/Michigan/photo22.jpg",
-      "location": "Porcupine Mountains Wilderness State Park",
+      "location": {
+        "en": "Porcupine Mountains Wilderness State Park",
+        "zh": "豪猪山荒野州立公园"
+      },
       "coordinates": [46.743469730497225, -89.80246347358397]
     },
     {
       "src": "../../img/travel/Michigan/photo23.jpg",
-      "location": "SkyBridge Michigan",
+      "location": {
+        "en": "SkyBridge Michigan",
+        "zh": "密歇根天空桥"
+      },
       "coordinates": [45.163864747597515, -84.93186987365281]
     }
   ]

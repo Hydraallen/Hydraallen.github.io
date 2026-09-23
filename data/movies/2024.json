@@ -6,221 +6,265 @@
   "movies": [
     {
       "title": "The Beekeeper",
+      "title_zh": "养蜂人",
       "date": "Jan 12, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzg3YjVmZGYtOTc5MC00MDdiLTllOTYtZWQ0ODQ1MmMyNTExXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Fighter",
+      "title_zh": "天空斗士",
       "date": "Jan 25, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmJiYzZhOTktNGIzNy00YjljLWI3ZDgtZGU2YWMzNGQ1YjQ5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Argylle",
+      "title_zh": "阿盖尔：神秘特工",
       "date": "Feb 2, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDkzMTU2OWUtZjA2ZS00ZmYxLWE2MzgtZDlhZDc1YjM4Yjk5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Madame Web",
+      "title_zh": "蜘蛛夫人",
       "date": "Feb 14, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BODViOTZiOTQtOTc4ZC00ZjUxLWEzMjItY2ExMmNlNDliNjE4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Land of Bad",
+      "title_zh": "惊天激战",
       "date": "Feb 16, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BOWI2YjMwMGEtZDJlZC00NGVkLTk2OTktMjhjNTZiNTIxOTg3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Dune: Part Two",
+      "title_zh": "沙丘2",
       "date": "Mar 1, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTc0YmQxMjEtODI5MC00NjFiLTlkMWUtOGQ5NjFmYWUyZGJhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Kung Fu Panda 4",
+      "title_zh": "功夫熊猫4",
       "date": "Mar 8, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzJlNGYxYzQtOTg4MC00OTMyLTkwYzMtZDRlNTgwY2YwOWYxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Wonderful Story of Henry Sugar and Three More",
+      "title_zh": "亨利·休格和其他三人的神奇故事",
       "date": "Mar 15, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2UwOWVlZWQtMmM0YS00Njc2LTlhOWYtYTA1ZTMwY2NjNmM1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ghostbusters: Frozen Empire",
+      "title_zh": "超能敢死队2：冰雪帝国",
       "date": "Mar 22, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BOWI5NGUyMzUtMGFiNi00ZTc3LTk1YTQtMDU0NGRjNGIxZTZmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Godzilla x Kong: The New Empire",
+      "title_zh": "哥斯拉大战金刚2：帝国崛起",
       "date": "Mar 29, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTY0N2MzODctY2ExYy00OWYxLTkyNDItMTVhZGIxZjliZjU5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "How to Have Sex",
+      "title_zh": "如何做爱",
       "date": "Apr 5, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BODEyY2ZjZGUtNzE1MS00YjhlLTkwYTctMTNkZDVlZWZmOWQyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Civil War",
+      "title_zh": "美国内战",
       "date": "Apr 12, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BYTkzMjc0YzgtY2E0Yi00NDBlLWI0MWUtODY1ZjExMDAyOWZiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Rebel Moon - Part Two: The Scargiver",
+      "title_zh": "月球叛军2：烙印之人",
       "date": "Apr 19, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGYzMDQ1ZWItNjMyYi00ZjM4LWE5YTctYTJhNTYxZDI4OTU0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Fall Guy",
+      "title_zh": "特技狂人",
       "date": "May 3, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BM2U0MTJiYTItMjNiZS00MzU4LTkxYTAtYTU0ZGY1ODJhMjRhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Kingdom of the Planet of the Apes",
+      "title_zh": "猩球崛起：新世界",
       "date": "May 10, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDRlZTc3YTItOTk3Yi00NmU4LWFiOGUtNjgwMDZjNjIzNTU1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "IF",
+      "title_zh": "神秘友友",
       "date": "May 17, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjFiY2U2NjUtMWIxMy00NjJkLWI3OTItYzM3MzBlZDkyMDNkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Garfield Movie",
+      "title_zh": "加菲猫家族",
       "date": "May 24, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjY2NDZhN2EtZmYwNS00NDU2LThiODAtNmY4OWY2ODNmZWRmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Furiosa: A Mad Max Saga",
+      "title_zh": "疯狂的麦克斯：狂暴女神",
       "date": "May 24, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTcwYWE1NTYtOWNiYy00NzY3LWIwY2MtNjJmZDkxNDNmOWE1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Atlas",
+      "title_zh": "异星战境",
       "date": "May 24, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDUwNTFkNzYtMGM5NS00NTc4LWEwMDUtMmE5MzgyMjcwOWM4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Bad Boys: Ride or Die",
+      "title_zh": "绝地战警：生死与共",
       "date": "Jun 7, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Inside Out 2",
+      "title_zh": "头脑特工队2",
       "date": "Jun 14, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWY3MDE2Y2UtOTE3Zi00MGUzLTg2MTItZjE1ZWVkMGVlODRmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "A Quiet Place: Day One",
+      "title_zh": "寂静之地：入侵日",
       "date": "Jun 28, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDdjZTljZWMtMDIwNi00MTA5LTkxZmItNmY0NDA3ZDM0N2M2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Despicable Me 4",
+      "title_zh": "神偷奶爸4",
       "date": "Jul 3, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzY0ZTlhYzgtOTgzZC00ZTg2LTk4NTEtZDllM2E2NGE5Njg2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Twisters",
+      "title_zh": "龙卷风",
       "date": "Jul 19, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjM4MWEwMTEtNTcwYi00ZDI4LWEwMzUtNDMzODBhZmI5MWE1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Young Woman and the Sea",
+      "title_zh": "泳者之心",
       "date": "Jul 19, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjYxOThhYzMtMjVlOS00MjkzLTlkZmQtZTJiN2JhNDg5OGJkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Deadpool & Wolverine",
+      "title_zh": "死侍与金刚狼",
       "date": "Jul 26, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTk5ODY0MmQtMzA3Ni00NGY1LThiYzItZThiNjFiNDM4MTM3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Borderlands",
+      "title_zh": "无主之地",
       "date": "Aug 9, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDhkMzQzZmQtOGQ1NS00Y2FhLTkzYjAtNWE1MmRiOWM1MjUzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Alien: Romulus",
+      "title_zh": "异形：夺命舰",
       "date": "Aug 16, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDU0NjcwOGQtNjNjOS00NzQ3LWIwM2YtYWVmODZjMzQzN2ExXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Lee",
+      "title_zh": "李·米勒",
       "date": "Sep 13, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDlhMDY0NTAtOTQwZi00ZjIxLTk2ZmYtZjU1Y2FiYWRhZDk3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Transformers One",
+      "title_zh": "变形金刚：起源",
       "date": "Sep 20, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BZWI1ZDY1YTQtMjRkNy00ZDZhLWE3OTItMTIwNzliY2Y1MTZhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "His Three Daughters",
+      "title_zh": "他的三个女儿",
       "date": "Sep 20, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzFhY2ZlYjctYjk1ZS00YTNiLWI0ZDktOGE3Y2YxZWQ5ZGQ4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Wild Robot",
+      "title_zh": "荒野机器人",
       "date": "Sep 27, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BZWNiZjVlZTUtNGUwYi00MjJmLTg2MDctNWEzYTJiMzY1ODc4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Megalopolis",
+      "title_zh": "大都会",
       "date": "Sep 27, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTQ2MTcwODgtOTg3Yi00M2RmLWEyMDQtY2IzZmRlYzM3YzhjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Joker: Folie à Deux",
+      "title_zh": "小丑2：双重妄想",
       "date": "Oct 4, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTRlNmU1NzEtODNkNC00ZGM3LWFmNzQtMjBlMWRiYTcyMGRhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Venom: The Last Dance",
+      "title_zh": "毒液：最后一舞",
       "date": "Oct 25, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDMyYWU4NzItZDY0MC00ODE2LTkyYTMtMzNkNDdmYmFhZDg0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Anora",
+      "title_zh": "阿诺拉",
       "date": "Nov 8, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BYThiN2M0NTItODRmNC00NDhlLWFiYTgtMWM2YTEyYzI3ZTY1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Red One",
+      "title_zh": "红色一号：冬日行动",
       "date": "Nov 15, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BZmFkMjE4NjQtZTVmZS00MDZjLWE2ZmEtZTkzODljNjhlNWUxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Wicked",
+      "title_zh": "魔法坏女巫",
       "date": "Nov 22, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BOWMwYjYzYmMtMWQ2Ni00NWUwLTg2MzAtYzkzMDBiZDIwOTMwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Gladiator II",
+      "title_zh": "角斗士2",
       "date": "Nov 22, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWYzZTM5ZGQtOGE5My00NmM2LWFlMDEtMGNjYjdmOWM1MzA1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Elevation",
+      "title_zh": "高处营救",
       "date": "Nov 26, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BY2NiNDM0NWYtNzQxNi00NmY1LTg1YmYtMDE5ZmQzMGJlMGQzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Moana 2",
+      "title_zh": "海洋奇缘2",
       "date": "Nov 27, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDUxNThhYTUtYjgxNy00MGQ4LTgzOTEtZjg1YTU5NTcwNThlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Kraven the Hunter",
+      "title_zh": "猎人克莱文",
       "date": "Dec 13, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDU0YTI5ODAtN2NmMS00YTg3LTgyNDItN2RmOWEzOTkzZjcyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Mufasa: The Lion King",
+      "title_zh": "狮子王：木法沙传奇",
       "date": "Dec 20, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjBkOWUwODYtYWI3YS00N2I0LWEyYTktOTJjM2YzOTc3ZDNlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Sonic the Hedgehog 3",
+      "title_zh": "刺猬索尼克3",
       "date": "Dec 20, 2024",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjZjNjE5NDEtOWJjYS00Mjk2LWI1ZDYtOWI1ZWI3MzRjM2UzXkEyXkFqcGc@._V1_.jpg"
     }

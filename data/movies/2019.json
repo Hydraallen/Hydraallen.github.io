@@ -6,216 +6,259 @@
   "movies": [
     {
       "title": "IO",
+      "title_zh": "少女地球守护者",
       "date": "Jan 18, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2RiYTkyMjMtYTljOS00ZDJiLWJhMWItMGYzNzJkYmE1NTMzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Wandering Earth",
+      "title_zh": "流浪地球",
       "date": "Feb 5, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BM2RkYTg4YWQtNmE3Ny00MmE3LWJkNzQtZTFhNWNjOGM3OTZlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Alita: Battle Angel",
+      "title_zh": "阿丽塔：战斗天使",
       "date": "Feb 14, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmZhZGQzM2MtMWEyZC00YTU1LTk4YTQtMTg3ZjEzM2U1NTkxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "How to Train Your Dragon: The Hidden World",
+      "title_zh": "驯龙高手3",
       "date": "Feb 22, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjIwMDIwNjAyOF5BMl5BanBnXkFtZTgwNDE1MDc2NTM@._V1_.jpg"
     },
     {
       "title": "Apollo 11",
+      "title_zh": "阿波罗11号",
       "date": "Mar 1, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYyMzEzNjI4M15BMl5BanBnXkFtZTgwODgxOTgyNzM@._V1_.jpg"
     },
     {
       "title": "Captain Marvel",
+      "title_zh": "惊奇队长",
       "date": "Mar 8, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDI1NGU2ODAtNzBiNy00MWY5LWIyMGEtZjUxZjUwZmZiNjBlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Dumbo",
+      "title_zh": "小飞象",
       "date": "Mar 29, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_.jpg"
     },
     {
       "title": "Shazam!",
+      "title_zh": "雷霆沙赞！",
       "date": "Apr 5, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BZWM1YjdmOGQtNGYyMC00NjMwLTk1OWUtMGYzM2NjYjliYzYyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Avengers: Endgame",
+      "title_zh": "复仇者联盟4：终局之战",
       "date": "Apr 26, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg"
     },
     {
       "title": "John Wick: Chapter 3 - Parabellum",
+      "title_zh": "疾速追杀3",
       "date": "May 17, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjdlNWFlZjEtM2U0NS00ZWU5LTk1M2EtZmQxNWFiZjk0MGM5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Aladdin",
+      "title_zh": "阿拉丁",
       "date": "May 24, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjQ2ODIyMjY4MF5BMl5BanBnXkFtZTgwNzY4ODI2NzM@._V1_.jpg"
     },
     {
       "title": "Godzilla: King of the Monsters",
+      "title_zh": "哥斯拉2：怪兽之王",
       "date": "May 31, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDVhMjk2OGUtYzYxNS00NzBjLTk5YTItYzI0ZjgzNjY1NmI0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "X-Men: Dark Phoenix",
+      "title_zh": "X战警：黑凤凰",
       "date": "Jun 7, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BZjcwMDIyNjctMDVmNS00MzkyLTgxMDMtNTFmNTk0NDkyNzdjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Men in Black: International",
+      "title_zh": "黑衣人：全球追缉",
       "date": "Jun 14, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTI0ZjJlODYtNTAyOS00ZDk4LTk0M2ItNDljMzY5NmZkYTRkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Toy Story 4",
+      "title_zh": "玩具总动员4",
       "date": "Jun 21, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTYzMDM4NzkxOV5BMl5BanBnXkFtZTgwNzM1Mzg2NzM@._V1_.jpg"
     },
     {
       "title": "Spider-Man: Far from Home",
+      "title_zh": "蜘蛛侠：英雄远征",
       "date": "Jul 2, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzNhNTE0NWQtN2E1Ny00NjcwLTg1YTctMGY1NmMwODJmY2NmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Lion King",
+      "title_zh": "狮子王",
       "date": "Jul 19, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_.jpg"
     },
     {
       "title": "Once Upon a Time... in Hollywood",
+      "title_zh": "好莱坞往事",
       "date": "Jul 26, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzMzNmViNjYtN2ViNi00NDM3LWFlMmItNDYyMGIzY2EzZjE2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ne Zha",
+      "title_zh": "哪吒之魔童降世",
       "date": "Jul 26, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmRlODVlZDAtNzcxOC00N2U2LWE4MmQtZTYzZjg3Yjg1MzUxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Red Sea Diving Resort",
+      "title_zh": "红海潜水俱乐部",
       "date": "Jul 31, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BODk5ZmI1MTItZmU1Zi00MTMzLTk3ZDctYzM5YzYyMTI2YzE3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Fast & Furious Presents: Hobbs & Shaw",
+      "title_zh": "速度与激情：特别行动",
       "date": "Aug 2, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNmU4OTA5NGYtMTFjMS00MzgxLWFjNTMtYjdlMThlYzc4M2M4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "American Factory",
+      "title_zh": "美国工厂",
       "date": "Aug 21, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BY2I1ZWJmNDUtMzc5OC00YzVmLTliZWItNTczZDQ0YTNiOTZjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Angel Has Fallen",
+      "title_zh": "天使陷落",
       "date": "Aug 23, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BZmY4YTJlZjktNmVkYi00MzBjLTg3MTAtMGZiNWUwY2NiMmM5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ad Astra",
+      "title_zh": "星际探索",
       "date": "Sep 20, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGRhOGNjZjEtNTU2Ni00MDlmLWI3MWEtNzc1OGE2ZmEwZGNhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Diego Maradona",
+      "title_zh": "马拉多纳",
       "date": "Sep 20, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzVjYTI1NDEtYTk2OS00NzhiLTliZWUtNzgxODdlMWJlMGQ4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Abominable",
+      "title_zh": "雪人奇缘",
       "date": "Sep 27, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDdiYTViMzQtNDhkZC00YTgzLWI2NWItODZkNjVlMDZkMDNiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Joker",
+      "title_zh": "小丑",
       "date": "Oct 4, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzY3OWQ5NDktNWQ2OC00ZjdlLThkMmItMDhhNDk3NTFiZGU4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Gemini Man",
+      "title_zh": "双子杀手",
       "date": "Oct 11, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWY2ZmM4ZGEtODJjMC00MzY5LTk4ZmYtNzA5NmRhYzA5Y2EzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Maleficent: Mistress of Evil",
+      "title_zh": "沉睡魔咒2",
       "date": "Oct 18, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTY4YjYwYzMtYTg1NC00ZmJiLTk0OTYtMWMzM2Y4Yzc5MDc2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Zombieland: Double Tap",
+      "title_zh": "僵尸之地2",
       "date": "Oct 18, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTViNDc4NTgtYzVlNi00YmY3LWFiNDgtODJlNGU1YzI1MGExXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Current War",
+      "title_zh": "电力之战",
       "date": "Oct 25, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk4MzhkMDAtNWMyMi00ZmI4LWEyNTUtZDVkMTVlZjJmYTAzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Terminator: Dark Fate",
+      "title_zh": "终结者：黑暗命运",
       "date": "Nov 1, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTU2OGFhYjktNDJhMC00NmU5LWE1OWItNzg5ODU1MzdmNTZkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Midway",
+      "title_zh": "决战中途岛",
       "date": "Nov 8, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDcyMGVlYzctZjYwNC00MDBiLTg1NDAtNzcxZjlhZTA4NzczXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Jojo Rabbit",
+      "title_zh": "乔乔的异想世界",
       "date": "Nov 8, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmFmNmUyMjYtZTFjNS00OWQyLThhZmMtMGZkYTQ3YjY0ZDQ1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ford v Ferrari",
+      "title_zh": "极速车王",
       "date": "Nov 15, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTBjNTEyNjYtYjdkNi00YzE5LTljYzUtZjVlYmYwZmJmZWYxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Charlie's Angels",
+      "title_zh": "霹雳娇娃",
       "date": "Nov 15, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMjIyYTRhNDItNzc2MS00MjkxLWFhOTItMzg1MTZkNDk5Nzc0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "21 Bridges",
+      "title_zh": "21座桥",
       "date": "Nov 22, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMmZjYjI0YjUtOTc4OC00MmEyLWE4MDItN2M5NGZmNWY1YzYxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Knives Out",
+      "title_zh": "利刃出鞘",
       "date": "Nov 27, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDU5ZTRkYmItZjg0Mi00ZTQwLThjMWItNWM3MTMxMzVjZmVjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Marriage Story",
+      "title_zh": "婚姻故事",
       "date": "Dec 6, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNmE0OWJlM2MtNzhmMi00YmQyLTlmY2EtZmUzNzBiNGRlN2JkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Jumanji: The Next Level",
+      "title_zh": "勇敢者游戏2：再战巅峰",
       "date": "Dec 13, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWFjODExZWEtYzIwYS00M2YwLTk4YTktNDQ5ZmVmOThiNmI1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "6 Underground",
+      "title_zh": "鬼影特攻：以暴制暴",
       "date": "Dec 13, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTNmZDgzMmMtMzJhMy00NGI3LWI5YTktYjg5MTllZmYyYTMxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Star Wars: Episode IX - The Rise of Skywalker",
+      "title_zh": "星球大战：天行者崛起",
       "date": "Dec 20, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BODg5ZTNmMTUtYThlNy00NjljLWE0MGUtYmQ1NDg4NWU5MjQ1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Little Women",
+      "title_zh": "小妇人",
       "date": "Dec 25, 2019",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWMzYjNiZWMtMDg4NS00MDgyLTk5MWItOTFmNjg4NzRhZmExXkEyXkFqcGc@._V1_.jpg"
     }

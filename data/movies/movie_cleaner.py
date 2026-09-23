@@ -1,17 +1,24 @@
 """Movie Cleaner - Tkinter GUI,用于逐年清理电影收藏。
 
 模块内的纯逻辑函数(build_imdb_url / get_title / parse_year_files /
-atomic_write_json)可独立测试;GUI 回调、setup_ui、load_image 依赖 Tk 与
-网络,标注为不可自动化测试。
+atomic_write_json / title_zh 查询)可独立测试;GUI 回调、setup_ui、load_image
+依赖 Tk 与网络,标注为不可自动化测试。
+
+title_zh(中文片名):保存时对缺失 title_zh 的电影自动查询 Wikidata
+(优先中文维基 zh-cn 变体标题,即大陆译名),查不到则留空待手动补;
+tests/content_movies.test.js 会强制每部电影都有 title_zh。
+批量补全:python movie_cleaner.py --fill-zh
 """
 import json
 import logging
 import os
+import re
+import sys
 import tkinter as tk
 import webbrowser
 from io import BytesIO
 from tkinter import messagebox
-from typing import Any, Dict, List, Optional
+from typing import Any, Callable, Dict, List, Optional
 from urllib.parse import quote
 
 import requests
@@ -23,6 +30,21 @@ BACKUP_FILE = "backup.json"
 EXCLUDED_FILES = {"index.json", "backup.json"}
 # requests 分离超时:(连接超时, 读取超时)
 REQUEST_TIMEOUT = (3, 10)
+
+WIKIDATA_API = "https://www.wikidata.org/w/api.php"
+ZHWIKI_API = "https://zh.wikipedia.org/w/api.php"
+HTTP_HEADERS = {"User-Agent": "HydraallenMovieCleaner/1.0 (https://hydraallen.github.io)"}
+SEARCH_LIMIT = 10
+YEAR_TOLERANCE = 1
+# 简体标签优先;繁体标签仅在可用 opencc 转换时使用
+SIMPLIFIED_LABEL_LANGS = ("zh-cn", "zh-hans", "zh-sg", "zh-my")
+TRADITIONAL_LABEL_LANGS = ("zh", "zh-tw", "zh-hant", "zh-hk", "zh-mo")
+CJK_RE = re.compile(r"[\u4e00-\u9fff]")
+TAG_RE = re.compile(r"<[^>]+>")
+# 维基消歧义后缀,如 "沙丘 (2021年电影)"、"某片（电影）"
+DISAMBIG_RE = re.compile(r"\s*[(（][^()（）]*(?:电影|影片|电视电影|film)[^()（）]*[)）]\s*$")
+
+TitleLookup = Callable[[str, int], Optional[str]]
 
 
 # --------------------------------------------------------------------------- #
@@ -58,6 +80,118 @@ def atomic_write_json(path: str, data: Any) -> None:
     with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
     os.replace(tmp_path, path)
+
+
+# --------------------------------------------------------------------------- #
+# title_zh:Wikidata 查询(纯逻辑,HTTP 经 _http_get,测试中 mock)
+# --------------------------------------------------------------------------- #
+def _http_get(url: str, params: Dict[str, Any]) -> Any:
+    """GET 并解析 JSON;带超时与 User-Agent。网络错误由调用方处理。"""
+    res = requests.get(url, params=params, headers=HTTP_HEADERS, timeout=REQUEST_TIMEOUT)
+    res.raise_for_status()
+    return res.json()
+
+
+def _to_simplified(text: str) -> Optional[str]:
+    """繁转简;未安装 opencc 时返回 None(此时不使用繁体标签)。"""
+    try:
+        from opencc import OpenCC  # type: ignore[import-not-found]
+    except ImportError:
+        return None
+    return OpenCC("t2s").convert(text)
+
+
+def strip_disambiguation(title: str) -> str:
+    """去掉维基条目的消歧义后缀,如 "沙丘 (2021年电影)" -> "沙丘"。"""
+    return DISAMBIG_RE.sub("", title).strip()
+
+
+def pick_zh_label(labels: Dict[str, str]) -> Optional[str]:
+    """按 zh-cn > zh-hans > zh-sg/zh-my > 繁体(需可转换) 选取含汉字的标签。"""
+    for lang in SIMPLIFIED_LABEL_LANGS:
+        label = labels.get(lang, "").strip()
+        if CJK_RE.search(label):
+            return label
+    for lang in TRADITIONAL_LABEL_LANGS:
+        label = labels.get(lang, "").strip()
+        if CJK_RE.search(label):
+            converted = _to_simplified(label)
+            if converted:
+                return converted
+    return None
+
+
+def _claim_values(entity: Dict[str, Any], prop: str) -> List[Any]:
+    snaks = (c.get("mainsnak", {}) for c in entity.get("claims", {}).get(prop, []))
+    return [s["datavalue"]["value"] for s in snaks if "datavalue" in s]
+
+
+def _release_years(entity: Dict[str, Any]) -> List[int]:
+    years = []
+    for value in _claim_values(entity, "P577"):
+        match = re.match(r"[+-]?(\d{4})", str(value.get("time", "")))
+        if match:
+            years.append(int(match.group(1)))
+    return years
+
+
+def _best_film_entity(entities: List[Dict[str, Any]], year: int) -> Optional[Dict[str, Any]]:
+    """只保留带 IMDb 编号(tt…)的条目,按上映年份与目标年份的差距选最近者。"""
+    scored = []
+    for rank, ent in enumerate(entities):
+        imdb_ids = [v for v in _claim_values(ent, "P345") if str(v).startswith("tt")]
+        gaps = [abs(y - year) for y in _release_years(ent)]
+        if imdb_ids and gaps and min(gaps) <= YEAR_TOLERANCE:
+            scored.append((min(gaps), rank, ent))
+    return min(scored, key=lambda s: s[:2])[2] if scored else None
+
+
+def _zhwiki_mainland_title(page: str) -> Optional[str]:
+    """中文维基条目在 zh-cn 变体下的显示标题(应用条目自身的地区词转换)。"""
+    data = _http_get(ZHWIKI_API, {"action": "parse", "page": page, "prop": "displaytitle",
+                                  "variant": "zh-cn", "redirects": 1, "format": "json"})
+    raw = data.get("parse", {}).get("displaytitle")
+    title = strip_disambiguation(TAG_RE.sub("", raw)) if raw else ""
+    return title if CJK_RE.search(title) else None
+
+
+def lookup_title_zh(title: str, year: int) -> Optional[str]:
+    """按英文片名 + 年份在 Wikidata 查中文片名;任何失败都返回 None(不抛出)。"""
+    try:
+        hits = _http_get(WIKIDATA_API, {"action": "wbsearchentities", "search": title,
+                                        "language": "en", "type": "item",
+                                        "limit": SEARCH_LIMIT, "format": "json"})["search"]
+        ids = [h["id"] for h in hits]
+        if not ids:
+            return None
+        entities = _http_get(WIKIDATA_API, {"action": "wbgetentities", "ids": "|".join(ids),
+                                            "props": "labels|claims|sitelinks",
+                                            "sitefilter": "zhwiki", "format": "json"})["entities"]
+        best = _best_film_entity([entities[i] for i in ids if i in entities], year)
+        if best is None:
+            return None
+        zhwiki = best.get("sitelinks", {}).get("zhwiki", {}).get("title")
+        mainland = _zhwiki_mainland_title(zhwiki) if zhwiki else None
+        labels = {k: v.get("value", "") for k, v in best.get("labels", {}).items()}
+        return mainland or pick_zh_label(labels)
+    except (requests.RequestException, ValueError, KeyError, TypeError, AttributeError):
+        logger.warning("title_zh lookup failed for %r (%s); fill it manually", title, year)
+        return None
+
+
+def fill_missing_title_zh(
+    movies: List[Dict[str, Any]], year: int, lookup: Optional[TitleLookup] = None
+) -> List[Dict[str, Any]]:
+    """返回新列表:缺 title_zh 的电影尝试查询补全;已有的不覆盖,查不到的保持原样。"""
+    do_lookup = lookup or lookup_title_zh
+    result = []
+    for movie in movies:
+        if str(movie.get("title_zh", "")).strip():
+            result.append(movie)
+            continue
+        found = do_lookup(get_title(movie), year)
+        result.append({**movie, "title_zh": found} if found else movie)
+    return result
 
 
 # --------------------------------------------------------------------------- #
@@ -125,8 +259,12 @@ class MovieCleanerApp:
             return False
 
     def save_data(self) -> None:
-        """原子保存当前年份数据与备份数据。"""
+        """原子保存当前年份数据与备份数据(保存前补全缺失的 title_zh)。"""
         if self.current_filename and self.current_data is not None:
+            year = self.current_data.get("year") or getattr(self, "selected_year", None)
+            if year:
+                self.current_movies = fill_missing_title_zh(self.current_movies, int(year))
+                self.current_data["movies"] = self.current_movies
             self.current_data["total_count"] = len(self.current_movies)
             self.current_data["saved_count"] = len(self.current_movies)
             atomic_write_json(self.current_filename, self.current_data)
@@ -315,8 +453,27 @@ class MovieCleanerApp:
         self.render_movie()
 
 
+def fill_zh_for_all_years(directory: str = ".") -> List[str]:
+    """批量为所有年份文件补 title_zh,返回仍缺失的 "年份|片名" 列表。"""
+    missing: List[str] = []
+    for year, name in sorted(parse_year_files(os.listdir(directory)).items()):
+        path = os.path.join(directory, name)
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        movies = fill_missing_title_zh(data.get("movies", []), year)
+        if movies != data.get("movies", []):
+            atomic_write_json(path, {**data, "movies": movies})
+        missing += [f"{year}|{get_title(m)}" for m in movies if not m.get("title_zh")]
+    return missing
+
+
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(message)s")
+    if "--fill-zh" in sys.argv:
+        still_missing = fill_zh_for_all_years(".")
+        for item in still_missing:
+            logger.info("missing title_zh: %s", item)
+        sys.exit(1 if still_missing else 0)
     root = tk.Tk()
     app = MovieCleanerApp(root)
     root.mainloop()

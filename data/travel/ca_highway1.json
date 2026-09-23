@@ -1,11 +1,14 @@
 {
   "id": "ca_highway1",
-  "name": "California Highway 1",
-  "country": "🇺🇸 USA",
+  "name": {
+    "en": "California Highway 1",
+    "zh": "加州一号公路"
+  },
+  "country_code": "US",
   "state": "CA",
   "continent": "namerica",
-  "date": "TBD",
-  "date_display": "TODO List",
+  "date": null,
+  "date_end": null,
   "video": "",
   "status": "planned",
   "cover": "../../img/travel/CAHighway1/cover.jpg",

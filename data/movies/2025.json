@@ -6,221 +6,265 @@
   "movies": [
     {
       "title": "Back in Action",
+      "title_zh": "重返行动",
       "date": "Jan 17, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BMWQ4YWYxYTAtZTlhNC00Nzc3LWE3OWUtZjY5MThlNWNiYTBiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Star Trek: Section 31",
+      "title_zh": "星际迷航：31区",
       "date": "Jan 24, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWMwNDdmYTAtOWJiNy00MzE0LThlZTMtODdhOWVkZDgyYjI3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Sky Force",
+      "title_zh": "天空之力",
       "date": "Jan 24, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTViYzEwYjMtMDJlNy00ZTdiLWE3YWMtN2Q3MWFiYTFjZGZmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ne Zha 2",
+      "title_zh": "哪吒之魔童闹海",
       "date": "Jan 29, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjIyMDc3ZmQtZTQyYy00NDhhLTlmMWEtYzM3MDYwNjRmY2NkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Love Hurts",
+      "title_zh": "前任杀神",
       "date": "Feb 7, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDBmMTVkNWItZWY4Yy00MjI0LWFiMmMtMWM4ZGQ3NTg0MDE1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "My Fault: London",
+      "title_zh": "我的错误：伦敦版",
       "date": "Feb 13, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2MzOTJiOTItODBjOS00MjVhLWFiOWQtOTVjOTAyM2NkODM2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Captain America: Brave New World",
+      "title_zh": "美国队长4",
       "date": "Feb 14, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNDRjY2E0ZmEtN2QwNi00NTEwLWI3MWItODNkMGYwYWFjNGE0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Gorge",
+      "title_zh": "禁谷",
       "date": "Feb 14, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTQ5Y2QyYTktYmFmZi00NWJlLWE0MzgtYTA4M2I0ZjQwZjcxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Mickey 17",
+      "title_zh": "编号17",
       "date": "Mar 7, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BZGQwYmEzMzktYzBmMy00NmVmLTkyYTUtOTYyZjliZDNhZGVkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Black Bag",
+      "title_zh": "黑袋行动",
       "date": "Mar 14, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzA1OWU4NDMtMDUxMC00NWI4LWJhYjUtYWQ0OGQ5MTc2NDRjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Snow White",
+      "title_zh": "白雪公主",
       "date": "Mar 21, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BY2UwOGUxMzEtMzEyZi00NjEwLTkxOTMtYTljOWEzYjYyMWNjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "A Working Man",
+      "title_zh": "制暴：无限杀机",
       "date": "Mar 28, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmQxZGIxNTYtYTQwMy00ODdkLWI0MmQtM2E0ZmIyNmYzMGMzXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "A Minecraft Movie",
+      "title_zh": "我的世界大电影",
       "date": "Apr 4, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzFjMzNjOTktNDBlNy00YWZhLWExYTctZDcxNDA4OWVhOTJjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Amateur",
+      "title_zh": "谍网追凶",
       "date": "Apr 11, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjhkZjM3ZWYtMjUxMS00YzhlLTkxZWYtMzhkMzFhOTQ1NjRkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Sinners",
+      "title_zh": "罪人",
       "date": "Apr 18, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjIwZWY4ZDEtMmIxZS00NDA4LTg4ZGMtMzUwZTYyNzgxMzk5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Thunderbolts*",
+      "title_zh": "雷霆特攻队*",
       "date": "May 2, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWE2NmNmYTItZGY0ZC00MmY2LTk1NDAtMGUyMGEzMjcxNWM0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Lilo & Stitch",
+      "title_zh": "星际宝贝史迪奇",
       "date": "May 23, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmFmZjM1ZTEtYzQ5ZS00MTRmLTkzMDktYWMxNTg2NGE3YjY4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Mission: Impossible - The Final Reckoning",
+      "title_zh": "碟中谍8：最终清算",
       "date": "May 23, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BZGQ5NGEyYTItMjNiMi00Y2EwLTkzOWItMjc5YjJiMjMyNTI0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Fountain of Youth",
+      "title_zh": "寻秘不老泉",
       "date": "May 23, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNWRlZmU3ZTItM2JlYi00YTg1LTgxNTItMjMyNzIyZWY5YWJmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ballerina",
+      "title_zh": "疾速追杀外传：芭蕾杀姬",
       "date": "Jun 6, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzdhZmY2OTQtYWI4OC00ZThkLTlhZjAtNzE2YzRjM2Q5YjJlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Predator: Killer of Killers",
+      "title_zh": "铁血战士：杀戮之王",
       "date": "Jun 6, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjM2MjA4YzQtYjBkNS00YmU3LTllOTgtMDQzMjkzM2Q4MmM5XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "How to Train Your Dragon",
+      "title_zh": "新·驯龙高手",
       "date": "Jun 13, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BODA5Y2M0NjctNWQzMy00ODRhLWE0MzUtYmE1YTAzZjYyYmQyXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Materialists",
+      "title_zh": "物质主义者",
       "date": "Jun 13, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNmQxMTI1YmEtOGY3Yi00NzVlLWEzMjAtYTI1NWZkNDFiMDg1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Cleaner",
+      "title_zh": "清洁工",
       "date": "Jun 13, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BMmE1MzkyMDctZjgzNC00YzkxLWI1YTctY2E4YzNjNmI1YTljXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "F1: The Movie",
+      "title_zh": "F1：狂飙飞车",
       "date": "Jun 27, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNGI0MDI4NjEtOWU3ZS00ODQyLWFhYTgtNGYxM2ZkM2Q2YjE3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ice Road: Vengeance",
+      "title_zh": "冰路营救2：复仇",
       "date": "Jul 1, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjNlOGE0ZmMtNTk2MC00NTBhLTg2Y2QtZjdkZjIwNjQzYzY3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Jurassic World: Rebirth",
+      "title_zh": "侏罗纪世界：重生",
       "date": "Jul 2, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNjg2NTcwYWQtYzk4NS00MTJhLWEzZjItMzIxNjk3YzlkYzU0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Heads of State",
+      "title_zh": "国家元首",
       "date": "Jul 2, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWFmNjg0ZGMtZmI5OC00YTAwLWFiMmMtOWRkNzQ0OTE1YWEwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Old Guard 2",
+      "title_zh": "永生守卫2",
       "date": "Jul 2, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BZmFhNWY1MjEtZTkyZS00ZWIzLTk4ZWItMDM0MzliNmE1ZGZhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Superman",
+      "title_zh": "超人",
       "date": "Jul 11, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Eddington",
+      "title_zh": "爱丁顿",
       "date": "Jul 18, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNmM0Yzc1ZjAtZTg4My00NDI3LWEwMzAtY2ZkNzMxMWMwOTFlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Fantastic Four: First Steps",
+      "title_zh": "神奇4侠：初露锋芒",
       "date": "Jul 25, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BOGM5MzA3MDAtYmEwMi00ZDNiLTg4MDgtMTZjOTc0ZGMyNTIwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "One Battle After Another",
+      "title_zh": "一战再战",
       "date": "Sep 26, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzBkZmQ0NjMtNTZlMy00ZjdlLTg5ODUtYWFlNGM0YzE3MTg0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Lost Bus",
+      "title_zh": "火烧天堂镇",
       "date": "Oct 3, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BZTIzNmQzYzUtNTdlNi00NmY5LThmNTYtMGFmZjUxMTgzOGNmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Tron: Ares",
+      "title_zh": "创：战神",
       "date": "Oct 10, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzk0NjE4NzYtZjc5Ni00MTkxLTgyY2QtZjliOTA5N2U2YzM1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Predator: Badlands",
+      "title_zh": "铁血战士：杀戮之地",
       "date": "Nov 7, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTdjZGUxMTItNjRkNS00N2VhLWE4MjMtMjVhODMwMGIxNjUwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Now You See Me: Now You Don't",
+      "title_zh": "惊天魔盗团3",
       "date": "Nov 14, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmZmZDc1Y2EtMmU2MS00NmMzLTllZmYtNjlkODFkNjZlOGE0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Running Man",
+      "title_zh": "猎杀游戏",
       "date": "Nov 14, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTk5NjU4OTAtNTEyMS00ZjBiLTg0ZjMtOGJiMGJhNjQ3MzYxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Wicked: For Good",
+      "title_zh": "魔法坏女巫2",
       "date": "Nov 21, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzRhNTE4ZTYtNTM0Mi00MzU3LTk4MTktYWE3MzQ2NTU0MDNlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Zootopia 2",
+      "title_zh": "疯狂动物城2",
       "date": "Nov 26, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BYjg1Mjc3MjQtMTZjNy00YWVlLWFhMWEtMWI3ZTgxYjJmNmRlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Eternity",
+      "title_zh": "永恒站",
       "date": "Nov 26, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BNzlmZTNiOTAtNzhlOC00ZTA1LWJhNTgtMDQ4YmY4NWIyNTA4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Wake Up Dead Man",
+      "title_zh": "利刃出鞘3",
       "date": "Dec 12, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BY2Q0OTA5MTEtNWU4NC00ZWFmLTg5NmYtNDFmODViYWUxZmJkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Avatar: Fire and Ash",
+      "title_zh": "阿凡达：火与烬",
       "date": "Dec 19, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BZDYxY2I1OGMtN2Y4MS00ZmU1LTgyNDAtODA0MzAyYjI0N2Y2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Anaconda",
+      "title_zh": "新狂蟒之灾",
       "date": "Dec 25, 2025",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTNlMTk1YTItOWYxNi00ZWIzLTkyOWEtNTJmMzk4NmIyN2NmXkEyXkFqcGc@._V1_.jpg"
     }

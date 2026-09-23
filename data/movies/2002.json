@@ -6,66 +6,79 @@
   "movies": [
     {
       "title": "Black Hawk Down",
+      "title_zh": "黑鹰坠落",
       "date": "Jan 18, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BYTM3YTQ1M2MtNDEyNC00NzRlLWFmOTgtYjBhNDg2ODNjNTU0XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Amélie",
+      "title_zh": "天使爱美丽",
       "date": "Feb 8, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTNmYzY0MWQtZGZmNy00Y2Y4LWFmMDQtMTZjYTdiYzEwZGQ2XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Ice Age",
+      "title_zh": "冰川时代",
       "date": "Mar 15, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BMDBlYzU2OGMtOGJjNi00ZGZjLWIwNjMtYzdiZjkwYWNjZDljXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Resident Evil",
+      "title_zh": "生化危机",
       "date": "Mar 15, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BYmI3YjJkN2ItY2ZmYS00Y2JhLTk2YTQtYzE5YWU5ODI1MzJmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Blade II",
+      "title_zh": "刀锋战士2",
       "date": "Mar 22, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BMGE5ZmY2NzEtZTEyMi00MWIyLThmOWYtYzJkOTQ0Y2U3ZWU1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Spider-Man",
+      "title_zh": "蜘蛛侠",
       "date": "May 3, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BZWM0OWVmNTEtNWVkOS00MzgyLTkyMzgtMmE2ZTZiNjY4MmFiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Star Wars: Episode II - Attack of the Clones",
+      "title_zh": "星球大战前传2：克隆人的进攻",
       "date": "May 16, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BNTgxMjY2YzUtZmVmNC00YjAwLWJlODMtNDBhNzllNzIzMjgxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Bourne Identity",
+      "title_zh": "谍影重重",
       "date": "Jun 14, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BYTk1ZTcyMWMtMWUxYS00MmEzLTlmODYtOTk1MGRjOTg1ZjlmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Lilo & Stitch",
+      "title_zh": "星际宝贝",
       "date": "Jun 21, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BYzRiYTA1YTEtMjYwMi00NGVhLThkOGYtZDBlYjNjZDk2NDEwXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Minority Report",
+      "title_zh": "少数派报告",
       "date": "Jun 21, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BYTdmNzM3YzItZTRkYS00MTY5LTg4ZmItNjFmNTk2N2Q2NmNlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Men in Black II",
+      "title_zh": "黑衣人2",
       "date": "Jul 3, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNDA0NTMxMV5BMl5BanBnXkFtZTYwMDE2NzY2._V1_.jpg"
     },
     {
       "title": "Harry Potter and the Chamber of Secrets",
+      "title_zh": "哈利·波特与密室",
       "date": "Nov 15, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BNGJhM2M2MWYtZjIzMC00MDZmLThkY2EtOWViMDhhYjRhMzk4XkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "The Lord of the Rings: The Two Towers",
+      "title_zh": "指环王：双塔奇兵",
       "date": "Dec 18, 2002",
       "poster": "https://m.media-amazon.com/images/M/MV5BMGQxMDdiOWUtYjc1Ni00YzM1LWE2NjMtZTg3Y2JkMjEzMTJjXkEyXkFqcGc@._V1_.jpg"
     }
