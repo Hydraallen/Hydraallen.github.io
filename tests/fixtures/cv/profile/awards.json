@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "fixture-cup",
+      "cv_ref": "荣誉奖项与证书/奖项与荣誉",
+      "visible": true,
+      "featured": true,
+      "title": { "en": "Fixture Cup Honorable Mention", "zh": "测试杯荣誉奖", "en_source": "translated" },
+      "kind": "award",
+      "level": "international",
+      "issuer": null,
+      "date": "2030-05"
+    },
+    {
+      "id": "fixture-cup-short",
+      "cv_ref": "荣誉奖项与证书",
+      "visible": true,
+      "featured": false,
+      "title": { "en": "Fixture Cup H", "zh": "测试杯 H 奖", "en_source": "translated" },
+      "kind": "award",
+      "level": null,
+      "issuer": null,
+      "date": null
+    }
+  ]
+}

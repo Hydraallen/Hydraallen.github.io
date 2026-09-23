@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "zyxcorp",
+      "cv_ref": "实习经历/Zyxcorp",
+      "visible": true,
+      "featured": true,
+      "org": { "en": "Zyxcorp Fixture Labs", "zh": "Zyxcorp 测试实验室" },
+      "role": { "en": "Imaginary Agent Intern", "zh": "虚构 Agent 实习生", "en_source": "translated" },
+      "location": { "en": "Atlantis", "zh": "亚特兰蒂斯" },
+      "remote": true,
+      "start": "2030-08",
+      "end": null,
+      "tech": ["Python", "Tool Calling"],
+      "summary": { "en": "Built a pretend harness.", "zh": "搭建了一个假装的框架。", "en_source": "translated" },
+      "bullets": [
+        { "en": "Cut latency by 35% across 1,200 runs.", "zh": "在 1,200 次运行中将延迟降低 35%。", "en_source": "translated" }
+      ],
+      "links": [{ "kind": "site", "url": "https://example.com/zyx" }]
+    },
+    {
+      "id": "quuxworks",
+      "cv_ref": "实习经历/Quuxworks",
+      "visible": true,
+      "featured": false,
+      "org": { "en": "Quuxworks Imaginary Ltd", "zh": "Quuxworks 虚构有限公司" },
+      "role": { "en": "Pretend Data Intern", "zh": "假想数据实习生", "en_source": "translated" },
+      "location": null,
+      "start": "2029-06",
+      "end": "2029-09",
+      "bullets": [
+        { "en": "Reached 86% accuracy.", "zh": "准确率达到 86%。", "en_source": "translated" }
+      ]
+    },
+    {
+      "id": "hidden-co",
+      "visible": false,
+      "featured": true,
+      "org": { "en": "Invisible Hiddenco", "zh": "隐形公司" },
+      "role": { "en": "Ghost", "zh": "幽灵" },
+      "location": null,
+      "start": "2028-01",
+      "end": "2028-02",
+      "bullets": []
+    }
+  ]
+}

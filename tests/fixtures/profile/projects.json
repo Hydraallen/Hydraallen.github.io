@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "widget",
+      "visible": true,
+      "featured": true,
+      "title": "Widgetron",
+      "description": { "en": "A widget that does nothing.", "zh": "一个什么也不做的小部件。" },
+      "image": "img/widget.png",
+      "links": [{ "kind": "github", "url": "https://github.com/example/widgetron" }]
+    },
+    {
+      "id": "gadget",
+      "visible": true,
+      "featured": false,
+      "title": { "en": "Gadget Site", "zh": "小工具网站" },
+      "description": { "en": "A live gadget.", "zh": "一个在线小工具。" },
+      "image": "img/gadget.png",
+      "links": [{ "kind": "site", "url": "https://example.com/gadget" }]
+    }
+  ]
+}

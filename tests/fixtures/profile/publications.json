@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "pub-imaginary",
+      "visible": true,
+      "featured": true,
+      "title": "Imaginary Gym: A Fictional Benchmark",
+      "authors": "A. Person, B. Testperson",
+      "authorship": "co-author",
+      "status": "preprint",
+      "venue": { "en": "arXiv preprint", "zh": "arXiv 预印本" },
+      "date": "2030-11",
+      "links": [{ "kind": "arxiv", "url": "https://arxiv.org/abs/0000.00000" }]
+    },
+    {
+      "id": "pub-pretend",
+      "visible": true,
+      "featured": false,
+      "title": "Pretend Surgery Study",
+      "authorship": "co-author",
+      "status": "published",
+      "venue": { "en": "Journal of Fixtures", "zh": "Journal of Fixtures" },
+      "date": "2031-01",
+      "doi": "10.0000/fixture-1",
+      "links": [{ "kind": "doi", "url": "https://doi.org/10.0000/fixture-1" }]
+    }
+  ]
+}

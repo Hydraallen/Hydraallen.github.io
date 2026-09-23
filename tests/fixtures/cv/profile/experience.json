@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "zyxcorp",
+      "cv_ref": "实习经历/Zyxcorp",
+      "visible": true,
+      "featured": true,
+      "org": { "en": "Zyxcorp", "zh": "Zyxcorp 测试实验室" },
+      "role": { "en": "Imaginary Agent Intern", "zh": "虚构 Agent 实习生", "en_source": "translated" },
+      "location": null,
+      "start": "2031-06",
+      "end": "2031-09",
+      "summary": { "en": "Built a pretend harness for imaginary teams.", "zh": "为虚构团队搭建一个假装的框架。", "en_source": "translated" },
+      "bullets": [
+        {
+          "en": "Cut latency by 35% across 1,200 runs — reaching ~60% cache hits with select_tools on 8×GPU; see Imaginary Gym, arXiv:0000.00001.",
+          "zh": "在 1,200 次运行中将延迟降低 35%。",
+          "en_source": "translated"
+        },
+        { "en": "Designed a cache with a 60% hit rate.", "zh": "命中率达到 60%，并公开了示例", "en_source": "translated" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "umich",
+      "cv_ref": "教育背景/硕士",
+      "visible": true,
+      "featured": true,
+      "school": {
+        "en": "University of Michigan, Ann Arbor",
+        "zh": "美国密歇根大学"
+      },
+      "degree": {
+        "en": "Master of Science in Information",
+        "zh": "信息科学理学硕士",
+        "en_source": "translated"
+      },
+      "major": null,
+      "location": null,
+      "start": "2025-08",
+      "end": "2027-05",
+      "gpa": "4.00/4.00",
+      "minors": [],
+      "coursework": [
+        {
+          "en": "Data Mining",
+          "zh": "数据挖掘",
+          "en_source": "official"
+        },
+        {
+          "en": "Natural Language Processing",
+          "zh": "自然语言处理",
+          "en_source": "official"
+        },
+        {
+          "en": "Applied Machine Learning",
+          "zh": "应用机器学习",
+          "en_source": "official"
+        },
+        {
+          "en": "Information Visualization",
+          "zh": "信息可视化",
+          "en_source": "official"
+        }
+      ]
+    },
+    {
+      "id": "cornell",
+      "cv_ref": "教育背景/交换项目",
+      "visible": true,
+      "featured": false,
+      "school": {
+        "en": "Cornell University",
+        "zh": "美国康奈尔大学"
+      },
+      "degree": {
+        "en": "Exchange Program",
+        "zh": "交换项目",
+        "en_source": "translated"
+      },
+      "major": {
+        "en": "College of Engineering",
+        "zh": "工程学院",
+        "en_source": "translated"
+      },
+      "location": null,
+      "start": "2025-01",
+      "end": "2025-05",
+      "gpa": null,
+      "minors": [],
+      "coursework": [
+        {
+          "en": "Service Systems Modeling and Design",
+          "zh": "服务系统建模与设计",
+          "en_source": "official"
+        },
+        {
+          "en": "Applied Statistical Computing with SAS",
+          "zh": "SAS应用统计计算",
+          "en_source": "official"
+        },
+        {
+          "en": "Foundations of Machine Learning",
+          "zh": "机器学习导论",
+          "en_source": "official"
+        }
+      ]
+    },
+    {
+      "id": "tu-berlin",
+      "cv_ref": "教育背景/短期交流",
+      "visible": true,
+      "featured": false,
+      "school": {
+        "en": "Technische Universität Berlin",
+        "zh": "德国柏林工业大学"
+      },
+      "degree": {
+        "en": "Winter School",
+        "zh": "冬季短期交流",
+        "en_source": "translated"
+      },
+      "major": {
+        "en": "CanSat Satellite Design",
+        "zh": "CanSat 卫星设计",
+        "en_source": "translated"
+      },
+      "location": null,
+      "start": "2024-01",
+      "end": "2024-01",
+      "gpa": null,
+      "minors": [],
+      "coursework": []
+    },
+    {
+      "id": "sjtu",
+      "cv_ref": "教育背景/本科",
+      "visible": true,
+      "featured": true,
+      "school": {
+        "en": "Shanghai Jiao Tong University",
+        "zh": "上海交通大学"
+      },
+      "degree": {
+        "en": "B.Eng. in Electrical and Computer Engineering",
+        "zh": "电子与计算机工程 工学学士",
+        "en_source": "translated"
+      },
+      "major": null,
+      "location": null,
+      "start": "2022-08",
+      "end": "2026-08",
+      "gpa": "3.63/4.00",
+      "minors": [
+        {
+          "en": "Computer Science",
+          "zh": "计算机科学",
+          "en_source": "translated"
+        },
+        {
+          "en": "Data Science",
+          "zh": "数据科学",
+          "en_source": "translated"
+        }
+      ],
+      "coursework": [
+        {
+          "en": "Data Structures and Algorithms",
+          "zh": "数据结构与算法",
+          "en_source": "official"
+        },
+        {
+          "en": "Introduction to Operating Systems",
+          "zh": "操作系统导论",
+          "en_source": "official"
+        },
+        {
+          "en": "Introduction to Computer Organization",
+          "zh": "计算机组成件导论",
+          "en_source": "official"
+        },
+        {
+          "en": "Introduction to Logic Design",
+          "zh": "逻辑设计导论",
+          "en_source": "official"
+        },
+        {
+          "en": "Probabilistic Methods in Engineering",
+          "zh": "工程概率方法",
+          "en_source": "official"
+        },
+        {
+          "en": "Data Science and Analytics using Python",
+          "zh": "数据科学和Python数据分析",
+          "en_source": "official"
+        },
+        {
+          "en": "Computational Methods for Statistics and Data Science",
+          "zh": "统计与数据科学的计算方法",
+          "en_source": "official"
+        }
+      ]
+    }
+  ]
+}

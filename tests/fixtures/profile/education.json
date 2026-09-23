@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "nowhere-u",
+      "cv_ref": "教育背景/Nowhere",
+      "visible": true,
+      "featured": true,
+      "school": { "en": "Nowhere University of Fixtures", "zh": "无名测试大学" },
+      "degree": { "en": "Master of Imaginary Science", "zh": "虚构科学硕士" },
+      "major": null,
+      "location": { "en": "Atlantis", "zh": "亚特兰蒂斯" },
+      "start": "2030-08",
+      "end": null,
+      "gpa": "3.99/4.00",
+      "minors": [],
+      "coursework": [
+        { "en": "Pretend Mining", "zh": "假想挖掘", "en_source": "official" },
+        { "en": "Fake Vision", "zh": "伪视觉", "en_source": "official" }
+      ]
+    },
+    {
+      "id": "exchange-u",
+      "visible": true,
+      "featured": false,
+      "school": { "en": "Faraway Exchange College", "zh": "远方交换学院" },
+      "degree": { "en": "Exchange Program", "zh": "交换项目" },
+      "major": { "en": "College of Nothing", "zh": "无学院" },
+      "location": null,
+      "start": "2029-01",
+      "end": "2029-05",
+      "gpa": null,
+      "minors": [{ "en": "Computer Science", "zh": "计算机科学" }],
+      "coursework": []
+    }
+  ]
+}

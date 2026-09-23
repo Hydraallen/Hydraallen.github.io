@@ -1,0 +1,253 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "tencent",
+      "cv_ref": "实习经历/腾讯（民企口径，AI应用方向）",
+      "visible": true,
+      "featured": true,
+      "org": {
+        "en": "Tencent",
+        "zh": "腾讯"
+      },
+      "role": {
+        "en": "AI Application Engineering Intern",
+        "zh": "AI应用开发实习生",
+        "en_source": "translated"
+      },
+      "location": null,
+      "start": "2026-05",
+      "end": "2026-08",
+      "tech": [
+        "Mastra",
+        "ReAct",
+        "Multi-Agent",
+        "Agent Observability",
+        "MCP",
+        "TypeScript"
+      ],
+      "summary": {
+        "en": "Built a conversational data-retrieval Agent for the data-retrieval and analysis scenarios of the company-wide AI-native analytics platform, serving operations staff without SQL skills; focused on production issues such as uncontrolled long-running LLM tasks, hung long queries, and silently terminated answers.",
+        "zh": "针对全公司 AI 原生数据分析中台的取数与分析场景，面向无 SQL 能力的运营人员开发对话式取数 Agent。重点解决 LLM 长任务执行不可控、长查询卡死与回答静默终止等生产级问题。",
+        "en_source": "translated"
+      },
+      "bullets": [
+        {
+          "en": "Designed a ReAct observe-act loop that self-corrects from real execution results: 7-dimension static validation blocks high-risk SQL before execution, and after success the LLM runs up to 3 rounds of semantic self-verification, cutting the manual re-ask rate by ~20% (relative) and delivering an observable Agent pipeline with feedback.",
+          "zh": "设计 ReAct 观察与行动闭环，以真实执行结果驱动自纠。依托执行前 7 维静态校验拦截高危 SQL，成功后由 LLM 执行至多 3 轮语义自验证，将人工介入重问率相对下降约 20%，成功实现可观察且可反馈的 Agent 链路。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Packaged analytics capabilities into 54 pluggable built-in tools, with 23 Skill documents constraining Agent behavior instead of one monolithic prompt; a select_tools meta-tool narrows the toolset dynamically, exposing only 9 tools per step on average versus all 90 and cutting tool-description tokens by ~85% while balancing instruction clarity and context cost.",
+          "zh": "将分析能力沉淀为 54 个插件化内置工具，结合 23 份 Skill 文档约束 Agent 行为，避免堆进单一巨型 Prompt。通过 select_tools 元工具动态收敛，每步平均仅暴露 9 个工具，较全量 90 个工具减少约 85% 的描述 Token，兼顾指令清晰与上下文开销。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Built an unattended, data-driven generation mechanism for dashboard AI insight cards that refreshes chart insights automatically when underlying data changes, with a 93.64% online success rate over the last 30 days; SHA-256 data fingerprints detect changes and reuse the cache for a ~60% hit rate, while polling jitter prevents stampedes and Redis singleflight plus atomic task claiming avoids concurrency conflicts, keeping multiple instances stable.",
+          "zh": "构建无人值守的数据驱动生成机制，在底层数据变更时自动更新图表洞察，近 30 天线上生成成功率 93.64%。利用 SHA256 数据指纹判定变更复用缓存以达到约 60% 命中率。结合轮询抖动防雪崩，基于 Redis singleflight 与任务原子认领机制规避并发冲突，多实例稳定可用。",
+          "en_source": "translated"
+        }
+      ]
+    },
+    {
+      "id": "philo-homes",
+      "cv_ref": "实习经历/Philo-homes",
+      "visible": true,
+      "featured": true,
+      "org": {
+        "en": "Philo-homes",
+        "zh": "Philo-homes"
+      },
+      "role": {
+        "en": "Computer Vision & AI Application Intern",
+        "zh": "计算机视觉与 AI 应用实习生",
+        "en_source": "translated"
+      },
+      "location": null,
+      "start": "2026-01",
+      "end": "2026-03",
+      "tech": [
+        "SAM3",
+        "COLMAP",
+        "Video Inpainting",
+        "Multi-modal Prompting",
+        "3D Reconstruction"
+      ],
+      "summary": {
+        "en": "Developed a pipeline fusing 2D vision with 3D point clouds for indoor physical-space reconstruction, tackling object occlusion, 2D-3D view conflicts, and reconstruction holes in complex real-world environments.",
+        "zh": "面向室内物理空间重建，研发 2D 视觉与 3D 点云融合方案。重点解决复杂物理环境下的目标遮挡、2D-3D 视角冲突以及重建空洞问题。",
+        "en_source": "translated"
+      },
+      "bullets": [
+        {
+          "en": "Designed and built an automated pipeline of video frame extraction → SAM3 segmentation → Fooocus inpainting for de-occlusion → COLMAP point cloud generation, keeping processing for a single room (~100-200 frames) under 5 minutes.",
+          "zh": "设计并实现「视频抽帧 → SAM3 分割 → Fooocus 修复去遮挡 → COLMAP 点云生成」的自动化链路；将单房间（约 100-200 帧）处理耗时控制在 5 分钟以内。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Designed a SAM3-based strategy combining positive and negative prompts for heavy furniture occlusion indoors; supports full removal or user intervention, with precise per-frame interaction and target refinement via Point, BBox, or Pixel Mask inputs.",
+          "zh": "针对室内复杂家具遮挡，设计基于 SAM3 的正负样本结合策略；支持全量去除或用户自主介入，允许在单帧通过 Point、BBox、Pixel Mask 等多路径进行精准交互与目标微调。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Introduced multi-view voting to resolve the geometric conflicts that per-frame 2D inpainting creates in 3D space: regions that conflict across views are cleared and patched with a wall-extension strategy, yielding cleaner spatial reconstruction.",
+          "zh": "针对单帧 2D Inpainting 在 3D 空间中易产生几何冲突的问题，引入多视图投票决策机制；将多视角下的冲突区域置空，并通过墙面延展策略进行几何修补，提升空间重建的纯净度。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Added an AI enhancement rendering layer on flux-1.1-pro to fix holes and dim lighting left by 3D reconstruction; mask control restricts lighting and texture enhancement to background regions such as walls and ceilings.",
+          "zh": "针对 3D 重建后空洞、光线暗淡等可视化瑕疵，引入 flux-1.1-pro 模型构建 AI 美化渲染层，通过 Mask 控制，实现仅对墙壁、天花板等背景区域的光影与纹理增强。",
+          "en_source": "translated"
+        }
+      ]
+    },
+    {
+      "id": "salesforce",
+      "cv_ref": "实习经历/Salesforce",
+      "visible": true,
+      "featured": true,
+      "org": {
+        "en": "Salesforce",
+        "zh": "Salesforce"
+      },
+      "role": {
+        "en": "AI Agent Engineering Intern",
+        "zh": "AI Agent 研发实习生",
+        "en_source": "translated"
+      },
+      "location": null,
+      "start": "2025-08",
+      "end": "2025-12",
+      "tech": [
+        "Python",
+        "Agent Harness",
+        "Tool Calling",
+        "Run Trace",
+        "Context Management",
+        "Layered Memory"
+      ],
+      "summary": {
+        "en": "For an education setting where students use the tool and teachers oversee it, developed a code-agent harness for long-horizon repository tasks, with systematic design around model integration, context management, task recovery, tool calling, and structured memory; focused on repeated file reads, lost state, and uncontrolled tool side effects in multi-turn tasks.",
+        "zh": "针对教育场景中学生使用、教师管控的情景，面向代码仓库长链路任务开发代码 agent harness，围绕模型接入、上下文管理、任务恢复、工具调用和结构化记忆做系统化设计。重点解决多轮任务里重复读文件、状态丢失和工具副作用不可控的问题。",
+        "en_source": "translated"
+      },
+      "bullets": [
+        {
+          "en": "Owned the end-to-end design and development of the code agent, unifying model access, tool execution, checkpoint recovery, and run-artifact persistence into a replayable execution trace; supports 2 model backends, 6 tool types, and 3 run-artifact types.",
+          "zh": "负责代码 agent 的整体设计与开发，统一模型接入、工具执行、checkpoint 恢复和运行工件落盘流程，形成可复盘的执行链路；支持 2 类模型后端、6 类工具和 3 类运行工件。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Designed layered context management with budget-aware pruning that cut average prompt length from 8197 to 6186 across 12 long-context configurations (20.03% average and 37.73% maximum compression) while keeping the current request intact.",
+          "zh": "设计分层上下文管理与预算裁剪机制，在 12 组长上下文配置里，将平均 prompt 长度从 8197 压到 6186，平均压缩率 20.03%，最高压缩率 37.73%，同时保证当前请求不被裁坏。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Designed a checkpoint/resume mechanism so the agent restores task state after context-budget overruns or interruptions instead of rereading the full chat history, preventing it from continuing on stale state.",
+          "zh": "设计 checkpoint / resume 机制，让 agent 在上下文超预算、中断恢复等场景下恢复任务状态，而不是重读整段聊天历史，避免出现误信旧状态继续执行的情况。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Adapted the harness to the classroom: to address students' worries about being monitored and teachers' lack of oversight tools, the student side keeps a native experience while operations are logged quietly underneath; after privacy de-identification, teachers get database access and a structured learning-analytics view.",
+          "zh": "针对学生担忧被监测及教师缺乏管控工具的痛点，学生端保持原生交互体验，底层静默记录操作日志；经隐私脱敏处理后，教师端开放数据库访问权限并提供结构化学情视图。",
+          "en_source": "translated"
+        }
+      ]
+    },
+    {
+      "id": "openagi",
+      "cv_ref": "实习经历/OpenAGI Foundation",
+      "visible": true,
+      "featured": true,
+      "org": {
+        "en": "OpenAGI Foundation",
+        "zh": "OpenAGI Foundation"
+      },
+      "role": {
+        "en": "AI Agent Research Intern",
+        "zh": "AI Agent 研发实习生",
+        "en_source": "translated"
+      },
+      "location": null,
+      "start": "2025-01",
+      "end": "2025-08",
+      "tech": [
+        "Python",
+        "Computer Use Agent",
+        "ReAct",
+        "Multimodal SFT",
+        "Data Engineering",
+        "Prompt Engineering"
+      ],
+      "summary": {
+        "en": "Developed an LLM Agent interaction framework for Computer Use tasks, covering high-quality multimodal data construction and supervised fine-tuning; focused on the low fault tolerance of LLM interaction in complex OS environments and the scarcity of high-quality demonstration data.",
+        "zh": "面向 Computer Use 任务开发大模型 Agent 交互框架，覆盖高质量多模态数据构建与模型监督微调。重点解决复杂 OS 环境下大模型交互容错率低、高质量示范数据稀缺的问题。",
+        "en_source": "translated"
+      },
+      "bullets": [
+        {
+          "en": "Built a unified ReAct-based Agent runtime and execution flow (covering the Configure, Reset, Operate, and Evaluate stages), standardizing interaction between the LLM and the desktop OS environment.",
+          "zh": "基于 ReAct 模式构建 Agent 统一运行逻辑与执行流（涵盖 Configure、Reset、Operate、Evaluate 四个阶段），实现大模型与桌面 OS 环境的标准化交互。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Led the core data-engineering pipeline for LLM SFT: hand-designed 244 cross-application task prompts and built an automated quality-check pipeline on OSWorld, producing high-quality multimodal screenshot–chain-of-thought–action trajectories that form the data foundation for fine-tuning.",
+          "zh": "针对大模型 SFT 需求，主导核心数据工程链路。手动设计 244 个跨软件任务 Prompt；基于 OSWorld 开发自动化质检 Pipeline，成功构建包含「截图-思维链-动作」的高质量多模态轨迹，为模型微调提供关键的数据基座。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Completed supervised fine-tuning (SFT) of Qwen 2.5-VL (32B) on an 8×H100 cluster; used the distributed OSGym infrastructure to schedule 1,024 concurrent OS replicas, cutting data generation for 2,863 trajectories from 32 hours (115,654 s) to ~2 minutes (121 s).",
+          "zh": "在 8×H100 集群上完成 Qwen 2.5-VL (32B) 模型的监督微调（SFT）。依托分布式基础设施 OSGym 实现 1024 个 OS 副本的高并发调度，将 2,863 条轨迹的数据生成耗时从 32 小时（115,654 秒）骤降至约 2 分钟（121 秒）。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Scored 83.6 on the Online-Mind2Web benchmark, well ahead of Google Gemini CUA (69.0), OpenAI Operator (61.3), and Anthropic Claude Sonnet 4 (61.0); co-authored the paper OSGym: Scalable OS Infra for Computer Use Agents (arXiv preprint arXiv:2511.11672) based on this project.",
+          "zh": "在 Online-Mind2Web 基准测试中取得 83.6 分，显著超越 Google Gemini CUA (69.0)、OpenAI Operator (61.3) 及 Anthropic Claude Sonnet 4 (61.0)。基于该项目以共同作者身份发表论文 OSGym: Scalable OS Infra for Computer Use Agents，arXiv:2511.11672",
+          "en_source": "translated"
+        }
+      ]
+    },
+    {
+      "id": "baosight",
+      "cv_ref": "实习经历/上海宝信软件",
+      "visible": true,
+      "featured": false,
+      "num_check": false,
+      "num_check_reason": "zh counts samples in 万 (10.4 万 = 104K in en); all other numbers match",
+      "org": {
+        "en": "Shanghai Baosight Software",
+        "zh": "上海宝信软件"
+      },
+      "role": {
+        "en": "Machine Learning Intern",
+        "zh": "机器学习实习生",
+        "en_source": "translated"
+      },
+      "location": null,
+      "start": "2024-08",
+      "end": "2024-09",
+      "tech": [
+        "XGBoost",
+        "Cross-Validation",
+        "Class Weighting"
+      ],
+      "summary": {
+        "en": "Developed passenger-flow forecasting and abnormal-flow alert models for peak-hour crowd warnings at metro stations.",
+        "zh": "面向地铁车站高峰客流预警场景，开发乘客流量预测与异常客流预警识别模型。",
+        "en_source": "translated"
+      },
+      "bullets": [
+        {
+          "en": "Built an XGBoost machine learning pipeline that forecasts passenger flow across 523 stations.",
+          "zh": "基于 XGBoost 搭建机器学习流水线，覆盖 523 个站点的乘客流量预测。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Compared 8 model families with cross-validation on 104K samples; introduced class weighting because alert positives made up only 4.3%-11% of the data, reaching a best holiday entry-alert F1 of 0.80 and 96.5% accuracy.",
+          "zh": "在 10.4 万条样本上以交叉验证比较 8 类模型；针对预警正样本占比仅 4.3%-11% 的问题引入类别加权，实现节假日进站预警最优 F1 值 0.80、准确率 96.5% 的高精度预测。",
+          "en_source": "translated"
+        }
+      ]
+    }
+  ]
+}

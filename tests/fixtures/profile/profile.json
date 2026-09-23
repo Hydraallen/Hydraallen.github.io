@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "intro": {
+    "en": "A fictional builder of imaginary tools.",
+    "zh": "一位虚构的工具构建者。",
+    "en_source": "translated"
+  },
+  "typing_lines": [
+    {
+      "en": "Hello there",
+      "zh": "你好"
+    },
+    {
+      "en": "Fixture line; two",
+      "zh": "测试行；二"
+    }
+  ],
+  "about": [
+    {
+      "en": "I study at Nowhere Institute of Fixtures.",
+      "zh": "我在无名测试学院学习。",
+      "en_source": "translated"
+    },
+    {
+      "en": "I like <b>tags</b> & \"quotes\".",
+      "zh": "我喜欢 <b>标签</b> 与“引号”。",
+      "en_source": "translated"
+    }
+  ],
+  "languages": [
+    "Python",
+    "Go"
+  ],
+  "tools": [
+    "Git",
+    "Docker"
+  ],
+  "social": [
+    {
+      "id": "github",
+      "name": "GitHub",
+      "url": "https://github.com/example-fixture",
+      "icon": "https://example.com/icons/gh.png"
+    },
+    {
+      "id": "email",
+      "name": "Email",
+      "url": "mailto:fixture@example.com",
+      "icon": "https://example.com/icons/mail.png"
+    },
+    {
+      "id": "evil",
+      "name": "Evil",
+      "url": "javascript:alert(1)",
+      "icon": "https://example.com/icons/x.png"
+    }
+  ]
+}

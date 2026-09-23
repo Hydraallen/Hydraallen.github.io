@@ -1,0 +1,137 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "gdp-explorer-scholarship",
+      "cv_ref": "荣誉奖项与证书/奖项与荣誉",
+      "visible": true,
+      "featured": true,
+      "title": {
+        "en": "The GDP Explorer Scholarship of Global College, Shanghai Jiao Tong University (2025–2026)",
+        "zh": "2025-2026 学年上海交通大学浦江国际学院求索奖学金",
+        "en_source": "official"
+      },
+      "kind": "scholarship",
+      "level": "college",
+      "issuer": {
+        "en": "Global College, Shanghai Jiao Tong University",
+        "zh": "上海交通大学浦江国际学院"
+      },
+      "date": "2026-08"
+    },
+    {
+      "id": "mcm-honorable-mention",
+      "cv_ref": "荣誉奖项与证书",
+      "visible": true,
+      "featured": true,
+      "title": {
+        "en": "Honorable Mention, 2023 Mathematical Contest in Modeling (MCM)",
+        "zh": "美国大学生数学建模竞赛 H 奖",
+        "en_source": "translated"
+      },
+      "kind": "award",
+      "level": "international",
+      "issuer": {
+        "en": "COMAP",
+        "zh": "COMAP"
+      },
+      "date": "2023-05",
+      "num_check": false,
+      "num_check_reason": "zh keeps the résumé short form without the year (md 简历一句话版); the year 2023 is carried by date 2023-05"
+    },
+    {
+      "id": "humanity-llm-monitor-copyright",
+      "cv_ref": "荣誉奖项与证书/知识产权",
+      "visible": true,
+      "featured": true,
+      "title": {
+        "en": "Elderly Companion and Monitoring System Based on Unreal Engine and Large Language Models (Humanity LLM Monitor) V1.0",
+        "zh": "基于Unreal_Engine和大语言模型的老年人陪伴监护系统（简称：Humanity LLM Monitor）V1.0",
+        "en_source": "translated"
+      },
+      "kind": "software-copyright",
+      "level": null,
+      "issuer": {
+        "en": "National Copyright Administration of China",
+        "zh": "中华人民共和国国家版权局"
+      },
+      "date": "2024-05",
+      "holder": {
+        "en": "Shanghai Jiao Tong University",
+        "zh": "上海交通大学"
+      }
+    },
+    {
+      "id": "young-maker-shanghai",
+      "cv_ref": "荣誉奖项与证书/奖项与荣誉",
+      "visible": true,
+      "featured": true,
+      "title": {
+        "en": "Third Prize, 2024 China-U.S. Young Maker Competition (Shanghai Division)",
+        "zh": "2024 中美青年创客大赛上海分赛区三等奖",
+        "en_source": "translated"
+      },
+      "kind": "award",
+      "level": "regional",
+      "issuer": {
+        "en": "Shanghai Municipal Education Commission",
+        "zh": "上海市教育委员会"
+      },
+      "date": "2024-07"
+    },
+    {
+      "id": "sjtu-outstanding-graduate",
+      "cv_ref": "荣誉奖项与证书/奖项与荣誉",
+      "visible": true,
+      "featured": true,
+      "title": {
+        "en": "Outstanding Graduate, Class of 2026, Shanghai Jiao Tong University",
+        "zh": "2026 届上海交通大学优秀毕业生",
+        "en_source": "translated"
+      },
+      "kind": "honor",
+      "level": "university",
+      "issuer": {
+        "en": "Shanghai Jiao Tong University",
+        "zh": "上海交通大学"
+      },
+      "date": "2026-06"
+    },
+    {
+      "id": "sjtu-merit-student",
+      "cv_ref": "荣誉奖项与证书/奖项与荣誉",
+      "visible": true,
+      "featured": false,
+      "title": {
+        "en": "Merit Student, Shanghai Jiao Tong University (2023–2024)",
+        "zh": "上海交通大学 2023-2024 学年三好学生",
+        "en_source": "translated"
+      },
+      "kind": "honor",
+      "level": "university",
+      "issuer": {
+        "en": "Shanghai Jiao Tong University",
+        "zh": "上海交通大学"
+      },
+      "date": "2024-10"
+    },
+    {
+      "id": "silverfocs-silver-paw",
+      "cv_ref": "荣誉奖项与证书/奖项与荣誉",
+      "visible": true,
+      "featured": false,
+      "title": {
+        "en": "SilverFOCS Silver Paw, Best Game Design",
+        "zh": "SilverFOCS 银爪奖·最佳游戏设计",
+        "en_source": "translated"
+      },
+      "kind": "award",
+      "level": "college",
+      "issuer": {
+        "en": "UM-SJTU Joint Institute, Shanghai Jiao Tong University",
+        "zh": "上海交通大学密西根学院"
+      },
+      "date": null
+    }
+  ]
+}

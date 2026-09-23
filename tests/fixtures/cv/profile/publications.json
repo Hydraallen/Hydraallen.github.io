@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "imaginary-gym",
+      "cv_ref": "论文与著作发表/论文一（预印本）",
+      "visible": true,
+      "featured": true,
+      "title": "Imaginary Gym: A Fictional Benchmark",
+      "authorship": "co-author",
+      "status": "preprint",
+      "venue": { "en": "arXiv preprint", "zh": "arXiv 预印本" },
+      "date": "2031-11",
+      "doi": "10.0000/fixture-1",
+      "arxiv": "0000.00001",
+      "links": [{ "kind": "arxiv", "url": "https://arxiv.org/abs/0000.00001" }]
+    }
+  ]
+}

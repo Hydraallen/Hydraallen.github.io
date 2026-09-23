@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "items": [
+    { "id": "ai", "skills": [{ "name": "PyTorch", "icon": "https://cdn.example.com/pytorch.svg" }] },
+    {
+      "id": "backend",
+      "skills": [
+        { "name": "Python", "icon": "https://cdn.example.com/python.svg" },
+        { "name": "Go", "icon": "img/go.png" }
+      ]
+    }
+  ]
+}

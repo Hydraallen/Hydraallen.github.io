@@ -1,0 +1,328 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "lux",
+      "visible": true,
+      "featured": true,
+      "title": "Lux",
+      "description": {
+        "en": "The world's best computer use model and developer toolkit.",
+        "zh": "世界领先的 Computer Use 模型与开发者工具包。"
+      },
+      "image": "img/lux.jpg",
+      "links": [
+        {
+          "kind": "site",
+          "url": "https://www.agiopen.org/"
+        }
+      ]
+    },
+    {
+      "id": "online-judge-platform",
+      "visible": true,
+      "featured": true,
+      "title": "Online Judge Platform",
+      "description": {
+        "en": "An Online Judge platform for running code evaluations efficiently, built on Go and Git.",
+        "zh": "基于 Go 与 Git 的在线评测平台，高效完成代码评测与打分。"
+      },
+      "image": "img/joj3.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/JOJ3/tree/master"
+        }
+      ]
+    },
+    {
+      "id": "surgical-sam2",
+      "visible": true,
+      "featured": true,
+      "title": "SurgicalSAM2",
+      "description": {
+        "en": "Automatically segments surgical instruments in surgery videos.",
+        "zh": "自动分割手术视频中的手术器械。"
+      },
+      "image": "img/sam2.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/SurgicalSAM2"
+        }
+      ]
+    },
+    {
+      "id": "michigan-campaign-cash",
+      "visible": true,
+      "featured": true,
+      "title": "Tracking Michigan's Campaign Cash",
+      "description": {
+        "en": "A data analysis and visualization report tracking campaign cash in Michigan.",
+        "zh": "用数据分析与可视化追踪密歇根州竞选资金流向的报告。"
+      },
+      "image": "img/money.jpg",
+      "links": [
+        {
+          "kind": "site",
+          "url": "https://hydraallen.github.io/MoneyFlow/"
+        }
+      ]
+    },
+    {
+      "id": "screen-recorder",
+      "visible": true,
+      "featured": true,
+      "title": "Screen Recorder",
+      "description": {
+        "en": "Records user actions and reproduces their workflow.",
+        "zh": "记录用户操作并复现其工作流程。"
+      },
+      "image": "img/screenRecorder.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/ScreenRecorder"
+        }
+      ]
+    },
+    {
+      "id": "os-validator",
+      "visible": true,
+      "featured": false,
+      "title": "OS Validator",
+      "description": {
+        "en": "Automatically generates computer operation datasets based on the OSWorld dataset.",
+        "zh": "基于 OSWorld 数据集自动生成电脑操作数据集。"
+      },
+      "image": "img/osvalidator.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/OS_Validator"
+        }
+      ]
+    },
+    {
+      "id": "vid2frames",
+      "visible": true,
+      "featured": false,
+      "title": "Vid2Frames",
+      "description": {
+        "en": "Automatically extracts keyframes from videos and images.",
+        "zh": "自动从视频和图像中提取关键帧。"
+      },
+      "image": "img/vid2frame.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/Vid2Frames"
+        }
+      ]
+    },
+    {
+      "id": "edge-of-gravity",
+      "visible": true,
+      "featured": true,
+      "title": "Edge of Gravity",
+      "description": {
+        "en": "A bouncing-ball game that challenges players to navigate gravity-driven puzzles.",
+        "zh": "一款弹球游戏，玩家需要闯过由重力驱动的谜题关卡。"
+      },
+      "image": "img/edge_of_gravity.png",
+      "links": [
+        {
+          "kind": "site",
+          "url": "https://focs.ji.sjtu.edu.cn/silverfocs/demo/2023/p1team01/"
+        }
+      ]
+    },
+    {
+      "id": "weather-mcp",
+      "visible": true,
+      "featured": true,
+      "title": "Weather MCP",
+      "description": {
+        "en": "A weather server built on the Model Context Protocol (MCP) that provides real-time weather data.",
+        "zh": "基于 Model Context Protocol（MCP）的天气服务，提供实时天气数据。"
+      },
+      "image": "img/weather_mcp.jpeg",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/Weather_MCP_Server"
+        }
+      ]
+    },
+    {
+      "id": "no-room-for-chaos",
+      "visible": true,
+      "featured": false,
+      "title": "No Room for Chaos",
+      "description": {
+        "en": "A fast-paced map-running game where players navigate chaotic environments.",
+        "zh": "一款快节奏跑图游戏，玩家需要穿越混乱的场景。"
+      },
+      "image": "img/no_room_for_chaos.png",
+      "links": [
+        {
+          "kind": "site",
+          "url": "https://focs.ji.sjtu.edu.cn/silverfocs/project/2023/p2"
+        }
+      ]
+    },
+    {
+      "id": "git-workshop",
+      "visible": true,
+      "featured": true,
+      "title": "Git Workshop",
+      "description": {
+        "en": "Workshop materials and slides that teach beginners Git.",
+        "zh": "面向初学者的 Git 技术分享会材料与幻灯片。"
+      },
+      "image": "img/git.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/Basic_Git_wksp"
+        }
+      ]
+    },
+    {
+      "id": "vim-workshop",
+      "visible": true,
+      "featured": false,
+      "title": "Vim Workshop",
+      "description": {
+        "en": "Workshop materials and slides that teach beginners Vim.",
+        "zh": "面向初学者的 Vim 技术分享会材料与幻灯片。"
+      },
+      "image": "img/vim.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/Vim_wksp_2023"
+        }
+      ]
+    },
+    {
+      "id": "latex-vscode",
+      "visible": true,
+      "featured": true,
+      "title": "LaTeX VS Code Configuration",
+      "description": {
+        "en": "A guide and configuration files for using LaTeX with VS Code.",
+        "zh": "在 VS Code 中使用 LaTeX 的完整指南与配置文件。"
+      },
+      "image": "img/Latex_VSCode.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/Latex-vscode"
+        }
+      ]
+    },
+    {
+      "id": "rime-configuration",
+      "visible": true,
+      "featured": false,
+      "title": "Rime Configuration",
+      "description": {
+        "en": "Open-source, personalized configuration files for the Rime input method.",
+        "zh": "开源的 Rime 输入法个性化配置文件。"
+      },
+      "image": "img/rime.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/Rime"
+        }
+      ]
+    },
+    {
+      "id": "lunarvim-configuration",
+      "visible": true,
+      "featured": false,
+      "title": "LunarVim Configuration",
+      "description": {
+        "en": "A personalized LunarVim configuration designed to make developers more efficient.",
+        "zh": "个性化的 LunarVim 配置，帮助开发者提升效率。"
+      },
+      "image": "img/LunarVim.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/lvim"
+        }
+      ]
+    },
+    {
+      "id": "yabai-configuration",
+      "visible": true,
+      "featured": false,
+      "title": "Yabai Configuration",
+      "description": {
+        "en": "Configuration files for Yabai, a tiling window manager for macOS.",
+        "zh": "macOS 平铺式窗口管理器 Yabai 的配置文件。"
+      },
+      "image": "img/yabai.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/yabai"
+        }
+      ]
+    },
+    {
+      "id": "hammerspoon-configuration",
+      "visible": true,
+      "featured": false,
+      "title": "Hammerspoon Configuration",
+      "description": {
+        "en": "Configuration files for Hammerspoon, a powerful automation tool for macOS.",
+        "zh": "macOS 自动化工具 Hammerspoon 的配置文件。"
+      },
+      "image": "img/hammerspoon.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/hammerspoon"
+        }
+      ]
+    },
+    {
+      "id": "face-recognition-tool",
+      "visible": true,
+      "featured": false,
+      "title": "Face Recognition Tool",
+      "description": {
+        "en": "A face recognition tool that detects and tracks faces in real time.",
+        "zh": "实时检测并跟踪人脸的人脸识别工具。"
+      },
+      "image": "img/face_recognition.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/Face-recognition"
+        }
+      ]
+    },
+    {
+      "id": "election-for-techji",
+      "visible": true,
+      "featured": false,
+      "title": "Election For TechJI",
+      "description": {
+        "en": "An election vote counter.",
+        "zh": "一个选举计票程序。"
+      },
+      "image": "img/electionfortechji.png",
+      "links": [
+        {
+          "kind": "github",
+          "url": "https://github.com/Hydraallen/ElectionForTechJI"
+        }
+      ]
+    }
+  ]
+}

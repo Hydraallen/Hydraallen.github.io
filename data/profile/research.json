@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "surgical-sam2",
+      "cv_ref": "科研经历/基于 SAM2 的手术视频工具分割与评估",
+      "visible": true,
+      "featured": true,
+      "kind": "research",
+      "title": {
+        "en": "Surgical Video Tool Segmentation and Evaluation with SAM2",
+        "zh": "基于 SAM2 的手术视频工具分割与评估",
+        "en_source": "translated"
+      },
+      "org": null,
+      "role": { "en": "Research Assistant", "zh": "研究员", "en_source": "translated" },
+      "location": null,
+      "start": "2024-07",
+      "end": "2025-07",
+      "tech": ["SAM2", "COCO", "YAML"],
+      "summary": {
+        "en": "Contributed to a systematic evaluation and fine-tuning study of SAM2 for instrument and tissue segmentation in surgical videos, covering 9 surgical datasets and 17 instrument classes, and addressing scarce annotations and tracking drift in long videos.",
+        "zh": "面向手术视频的器械与组织分割场景，参与 SAM2 的系统性评测与微调研究，覆盖 9 个手术数据集、17 类手术器械，解决标注稀缺与长视频跟踪漂移问题。",
+        "en_source": "translated"
+      },
+      "bullets": [
+        {
+          "en": "Converted pixel-mask and box annotations into a unified COCO format and automated the generation of 5 prompt types (center point, random point, multi-point, bounding box, mask) with negative-point sampling, enabling precise segmentation of 7 surgical tool classes in EndoVis2018.",
+          "zh": "统一将像素掩码与框标注转为 COCO 格式，实现中心点、随机点、多点、边界框、掩码 5 类 Prompt 自动生成与负样本点采样，覆盖 EndoVis2018 中 7 类手术工具的精确分割。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Countered tracking drift of the SAM2 memory bank on long sequences with prompt re-initialization triggered at fixed frame intervals or when a new class appears, raising mask-prompt mIoU on EndoVis2017 from 52.63% to 76.15%.",
+          "zh": "针对 SAM2 记忆库在长序列上的跟踪漂移，实现按固定帧间隔与新类别出现两种条件触发的 Prompt 重初始化；EndoVis2017 掩码提示 mIoU 由 52.63% 提升至 76.15%。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Ablations showed that fine-tuning the mask decoder and prompt encoder with a frozen image encoder is the best configuration, lifting DSAD organ-segmentation mIoU from 19.58% to 80.87%.",
+          "zh": "消融确认微调掩码解码器与 Prompt 编码器、冻结图像编码器为最优配置，DSAD 器官分割 mIoU 由 19.58% 升至 80.87%。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Built an analysis pipeline for data preprocessing, batch inference, and automatic metrics, reporting mIoU, Dice, and MAE at frame, class, and video levels, with YAML configs driving batch runs of 19 prompt and re-initialization experiments.",
+          "zh": "构建数据预处理、批量推理与自动指标计算的分析流水线，按帧、类别、视频三级统计 mIoU、Dice 与 MAE，以 YAML 配置驱动 19 组提示与重初始化实验的批量执行。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Generated first-frame pseudo-labels for unannotated videos such as Cholec80 with the automatic mask generator and searched for optimal hyperparameters; co-author, Systematic Evaluation and Guidelines for Segment Anything Model in Surgical Video Analysis, arXiv:2501.00525.",
+          "zh": "针对 Cholec80 等无标注视频，用自动掩码生成器产出首帧伪标签并搜索最优超参；以共同作者身份完成论文 Systematic Evaluation and Guidelines for Segment Anything Model in Surgical Video Analysis，arXiv:2501.00525",
+          "en_source": "translated"
+        }
+      ],
+      "links": [{ "kind": "github", "url": "https://github.com/Hydraallen/SurgicalSAM2" }]
+    },
+    {
+      "id": "joj3",
+      "cv_ref": "项目经历/JOJ3 在线评测平台",
+      "visible": true,
+      "featured": true,
+      "kind": "project",
+      "title": { "en": "JOJ3 Online Judge Platform", "zh": "JOJ3 在线评测平台", "en_source": "translated" },
+      "org": { "en": "Shanghai Jiao Tong University", "zh": "上海交通大学" },
+      "role": { "en": "Core Developer", "zh": "核心开发者", "en_source": "translated" },
+      "location": null,
+      "start": "2024-01",
+      "end": "2026-08",
+      "tech": ["Go", "Gitea Actions", "go-judge", "gRPC", "cgroup v2", "Prometheus"],
+      "summary": {
+        "en": "Rebuilt the Online Judge platform in Go on Gitea Actions CI/CD with a stage-based pipeline architecture, automating grading across the full judging chain: compilation, execution, scoring, and repository checks.",
+        "zh": "基于 Go 语言重构在线评测平台，运行于 Gitea Actions CI/CD 环境，采用 Stage-based Pipeline 架构，实现自动化评分，覆盖代码编译、执行、评分、仓库检查等完整评测链路。",
+        "en_source": "translated"
+      },
+      "bullets": [
+        {
+          "en": "Designed a two-layer Executor-Parser plugin system in which executors and parsers self-register in a global registry, so a new judging rule only has to implement an interface and be imported.",
+          "zh": "设计 Executor-Parser 双层插件体系，执行器与解析器通过自注册到全局注册表，新增评测规则仅需实现接口并导入。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Built a sandbox execution environment on go-judge over gRPC with multi-dimensional resource limits (CPU time, memory, process count) and system-level isolation via cgroup v2.",
+          "zh": "基于 go-judge 构建沙箱执行环境，通过 gRPC 协议交互，支持 CPU 时间、内存、进程数等多维度资源限制，利用 cgroup v2 实现系统级隔离。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Developed health-checker as a standalone checking entry point that validates commit-message conventions, repository file-size limits, non-ASCII file names, and file integrity.",
+          "zh": "开发 health-checker 工具作为独立检查入口，检查提交信息规范性、仓库文件大小限制、非 ASCII 文件名检测、文件完整性验证等指标。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Integrated Prometheus monitoring to collect and analyze runtime logs and health metrics in real time, with visual dashboards that produce automated operations reports.",
+          "zh": "集成 Prometheus 监控模块，实时采集并分析系统运行日志与健康指标，构建可视化数据仪表盘生成自动化运维报告。",
+          "en_source": "translated"
+        }
+      ],
+      "links": [{ "kind": "github", "url": "https://github.com/Hydraallen/JOJ3/tree/master" }]
+    }
+  ]
+}

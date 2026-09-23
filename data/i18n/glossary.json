@@ -1,0 +1,39 @@
+{
+  "terms": [
+    { "en": "Online Judge", "zh": "在线评测" },
+    { "en": "co-author", "zh": "共同作者" },
+    { "en": "Computer Use", "zh": "Computer Use" },
+    { "en": "benchmark", "zh": "基准" },
+    { "en": "trajector", "zh": "轨迹" },
+    { "en": "static validation", "zh": "静态校验" },
+    { "en": "self-verification", "zh": "自验证" },
+    { "en": "point cloud", "zh": "点云" },
+    { "en": "sandbox", "zh": "沙箱" },
+    { "en": "cross-validation", "zh": "交叉验证" },
+    { "en": "pseudo-label", "zh": "伪标签" },
+    { "en": "re-initialization", "zh": "重初始化" },
+    { "en": "Teaching Assistant", "zh": "助教" },
+    { "en": "Student Union", "zh": "学生会" },
+    { "en": "Scholarship", "zh": "奖学金" },
+    { "en": "Shanghai Jiao Tong University", "zh": "上海交通大学" },
+    { "en": "Global College", "zh": "浦江国际学院" },
+    { "en": "University of Michigan", "zh": "密歇根大学" }
+  ],
+  "forbidden": [
+    {
+      "pattern": "first[- ]author|第一作者|一作|共同第一",
+      "flags": "i",
+      "reason": "Both papers are co-authored; never claim first or co-first authorship"
+    },
+    {
+      "pattern": "Deep Learning|深度学习",
+      "flags": "i",
+      "reason": "Not part of the official UMich coursework (Data Mining, NLP, Applied ML, Information Visualization)"
+    },
+    {
+      "pattern": "(著作权人|copyright holder)[:：]?\\s*(Hydraallen|Hydraallen|Hydraallen)",
+      "flags": "i",
+      "reason": "The software copyright holder is Shanghai Jiao Tong University, not the owner"
+    }
+  ]
+}

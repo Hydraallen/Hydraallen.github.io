@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "intro": {
+    "en": "AI agent engineer and M.S. in Information student at the University of Michigan, building reliable LLM agents, agent harnesses, and the data pipelines behind them.",
+    "zh": "密歇根大学信息科学硕士在读，专注 AI Agent 研发：打造可靠的大模型 Agent、Agent Harness 及其背后的数据流水线。",
+    "en_source": "translated"
+  },
+  "typing_lines": [
+    {
+      "en": "Hi there 👋, I am Hydraallen",
+      "zh": "你好 👋，我是Hydraallen"
+    },
+    {
+      "en": "Welcome to My Profile!",
+      "zh": "欢迎来到我的主页！"
+    },
+    {
+      "en": "Building reliable AI agents",
+      "zh": "构建可靠的 AI Agent"
+    },
+    {
+      "en": "Always learning new things",
+      "zh": "始终保持学习"
+    }
+  ],
+  "about": [
+    {
+      "en": "I am a Master of Science in Information student at the University of Michigan School of Information. I received my B.Eng. in Electrical and Computer Engineering from Shanghai Jiao Tong University, with minors in Computer Science and Data Science.",
+      "zh": "我目前在密歇根大学信息学院攻读信息科学硕士。本科毕业于上海交通大学电子与计算机工程专业，获工学学士学位，并辅修计算机科学与数据科学。",
+      "en_source": "translated"
+    },
+    {
+      "en": "My work centers on AI agents: a conversational data-analysis agent at Tencent, a code-agent harness at Salesforce, and a multimodal data engine for Computer Use agents at OpenAGI Foundation. I am also a co-author of the OSGym paper and of a study evaluating SAM2 for surgical video analysis.",
+      "zh": "我的工作聚焦于 AI Agent：在腾讯开发对话式取数 Agent，在 Salesforce 开发代码 Agent Harness，在 OpenAGI Foundation 为 Computer Use Agent 构建多模态数据引擎。我也以共同作者身份参与了 OSGym 论文和 SAM2 手术视频分析评测研究。",
+      "en_source": "translated"
+    },
+    {
+      "en": "I enjoy turning messy real-world problems into dependable systems and sharing what I learn through workshops and open-source projects. Beyond work, I have a deep love for football and a passion for traveling and photography.",
+      "zh": "我喜欢把复杂的现实问题变成可靠的系统，也乐于通过技术分享会和开源项目分享所学。工作之外，我热爱足球，也喜欢旅行和摄影。",
+      "en_source": "translated"
+    }
+  ],
+  "languages": [
+    "Python",
+    "TypeScript",
+    "SQL",
+    "Go",
+    "C/C++",
+    "Bash"
+  ],
+  "tools": [
+    "Mastra",
+    "MCP",
+    "LangChain",
+    "PyTorch",
+    "Redis",
+    "Docker",
+    "Git",
+    "GitHub Actions",
+    "Linux",
+    "LaTeX"
+  ],
+  "social": [
+    {
+      "id": "github",
+      "name": "GitHub",
+      "url": "https://github.com/Hydraallen",
+      "icon": "https://cdn-icons-png.flaticon.com/512/25/25231.png"
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/rui-wang-546099392/",
+      "icon": "https://cdn-icons-png.flaticon.com/512/174/174857.png"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "url": "https://www.facebook.com/hydra.allen.2025/",
+      "icon": "https://cdn-icons-png.flaticon.com/512/733/733547.png"
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "url": "https://www.instagram.com/hydraallen6/",
+      "icon": "https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter/X",
+      "url": "https://x.com/allen92451109",
+      "icon": "https://cdn-icons-png.flaticon.com/512/733/733579.png"
+    },
+    {
+      "id": "xiaohongshu",
+      "name": "Xiaohongshu",
+      "url": "https://xhslink.com/m/4Ka90xNTlt9",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDo2rHHxrkOzsL4RvHn_fsCt6SIVtdCNH0TQ&s"
+    },
+    {
+      "id": "bilibili",
+      "name": "Bilibili",
+      "url": "https://space.bilibili.com/397325796",
+      "icon": "https://img.icons8.com/color/96/bilibili.png"
+    },
+    {
+      "id": "email",
+      "name": "Email",
+      "url": "mailto:wangruiallen@gmail.com",
+      "icon": "https://cdn-icons-png.flaticon.com/512/732/732200.png"
+    }
+  ]
+}

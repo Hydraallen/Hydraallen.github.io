@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "groups": [
+    {
+      "id": "languages",
+      "label": { "en": "Languages", "zh": "编程语言", "en_source": "translated" },
+      "skills": ["Python", "TypeScript", "SQL", "Go", "C/C++", "Bash"]
+    },
+    {
+      "id": "ai-agent",
+      "label": { "en": "AI & Agent", "zh": "AI 与 Agent", "en_source": "translated" },
+      "skills": [
+        "Agent Harness",
+        "ReAct",
+        "Multi-Agent",
+        "Tool Calling",
+        "Context Management",
+        "Layered Memory",
+        "Run Trace",
+        "Agent Observability",
+        "Prompt Engineering",
+        "Computer Use Agents",
+        "Multimodal SFT",
+        "Data Engineering"
+      ]
+    },
+    {
+      "id": "frameworks-tools",
+      "label": { "en": "Frameworks & Tools", "zh": "框架与工具", "en_source": "translated" },
+      "skills": ["Mastra", "MCP", "LangChain", "PyTorch", "Redis", "Docker", "Git", "GitHub Actions", "Linux", "LaTeX"]
+    }
+  ],
+  "items": [
+    {
+      "id": "ai",
+      "skills": [
+        { "name": "PyTorch", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+        { "name": "OpenCV", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" },
+        { "name": "pandas", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+        { "name": "NumPy", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+        { "name": "Jupyter", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" }
+      ]
+    },
+    {
+      "id": "backend",
+      "skills": [
+        { "name": "Python", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { "name": "TypeScript", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+        { "name": "Go", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" },
+        { "name": "C++", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+        { "name": "C", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+        { "name": "Node.js", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+        { "name": "MySQL", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+        { "name": "Redis", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" }
+      ]
+    },
+    {
+      "id": "frontend",
+      "skills": [
+        { "name": "JavaScript", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+        { "name": "HTML5", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+        { "name": "CSS", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+        { "name": "React.js", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" }
+      ]
+    },
+    {
+      "id": "devops",
+      "skills": [
+        { "name": "Docker", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+        { "name": "GitHub Actions", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" },
+        { "name": "Bash", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" },
+        { "name": "Prometheus", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" },
+        { "name": "Grafana", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" }
+      ]
+    },
+    {
+      "id": "tools",
+      "skills": [
+        { "name": "Linux", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+        { "name": "Git", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { "name": "LaTeX", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg" },
+        { "name": "Vim", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg" }
+      ]
+    }
+  ]
+}

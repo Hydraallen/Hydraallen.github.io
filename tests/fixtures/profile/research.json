@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "fixture-seg",
+      "cv_ref": "科研经历/FixtureSeg",
+      "visible": true,
+      "featured": true,
+      "title": { "en": "FixtureSeg Pseudo Segmentation", "zh": "FixtureSeg 伪分割研究" },
+      "org": { "en": "Nowhere Vision Lab", "zh": "无名视觉实验室" },
+      "role": { "en": "Research Assistant", "zh": "科研助理", "en_source": "translated" },
+      "start": "2029-01",
+      "end": "2029-12",
+      "tech": ["PyTorch"],
+      "bullets": [
+        { "en": "Improved mIoU by 3.5 points.", "zh": "mIoU 提升 3.5 个点。", "en_source": "translated" }
+      ],
+      "links": [
+        { "kind": "github", "url": "https://github.com/example/fixtureseg" },
+        { "kind": "site", "url": "javascript:alert(1)" }
+      ]
+    }
+  ]
+}

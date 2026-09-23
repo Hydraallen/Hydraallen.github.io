@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "sam2-surgical-video",
+      "cv_ref": "论文与著作发表/论文二（已正式见刊）",
+      "visible": true,
+      "featured": true,
+      "title": "Systematic Evaluation and Guidelines for Segment Anything Model in Surgical Video Analysis",
+      "authorship": "co-author",
+      "status": "published",
+      "venue": { "en": "npj Digital Surgery (Nature Portfolio)", "zh": "npj Digital Surgery（Nature Portfolio）" },
+      "date": "2026-04",
+      "doi": "10.1038/s44484-025-00002-2",
+      "arxiv": "2501.00525",
+      "links": [
+        { "kind": "doi", "url": "https://doi.org/10.1038/s44484-025-00002-2" },
+        { "kind": "arxiv", "url": "https://arxiv.org/abs/2501.00525" }
+      ]
+    },
+    {
+      "id": "osgym",
+      "cv_ref": "论文与著作发表/论文一（预印本，未正式发表）",
+      "visible": true,
+      "featured": true,
+      "title": "OSGym: Scalable OS Infra for Computer Use Agents",
+      "authorship": "co-author",
+      "status": "preprint",
+      "venue": { "en": "arXiv preprint", "zh": "arXiv 预印本" },
+      "date": "2025-11",
+      "doi": null,
+      "arxiv": "2511.11672",
+      "links": [{ "kind": "arxiv", "url": "https://arxiv.org/abs/2511.11672" }]
+    }
+  ]
+}

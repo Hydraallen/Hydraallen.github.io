@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "groups": [
+    { "id": "langs", "label": { "en": "Languages & Tools", "zh": "语言与工具", "en_source": "translated" }, "skills": ["Python", "LaTeX"] }
+  ],
+  "items": []
+}

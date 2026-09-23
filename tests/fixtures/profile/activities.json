@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "fixture-ta",
+      "cv_ref": "学生工作/助教",
+      "visible": true,
+      "featured": true,
+      "org": { "en": "Fixture Teaching Office", "zh": "测试教学办公室" },
+      "role": { "en": "Teaching Assistant", "zh": "课程助教" },
+      "location": null,
+      "start": "2029-09",
+      "end": "2030-12",
+      "bullets": [{ "en": "Helped 120 students.", "zh": "帮助了 120 名学生。" }]
+    }
+  ]
+}

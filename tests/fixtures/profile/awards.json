@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "fixture-cup",
+      "visible": true,
+      "featured": true,
+      "title": { "en": "Fixture Cup Honorable Mention", "zh": "测试杯荣誉奖" },
+      "kind": "award",
+      "level": "international",
+      "issuer": { "en": "Fixture Society", "zh": "测试协会" },
+      "date": "2030-05"
+    },
+    {
+      "id": "fixture-copyright",
+      "visible": true,
+      "featured": false,
+      "title": { "en": "Pretend Monitor V1.0", "zh": "假想监控 V1.0" },
+      "kind": "software-copyright",
+      "level": null,
+      "issuer": null,
+      "date": "2030-03",
+      "holder": { "en": "Nowhere University of Fixtures", "zh": "无名测试大学" }
+    }
+  ]
+}

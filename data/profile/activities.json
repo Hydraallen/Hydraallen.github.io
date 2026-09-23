@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "teaching-assistant",
+      "cv_ref": "学生工作与社会实践/课程助教",
+      "visible": true,
+      "featured": true,
+      "num_check": false,
+      "num_check_reason": "summary: zh gives course terms as YYYY.MM ranges, en uses month names",
+      "org": { "en": "Shanghai Jiao Tong University", "zh": "上海交通大学" },
+      "role": { "en": "Teaching Assistant", "zh": "课程助教", "en_source": "translated" },
+      "location": null,
+      "start": "2023-09",
+      "end": "2024-12",
+      "summary": {
+        "en": "Courses: Introduction to Computing (Sep–Dec 2023) and Data Structures and Algorithms (Sep–Dec 2024).",
+        "zh": "负责课程：计算机导论（2023.09-2023.12）、数据结构与算法（2024.09-2024.12）",
+        "en_source": "translated"
+      },
+      "bullets": [
+        {
+          "en": "Assisted instructors with office hours, homework grading, and lab guidance to keep the course running smoothly.",
+          "zh": "协助任课教师开展课程答疑、作业批改与实验指导，保障课程有序运行。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Maintained the course lab environment and reviewed grading rules, and helped instructors compile end-of-term assessment materials.",
+          "zh": "参与课程实验环境维护与评测规则核查，配合教师完成学期考核材料整理。",
+          "en_source": "translated"
+        }
+      ]
+    },
+    {
+      "id": "student-union",
+      "cv_ref": "学生工作与社会实践/学生会技术部部长",
+      "visible": true,
+      "featured": true,
+      "org": { "en": "Shanghai Jiao Tong University", "zh": "上海交通大学" },
+      "role": { "en": "Head of Technology Department, Student Union", "zh": "学生会技术部部长", "en_source": "translated" },
+      "location": null,
+      "start": "2023-06",
+      "end": "2024-06",
+      "summary": null,
+      "bullets": [
+        {
+          "en": "Managed the department's day-to-day operations and trained new members, supporting the college's student-affairs work.",
+          "zh": "承担部门日常事务管理与新成员培养，配合学院完成各项学生工作部署。",
+          "en_source": "translated"
+        },
+        {
+          "en": "Co-organized technical workshops on Git, Bash, and Vim, and provided technical and equipment support for student events.",
+          "zh": "参与组织 Git、Bash、Vim 等技术分享会，保障学生活动技术支持与设备运行。",
+          "en_source": "translated"
+        }
+      ]
+    }
+  ]
+}

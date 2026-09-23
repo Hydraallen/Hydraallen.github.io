@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "nowhere-u",
+      "cv_ref": "教育背景/硕士",
+      "visible": true,
+      "featured": true,
+      "school": { "en": "Nowhere University", "zh": "无名测试大学" },
+      "degree": { "en": "Master of Nothing", "zh": "虚无硕士", "en_source": "translated" },
+      "major": null,
+      "location": null,
+      "start": "2030-08",
+      "end": "2032-05",
+      "gpa": "3.99/4.00",
+      "minors": [],
+      "coursework": [
+        { "en": "Pretend Mining", "zh": "假想挖掘", "en_source": "official" },
+        { "en": "Fake Vision", "zh": "伪视觉", "en_source": "official" }
+      ]
+    },
+    {
+      "id": "faraway",
+      "cv_ref": "教育背景/短期交流",
+      "visible": true,
+      "featured": false,
+      "school": { "en": "Faraway College", "zh": "远方测试学院" },
+      "degree": { "en": "Winter School", "zh": "冬季学校", "en_source": "translated" },
+      "major": null,
+      "location": null,
+      "start": "2029-01",
+      "end": "2029-01",
+      "gpa": null,
+      "minors": [],
+      "coursework": []
+    }
+  ]
+}
