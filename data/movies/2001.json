@@ -1,7 +1,7 @@
 {
   "year": 2001,
-  "total_count": 8,
-  "saved_count": 8,
+  "total_count": 7,
+  "saved_count": 7,
   "favorite": "Harry Potter and the Sorcerer's Stone",
   "movies": [
     {
@@ -33,12 +33,6 @@
       "title_zh": "侏罗纪公园3",
       "date": "Jul 18, 2001",
       "poster": "https://m.media-amazon.com/images/M/MV5BN2FmMjhlZDYtNmYyMy00NTdjLTlhYzYtZWNlMDY2MmUzOGM2XkEyXkFqcGc@._V1_.jpg"
-    },
-    {
-      "title": "Planet of the Apes",
-      "title_zh": "决战猩球",
-      "date": "Jul 27, 2001",
-      "poster": "https://m.media-amazon.com/images/M/MV5BYjczODRhOTQtZjdkYi00MmM2LTg1ZmEtZDQ3YjA5MDJhODNhXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Harry Potter and the Sorcerer's Stone",
