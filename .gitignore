@@ -22,3 +22,9 @@ __pycache__/
 
 # Local working file for data/movies/movie_cleaner.py (not published to the site)
 data/movies/backup.json
+
+# Local-only CV source paths for tools/cv_sync_check.py (never commit local paths)
+tools/cv_sources.local.json
+
+# Local preview server state (manage-service.sh)
+.preview/
