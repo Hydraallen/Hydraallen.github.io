@@ -51,52 +51,65 @@ test("buildMovieCardHtml uses placeholder when no poster", () => {
   assert.ok(html.includes(lib.NO_POSTER_SRC));
 });
 
-test("getDisplayName appends state only for USA", () => {
-  assert.strictEqual(
-    lib.getDisplayName({ name: "Seattle", country: "USA", state: "WA" }),
-    "Seattle, WA"
-  );
-  assert.strictEqual(
-    lib.getDisplayName({ name: "Seattle", country: "usa", state: "WA" }),
-    "Seattle, WA"
-  );
-  assert.strictEqual(
-    lib.getDisplayName({ name: "Paris", country: "France", state: "X" }),
-    "Paris"
-  );
-  assert.strictEqual(
-    lib.getDisplayName({ name: "Austin", country: "USA" }),
-    "Austin"
-  );
+test("NO_POSTER_SRC placeholder carries no language-specific text", () => {
+  assert.ok(lib.NO_POSTER_SRC.startsWith("data:image/svg+xml"));
+  assert.ok(!/No Poster|%3Ctext/.test(lib.NO_POSTER_SRC), "no baked-in English label");
 });
 
-test("getDisplayName handles the flag-emoji country shape used in data/travel", () => {
-  // 真实数据形态:country 带国旗 emoji
-  assert.strictEqual(
-    lib.getDisplayName({ name: "Boston", country: "\u{1F1FA}\u{1F1F8} USA", state: "MA" }),
-    "Boston, MA"
-  );
-  assert.strictEqual(
-    lib.getDisplayName({ name: "New York City", country: "\u{1F1FA}\u{1F1F8} USA", state: "NY" }),
-    "New York City, NY"
-  );
-  assert.strictEqual(
-    lib.getDisplayName({ name: "Reykjavik", country: "\u{1F1EE}\u{1F1F8} Iceland" }),
-    "Reykjavik"
-  );
-  // A country merely containing "usa" must not be treated as the USA
-  assert.strictEqual(
-    lib.getDisplayName({ name: "Somewhere", country: "Usaland", state: "ZZ" }),
-    "Somewhere"
-  );
+// ---------------------------------------------------------------------------
+// Travel: country / display name (bilingual schema: name {en,zh}, country_code)
+// ---------------------------------------------------------------------------
+const NYC = { name: { en: "New York City", zh: "纽约" }, country_code: "US", state: "NY" };
+const SEATTLE = { name: { en: "Seattle", zh: "西雅图" }, country_code: "US", state: "WA" };
+
+test("flagEmoji maps an ISO alpha-2 code to its regional-indicator flag", () => {
+  assert.strictEqual(lib.flagEmoji("US"), "\u{1F1FA}\u{1F1F8}");
+  assert.strictEqual(lib.flagEmoji("jp"), "\u{1F1EF}\u{1F1F5}", "case-insensitive");
+  assert.strictEqual(lib.flagEmoji("USA"), "");
+  assert.strictEqual(lib.flagEmoji(undefined), "");
 });
 
-test("getDisplayName never emits a dangling comma or undefined", () => {
+test("getCountryLabel combines the flag with the localized country name", () => {
+  assert.strictEqual(lib.getCountryLabel({ country_code: "US" }), "\u{1F1FA}\u{1F1F8} USA");
+  assert.strictEqual(lib.getCountryLabel({ country_code: "US" }, "zh"), "\u{1F1FA}\u{1F1F8} 美国");
+  assert.strictEqual(lib.getCountryLabel({ country_code: "CZ" }, "zh"), "\u{1F1E8}\u{1F1FF} 捷克");
+  assert.strictEqual(lib.getCountryLabel({}), "", "no code -> empty, never undefined");
+});
+
+test("getDisplayName appends the US state (postal code in en, full name in zh)", () => {
+  assert.strictEqual(lib.getDisplayName(SEATTLE), "Seattle, WA", "defaults to English");
+  assert.strictEqual(lib.getDisplayName(SEATTLE, "en"), "Seattle, WA");
+  assert.strictEqual(lib.getDisplayName(SEATTLE, "zh"), "西雅图，华盛顿州");
+});
+
+test("getDisplayName (zh) drops a state that merely repeats the place name", () => {
+  assert.strictEqual(lib.getDisplayName(NYC, "en"), "New York City, NY");
+  assert.strictEqual(lib.getDisplayName(NYC, "zh"), "纽约", "not 纽约，纽约州");
+  const dc = { name: { en: "Washington DC", zh: "华盛顿特区" }, country_code: "US", state: "DC" };
+  assert.strictEqual(lib.getDisplayName(dc, "zh"), "华盛顿特区");
+});
+
+test("getDisplayName ignores a state outside the USA and never dangles a comma", () => {
   assert.strictEqual(
-    lib.getDisplayName({ name: "Honolulu", country: "\u{1F1FA}\u{1F1F8} USA" }),
-    "Honolulu"
+    lib.getDisplayName({ name: { en: "Paris", zh: "巴黎" }, country_code: "FR", state: "X" }, "zh"),
+    "巴黎"
   );
-  assert.strictEqual(lib.getDisplayName({ name: "Kyoto" }), "Kyoto");
+  assert.strictEqual(lib.getDisplayName({ name: { en: "Honolulu", zh: "檀香山" }, country_code: "US" }), "Honolulu");
+  assert.strictEqual(lib.getDisplayName({ name: "Kyoto" }), "Kyoto", "plain-string names pass through");
+  assert.ok(!lib.getDisplayName({}).includes("undefined"));
+});
+
+test("formatPlaceDates renders a localized range, or the planned label", () => {
+  const ithaca = { status: "visited", date: "2025-01-15", date_end: "2025-05-17" };
+  assert.strictEqual(lib.formatPlaceDates(ithaca), "Jan 15 – May 17, 2025");
+  assert.strictEqual(lib.formatPlaceDates(ithaca, "zh"), "2025.01.15 – 05.17");
+  assert.strictEqual(
+    lib.formatPlaceDates({ status: "visited", date: "2025-05-09", date_end: "2025-05-09" }, "en"),
+    "May 9, 2025"
+  );
+  const planned = { status: "planned", date: null, date_end: null };
+  assert.strictEqual(lib.formatPlaceDates(planned, "en"), "TODO List");
+  assert.strictEqual(lib.formatPlaceDates(planned, "zh"), "待出发");
 });
 
 test("getLightboxSrc / getLightboxCaption handle string and object photos", () => {
@@ -104,19 +117,22 @@ test("getLightboxSrc / getLightboxCaption handle string and object photos", () =
   assert.strictEqual(lib.getLightboxSrc({ src: "b.jpg" }), "b.jpg");
   assert.strictEqual(lib.getLightboxCaption("a.jpg"), "");
   assert.strictEqual(lib.getLightboxCaption({ src: "b.jpg" }), "");
-  assert.strictEqual(
-    lib.getLightboxCaption({ src: "b.jpg", location: "Rome" }),
-    "Rome"
-  );
+  assert.strictEqual(lib.getLightboxCaption({ src: "b.jpg", location: "Rome" }), "Rome");
+  const loc = { src: "b.jpg", location: { en: "Central Park", zh: "中央公园" } };
+  assert.strictEqual(lib.getLightboxCaption(loc), "Central Park");
+  assert.strictEqual(lib.getLightboxCaption(loc, "zh"), "中央公园");
 });
 
-test("compareVisited: TBD sorts first for newest, last for oldest", () => {
-  const tbd = { name: "T", date: "TBD" };
+// ---------------------------------------------------------------------------
+// Travel: comparators (ISO dates, planned = null; names via Intl.Collator)
+// ---------------------------------------------------------------------------
+test("compareVisited: an undated place sorts first for newest, last for oldest", () => {
+  const undated = { name: "T", date: null };
   const dated = { name: "D", date: "2020-01-01" };
-  assert.ok(lib.compareVisited("newest")(tbd, dated) < 0);
-  assert.ok(lib.compareVisited("newest")(dated, tbd) > 0);
-  assert.ok(lib.compareVisited("oldest")(tbd, dated) > 0);
-  assert.ok(lib.compareVisited("oldest")(dated, tbd) < 0);
+  assert.ok(lib.compareVisited("newest")(undated, dated) < 0);
+  assert.ok(lib.compareVisited("newest")(dated, undated) > 0);
+  assert.ok(lib.compareVisited("oldest")(undated, dated) > 0);
+  assert.ok(lib.compareVisited("oldest")(dated, undated) < 0);
 });
 
 test("compareVisited: newest/oldest order dated items correctly", () => {
@@ -127,12 +143,23 @@ test("compareVisited: newest/oldest order dated items correctly", () => {
 });
 
 test("compareVisited: az / za and equal-name fallback", () => {
-  const a = { name: "Alpha", date: "x" };
-  const b = { name: "Beta", date: "x" };
+  const a = { name: { en: "Alpha", zh: "阿" }, date: "x" };
+  const b = { name: { en: "Beta", zh: "贝" }, date: "x" };
   assert.ok(lib.compareVisited("az")(a, b) < 0);
   assert.ok(lib.compareVisited("za")(a, b) > 0);
   const same = { name: "Same", date: "x" };
   assert.strictEqual(lib.compareVisited("unknown")(same, same), 0);
+});
+
+test("compareVisited / comparePlanned sort by the name in the page language", () => {
+  // en: Seattle < Tokyo; zh (pinyin): 东京 dong < 西雅图 xi
+  const seattle = { name: { en: "Seattle", zh: "西雅图" }, date: "2025-01-01" };
+  const tokyo = { name: { en: "Tokyo", zh: "东京" }, date: "2025-01-01" };
+  assert.ok(lib.compareVisited("az", "en")(seattle, tokyo) < 0);
+  assert.ok(lib.compareVisited("az", "zh")(seattle, tokyo) > 0);
+  assert.ok(lib.comparePlanned("az", "en")(seattle, tokyo) < 0);
+  assert.ok(lib.comparePlanned("az", "zh")(seattle, tokyo) > 0);
+  assert.ok(lib.comparePlanned("za", "zh")(seattle, tokyo) < 0);
 });
 
 test("comparePlanned: default asc, za desc", () => {

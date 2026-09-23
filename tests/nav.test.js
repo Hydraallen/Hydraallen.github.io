@@ -105,3 +105,70 @@ test("injectNav is a no-op when placeholder is absent", () => {
   const dom = new JSDOM("<!DOCTYPE html><html><body></body></html>");
   assert.strictEqual(nav.injectNav(dom.window.document, "/index.html"), null);
 });
+
+// ---------------------------------------------------------------------------
+// i18n: localized labels, lang-carrying links, Research/Awards anchors, toggle
+// ---------------------------------------------------------------------------
+test("buildNavHtml includes Research and Awards anchors in order", () => {
+  const html = nav.buildNavHtml("index.html");
+  const order = [
+    "#about", "#experience", "#research", "#projects", "#skills",
+    "#education", "#awards", "movies.html", "travel.html", "#contact",
+  ].map((h) => html.indexOf(h));
+  order.forEach((idx) => assert.ok(idx > -1));
+  assert.deepStrictEqual([...order].sort((a, b) => a - b), order, "nav order");
+  assert.ok(html.includes("Research") && html.includes("Awards"));
+});
+
+test("buildNavHtml renders Chinese labels and carries ?lang= on links", () => {
+  const html = nav.buildNavHtml("movies.html", "zh");
+  assert.ok(html.includes("关于我"));
+  assert.ok(html.includes("观影"));
+  assert.ok(html.includes('href="index.html?lang=zh#about"'));
+  assert.ok(
+    html.includes('href="movies.html?lang=zh" class="active-nav-item" aria-current="page"')
+  );
+  assert.ok(!html.includes('href="#"'));
+});
+
+test("buildNavHtml renders a language switch preserving the current query", () => {
+  const dom = new JSDOM(
+    "<!DOCTYPE html><body>" + nav.buildNavHtml("travel.html", "zh", "?place=nyc#day-2") + "</body>"
+  );
+  const links = dom.window.document.querySelectorAll(".lang-switch a");
+  assert.strictEqual(links.length, 2);
+  const [en, zh] = links;
+  assert.strictEqual(en.getAttribute("href"), "?place=nyc&lang=en#day-2");
+  assert.strictEqual(en.getAttribute("hreflang"), "en");
+  assert.strictEqual(en.getAttribute("lang"), "en");
+  assert.strictEqual(en.getAttribute("aria-current"), null);
+  assert.strictEqual(zh.getAttribute("href"), "?place=nyc&lang=zh#day-2");
+  assert.strictEqual(zh.getAttribute("hreflang"), "zh-Hans");
+  assert.strictEqual(zh.getAttribute("aria-current"), "true");
+  assert.strictEqual(zh.textContent.trim(), "中文");
+  const group = dom.window.document.querySelector(".lang-switch");
+  assert.strictEqual(group.getAttribute("role"), "group");
+  assert.ok(group.getAttribute("aria-label"));
+});
+
+test("language switch sits right under the avatar, before the link list", () => {
+  // Short desktop viewports (1280x720) must show it without scrolling the nav.
+  const dom = new JSDOM("<!DOCTYPE html><body>" + nav.buildNavHtml("index.html", "en") + "</body>");
+  const children = Array.from(dom.window.document.getElementById("primary-nav").children);
+  const order = children.map((el) => el.className);
+  assert.deepStrictEqual(order, ["profile-picture", "lang-switch", "navigation"]);
+});
+
+test("injectNav passes language and current URL to the nav", () => {
+  const dom = new JSDOM(
+    '<!DOCTYPE html><html><body><div id="nav-placeholder"></div></body></html>'
+  );
+  const doc = dom.window.document;
+  const navEl = nav.injectNav(doc, "/trip.html", "zh", "?place=nyc");
+  assert.ok(navEl);
+  assert.strictEqual(navEl.getAttribute("aria-label"), "主导航");
+  const current = navEl.querySelector('[aria-current="page"]');
+  assert.strictEqual(current.getAttribute("href"), "travel.html?lang=zh");
+  const en = navEl.querySelector('.lang-switch a[hreflang="en"]');
+  assert.strictEqual(en.getAttribute("href"), "?place=nyc&lang=en");
+});

@@ -1,0 +1,79 @@
+/* ==========================================
+   css/styles_i18n.css
+   Language-specific styles (kept out of styles.css, which must not grow).
+   语言相关样式：FOUC 遮挡、中文字体栈、导航内语言切换。
+   ========================================== */
+
+/* Hide the page while non-English translations are applied (js/i18n.js adds
+   the class in <head> and removes it after DOMContentLoaded, 1500ms fallback).
+   Without JavaScript the class is never added, so the English fallback shows. */
+html.i18n-pending body {
+  visibility: hidden;
+}
+
+/* Simplified Chinese: CJK fonts first, then the site's existing stack
+   (css/styles.css body font-family). */
+html:lang(zh-Hans) body {
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+/* --- Language switch inside the injected nav (js/nav.js) --- */
+/* The nav is height:100% + padding-top (styles.css); under content-box the
+   padding pushes its bottom (where the switch sits) below the viewport, out
+   of reach of its own overflow scroll. border-box keeps it inside.
+   导航高度含 padding 时会超出视口，语言切换滚动不到；改为 border-box。 */
+nav#primary-nav {
+  box-sizing: border-box;
+}
+
+nav .lang-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+nav .lang-switch a {
+  color: rgb(0, 75, 0);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+nav .lang-switch a:hover {
+  background-color: #f5f5f5;
+}
+
+nav .lang-switch a:focus-visible {
+  outline: 3px solid #00695c;
+  outline-offset: 2px;
+}
+
+nav .lang-switch a[aria-current="true"] {
+  font-weight: bold;
+  border-color: #00695c;
+  background-color: #e0f2f1;
+}
+
+nav .lang-switch .lang-sep {
+  color: #999;
+}
+
+/* The switch sits directly under the avatar (js/nav.js), so tighten the gap
+   the sidebar leaves below the picture; keeps it above the fold at 1280x720.
+   语言切换紧跟头像，收紧头像下方留白。 */
+@media screen and (min-width: 800px) {
+  nav .profile-picture {
+    margin-bottom: 4px;
+  }
+
+  nav .lang-switch {
+    padding: 4px 20px 16px;
+  }
+}

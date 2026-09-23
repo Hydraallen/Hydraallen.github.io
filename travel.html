@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="meta.title.travel">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel | Hydraallen</title>
-  <meta name="description"
+  <meta name="description" data-i18n-attr="content:meta.description.travel"
     content="Explore Hydraallen's travel journey through an interactive world map and photo galleries capturing places visited across every continent.">
   <meta property="og:title" content="Travel | Hydraallen">
   <meta property="og:description"
@@ -18,31 +18,39 @@
   <link rel="stylesheet" href="css/styles_travel.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="alternate" hreflang="en" href="https://hydraallen.github.io/travel.html?lang=en">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hydraallen.github.io/travel.html?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://hydraallen.github.io/travel.html">
+  <link rel="stylesheet" href="css/styles_i18n.css">
+  <!-- i18n runtime + strings: synchronous in <head> so the language is applied before first paint -->
+  <script src="js/i18n.js"></script>
+  <script src="js/i18n/strings.common.js"></script>
+  <script src="js/i18n/strings.travel.js"></script>
 </head>
 
 <body>
-  <div class="skip"><a href="#main-content">Skip to Main Content</a></div>
+  <div class="skip"><a href="#main-content" data-i18n="common.skip">Skip to Main Content</a></div>
 
   <header class="movie-header">
     <div class="hamburger-menu-wrapper">
       <p class="logo">Hydraallen</p>
-      <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false"
+      <button class="hamburger-menu" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggle" aria-expanded="false"
         aria-controls="primary-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
-    <h1>My <strong>Travel Journey</strong></h1>
+    <h1><span data-i18n="travel.hero.my">My</span> <strong data-i18n="travel.hero.title">Travel Journey</strong></h1>
     <p class="intro">
-      Using image and video to defeat time.
-      <br>Explore the world through my lens.
+      <span data-i18n="travel.hero.intro_1">Using image and video to defeat time.</span>
+      <br><span data-i18n="travel.hero.intro_2">Explore the world through my lens.</span>
     </p>
 
     <div class="cv-container">
       <a href="index.html" class="cv-btn">
         <img src="https://img.icons8.com/ios-filled/50/000000/home.png" alt="" aria-hidden="true" class="cv-icon">
-        <span>Back to Home</span>
+        <span data-i18n="common.back_home">Back to Home</span>
       </a>
     </div>
   </header>
@@ -52,7 +60,7 @@
 
   <main id="main-content">
     <section id="travel-gallery">
-      <h2>Travel Journey</h2>
+      <h2 data-i18n="travel.heading">Travel Journey</h2>
 
       <!-- 2. 地图容器 -->
       <div class="map-wrapper">
@@ -60,47 +68,48 @@
       </div>
 
       <!-- 3. 大洲筛选 Tab -->
-      <div class="continent-tabs" role="tablist" aria-label="Filter places by continent">
+      <div class="continent-tabs" role="tablist" aria-label="Filter places by continent"
+        data-i18n-attr="aria-label:travel.continent.label">
         <button class="tab-btn active" type="button" role="tab" aria-selected="true"
-          data-continent="all">All World</button>
+          data-continent="all" data-i18n="travel.continent.all">All World</button>
         <button class="tab-btn" type="button" role="tab" aria-selected="false"
-          data-continent="asia">Asia</button>
+          data-continent="asia" data-i18n="travel.continent.asia">Asia</button>
         <button class="tab-btn" type="button" role="tab" aria-selected="false"
-          data-continent="europe">Europe</button>
+          data-continent="europe" data-i18n="travel.continent.europe">Europe</button>
         <button class="tab-btn" type="button" role="tab" aria-selected="false"
-          data-continent="namerica">North America</button>
+          data-continent="namerica" data-i18n="travel.continent.namerica">North America</button>
         <button class="tab-btn" type="button" role="tab" aria-selected="false"
-          data-continent="samerica">South America</button>
+          data-continent="samerica" data-i18n="travel.continent.samerica">South America</button>
         <button class="tab-btn" type="button" role="tab" aria-selected="false"
-          data-continent="africa">Africa</button>
+          data-continent="africa" data-i18n="travel.continent.africa">Africa</button>
         <button class="tab-btn" type="button" role="tab" aria-selected="false"
-          data-continent="oceania">Oceania</button>
+          data-continent="oceania" data-i18n="travel.continent.oceania">Oceania</button>
         <button class="tab-btn" type="button" role="tab" aria-selected="false"
-          data-continent="antarctica">Antarctica</button>
+          data-continent="antarctica" data-i18n="travel.continent.antarctica">Antarctica</button>
       </div>
 
       <!-- 4. 控制区域 -->
       <div class="travel-controls">
         <div class="dropdown-group">
           <div class="control-item">
-            <label for="place-sort">Sort by</label>
+            <label for="place-sort" data-i18n="travel.sort.label">Sort by</label>
             <div class="select-wrapper">
               <select id="place-sort">
-                <option value="newest">Date (Newest)</option>
-                <option value="oldest">Date (Oldest)</option>
-                <option value="az">Name (A-Z)</option>
+                <option value="newest" data-i18n="travel.sort.newest">Date (Newest)</option>
+                <option value="oldest" data-i18n="travel.sort.oldest">Date (Oldest)</option>
+                <option value="az" data-i18n="travel.sort.az">Name (A-Z)</option>
                 <!-- 新增 Z-A 选项 -->
-                <option value="za">Name (Z-A)</option>
+                <option value="za" data-i18n="travel.sort.za">Name (Z-A)</option>
               </select>
             </div>
           </div>
           <div class="control-item">
-            <label for="lang-select">Map Language</label>
+            <label for="lang-select" data-i18n="travel.map_lang.label">Map Language</label>
             <div class="select-wrapper">
               <select id="lang-select">
-                <option value="en" selected>English</option>
-                <option value="cn">中文 (Chinese)</option>
-                <option value="local">Original (Local)</option>
+                <option value="en" selected data-i18n="travel.map_lang.en">English</option>
+                <option value="cn" data-i18n="travel.map_lang.cn">中文 (Chinese)</option>
+                <option value="local" data-i18n="travel.map_lang.local">Original (Local)</option>
               </select>
             </div>
           </div>
@@ -109,26 +118,26 @@
         <div class="filter-toggles">
           <label class="toggle-btn visited-toggle">
             <input type="checkbox" id="filter-visited" checked>
-            <span class="toggle-icon">●</span> Visited
+            <span class="toggle-icon">●</span> <span data-i18n="travel.filter.visited">Visited</span>
           </label>
           <label class="toggle-btn planned-toggle">
             <input type="checkbox" id="filter-planned" checked>
-            <span class="toggle-icon">●</span> TODO List
+            <span class="toggle-icon">●</span> <span data-i18n="travel.filter.planned">TODO List</span>
           </label>
         </div>
       </div>
 
       <!-- 主容器：JS 将在这里动态生成两个区域 -->
       <div id="travel-grid" aria-live="polite">
-        <p class="loading-text">Loading world map & memories...</p>
+        <p class="loading-text" data-i18n="travel.loading">Loading world map &amp; memories...</p>
       </div>
     </section>
   </main>
 
   <footer>
     <p>
-      &copy; Copyrights <span id="year"></span> by Hydraallen. All rights
-      reserved.
+      &copy; <span data-i18n="footer.copyright_prefix">Copyrights</span> <span id="year"></span>
+      <span data-i18n="footer.copyright_suffix">by Hydraallen. All rights reserved.</span>
     </p>
   </footer>
   <script src="js/lib.js"></script>

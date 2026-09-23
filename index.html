@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="meta.title.index">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Hydraallen</title>
-  <meta name="description"
+  <meta name="description" data-i18n-attr="content:meta.description.index"
     content="Hydraallen is a Master of Science in Information student at the University of Michigan and a passionate programmer working on Agent AI, machine learning, and online judge platforms.">
   <meta property="og:title" content="Home | Hydraallen">
   <meta property="og:description"
@@ -15,15 +15,24 @@
   <meta property="og:image" content="https://hydraallen.github.io/img/avatar.jpg">
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="alternate" hreflang="en" href="https://hydraallen.github.io/?lang=en">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hydraallen.github.io/?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://hydraallen.github.io/">
+  <link rel="stylesheet" href="css/styles_i18n.css">
+  <link rel="stylesheet" href="css/styles_profile.css">
+  <!-- i18n runtime + strings: synchronous in <head> so the language is applied before first paint -->
+  <script src="js/i18n.js"></script>
+  <script src="js/i18n/strings.common.js"></script>
+  <script src="js/i18n/strings.index.js"></script>
 </head>
 
 <body>
-  <div class="skip"><a href="#main-content">Skip to Main Content</a></div>
+  <div class="skip"><a href="#main-content" data-i18n="common.skip">Skip to Main Content</a></div>
 
   <header>
     <div class="hamburger-menu-wrapper">
       <p class="logo">Hydraallen</p>
-      <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false"
+      <button class="hamburger-menu" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggle" aria-expanded="false"
         aria-controls="primary-nav">
         <span></span>
         <span></span>
@@ -31,658 +40,114 @@
       </button>
     </div>
 
-    <h1>Hi, I'm <strong>Hydraallen.</strong></h1>
+    <h1><span data-i18n="index.hero.greeting">Hi, I'm</span> <strong data-i18n="index.hero.name">Hydraallen.</strong></h1>
 
     <div class="typing-svg">
-      <img
-        src="https://readme-typing-svg.herokuapp.com?color=%23FFFF00&center=false&vCenter=true&width=400&lines=Hi+there+👋,+I+am+Hydraallen;+Welcome+to+My+Profile!;Over+some+years+of;programming+experience;Always+learning+new+things+;Machine+learning+enthusiast+"
-        alt="" aria-hidden="true">
+      <!-- src is set from profile.json typing_lines by js/scripts_profile.js -->
+      <img alt="Animated greeting" data-i18n-attr="alt:index.hero.typing_alt">
     </div>
 
-    <p class="intro">
-      Self-driven and passionate programmer with a curious and creative mind
-      who enjoys solving complex and challenging real-world problems.
-    </p>
+    <p class="intro" id="hero-intro"></p>
 
-    <div class="social-icons">
-      <!-- GitHub -->
-      <a href="https://github.com/Hydraallen" target="_blank" rel="noopener noreferrer"
-        aria-label="GitHub profile (opens in new tab)">
-        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon">
-      </a>
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/rui-wang-546099392/" target="_blank" rel="noopener noreferrer"
-        aria-label="LinkedIn profile (opens in new tab)">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="icon">
-      </a>
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/hydra.allen.2025/" target="_blank" rel="noopener noreferrer"
-        aria-label="Facebook profile (opens in new tab)">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="icon">
-      </a>
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/hydraallen6/" target="_blank" rel="noopener noreferrer"
-        aria-label="Instagram profile (opens in new tab)">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="icon">
-      </a>
-      <!-- Twitter -->
-      <a href="https://x.com/allen92451109" target="_blank" rel="noopener noreferrer"
-        aria-label="Twitter/X profile (opens in new tab)">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" class="icon">
-      </a>
-      <!-- Xiaohongshu -->
-      <a href="https://xhslink.com/m/4Ka90xNTlt9" target="_blank" rel="noopener noreferrer"
-        aria-label="Xiaohongshu profile (opens in new tab)">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDo2rHHxrkOzsL4RvHn_fsCt6SIVtdCNH0TQ&s"
-          alt="Xiaohongshu" class="icon">
-      </a>
-      <!-- Bilibili -->
-      <a href="https://space.bilibili.com/397325796" target="_blank" rel="noopener noreferrer"
-        aria-label="Bilibili profile (opens in new tab)">
-        <img src="https://img.icons8.com/color/96/bilibili.png" alt="Bilibili" class="icon">
-      </a>
-      <!-- Email -->
-      <a href="mailto:wangruiallen@gmail.com" aria-label="Send an email">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="icon">
-      </a>
-    </div>
-
-    <!-- CV Button Section -->
-    <div class="cv-container">
-      <a href="https://hydraallen.github.io/CV/CV.pdf" target="_blank" rel="noopener noreferrer" class="cv-btn">
-        <img src="https://img.icons8.com/ios-filled/50/000000/open-resume.png" alt="" aria-hidden="true" class="cv-icon">
-        <span>Resume</span>
-      </a>
-    </div>
+    <!-- Social links are rendered from data/profile/profile.json (social) by js/scripts_profile.js -->
+    <div class="social-icons"></div>
   </header>
 
   <!-- Primary navigation is injected here by js/nav.js (single source of truth) -->
   <div id="nav-placeholder"></div>
 
   <main id="main-content">
+    <noscript>
+      <p class="noscript-note" data-i18n="index.noscript">This site needs JavaScript to load its content.</p>
+      <p class="noscript-note" lang="zh-Hans">本网站需要启用 JavaScript 才能加载内容。</p>
+    </noscript>
+
+    <!-- CV content is rendered from data/profile/*.json by js/scripts_profile.js -->
     <section id="about">
-      <h2>About</h2>
-
-      <p>
-        I am a student in the Master of Science in Information program at the
-        <strong>University of Michigan, School of Information</strong>. I am a
-        self-driven and passionate programmer with a curious and creative mind
-        who enjoys solving complex and challenging real-world problems.
-      </p>
-      <p>
-        I am currently working on a project in the field of
-        <strong>Agent AI</strong>. I am also working on
-        <strong>Online Judge platforms, Machine Learning</strong>, etc .
-      </p>
-      <p>
-        I have strong skills in coding and data processing, with a deep
-        passion for computer science. As an excellent problem-solver, I thrive
-        on tackling challenges. I enjoy sharing the knowledge I've gained from
-        diverse sources and life experiences. Beyond my professional pursuits,
-        I have a deep love for football and a passion for traveling and
-        photography.
-      </p>
-
-      <div class="about-skills">
-        <h3>Languages &amp; Tools</h3>
-        <ul>
-          <li>
-            <strong>Languages:</strong> Python, R, C/C++, Go, Matlab, SQL,
-            Elm, SAS, HTML/CSS, JavaScript, Bash
-          </li>
-          <li>
-            <strong>Tools & Technologies:</strong>Linux, Git, Docker, Latex,
-            Vim, Shell, AWS, Tableau, PowerBI
-          </li>
-        </ul>
-      </div>
+      <h2 data-i18n="index.section.about">About</h2>
+      <div id="about-content" aria-live="polite"></div>
     </section>
 
     <section id="experience">
-      <h2>Work Experience</h2>
-      <div class="education-list">
+      <h2 data-i18n="index.section.experience">Work Experience</h2>
+      <div id="experience-list" class="education-list"></div>
+      <button id="toggleExperienceBtn" class="btn profile-toggle-btn" type="button" aria-expanded="false"
+        aria-controls="experience-list" data-i18n="common.show_more" hidden>Show More</button>
+    </section>
 
-        <div class="education-card">
-          <div class="edu-header">
-            <h3>OpenAGI Research Foundation, Inc.</h3>
-            <span class="edu-date">Jan - Aug 2025</span>
-          </div>
-          <div class="edu-details">
-            <h4 class="edu-degree">Software Engineer Intern</h4>
-            <p class="edu-major">United States (Remote)</p>
-            <ul class="experience-bullets">
-              <li>
-                Contributed to <strong>Lux</strong>, achieving state-of-the-art performance on Online-Mind2Web
-                (<strong>83.6</strong>), outperforming Google Gemini CUA (69.0), OpenAI Operator (61.3), and Anthropic
-                Claude Sonnet 4 (61.0).
-              </li>
-              <li>
-                Paper: <em>OSGym: Super-Scalable Distributed Data Engine for Generalizable Computer Agents</em> (<a
-                  href="https://arxiv.org/abs/2511.11672" target="_blank" rel="noopener noreferrer"
-                  class="inline-link">arXiv:2511.11672</a>).
-              </li>
-            </ul>
-          </div>
-        </div>
+    <section id="research">
+      <h2 data-i18n="index.section.research">Research &amp; Projects</h2>
+      <div id="research-list" class="education-list"></div>
+      <button id="toggleResearchBtn" class="btn profile-toggle-btn" type="button" aria-expanded="false"
+        aria-controls="research-list" data-i18n="common.show_more" hidden>Show More</button>
+    </section>
 
-        <div class="education-card">
-          <div class="edu-header">
-            <h3>Salesforce, Inc.</h3>
-            <span class="edu-date">Aug - Dec 2025</span>
-          </div>
-          <div class="edu-details">
-            <h4 class="edu-degree">Research Intern</h4>
-            <p class="edu-major">United States (Remote)</p>
-            <ul class="experience-bullets">
-              <li>
-                Visualized usage patterns in Tableau and identified potential privacy risks from data signals and user
-                feedback.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="education-card">
-          <div class="edu-header">
-            <h3>Shanghai Baosight Software Co., Ltd.</h3>
-            <span class="edu-date">Aug - Sep 2024</span>
-          </div>
-          <div class="edu-details">
-            <h4 class="edu-degree">Machine Learning Intern</h4>
-            <p class="edu-major">Shanghai, China (On-site)</p>
-            <ul class="experience-bullets">
-              <li>
-                Built short-term metro passenger-flow surge prediction models and achieved <strong>86%</strong> accuracy
-                in predicting crowd surges to support operational planning.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
+    <section id="publications">
+      <h2 data-i18n="index.section.publications">Publications</h2>
+      <ol id="publications-list" class="publication-list"></ol>
+      <button id="togglePublicationsBtn" class="btn profile-toggle-btn" type="button" aria-expanded="false"
+        aria-controls="publications-list" data-i18n="common.show_more" hidden>Show More</button>
     </section>
 
     <section id="projects">
-      <!-- all the picture here is 16:9 -->
-      <h2>Projects</h2>
-
-      <div class="project-grid">
-        <div class="project-panel">
-          <img src="./img/lux.jpg" alt="Lux Project" class="project-image">
-          <h3>Lux</h3>
-          <p>
-            The world's best computer use model and developer toolkit.
-          </p>
-          <div class="project-links">
-            <a href="https://www.agiopen.org/" target="_blank" rel="noopener noreferrer" class="btn live-site-btn">
-              <img src="https://cdn-icons-png.flaticon.com/128/2406/2406849.png" alt="Live Site Icon" class="btn-icon">
-              Live Site
-            </a>
-          </div>
-        </div>
-        <div class="project-panel">
-          <img src="./img/joj3.png" alt="Online Judge Platform Pic" class="project-image">
-          <h3>Online Judge Platform</h3>
-          <p>
-            A platform for conducting online judge and evaluations
-            efficiently. Based on Go and Git.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/JOJ3/tree/master" target="_blank" rel="noopener noreferrer" class="btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-        <div class="project-panel">
-          <img src="./img/sam2.png" alt="SurgicalSAM2 Project" class="project-image">
-          <h3>SurgicalSAM2</h3>
-          <p>Automatically segment surgical instruments in surgery videos.</p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/SurgicalSAM2" target="_blank" rel="noopener noreferrer" class="btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-        <div class="project-panel">
-          <img src="./img/money.jpg" alt="Tracking Michigan's Campaign Cash" class="project-image">
-          <h3>Tracking Michigan's Campaign Cash</h3>
-          <p>
-            A report on Tracking Michigan's Campaign Cash using data
-            analysis and visualization.
-          </p>
-          <div class="project-links">
-            <a href="https://hydraallen.github.io/MoneyFlow/" target="_blank" rel="noopener noreferrer" class="btn live-site-btn">
-              <img src="https://cdn-icons-png.flaticon.com/128/2406/2406849.png" alt="Live Site Icon" class="btn-icon">
-              Live Site
-            </a>
-          </div>
-        </div>
-        <div class="project-panel">
-          <img src="./img/screenRecorder.png" alt="Screen Recorder Project" class="project-image">
-          <h3>Screen Recorder</h3>
-          <p>
-            A project for recording user actions and reproduce their workflow.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/ScreenRecorder" target="_blank" rel="noopener noreferrer" class="btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel hidden_project">
-          <img src="./img/osvalidator.png" alt="OS Validator Project" class="project-image">
-          <h3>OS Validator</h3>
-          <p>
-            Automatically generates computer operation datasets based on
-            OSWorld's dataset.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/OS_Validator" target="_blank" rel="noopener noreferrer" class="btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-        <div class="project-panel hidden_project">
-          <img src="./img/vid2frame.png" alt="Vid2Frames Project" class="project-image">
-          <h3>Vid2Frames</h3>
-          <p>Automatically extract keyframes from videos and images.</p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/Vid2Frames" target="_blank" rel="noopener noreferrer" class="btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel">
-          <img src="img/edge_of_gravity.png" alt="Edge of Gravity Game Fig" class="project-image">
-          <h3>Edge of Gravity</h3>
-          <p>
-            A bouncing ball game that challenges players to navigate through
-            gravity-driven puzzles.
-          </p>
-          <div class="project-links">
-            <a href="https://focs.ji.sjtu.edu.cn/silverfocs/demo/2023/p1team01/" target="_blank" rel="noopener noreferrer"
-              class="btn live-site-btn">
-              <img src="https://cdn-icons-png.flaticon.com/128/2406/2406849.png" alt="Live Site Icon" class="btn-icon">
-              Live Site
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel">
-          <img src="img/weather_mcp.jpeg" alt="Weather MCP Project" class="project-image">
-          <h3>Weather MCP</h3>
-          <p>
-            A weather monitoring server that runs under Model Context Protocol
-            (MCP) to provide real-time weather data.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/Weather_MCP_Server" target="_blank" rel="noopener noreferrer" class="btn github-btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel hidden_project">
-          <img src="img/no_room_for_chaos.png" alt="No Room for Chaos Game Fig" class="project-image">
-          <h3>No Room for Chaos</h3>
-          <p>
-            A fast-paced map-running game where players navigate through
-            chaotic environments.
-          </p>
-          <div class="project-links">
-            <a href="https://focs.ji.sjtu.edu.cn/silverfocs/project/2023/p2" target="_blank" rel="noopener noreferrer" class="btn live-site-btn">
-              <img src="https://cdn-icons-png.flaticon.com/128/2406/2406849.png" alt="Live Site Icon" class="btn-icon">
-              Live Site
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel">
-          <img src="img/git.png" alt="Basic Git Workshop Fig" class="project-image">
-          <h3>Git Workshop</h3>
-          <p>Workshop materials and slides for beginners to learn Git.</p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/Basic_Git_wksp" target="_blank" rel="noopener noreferrer" class="btn github-btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel hidden_project">
-          <img src="img/vim.png" alt="Vim Workshop 2023 Fig" class="project-image">
-          <h3>Vim Workshop</h3>
-          <p>Workshop materials and slides for beginners to learn Vim.</p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/Vim_wksp_2023" target="_blank" rel="noopener noreferrer" class="btn github-btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel">
-          <img src="./img/Latex_VSCode.png" alt="Latex-vscode Project" class="project-image">
-          <h3>Latex Vscode Configuration</h3>
-          <p>
-            A comprehensive guide and configuration files for using LaTeX with
-            VS Code.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/Latex-vscode" target="_blank" rel="noopener noreferrer" class="btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel hidden_project">
-          <img src="./img/rime.png" alt="Rime Customization Project" class="project-image">
-          <h3>Rime Configuration</h3>
-          <p>
-            An open-source project for personalized Rime input method
-            configuration files.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/Rime" target="_blank" rel="noopener noreferrer" class="btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel hidden_project">
-          <img src="./img/LunarVim.png" alt="LunarVim Configuration Project" class="project-image">
-          <h3>LunarVim Configuration</h3>
-          <p>
-            A personalized configuration project for LunarVim, designed to
-            enhance efficiency for developers.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/lvim" target="_blank" rel="noopener noreferrer" class="btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel hidden_project">
-          <img src="img/yabai.png" alt="Yabai Configuration Fig" class="project-image">
-          <h3>Yabai Configuration</h3>
-          <p>
-            Configuration files for Yabai, a tiling window manager for macOS.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/yabai" target="_blank" rel="noopener noreferrer" class="btn github-btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel hidden_project">
-          <img src="img/hammerspoon.png" alt="Hammerspoon Configuration Fig" class="project-image">
-          <h3>Hammerspoon Configuration</h3>
-          <p>
-            Configuration files for Hammerspoon, a powerful automation tool
-            for macOS.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/hammerspoon" target="_blank" rel="noopener noreferrer" class="btn github-btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-        <div class="project-panel hidden_project">
-          <img src="img/face_recognition.png" alt="Face Recognition Tool Fig" class="project-image">
-          <h3>Face Recognition Tool</h3>
-          <p>
-            A face recognition tool leveraging advanced algorithms to detect
-            and track faces in real-time.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/Face-recognition" target="_blank" rel="noopener noreferrer" class="btn github-btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="project-panel hidden_project">
-          <img src="./img/electionfortechji.png" alt="ElectionForTechJI Project" class="project-image">
-          <h3>Election For TechJI</h3>
-          <p>A project for building an election vote counter,.</p>
-          <div class="project-links">
-            <a href="https://github.com/Hydraallen/ElectionForTechJI" target="_blank" rel="noopener noreferrer" class="btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" class="btn-icon">
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
+      <!-- all the pictures here are 16:9 -->
+      <h2 data-i18n="index.section.projects">Open Source &amp; Side Projects</h2>
+      <div id="projects-grid" class="project-grid"></div>
       <button id="toggleProjectsBtn" class="btn" type="button" aria-expanded="false"
-        aria-controls="projects">Show More</button>
+        aria-controls="projects-grid" data-i18n="common.show_more" hidden>Show More</button>
     </section>
 
     <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-tabs" role="tablist" aria-label="Skill categories">
-        <button class="tab-btn active" type="button" role="tab" aria-selected="true"
-          data-target="backend">Backend</button>
-        <button class="tab-btn" type="button" role="tab" aria-selected="false"
-          data-target="frontend">Frontend</button>
-        <button class="tab-btn" type="button" role="tab" aria-selected="false"
-          data-target="devops">DevOps</button>
-        <button class="tab-btn" type="button" role="tab" aria-selected="false"
-          data-target="tools">Tools</button>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-card" data-category="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-            alt="Python Language">
-          <span>Python</span>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-            alt="C++ Language">
-          <span>C++</span>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C Language">
-          <span>C</span>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" alt="Go Language">
-          <span>Go</span>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R Language">
-          <span>R</span>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg"
-            alt="Matlab Language">
-          <span>Matlab</span>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-            alt="Node.js Language">
-          <span>Node.js</span>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-            alt="TypeScript Language">
-          <span>TypeScript</span>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Language">
-          <span>PHP</span>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <img src="./img/SAS.png" alt="SAS Language">
-          <span>SAS</span>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Language">
-          <span>MySQL</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="frontend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            alt="JavaScript Language">
-          <span>JavaScript</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="frontend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Language">
-          <span>HTML5</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="frontend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Language">
-          <span>CSS</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="frontend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elm/elm-original.svg" alt="Elm Language">
-          <span>Elm</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="frontend">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-            alt="React.js Language">
-          <span>React.js</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="devops">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash Language">
-          <span>Bash</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="devops">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-            alt="AWS Workspace">
-          <span>AWS</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="devops">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Tool">
-          <span>Docker</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="devops">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg"
-            alt="GitHub Actions Tool">
-          <span>GitHub Actions</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="tools">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
-            alt="Linux Operating System">
-          <span>Linux</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="tools">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git Tool">
-          <span>Git</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="tools">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg" alt="Latex Tool">
-          <span>Latex</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="tools">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg" alt="Vim Tool">
-          <span>Vim</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="tools">
-          <img src="https://img.icons8.com/color/96/tableau-software.png" alt="Tableau Tool">
-          <span>Tableau</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="tools">
-          <img src="https://img.icons8.com/color/96/power-bi.png" alt="PowerBI Tool">
-          <span>PowerBI</span>
-        </div>
-        <div class="skill-card hidden-skill" data-category="tools">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana Tool">
-          <span>Grafana</span>
-        </div>
-      </div>
+      <h2 data-i18n="index.section.skills">Skills</h2>
+      <div class="skills-tabs" role="tablist" aria-label="Skill categories"
+        data-i18n-attr="aria-label:index.skills.tabs_label"></div>
+      <div id="skills-grid" class="skills-grid"></div>
     </section>
+
     <section id="education">
-      <h2>Education</h2>
-      <div class="education-list">
-        <div class="education-card">
-          <div class="edu-header">
-            <h3>University of Michigan, Ann Arbor</h3>
-            <span class="edu-date">Aug 2025 - Present</span>
-          </div>
-          <div class="edu-details">
-            <h4 class="edu-degree">Master of Science in Information</h4>
-            <p class="edu-major">Major in Data Analysis</p>
-          </div>
-        </div>
-        <div class="education-card hidden-edu">
-          <div class="edu-header">
-            <h3>Cornell University, Ithaca</h3>
-            <span class="edu-date">Jan 2025 - May 2025</span>
-          </div>
-          <div class="edu-details">
-            <h4 class="edu-degree">Exchange Program</h4>
-            <p class="edu-major">College of Engineering</p>
-          </div>
-        </div>
-        <div class="education-card hidden-edu">
-          <div class="edu-header">
-            <h3>Berlin Institute of Technology</h3>
-            <span class="edu-date">Jan 2024 - Feb 2024</span>
-          </div>
-          <div class="edu-details">
-            <h4 class="edu-degree">Exchange Program</h4>
-            <p class="edu-major">Course: Satellite Design</p>
-          </div>
-        </div>
-        <div class="education-card">
-          <div class="edu-header">
-            <h3>Shanghai Jiao Tong University</h3>
-            <span class="edu-date">Sept 2022 - Aug 2026</span>
-          </div>
-          <div class="edu-details">
-            <h4 class="edu-degree">Global College Institute</h4>
-            <p class="edu-major">
-              Major in Electrical and Computer Engineering
-            </p>
-            <p class="edu-minor">Minor in Computer Science</p>
-          </div>
-        </div>
-      </div>
+      <h2 data-i18n="index.section.education">Education</h2>
+      <div id="education-list" class="education-list"></div>
       <button id="toggleEduBtn" class="btn" type="button" aria-expanded="false"
-        aria-controls="education">Show More</button>
+        aria-controls="education-list" data-i18n="common.show_more" hidden>Show More</button>
+    </section>
+
+    <section id="awards">
+      <h2 data-i18n="index.section.awards">Awards &amp; Honors</h2>
+      <ul id="awards-list" class="award-list"></ul>
+      <button id="toggleAwardsBtn" class="btn profile-toggle-btn" type="button" aria-expanded="false"
+        aria-controls="awards-list" data-i18n="common.show_more" hidden>Show More</button>
+    </section>
+
+    <section id="activities">
+      <h2 data-i18n="index.section.activities">Student Work</h2>
+      <div id="activities-list" class="education-list"></div>
+      <button id="toggleActivitiesBtn" class="btn profile-toggle-btn" type="button" aria-expanded="false"
+        aria-controls="activities-list" data-i18n="common.show_more" hidden>Show More</button>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p class="contact-intro">
-        Have a question or want to work together? Feel free to leave a
-        message!
-      </p>
+      <h2 data-i18n="index.section.contact">Contact</h2>
+      <p class="contact-intro" data-i18n="index.contact.intro">Have a question or want to work together? Feel free to leave a message!</p>
 
       <form id="contact-form" action="https://formspree.io/f/mrbnkykq" method="POST">
         <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <label for="name" data-i18n="index.contact.name_label">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name"
+            data-i18n-attr="placeholder:index.contact.name_placeholder" required>
         </div>
 
         <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Your Email" required>
+          <label for="email" data-i18n="index.contact.email_label">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your Email"
+            data-i18n-attr="placeholder:index.contact.email_placeholder" required>
         </div>
 
         <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+          <label for="message" data-i18n="index.contact.message_label">Message:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
+            data-i18n-attr="placeholder:index.contact.message_placeholder" required></textarea>
         </div>
-        <button type="submit" class="btn submit-btn">Send Message</button>
+        <button type="submit" class="btn submit-btn" data-i18n="index.contact.submit">Send Message</button>
         <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
@@ -690,14 +155,15 @@
 
   <footer>
     <p>
-      &copy; Copyrights <span id="year"></span> by Hydraallen. All rights
-      reserved.
+      &copy; <span data-i18n="footer.copyright_prefix">Copyrights</span> <span id="year"></span>
+      <span data-i18n="footer.copyright_suffix">by Hydraallen. All rights reserved.</span>
     </p>
   </footer>
 
   <script src="js/lib.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="js/scripts_profile.js"></script>
 </body>
 
 </html>

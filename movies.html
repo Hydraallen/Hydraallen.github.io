@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="meta.title.movies">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movies | Hydraallen</title>
-  <meta name="description"
+  <meta name="description" data-i18n-attr="content:meta.description.movies"
     content="A visual timeline of the movies Hydraallen has watched over the years, organized by year with favorites highlighted.">
   <meta property="og:title" content="Movies | Hydraallen">
   <meta property="og:description"
@@ -16,31 +16,39 @@
   <link rel="stylesheet" href="css/html5reset.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/styles_movies.css">
+  <link rel="alternate" hreflang="en" href="https://hydraallen.github.io/movies.html?lang=en">
+  <link rel="alternate" hreflang="zh-Hans" href="https://hydraallen.github.io/movies.html?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://hydraallen.github.io/movies.html">
+  <link rel="stylesheet" href="css/styles_i18n.css">
+  <!-- i18n runtime + strings: synchronous in <head> so the language is applied before first paint -->
+  <script src="js/i18n.js"></script>
+  <script src="js/i18n/strings.common.js"></script>
+  <script src="js/i18n/strings.misc.js"></script>
 </head>
 
 <body>
-  <div class="skip"><a href="#main-content">Skip to Main Content</a></div>
+  <div class="skip"><a href="#main-content" data-i18n="common.skip">Skip to Main Content</a></div>
 
   <header class="movie-header">
     <div class="hamburger-menu-wrapper">
       <p class="logo">Hydraallen</p>
-      <button class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false"
+      <button class="hamburger-menu" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggle" aria-expanded="false"
         aria-controls="primary-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
-    <h1>My <strong>Movie Journey</strong></h1>
+    <h1><span data-i18n="movies.hero.my">My</span> <strong data-i18n="movies.hero.title">Movie Journey</strong></h1>
     <p class="intro">
-      A visual timeline of the movies I've watched.
-      <br>Click on a year to view the collection.
+      <span data-i18n="movies.hero.intro_1">A visual timeline of the movies I've watched.</span>
+      <br><span data-i18n="movies.hero.intro_2">Click on a year to view the collection.</span>
     </p>
 
     <div class="cv-container">
       <a href="index.html" class="cv-btn">
         <img src="https://img.icons8.com/ios-filled/50/000000/home.png" alt="" aria-hidden="true" class="cv-icon">
-        <span>Back to Home</span>
+        <span data-i18n="common.back_home">Back to Home</span>
       </a>
     </div>
   </header>
@@ -50,16 +58,16 @@
 
   <main id="main-content">
     <section id="movie-timeline">
-      <h2>Watch History</h2>
-      <!-- I Use json file to load data here -->
+      <h2 data-i18n="movies.heading">Watch History</h2>
+      <!-- Timeline is rendered from data/movies/*.json by loadMovies() in js/scripts.js -->
       <div class="timeline-container" id="timeline-root" aria-live="polite"></div>
     </section>
   </main>
 
   <footer>
     <p>
-      &copy; Copyrights <span id="year"></span> by Hydraallen. All rights
-      reserved.
+      &copy; <span data-i18n="footer.copyright_prefix">Copyrights</span> <span id="year"></span>
+      <span data-i18n="footer.copyright_suffix">by Hydraallen. All rights reserved.</span>
     </p>
   </footer>
   <script src="js/lib.js"></script>

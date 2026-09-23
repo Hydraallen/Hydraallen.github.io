@@ -17,6 +17,18 @@ var _lib =
         buildMovieCardHtml: buildMovieCardHtml,
       };
 var escapeHtmlFn = _lib.escapeHtml;
+
+// --- i18n (js/i18n.js is loaded in <head>, so its globals exist in the browser) ---
+var _i18n =
+  typeof module !== "undefined" && module.exports
+    ? require("./i18n.js")
+    : {
+        t: t,
+        getLang: getLang,
+        normalizeLang: normalizeLang,
+        parseMovieDate: parseMovieDate,
+        formatDay: formatDay,
+      };
 var getPosterSrcFn = _lib.getPosterSrc;
 var buildMovieCardHtmlFn = _lib.buildMovieCardHtml;
 
@@ -118,9 +130,9 @@ function showFormStatus(statusEl, message, type) {
 
 // Renders backend-provided error data. The backend response is UNTRUSTED, so
 // messages are written with textContent to prevent HTML/script injection.
-function showFormErrors(statusEl, errorData) {
+function showFormErrors(statusEl, errorData, lang = "en") {
   if (!statusEl) return;
-  let message = "Oops! There was a problem submitting your form.";
+  let message = _i18n.t("index.contact.error", lang);
   if (
     errorData &&
     Object.hasOwn(errorData, "errors") &&
@@ -132,7 +144,7 @@ function showFormErrors(statusEl, errorData) {
   statusEl.className = "form-status error";
 }
 
-function setupContactForm(doc, fetchImpl) {
+function setupContactForm(doc, fetchImpl, lang = "en") {
   const form = doc.getElementById("contact-form");
   const status = doc.getElementById("form-status");
   if (!form) return;
@@ -143,7 +155,7 @@ function setupContactForm(doc, fetchImpl) {
     const submitBtn = form.querySelector(".submit-btn");
     const originalBtnText = submitBtn.textContent;
 
-    submitBtn.textContent = "Sending...";
+    submitBtn.textContent = _i18n.t("index.contact.sending", lang);
     submitBtn.disabled = true;
 
     try {
@@ -156,24 +168,16 @@ function setupContactForm(doc, fetchImpl) {
       });
 
       if (response.ok) {
-        showFormStatus(
-          status,
-          "Thanks for your message! I'll get back to you soon.",
-          "success"
-        );
+        showFormStatus(status, _i18n.t("index.contact.success", lang), "success");
         form.reset();
       } else {
         const errorData = await response.json();
-        showFormErrors(status, errorData);
+        showFormErrors(status, errorData, lang);
       }
     } catch (error) {
       // Log detail server-side/console; show a generic message to the user.
       console.error("Contact form submission failed:", error);
-      showFormStatus(
-        status,
-        "Oops! There was a problem submitting your form.",
-        "error"
-      );
+      showFormStatus(status, _i18n.t("index.contact.error", lang), "error");
     } finally {
       submitBtn.textContent = originalBtnText;
       submitBtn.disabled = false;
@@ -183,61 +187,103 @@ function setupContactForm(doc, fetchImpl) {
 
 // ---------------------------------------------------------------------------
 // Generic "Show More / Show Less" toggle (projects, education)
+// Items are queried at CLICK time because index content is rendered
+// asynchronously from JSON. Items revealed by a button are tagged with
+// data-toggle-owner so the next click collapses exactly those again.
+// 点击时再查询（内容由 JSON 异步渲染）；展开的条目打标记，收起时精确还原。
 // ---------------------------------------------------------------------------
-function setupToggle(doc, btnId, hiddenSelector, hiddenClass) {
+function setupToggle(doc, btnId, hiddenSelector, hiddenClass, lang = "en") {
   const toggleBtn = doc.getElementById(btnId);
-  const hiddenItems = doc.querySelectorAll(hiddenSelector);
-  if (!toggleBtn || hiddenItems.length === 0) return;
+  if (!toggleBtn) return;
+  const ownerSelector = '[data-toggle-owner="' + btnId + '"]';
 
   toggleBtn.addEventListener("click", function () {
-    const isHidden = hiddenItems[0].classList.contains(hiddenClass);
-    hiddenItems.forEach((item) => {
-      if (isHidden) {
-        item.classList.remove(hiddenClass);
-      } else {
+    const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
+    if (expanded) {
+      doc.querySelectorAll(ownerSelector).forEach((item) => {
         item.classList.add(hiddenClass);
-      }
-    });
-    toggleBtn.textContent = isHidden ? "Show Less" : "Show More";
+        item.removeAttribute("data-toggle-owner");
+      });
+    } else {
+      doc.querySelectorAll(hiddenSelector).forEach((item) => {
+        item.classList.remove(hiddenClass);
+        item.setAttribute("data-toggle-owner", btnId);
+      });
+    }
+    toggleBtn.setAttribute("aria-expanded", expanded ? "false" : "true");
+    toggleBtn.textContent = expanded ? _i18n.t("common.show_more", lang) : _i18n.t("common.show_less", lang);
   });
 }
 
 // ---------------------------------------------------------------------------
-// Skills section tabs
+// Skills section tabs (event delegation: tabs/cards may render after setup;
+// scoped to .skills-tabs so the travel page's continent tabs are untouched)
+// 技能标签页：事件委托，只作用于 .skills-tabs。
 // ---------------------------------------------------------------------------
+function selectSkillsTab(doc, btn) {
+  const tablist = btn.closest(".skills-tabs");
+  tablist.querySelectorAll(".tab-btn").forEach((b) => {
+    const isActive = b === btn;
+    b.classList.toggle("active", isActive);
+    b.setAttribute("aria-selected", isActive ? "true" : "false");
+  });
+  const target = btn.getAttribute("data-target");
+
+  doc.querySelectorAll(".skill-card").forEach((card) => {
+    const cardCategory = card.getAttribute("data-category");
+    if (target === "all" || cardCategory === target) {
+      card.classList.remove("hidden-skill");
+      card.classList.add("transparent-skill");
+      void card.offsetWidth;
+      card.classList.remove("transparent-skill");
+    } else {
+      card.classList.add("hidden-skill");
+    }
+  });
+}
+
 function setupSkillsTabs(doc) {
-  const tabBtns = doc.querySelectorAll(".tab-btn");
-  const skillCards = doc.querySelectorAll(".skill-card");
-  if (tabBtns.length === 0) return;
-
-  tabBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      tabBtns.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const target = btn.getAttribute("data-target");
-
-      skillCards.forEach((card) => {
-        const cardCategory = card.getAttribute("data-category");
-        if (target === "all" || cardCategory === target) {
-          card.classList.remove("hidden-skill");
-          card.classList.add("transparent-skill");
-          void card.offsetWidth;
-          card.classList.remove("transparent-skill");
-        } else {
-          card.classList.add("hidden-skill");
-        }
-      });
-    });
+  doc.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!target || typeof target.closest !== "function") return;
+    const btn = target.closest(".skills-tabs .tab-btn");
+    if (btn) selectSkillsTab(doc, btn);
   });
 }
 
 // ---------------------------------------------------------------------------
 // Movies page
+// Movie titles are proper nouns and stay as-is; dates in the data look like
+// "Jan 12, 2024" and are re-formatted per locale (zh: "2024.01.12").
+// 片名不翻译；数据中的日期按语言重新格式化，无法解析时原样显示。
 // ---------------------------------------------------------------------------
-async function loadMovies(timelineRoot) {
+function formatMovieDate(raw, lang = "en") {
+  const iso = _i18n.parseMovieDate(raw);
+  return iso ? _i18n.formatDay(iso, lang) : raw || "";
+}
+
+// `title` is the English title; zh uses `title_zh` when present.
+// `title` 为英文片名；中文界面优先显示 `title_zh`，缺失时回退英文。
+function localizeMovieTitle(movie, lang = "en") {
+  const zh = typeof movie.title_zh === "string" ? movie.title_zh.trim() : "";
+  return _i18n.normalizeLang(lang) === "zh" && zh ? zh : movie.title;
+}
+
+// Immutable copy with localized title/date; lib's buildMovieCardHtml escapes
+// both (the title also becomes the poster alt text).
+// 返回新对象，不修改原数据；标题同时用作海报 alt。
+function buildLocalizedMovieCardHtml(movie, lang = "en") {
+  return buildMovieCardHtmlFn({
+    ...movie,
+    title: localizeMovieTitle(movie, lang),
+    date: formatMovieDate(movie.date, lang),
+  });
+}
+
+async function loadMovies(timelineRoot, lang = "en") {
   try {
     timelineRoot.innerHTML =
-      '<p style="text-align:center; padding:20px;">Loading movies...</p>';
+      '<p class="movies-status">' + escapeHtmlFn(_i18n.t("movies.loading", lang)) + "</p>";
     const indexResponse = await fetch("../data/movies/index.json");
     if (!indexResponse.ok) {
       throw new Error(`Failed to load index.json: ${indexResponse.status}`);
@@ -256,146 +302,145 @@ async function loadMovies(timelineRoot) {
       .filter((item) => item !== null)
       .sort((a, b) => parseInt(b.year) - parseInt(a.year));
     timelineRoot.innerHTML = "";
-    renderTimeline(moviesData, timelineRoot);
+    renderTimeline(moviesData, timelineRoot, lang);
   } catch (error) {
     // Detailed error to console only; user sees a generic, friendly message.
     console.error("Could not load movie data:", error);
-    timelineRoot.innerHTML = `
-      <div style="text-align:center; color:red; padding:20px;">
-        <p>Error loading movie data.</p>
-        <p>Note: Ensure you are running on a Local Server (http://) not file://</p>
-      </div>
-    `;
+    timelineRoot.innerHTML =
+      '<div class="movies-status movies-error">' +
+      "<p>" + escapeHtmlFn(_i18n.t("movies.error", lang)) + "</p>" +
+      "<p>" + escapeHtmlFn(_i18n.t("movies.error_hint", lang)) + "</p>" +
+      "</div>";
   }
 }
 
-function renderTimeline(data, rootElement) {
-  data.forEach((yearData) => {
-    const itemDiv = document.createElement("div");
-    itemDiv.className = "timeline-item";
-    const markerDiv = document.createElement("div");
-    markerDiv.className = "timeline-marker";
-    const contentDiv = document.createElement("div");
-    contentDiv.className = "timeline-content";
-    contentDiv.setAttribute("tabindex", "0");
+function buildTimelineHeader(doc, yearData, count, hasMoreMovies, lang) {
+  const headerDiv = doc.createElement("div");
+  headerDiv.className = "timeline-header";
+  const arrowHtml = hasMoreMovies ? '<span class="toggle-icon">▼</span>' : "";
+  headerDiv.innerHTML =
+    "<div>" +
+    '<h3 class="timeline-year">' + escapeHtmlFn(yearData.year) + "</h3>" +
+    '<p class="timeline-stats">' +
+    escapeHtmlFn(_i18n.t("movies.watched", lang, { n: count })) +
+    "</p>" +
+    "</div>" +
+    arrowHtml;
+  return headerDiv;
+}
 
-    const movies = yearData.movies || [];
-    const favMovie = movies.find((m) => m.title === yearData.favorite);
-    const otherMovies = movies.filter((m) => m.title !== yearData.favorite);
-    const hasMoreMovies = otherMovies.length > 0;
+function buildFavoriteSection(doc, yearData, favMovie, hasMoreMovies, lang) {
+  const favSection = doc.createElement("div");
+  // Border/spacing depend on whether a list follows (styles_movies.css).
+  // 下方是否还有列表决定分隔线与间距。
+  favSection.className = "favorite-section" + (hasMoreMovies ? "" : " favorite-section--solo");
+  favSection.innerHTML =
+    '<div class="favorite-label-large">' +
+    escapeHtmlFn(_i18n.t("movies.best_of", lang, { year: yearData.year })) +
+    "</div>" +
+    '<div class="favorite-card">' +
+    buildLocalizedMovieCardHtml(favMovie, lang) +
+    "</div>";
+  return favSection;
+}
 
-    if (hasMoreMovies) {
-      contentDiv.setAttribute("role", "button");
-      contentDiv.setAttribute(
-        "aria-label",
-        `Expand movie list for ${yearData.year}`
-      );
+function buildMovieList(doc, yearData, otherMovies, lang) {
+  const movieListContainer = doc.createElement("div");
+  movieListContainer.className = "movie-list-container";
+  if (otherMovies.length === 0) {
+    const empty = doc.createElement("p");
+    empty.className = "movies-empty";
+    empty.textContent = _i18n.t("movies.empty", lang);
+    movieListContainer.appendChild(empty);
+    return movieListContainer;
+  }
+  const scrollWrapper = doc.createElement("div");
+  scrollWrapper.className = "vertical-scroll-wrapper";
+  scrollWrapper.setAttribute("tabindex", "0");
+  scrollWrapper.setAttribute("aria-label", _i18n.t("movies.list_label", lang, { year: yearData.year }));
+  otherMovies.forEach((movie) => {
+    const card = doc.createElement("div");
+    card.className = "movie-card";
+    card.innerHTML = buildLocalizedMovieCardHtml(movie, lang);
+    scrollWrapper.appendChild(card);
+  });
+  movieListContainer.appendChild(scrollWrapper);
+  return movieListContainer;
+}
+
+// Expand / collapse a year's list (click + Enter/Space).
+function attachTimelineToggle(contentDiv) {
+  contentDiv.addEventListener("click", function (e) {
+    if (e.target.closest(".vertical-scroll-wrapper")) return;
+
+    const parent = this.parentElement;
+    const container = parent.querySelector(".movie-list-container");
+    const isActive = parent.classList.contains("active");
+
+    if (!isActive) {
+      parent.classList.add("active");
+      const height = container.scrollHeight;
+      container.style.maxHeight = height + "px";
+      setTimeout(() => {
+        if (parent.classList.contains("active")) {
+          container.style.maxHeight = "none";
+        }
+      }, 600);
     } else {
-      contentDiv.style.cursor = "default";
+      container.style.maxHeight = container.scrollHeight + "px";
+      void container.offsetHeight;
+      parent.classList.remove("active");
+      container.style.maxHeight = null;
     }
+  });
 
-    const headerDiv = document.createElement("div");
-    headerDiv.className = "timeline-header";
-    const arrowHtml = hasMoreMovies
-      ? '<span class="toggle-icon">▼</span>'
-      : "";
-
-    headerDiv.innerHTML = `
-      <div>
-        <h3 class="timeline-year">${escapeHtmlFn(yearData.year)}</h3>
-        <p class="timeline-stats" style="margin:5px 0 0 0; font-size:14px; color:#666;">
-           Watched: ${movies.length} movies
-        </p>
-      </div>
-      ${arrowHtml}
-    `;
-    contentDiv.appendChild(headerDiv);
-
-    if (favMovie) {
-      const favSection = document.createElement("div");
-      favSection.className = "favorite-section";
-
-      if (hasMoreMovies) {
-        favSection.style.borderBottom = "1px solid #eee";
-        favSection.style.marginBottom = "20px";
-      } else {
-        favSection.style.borderBottom = "none";
-        favSection.style.marginBottom = "0";
-        favSection.style.paddingBottom = "0";
-      }
-
-      favSection.innerHTML =
-        '<div class="favorite-label-large">🏆 Best of ' +
-        escapeHtmlFn(yearData.year) +
-        "</div>" +
-        '<div class="favorite-card">' +
-        buildMovieCardHtmlFn(favMovie) +
-        "</div>";
-      contentDiv.appendChild(favSection);
+  contentDiv.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      this.click();
     }
+  });
+}
 
-    const movieListContainer = document.createElement("div");
-    movieListContainer.className = "movie-list-container";
+function renderTimelineYear(doc, yearData, lang) {
+  const itemDiv = doc.createElement("div");
+  itemDiv.className = "timeline-item";
+  const markerDiv = doc.createElement("div");
+  markerDiv.className = "timeline-marker";
+  const contentDiv = doc.createElement("div");
+  contentDiv.className = "timeline-content";
+  contentDiv.setAttribute("tabindex", "0");
 
-    if (hasMoreMovies) {
-      const scrollWrapper = document.createElement("div");
-      scrollWrapper.className = "vertical-scroll-wrapper";
-      scrollWrapper.setAttribute("tabindex", "0");
-      scrollWrapper.setAttribute(
-        "aria-label",
-        `Movies list for ${yearData.year}`
-      );
+  const movies = yearData.movies || [];
+  const favMovie = movies.find((m) => m.title === yearData.favorite);
+  const otherMovies = movies.filter((m) => m.title !== yearData.favorite);
+  const hasMoreMovies = otherMovies.length > 0;
 
-      otherMovies.forEach((movie) => {
-        const card = document.createElement("div");
-        card.className = "movie-card";
-        card.innerHTML = buildMovieCardHtmlFn(movie);
-        scrollWrapper.appendChild(card);
-      });
-      movieListContainer.appendChild(scrollWrapper);
-      contentDiv.appendChild(movieListContainer);
-    } else if (!favMovie) {
-      movieListContainer.innerHTML +=
-        '<p style="padding:10px; text-align:center;">No movies recorded.</p>';
-      contentDiv.appendChild(movieListContainer);
-    }
+  if (hasMoreMovies) {
+    contentDiv.setAttribute("role", "button");
+    contentDiv.setAttribute("aria-label", _i18n.t("movies.expand", lang, { year: yearData.year }));
+  } else {
+    contentDiv.classList.add("timeline-content--static");
+  }
 
-    itemDiv.appendChild(markerDiv);
-    itemDiv.appendChild(contentDiv);
-    rootElement.appendChild(itemDiv);
+  contentDiv.appendChild(buildTimelineHeader(doc, yearData, movies.length, hasMoreMovies, lang));
+  if (favMovie) {
+    contentDiv.appendChild(buildFavoriteSection(doc, yearData, favMovie, hasMoreMovies, lang));
+  }
+  if (hasMoreMovies || !favMovie) {
+    contentDiv.appendChild(buildMovieList(doc, yearData, otherMovies, lang));
+  }
 
-    if (hasMoreMovies) {
-      contentDiv.addEventListener("click", function (e) {
-        if (e.target.closest(".vertical-scroll-wrapper")) return;
+  itemDiv.appendChild(markerDiv);
+  itemDiv.appendChild(contentDiv);
+  if (hasMoreMovies) attachTimelineToggle(contentDiv);
+  return itemDiv;
+}
 
-        const parent = this.parentElement;
-        const container = parent.querySelector(".movie-list-container");
-        const isActive = parent.classList.contains("active");
-
-        if (!isActive) {
-          parent.classList.add("active");
-          const height = container.scrollHeight;
-          container.style.maxHeight = height + "px";
-          setTimeout(() => {
-            if (parent.classList.contains("active")) {
-              container.style.maxHeight = "none";
-            }
-          }, 600);
-        } else {
-          container.style.maxHeight = container.scrollHeight + "px";
-          void container.offsetHeight;
-          parent.classList.remove("active");
-          container.style.maxHeight = null;
-        }
-      });
-
-      contentDiv.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          this.click();
-        }
-      });
-    }
+function renderTimeline(data, rootElement, lang = "en") {
+  const doc = rootElement.ownerDocument;
+  data.forEach((yearData) => {
+    rootElement.appendChild(renderTimelineYear(doc, yearData, lang));
   });
 }
 
@@ -412,19 +457,20 @@ if (typeof document !== "undefined") {
       document,
       "toggleProjectsBtn",
       ".project-panel.hidden_project",
-      "hidden_project"
+      "hidden_project",
+      _i18n.getLang()
     )
   );
   document.addEventListener("DOMContentLoaded", () => setupSkillsTabs(document));
   document.addEventListener("DOMContentLoaded", () =>
-    setupContactForm(document)
+    setupContactForm(document, undefined, _i18n.getLang())
   );
   document.addEventListener("DOMContentLoaded", () =>
-    setupToggle(document, "toggleEduBtn", ".hidden-edu", "hidden-edu")
+    setupToggle(document, "toggleEduBtn", ".hidden-edu", "hidden-edu", _i18n.getLang())
   );
   document.addEventListener("DOMContentLoaded", () => {
     const timelineRoot = document.getElementById("timeline-root");
-    if (timelineRoot) loadMovies(timelineRoot);
+    if (timelineRoot) loadMovies(timelineRoot, _i18n.getLang());
   });
 }
 

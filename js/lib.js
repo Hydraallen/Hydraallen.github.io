@@ -6,18 +6,26 @@
 //   - Browser: plain function declarations expose helpers on the global scope
 //     (HTML must load this file BEFORE scripts.js / scripts_travel.js).
 //   - Node (tests): the module.exports guard at the bottom exports everything.
+// i18n: js/i18n.js is loaded in <head> on every page, so in the browser its
+// globals exist before this file runs; Node requires it (which also registers
+// all strings). User-facing text is resolved at call time with a `lang`
+// argument that defaults to "en".
+// 文案通过 js/i18n.js 取得；渲染函数都接收末尾的 lang 参数（默认 "en"）。
 // ==========================================
 
+var _libI18n =
+  typeof module !== "undefined" && module.exports
+    ? require("./i18n.js")
+    : { t: t, pick: pick, formatDayRange: formatDayRange };
+
 // Placeholder poster used when a movie has no poster image.
-// Inline SVG data URI keeps this self-contained (no external host).
-// 内联 SVG data URI，避免依赖外部图床。
+// Inline SVG data URI keeps this self-contained (no external host). It carries
+// no text, so it needs no translation (the <img> alt is the movie title).
+// 内联 SVG data URI，不含文字，因此无需翻译。
 var NO_POSTER_SRC =
   "data:image/svg+xml;utf8," +
   "%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22300%22%3E" +
-  "%3Crect width=%22200%22 height=%22300%22 fill=%22%23e0e0e0%22/%3E" +
-  "%3Ctext x=%22100%22 y=%22150%22 font-family=%22sans-serif%22 font-size=%2218%22" +
-  " fill=%22%23666666%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E" +
-  "No Poster%3C/text%3E%3C/svg%3E";
+  "%3Crect width=%22200%22 height=%22300%22 fill=%22%23e0e0e0%22/%3E%3C/svg%3E";
 
 // Escape a string for safe interpolation into HTML (text or attribute context).
 function escapeHtml(str) {
@@ -60,68 +68,96 @@ function buildMovieCardHtml(movie) {
   );
 }
 
-// Country names in data/travel/*.json carry a leading flag emoji ("🇺🇸 USA").
-// Normalise to bare lowercase letters before comparing, so the check is an exact
-// match on the country rather than a substring test that "Usaland" would pass.
-function normalizeCountry(country) {
-  if (typeof country !== "string") return "";
-  return country.replace(/[^A-Za-z ]/g, "").trim().toLowerCase();
+// ISO 3166-1 alpha-2 code -> flag emoji built from regional-indicator symbols
+// ("US" -> 🇺🇸). Anything that is not exactly two letters yields "".
+var REGIONAL_INDICATOR_A = 0x1f1e6;
+
+function flagEmoji(code) {
+  if (typeof code !== "string" || !/^[A-Za-z]{2}$/.test(code)) return "";
+  return code
+    .toUpperCase()
+    .split("")
+    .map(function (ch) {
+      return String.fromCodePoint(REGIONAL_INDICATOR_A + ch.charCodeAt(0) - 65);
+    })
+    .join("");
 }
 
-var US_COUNTRY_NAMES = ["usa", "united states", "united states of america"];
+// Travel: "🇺🇸 USA" / "🇺🇸 美国" from place.country_code (names: "country.<code>").
+function getCountryLabel(place, lang) {
+  var code = place && place.country_code;
+  if (!flagEmoji(code)) return "";
+  return flagEmoji(code) + " " + _libI18n.t("country." + code.toUpperCase(), lang);
+}
 
 // Travel: compose the display name, appending the US state when applicable.
-// A place without a `state` field keeps its bare name — never a trailing comma.
-function getDisplayName(place) {
-  var displayName = place.name;
-  if (place.state && US_COUNTRY_NAMES.indexOf(normalizeCountry(place.country)) !== -1) {
-    displayName += ", " + place.state;
+// en keeps the postal code ("Seattle, WA"); zh uses the full state name
+// ("西雅图，华盛顿州") but drops it when it only repeats the place name
+// ("纽约" rather than "纽约，纽约州"). Never a trailing comma.
+function getDisplayName(place, lang) {
+  var safePlace = place || {};
+  var name = _libI18n.pick(safePlace.name, lang);
+  if (!safePlace.state || safePlace.country_code !== "US") return name;
+  var state = _libI18n.t("state." + safePlace.state, lang);
+  if (lang === "zh") {
+    return state.indexOf(name) === 0 ? name : name + "，" + state;
   }
-  return displayName;
+  return name + ", " + state;
 }
 
-// Travel lightbox: a photo may be a plain URL string or an object { src, location }.
+// Travel: visit dates as a localized range; planned places show a label.
+function formatPlaceDates(place, lang) {
+  var safePlace = place || {};
+  if (safePlace.status === "planned" || !safePlace.date) {
+    return _libI18n.t("travel.date.planned", lang);
+  }
+  return _libI18n.formatDayRange(safePlace.date, safePlace.date_end, lang);
+}
+
+// Travel lightbox: a photo may be a plain URL string or an object
+// { src, location } where location is LocalizedText (or a plain string).
 function getLightboxSrc(photo) {
   return typeof photo === "object" && photo !== null ? photo.src : photo;
 }
 
-function getLightboxCaption(photo) {
+function getLightboxCaption(photo, lang) {
   return typeof photo === "object" && photo !== null && photo.location
-    ? photo.location
+    ? _libI18n.pick(photo.location, lang)
     : "";
 }
 
-// Travel: comparator factory for the "Visited" list.
-function compareVisited(sortType) {
+// Locale-aware name comparison: zh sorts by pinyin, en alphabetically.
+function nameComparer(lang) {
+  var collator = new Intl.Collator(lang === "zh" ? "zh-Hans-CN" : "en");
   return function (a, b) {
-    var dateA = a.date;
-    var dateB = b.date;
-    var nameA = a.name;
-    var nameB = b.name;
+    return collator.compare(_libI18n.pick(a.name, lang), _libI18n.pick(b.name, lang));
+  };
+}
 
+// Travel: comparator factory for the "Visited" list. Dates are ISO strings, so
+// they compare lexically; an undated entry (null) sorts first for "newest".
+function compareVisited(sortType, lang) {
+  var byName = nameComparer(lang);
+  return function (a, b) {
     if (sortType === "newest" || sortType === "oldest") {
-      if (dateA === "TBD") return sortType === "newest" ? -1 : 1;
-      if (dateB === "TBD") return sortType === "newest" ? 1 : -1;
-      if (sortType === "newest") return new Date(dateB) - new Date(dateA);
-      if (sortType === "oldest") return new Date(dateA) - new Date(dateB);
+      if (!a.date && !b.date) return 0;
+      if (!a.date) return sortType === "newest" ? -1 : 1;
+      if (!b.date) return sortType === "newest" ? 1 : -1;
+      if (a.date === b.date) return 0;
+      var asc = a.date < b.date ? -1 : 1;
+      return sortType === "newest" ? -asc : asc;
     }
-
-    if (sortType === "az") return nameA.localeCompare(nameB);
-    if (sortType === "za") return nameB.localeCompare(nameA);
-
+    if (sortType === "az") return byName(a, b);
+    if (sortType === "za") return byName(b, a);
     return 0;
   };
 }
 
-// Travel: comparator factory for the "TODO"/planned list.
-function comparePlanned(sortType) {
+// Travel: comparator factory for the "TODO"/planned list (name only).
+function comparePlanned(sortType, lang) {
+  var byName = nameComparer(lang);
   return function (a, b) {
-    var nameA = a.name;
-    var nameB = b.name;
-    if (sortType === "za") {
-      return nameB.localeCompare(nameA);
-    }
-    return nameA.localeCompare(nameB);
+    return sortType === "za" ? byName(b, a) : byName(a, b);
   };
 }
 
@@ -187,25 +223,27 @@ function groupPhotosByLocation(photos) {
   });
 }
 
-// Stop categories rendered on a trip day. Labels are English (site UI is English).
+// Stop categories rendered on a trip day. Labels live in the dictionary
+// ("trip.stop_type.<type>") so they follow the page language.
+// 站点类型标签来自词典，随页面语言切换。
 var STOP_TYPES = {
-  sight: { label: "Sight", icon: "📍" },
-  food: { label: "Food", icon: "🍜" },
-  hotel: { label: "Stay", icon: "🛏" },
-  transport: { label: "Transit", icon: "🚃" },
+  sight: { icon: "📍" },
+  food: { icon: "🍜" },
+  hotel: { icon: "🛏" },
+  transport: { icon: "🚃" },
 };
+var DEFAULT_STOP_ICON = "•";
 
-// Always returns a usable descriptor; an unknown or missing type falls back to a
-// neutral one so the rendered HTML never contains "undefined".
+// Always returns a usable {label, icon}; an unknown or missing type falls back
+// to a neutral one so the rendered HTML never contains "undefined".
 // hasOwnProperty guards against inherited keys like "constructor".
-function getStopType(type) {
-  if (
-    typeof type === "string" &&
-    Object.prototype.hasOwnProperty.call(STOP_TYPES, type)
-  ) {
-    return STOP_TYPES[type];
-  }
-  return { label: "Stop", icon: "•" };
+function getStopType(type, lang) {
+  var known =
+    typeof type === "string" && Object.prototype.hasOwnProperty.call(STOP_TYPES, type);
+  return {
+    label: _libI18n.t("trip.stop_type." + (known ? type : "default"), lang),
+    icon: known ? STOP_TYPES[type].icon : DEFAULT_STOP_ICON,
+  };
 }
 
 // Defensive read of trip.days — a malformed or missing trip renders as empty.
@@ -225,9 +263,11 @@ function getTripDays(trip) {
 // the delegation trigger and therefore a focusable target to restore focus to
 // when the lightbox closes. Its accessible name comes from aria-label, so the
 // <img> is labelled empty to avoid announcing the stop name twice.
-function buildStopHtml(stop, photoIndex) {
+function buildStopHtml(stop, photoIndex, lang) {
   var safeStop = stop || {};
-  var typeInfo = getStopType(safeStop.type);
+  var typeInfo = getStopType(safeStop.type, lang);
+  var name = _libI18n.pick(safeStop.name, lang);
+  var note = _libI18n.pick(safeStop.note, lang);
   var typeKey = safeStop.type ? String(safeStop.type) : "default";
   var idx = Number(photoIndex);
   var hasPhoto = safeStop.photo && isFinite(idx) && idx >= 0;
@@ -246,11 +286,11 @@ function buildStopHtml(stop, photoIndex) {
     "</span>" +
     '<div class="stop-body">' +
     '<h4 class="stop-name">' +
-    escapeHtml(safeStop.name) +
+    escapeHtml(name) +
     "</h4>";
 
-  if (safeStop.note) {
-    html += '<p class="stop-note">' + escapeHtml(safeStop.note) + "</p>";
+  if (note) {
+    html += '<p class="stop-note">' + escapeHtml(note) + "</p>";
   }
   html += "</div>";
 
@@ -258,8 +298,8 @@ function buildStopHtml(stop, photoIndex) {
     html +=
       '<button class="stop-photo-btn" type="button" data-photo-index="' +
       idx +
-      '" aria-label="Photo of ' +
-      escapeHtml(safeStop.name) +
+      '" aria-label="' +
+      escapeHtml(_libI18n.t("travel.photo_of", lang, { name: name })) +
       '">' +
       '<img class="stop-photo" src="' +
       escapeHtml(getLightboxSrc(safeStop.photo)) +
@@ -272,29 +312,29 @@ function buildStopHtml(stop, photoIndex) {
 
 // Build one <section> for a trip day; `photos` is the place gallery, used to
 // resolve each stop's photo back to its gallery index for the lightbox.
-function buildDayHtml(day, photos) {
+function buildDayHtml(day, photos, lang) {
   var safeDay = day || {};
   var stops = Array.isArray(safeDay.stops) ? safeDay.stops : [];
 
   var stopsHtml = stops
     .map(function (stop) {
       var photoIndex = stop ? findPhotoIndex(photos, stop.photo) : -1;
-      return buildStopHtml(stop, photoIndex);
+      return buildStopHtml(stop, photoIndex, lang);
     })
     .join("");
 
   return (
     '<section class="trip-day">' +
     '<div class="day-stub">' +
-    '<span class="day-badge">Day ' +
-    escapeHtml(safeDay.day) +
+    '<span class="day-badge">' +
+    escapeHtml(_libI18n.t("trip.day", lang, { n: safeDay.day == null ? "" : safeDay.day })) +
     "</span>" +
     '<span class="day-date">' +
-    escapeHtml(safeDay.date) +
+    escapeHtml(_libI18n.formatDayRange(safeDay.date, null, lang)) +
     "</span>" +
     "</div>" +
     '<h3 class="day-title">' +
-    escapeHtml(safeDay.title) +
+    escapeHtml(_libI18n.pick(safeDay.title, lang)) +
     "</h3>" +
     '<ol class="stop-list">' +
     stopsHtml +
@@ -310,8 +350,10 @@ if (typeof module !== "undefined" && module.exports) {
     escapeHtml: escapeHtml,
     getPosterSrc: getPosterSrc,
     buildMovieCardHtml: buildMovieCardHtml,
-    normalizeCountry: normalizeCountry,
+    flagEmoji: flagEmoji,
+    getCountryLabel: getCountryLabel,
     getDisplayName: getDisplayName,
+    formatPlaceDates: formatPlaceDates,
     getLightboxSrc: getLightboxSrc,
     getLightboxCaption: getLightboxCaption,
     compareVisited: compareVisited,
