@@ -1,7 +1,7 @@
 {
   "year": 2009,
-  "total_count": 25,
-  "saved_count": 25,
+  "total_count": 24,
+  "saved_count": 24,
   "favorite": "Avatar",
   "movies": [
     {
@@ -135,12 +135,6 @@
       "title_zh": "暮光之城2：新月",
       "date": "Nov 20, 2009",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTI3MjE3NDIxNF5BMl5BanBnXkFtZTcwODM3NTY5Mg@@._V1_.jpg"
-    },
-    {
-      "title": "Red Cliff II",
-      "title_zh": "赤壁（下）",
-      "date": "Nov 20, 2009",
-      "poster": "https://m.media-amazon.com/images/M/MV5BY2JjZDYxMjgtNjRhMi00MGIwLWI5ZjktNDhmNDY2N2MyZjRlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       "title": "Avatar",
