@@ -15,7 +15,7 @@
   // --- Navigation / 导航 ---
   "nav.label": { en: "Primary navigation", zh: "主导航" },
   "nav.toggle": { en: "Toggle navigation", zh: "打开或关闭导航菜单" },
-  "nav.avatar_alt": { en: "Hydraallen profile picture", zh: "Hydraallen的头像" },
+  "nav.avatar_alt": { en: "Hydraallen profile picture", zh: "Hydraallen 的头像" },
   "nav.about": { en: "About", zh: "关于我" },
   "nav.experience": { en: "Experience", zh: "工作经历" },
   "nav.research": { en: "Research", zh: "科研与项目" },
@@ -36,7 +36,7 @@
 
   // --- Footer / 页脚: "© {prefix} <year> {suffix}" ---
   "footer.copyright_prefix": { en: "Copyrights", zh: "版权所有" },
-  "footer.copyright_suffix": { en: "by Hydraallen. All rights reserved.", zh: "Hydraallen保留所有权利。" },
+  "footer.copyright_suffix": { en: "by Hydraallen. All rights reserved.", zh: "Hydraallen 保留所有权利。" },
 
   // --- Common UI / 通用 ---
   "common.skip": { en: "Skip to Main Content", zh: "跳到主要内容" },
@@ -56,22 +56,22 @@
   // --- <meta name="description"> / 页面描述 ---
   "meta.description.index": {
     en: "Hydraallen is a Master of Science in Information student at the University of Michigan and a passionate programmer working on Agent AI, machine learning, and online judge platforms.",
-    zh: "Hydraallen是密歇根大学信息学硕士（MSI）在读学生，热爱编程，专注于 Agent AI、机器学习与在线评测平台。",
+    zh: "Hydraallen 是密歇根大学信息学硕士（MSI）在读学生，热爱编程，专注于 Agent AI、机器学习与在线评测平台。",
   },
   "meta.description.movies": {
     en: "A visual timeline of the movies Hydraallen has watched over the years, organized by year with favorites highlighted.",
-    zh: "Hydraallen历年观影的可视化时间线，按年份整理并标出年度最爱。",
+    zh: "Hydraallen 历年观影的可视化时间线，按年份整理并标出年度最爱。",
   },
   "meta.description.travel": {
     en: "Explore Hydraallen's travel journey through an interactive world map and photo galleries capturing places visited across every continent.",
-    zh: "通过交互式世界地图与照片墙，探索Hydraallen走过各大洲的旅行足迹。",
+    zh: "通过交互式世界地图与照片墙，探索 Hydraallen 走过各大洲的旅行足迹。",
   },
   "meta.description.trip": {
     en: "A day-by-day trip journal from Hydraallen's travels: itinerary, route map and photos for a single destination.",
-    zh: "Hydraallen的逐日旅行手记：单个目的地的行程、路线地图与照片。",
+    zh: "Hydraallen 的逐日旅行手记：单个目的地的行程、路线地图与照片。",
   },
   "meta.description.404": {
     en: "The page you were looking for on Hydraallen's site could not be found. Head back to the home page to continue exploring.",
-    zh: "在Hydraallen的网站上找不到你要访问的页面。返回首页继续浏览吧。",
+    zh: "在 Hydraallen 的网站上找不到你要访问的页面。返回首页继续浏览吧。",
   },
 });

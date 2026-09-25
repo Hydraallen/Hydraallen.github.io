@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.0] - 2026-09-24
+### Features
+- **Display name unified to Hydraallen**: both languages now use the display name Hydraallen: the zh hero ("你好，我是 Hydraallen"), the typing line, page titles ("首页 | Hydraallen"), meta descriptions, the avatar alt text and the footer. The English meta descriptions no longer add a real name in parentheses.
+- **Privacy guard**: a new `real_name` rule rejects the owner's real name (Chinese, and English in either order) in every published file. The pattern is built from escapes, so the guard and its tests never contain the name literally. The public e-mail and the LinkedIn URL stay allowed.
+
+### Design Rationale
+- One display name everywhere keeps the site consistent and keeps the real name off the public site. The owner-name test now requires the en and zh strings to share `index.hero.name`.
+- The glossary rule against naming the owner as copyright holder now matches the display name only. The guard covers the real name.
+
+### Notes & Caveats
+- The git history is being rewritten separately to drop the real name and the old CV files.
+
 ## [2.1.0] - 2026-09-24
 ### Features
 - **Travel status `planned` renamed to `idea`**: travel data now uses `status: visited|idea`. The rename covers all 23 affected `data/travel/*.json` files, `js/lib.js` (`comparePlanned` → `compareIdea`), `js/scripts_travel.js` (`MarkerIcons.idea`, `#filter-idea`, the card class), `travel.html` (`.idea-toggle`), `css/styles_travel.css`, and the dictionary keys `travel.{filter,section,date}.planned` → `.idea`.
@@ -22,7 +34,7 @@
 
 ## [2.0.0] - 2026-09-23
 ### Features
-- **Bilingual site (EN / 简体中文)** across all five pages, including data. `?lang=` persists, `<html lang>` is `en`/`zh-Hans`, titles and meta descriptions are localized, and a language switch in the nav reloads the page while keeping `?place=` and `#hash`. The zh UI uses the owner's Chinese name Hydraallen. English keeps Hydraallen / Hydraallen.
+- **Bilingual site (EN / 简体中文)** across all five pages, including data. `?lang=` persists, `<html lang>` is `en`/`zh-Hans`, titles and meta descriptions are localized, and a language switch in the nav reloads the page while keeping `?place=` and `#hash`. The owner's display name is Hydraallen in both languages.
 - **CV-synced index**: every index section (about, experience, research & projects, publications, open-source projects, skills, education, awards, student work) is rendered from `data/profile/*.json` by `js/scripts_profile.js`. Social links now come from `profile.json` too. `index.html` holds no CV content.
 - **Content**: internships (Tencent, Salesforce, Philo-homes, OpenAGI, Baosight), JOJ3, SAM2 research, two co-authored papers (OSGym, SAM2 / npj Digital Surgery), education (UMich, SJTU, Cornell exchange, TU Berlin winter school), selected awards, and student work. zh text is verbatim from `experience.md`. en text is a 1:1 translation.
 - **Travel / trips**: names, notes and titles are LocalizedText. Countries use ISO `country_code` with localized names and flag emoji. Dates are ISO and rendered per locale. Map tiles follow the site language.

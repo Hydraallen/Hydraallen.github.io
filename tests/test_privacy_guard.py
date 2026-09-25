@@ -120,6 +120,43 @@ def test_sensitive_keywords_flagged(word: str) -> None:
     assert "keyword" in _rules(f"xx {word} yy")
 
 
+# ---------------------------------------------------------------------------
+# Real name: the site uses the handle only. Samples are built from escapes so
+# this file never contains the name literally (it is published and in history).
+# 真实姓名：站点只用 Hydraallen；样例用转义拼出，文件本身不含字面姓名。
+# ---------------------------------------------------------------------------
+_ZH_NAME = "\u6c6a\u777f"
+_EN_GIVEN, _EN_FAMILY = "R" + "ui", "W" + "ang"
+
+
+@pytest.mark.unit
+@pytest.mark.parametrize(
+    "text",
+    [
+        f"你好，我是{_ZH_NAME}",
+        f"{_EN_GIVEN} {_EN_FAMILY} is a student",
+        f"by {_EN_FAMILY.upper()}  {_EN_GIVEN}",
+        f"({_EN_GIVEN.lower()}\n{_EN_FAMILY.lower()})",
+    ],
+)
+def test_real_name_flagged(text: str) -> None:
+    assert "real_name" in _rules(text)
+
+
+@pytest.mark.unit
+@pytest.mark.parametrize(
+    "text",
+    [
+        "Hi, I'm Hydraallen",
+        "wangruiallen@gmail.com",
+        "https://www.linkedin.com/in/rui-wang-546099392/",
+        f"{_EN_GIVEN}z {_EN_FAMILY}er",
+    ],
+)
+def test_handle_email_and_linkedin_slug_are_not_real_name(text: str) -> None:
+    assert "real_name" not in _rules(text)
+
+
 @pytest.mark.unit
 def test_pdf_link_flagged() -> None:
     assert "pdf_link" in _rules('<a href="CV/CV.pdf">Resume</a>')

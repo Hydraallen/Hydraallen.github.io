@@ -46,6 +46,12 @@ SENSITIVE_KEYWORDS = (
     "SICCX",
 )
 
+# The owner's real name never appears on the site (display name: Hydraallen).
+# Built from escapes so this published file never contains it literally.
+# Whitespace-separated only: the e-mail local part and the LinkedIn slug stay allowed.
+# 真实姓名：用转义拼出，源码中不出现字面姓名；邮箱与 LinkedIn 链接不受影响。
+REAL_NAME = re.compile(r"\u6c6a\u777f|\b(?:Rui\s+Wang|Wang\s+Rui)\b", re.IGNORECASE)
+
 # (rule name, compiled pattern). Every pattern has false-positive unit tests.
 PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
     ("cn_mobile", re.compile(r"(?<![\d.])1[3-9]\d{9}(?!\d)")),
@@ -54,6 +60,7 @@ PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
     ("long_digits", re.compile(r"(?<![\d.])\d{4}(?:\s\d{4}){3,}(?!\d)")),
     ("pdf_link", re.compile(r"\.pdf(?![A-Za-z0-9])", re.IGNORECASE)),
     ("keyword", re.compile("|".join(re.escape(k) for k in SENSITIVE_KEYWORDS))),
+    ("real_name", REAL_NAME),
 )
 
 EMAIL_PATTERN = re.compile(r"[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+([A-Za-z]{2,})(?![A-Za-z0-9])")

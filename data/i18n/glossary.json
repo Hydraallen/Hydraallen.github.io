@@ -31,7 +31,7 @@
       "reason": "Not part of the official UMich coursework (Data Mining, NLP, Applied ML, Information Visualization)"
     },
     {
-      "pattern": "(著作权人|copyright holder)[:：]?\\s*(Hydraallen|Hydraallen|Hydraallen)",
+      "pattern": "(著作权人|copyright holder)[:：]?\\s*Hydraallen",
       "flags": "i",
       "reason": "The software copyright holder is Shanghai Jiao Tong University, not the owner"
     }

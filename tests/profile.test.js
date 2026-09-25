@@ -445,7 +445,7 @@ test("renderProfile leaves social icons empty when profile.json fails", async ()
   assert.strictEqual(doc.querySelectorAll(".social-icons a").length, 0);
 });
 
-test("index.html: hero name is translatable (en handle Hydraallen, zh Hydraallen)", () => {
+test("index.html: hero name is translatable (Hydraallen in both languages)", () => {
   const i18n = require("../js/i18n.js");
   const doc = indexDoc();
   const name = doc.querySelector("header h1 [data-i18n='index.hero.name']");

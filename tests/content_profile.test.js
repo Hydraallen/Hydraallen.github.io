@@ -31,7 +31,7 @@ const EXPECTED_FILES = [
 ];
 
 const PUBLIC_EMAIL = "wangruiallen@gmail.com";
-const OWNER_NAME_RE = /Hydraallen|Hydraallen|Hydraallen/i;
+const OWNER_NAME_RE = /Hydraallen/i;
 const KEBAB_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const CV_REF_RE = /^[^/\s][^/]*(?:\/[^/]+)?$/;
 const LINK_KINDS = ["github", "site", "arxiv", "doi"];
@@ -388,6 +388,7 @@ test("glossary forbidden rules catch known pitfalls (self-check)", () => {
   assert.ok(hitsZh("共同第一作者") > 0);
   assert.ok(hits("Coursework: Deep Learning") > 0);
   assert.ok(hitsZh("著作权人：Hydraallen") > 0);
+  assert.ok(hits("Copyright holder: Hydraallen") > 0);
   assert.strictEqual(hits("co-author, OSGym"), 0);
   assert.strictEqual(hitsZh("以共同作者身份完成论文"), 0);
 });

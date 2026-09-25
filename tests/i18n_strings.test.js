@@ -186,27 +186,31 @@ test("strings files: every DYNAMIC_KEY_PREFIX is built by concatenation in js/**
 });
 
 // ---------------------------------------------------------------------------
-// Owner name: en UI uses the handle "Hydraallen", zh UI uses the Chinese name.
+// Owner name: both languages use the display name "Hydraallen".
 // index.hero.name is the single source; meta titles must agree with it.
-// 站主姓名：英文用 Hydraallen，中文用Hydraallen；以 index.hero.name 为唯一来源。
+// 站主姓名：中英文统一使用 Hydraallen；以 index.hero.name 为唯一来源。
 // ---------------------------------------------------------------------------
-test("owner name: zh UI strings use the Chinese name from index.hero.name", () => {
-  const zhName = dict["index.hero.name"].zh;
-  const enHandle = dict["index.hero.name"].en.replace(/\.$/, "");
+test("owner name: en and zh UI strings use the display name from index.hero.name", () => {
+  const handle = dict["index.hero.name"].en.replace(/\.$/, "");
+  assert.strictEqual(handle, "Hydraallen");
+  assert.strictEqual(dict["index.hero.name"].zh, handle);
   const ownerKeys = Object.keys(dict).filter(
     (k) => k.startsWith("meta.") || k === "nav.avatar_alt" || k === "footer.copyright_suffix"
   );
   const problems = [];
   ownerKeys.forEach((k) => {
-    if (!dict[k].zh.includes(zhName)) problems.push(`${k}: zh lacks ${zhName}`);
-    if (dict[k].en.includes(zhName)) problems.push(`${k}: en contains ${zhName}`);
-    if (!dict[k].en.includes(enHandle)) problems.push(`${k}: en lacks ${enHandle}`);
+    ["en", "zh"].forEach((lang) => {
+      if (!dict[k][lang].includes(handle)) problems.push(`${k}: ${lang} lacks ${handle}`);
+    });
   });
   Object.keys(dict)
     .filter((k) => k.startsWith("meta.title."))
     .forEach((k) => {
-      if (!dict[k].en.endsWith(`| ${enHandle}`)) problems.push(`${k}: en must end with "| ${enHandle}"`);
-      if (!dict[k].zh.endsWith(`| ${zhName}`)) problems.push(`${k}: zh must end with "| ${zhName}"`);
+      ["en", "zh"].forEach((lang) => {
+        if (!dict[k][lang].endsWith(`| ${handle}`)) {
+          problems.push(`${k}: ${lang} must end with "| ${handle}"`);
+        }
+      });
     });
   assert.deepStrictEqual(problems, []);
 });
