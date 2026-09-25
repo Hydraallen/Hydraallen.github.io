@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.1.0] - 2026-09-24
+### Features
+- **Travel status `planned` renamed to `idea`**: travel data now uses `status: visited|idea`. The rename covers all 23 affected `data/travel/*.json` files, `js/lib.js` (`comparePlanned` → `compareIdea`), `js/scripts_travel.js` (`MarkerIcons.idea`, `#filter-idea`, the card class), `travel.html` (`.idea-toggle`), `css/styles_travel.css`, and the dictionary keys `travel.{filter,section,date}.planned` → `.idea`.
+- **Country names**: added `country.CH/CL/EG/GR/IT/PT` (Switzerland, Chile, Egypt, Greece, Italy, Portugal) ahead of new travel entries.
+- **Travel sync check**: `tools/travel_sync_check.py` compares `data/travel/*.json` with a LifeChecklist snapshot (schema 1). It checks the fields LifeChecklist owns (name, country_code, state, continent, status, dates, and coordinates to 4 dp). It reports mismatches and snapshot places with no public file (exit 1), and it lists public orphans as warnings. The snapshot comes from `--snapshot`, else `LIFECHECKLIST_TRAVEL_SNAPSHOT`, else the gitignored `tools/travel_sources.local.json`. Tests use fictional fixtures under `tests/fixtures/travel/`.
+- **Image guardrail**: a content test requires every non-empty travel `cover` and every photo `src` to exist on disk.
+- **Docs**: new "Travel sync" section in `CLAUDE.md` covering which repo owns which fields and how to run the check.
+
+### Design Rationale
+- This matches the private LifeChecklist status vocabulary (`idea|done`, exported as `idea|visited`), so the planned one-way travel sync maps statuses directly.
+- The sync check mirrors `cv_sync_check.py` (same source-resolution order and exit codes) and never needs the private repo. It reads only the exported snapshot, so this public repo holds no private data or paths.
+- Field ownership is split so that neither side overwrites the other: travel facts live in LifeChecklist, and media and trip links stay here.
+- Only internal identifiers changed. Visible labels ("TODO List" / 心愿单 / 待出发) and marker colours (orange for idea, green for visited) stay the same.
+
+### Notes & Caveats
+- The content test now rejects `status: "planned"`, so a stale data file fails `npm test`.
+- `country.*` is a dynamic key prefix, so the new country names pass the unused-key check before any place uses them.
+- An empty `cover` is allowed, because places the exporter adds start without one. The travel card and the trip hero then render a neutral CSS placeholder block (`lib.hasCover`) instead of an `<img src="">`.
+- Orphans (public places missing from the snapshot) never fail the check, because the exporter never deletes files. Delete such files by hand when a place is meant to leave the site.
+
 ## [2.0.0] - 2026-09-23
 ### Features
 - **Bilingual site (EN / 简体中文)** across all five pages, including data. `?lang=` persists, `<html lang>` is `en`/`zh-Hans`, titles and meta descriptions are localized, and a language switch in the nav reloads the page while keeping `?place=` and `#hash`. The zh UI uses the owner's Chinese name Hydraallen. English keeps Hydraallen / Hydraallen.
