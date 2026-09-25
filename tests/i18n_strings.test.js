@@ -105,6 +105,14 @@ test("strings files: every travel country and US state has a name", () => {
   assert.deepStrictEqual(missingStates, []);
 });
 
+test("strings files: country names exist for upcoming travel countries", () => {
+  ["CL", "EG", "IT", "PT", "GR", "CH"].forEach((code) => {
+    const entry = dict[`country.${code}`];
+    assert.ok(entry, code);
+    assert.ok(entry.en && entry.zh, code);
+  });
+});
+
 // ---------------------------------------------------------------------------
 // HTML wiring
 // ---------------------------------------------------------------------------
