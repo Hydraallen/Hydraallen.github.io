@@ -99,7 +99,7 @@ test("getDisplayName ignores a state outside the USA and never dangles a comma",
   assert.ok(!lib.getDisplayName({}).includes("undefined"));
 });
 
-test("formatPlaceDates renders a localized range, or the planned label", () => {
+test("formatPlaceDates renders a localized range, or the idea label", () => {
   const ithaca = { status: "visited", date: "2025-01-15", date_end: "2025-05-17" };
   assert.strictEqual(lib.formatPlaceDates(ithaca), "Jan 15 – May 17, 2025");
   assert.strictEqual(lib.formatPlaceDates(ithaca, "zh"), "2025.01.15 – 05.17");
@@ -107,9 +107,9 @@ test("formatPlaceDates renders a localized range, or the planned label", () => {
     lib.formatPlaceDates({ status: "visited", date: "2025-05-09", date_end: "2025-05-09" }, "en"),
     "May 9, 2025"
   );
-  const planned = { status: "planned", date: null, date_end: null };
-  assert.strictEqual(lib.formatPlaceDates(planned, "en"), "TODO List");
-  assert.strictEqual(lib.formatPlaceDates(planned, "zh"), "待出发");
+  const idea = { status: "idea", date: null, date_end: null };
+  assert.strictEqual(lib.formatPlaceDates(idea, "en"), "TODO List");
+  assert.strictEqual(lib.formatPlaceDates(idea, "zh"), "待出发");
 });
 
 test("getLightboxSrc / getLightboxCaption handle string and object photos", () => {
@@ -124,7 +124,7 @@ test("getLightboxSrc / getLightboxCaption handle string and object photos", () =
 });
 
 // ---------------------------------------------------------------------------
-// Travel: comparators (ISO dates, planned = null; names via Intl.Collator)
+// Travel: comparators (ISO dates, idea = null; names via Intl.Collator)
 // ---------------------------------------------------------------------------
 test("compareVisited: an undated place sorts first for newest, last for oldest", () => {
   const undated = { name: "T", date: null };
@@ -151,23 +151,23 @@ test("compareVisited: az / za and equal-name fallback", () => {
   assert.strictEqual(lib.compareVisited("unknown")(same, same), 0);
 });
 
-test("compareVisited / comparePlanned sort by the name in the page language", () => {
+test("compareVisited / compareIdea sort by the name in the page language", () => {
   // en: Seattle < Tokyo; zh (pinyin): 东京 dong < 西雅图 xi
   const seattle = { name: { en: "Seattle", zh: "西雅图" }, date: "2025-01-01" };
   const tokyo = { name: { en: "Tokyo", zh: "东京" }, date: "2025-01-01" };
   assert.ok(lib.compareVisited("az", "en")(seattle, tokyo) < 0);
   assert.ok(lib.compareVisited("az", "zh")(seattle, tokyo) > 0);
-  assert.ok(lib.comparePlanned("az", "en")(seattle, tokyo) < 0);
-  assert.ok(lib.comparePlanned("az", "zh")(seattle, tokyo) > 0);
-  assert.ok(lib.comparePlanned("za", "zh")(seattle, tokyo) < 0);
+  assert.ok(lib.compareIdea("az", "en")(seattle, tokyo) < 0);
+  assert.ok(lib.compareIdea("az", "zh")(seattle, tokyo) > 0);
+  assert.ok(lib.compareIdea("za", "zh")(seattle, tokyo) < 0);
 });
 
-test("comparePlanned: default asc, za desc", () => {
+test("compareIdea: default asc, za desc", () => {
   const a = { name: "Alpha" };
   const b = { name: "Beta" };
-  assert.ok(lib.comparePlanned("az")(a, b) < 0);
-  assert.ok(lib.comparePlanned("newest")(a, b) < 0);
-  assert.ok(lib.comparePlanned("za")(a, b) > 0);
+  assert.ok(lib.compareIdea("az")(a, b) < 0);
+  assert.ok(lib.compareIdea("newest")(a, b) < 0);
+  assert.ok(lib.compareIdea("za")(a, b) > 0);
 });
 
 test("nextIndex / prevIndex wrap around", () => {

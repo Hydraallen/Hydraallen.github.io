@@ -105,11 +105,11 @@ function getDisplayName(place, lang) {
   return name + ", " + state;
 }
 
-// Travel: visit dates as a localized range; planned places show a label.
+// Travel: visit dates as a localized range; idea places show a label.
 function formatPlaceDates(place, lang) {
   var safePlace = place || {};
-  if (safePlace.status === "planned" || !safePlace.date) {
-    return _libI18n.t("travel.date.planned", lang);
+  if (safePlace.status === "idea" || !safePlace.date) {
+    return _libI18n.t("travel.date.idea", lang);
   }
   return _libI18n.formatDayRange(safePlace.date, safePlace.date_end, lang);
 }
@@ -153,8 +153,8 @@ function compareVisited(sortType, lang) {
   };
 }
 
-// Travel: comparator factory for the "TODO"/planned list (name only).
-function comparePlanned(sortType, lang) {
+// Travel: comparator factory for the "TODO"/idea list (name only).
+function compareIdea(sortType, lang) {
   var byName = nameComparer(lang);
   return function (a, b) {
     return sortType === "za" ? byName(b, a) : byName(a, b);
@@ -357,7 +357,7 @@ if (typeof module !== "undefined" && module.exports) {
     getLightboxSrc: getLightboxSrc,
     getLightboxCaption: getLightboxCaption,
     compareVisited: compareVisited,
-    comparePlanned: comparePlanned,
+    compareIdea: compareIdea,
     nextIndex: nextIndex,
     prevIndex: prevIndex,
     getPlaceIdFromSearch: getPlaceIdFromSearch,

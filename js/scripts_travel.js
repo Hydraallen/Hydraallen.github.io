@@ -1,6 +1,6 @@
 // ==========================================
 // Script for Travel Page
-// Features: Persistent Global Markers, Auto-Bounds, Colored Markers (Visited/Planned)
+// Features: Persistent Global Markers, Auto-Bounds, Colored Markers (Visited/Idea)
 // Modified: Orange markers for TODO, Split Sections, Independent Sorting, Dynamic Map Bounds
 // ==========================================
 
@@ -17,7 +17,7 @@ var lib =
         getCountryLabel: getCountryLabel,
         formatPlaceDates: formatPlaceDates,
         compareVisited: compareVisited,
-        comparePlanned: comparePlanned,
+        compareIdea: compareIdea,
       };
 
 // --- i18n (js/i18n.js is loaded in <head>; Node requires it) ---
@@ -68,13 +68,13 @@ function mapLangFor(siteLang) {
 // of the card link — nesting <a> inside <a> is invalid HTML; it sits above the
 // stretched link via z-index (see .hover-actions). The place name is a genuine
 // link; `.place-card-link::after` stretches its hit area over the whole card.
-function buildPlaceCardHtml(place, isPlanned, lang = "en") {
+function buildPlaceCardHtml(place, isIdea, lang = "en") {
   const esc = lib.escapeHtml;
   const displayName = lib.getDisplayName(place, lang);
   const hasVideo = typeof place.video === "string" && place.video.trim() !== "";
 
   let overlayHtml = "";
-  if (isPlanned) {
+  if (isIdea) {
     overlayHtml += `<span class="hover-note">${esc(_travelI18n.t("travel.coming_soon", lang))}</span>`;
   }
   if (hasVideo) {
@@ -119,7 +119,7 @@ const MarkerIcons = typeof L === "undefined" ? {} : {
     popupAnchor: [1, -34],
     shadowSize: [41, 41]
   }),
-  planned: new L.Icon({
+  idea: new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const langSelect = document.getElementById("lang-select");
   const continentBtns = document.querySelectorAll(".continent-tabs .tab-btn");
   const visitedCheckbox = document.getElementById("filter-visited");
-  const plannedCheckbox = document.getElementById("filter-planned");
+  const ideaCheckbox = document.getElementById("filter-idea");
   const siteLang = _travelI18n.getLang();
 
   // 地图瓦片默认语言跟随站点语言（zh -> cn），用户仍可手动切换
@@ -219,13 +219,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
     const targetContinent = activeBtn ? activeBtn.getAttribute("data-continent") : "all";
     const showVisited = visitedCheckbox.checked;
-    const showPlanned = plannedCheckbox.checked;
+    const showIdea = ideaCheckbox.checked;
 
     let filteredData = allTravelData.filter(place => {
       if (targetContinent !== "all" && place.continent !== targetContinent) return false;
-      const isPlanned = place.status === 'planned';
-      if (isPlanned && !showPlanned) return false;
-      if (!isPlanned && !showVisited) return false;
+      const isIdea = place.status === 'idea';
+      if (isIdea && !showIdea) return false;
+      if (!isIdea && !showVisited) return false;
       return true;
     });
 
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
     data.forEach(place => {
       if (place.coordinates) {
         // 根据状态选择图标颜色
-        const iconType = (place.status === 'planned') ? MarkerIcons.planned : MarkerIcons.visited;
+        const iconType = (place.status === 'idea') ? MarkerIcons.idea : MarkerIcons.visited;
 
         const marker = L.marker(place.coordinates, { icon: iconType }).addTo(map);
         
@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // 1. 筛选该大洲的所有数据（包括 Visited 和 Planned）
+    // 1. 筛选该大洲的所有数据（包括 Visited 和 Idea）
     // 这样可以确保地图视野包含你所有感兴趣的点
     const continentData = allTravelData.filter(p => p.continent === continent && p.coordinates);
     
@@ -308,8 +308,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 分离数据
-    const visitedData = data.filter(p => p.status !== 'planned');
-    const plannedData = data.filter(p => p.status === 'planned');
+    const visitedData = data.filter(p => p.status !== 'idea');
+    const ideaData = data.filter(p => p.status === 'idea');
 
     // --- 排序逻辑 (comparators reused from lib.js) ---
 
@@ -317,23 +317,23 @@ document.addEventListener("DOMContentLoaded", function () {
     visitedData.sort(lib.compareVisited(sortType, siteLang));
 
     // 2. TODO 排序
-    plannedData.sort(lib.comparePlanned(sortType, siteLang));
+    ideaData.sort(lib.compareIdea(sortType, siteLang));
 
     // --- 渲染逻辑 ---
 
-    const createSection = (title, items, isPlanned) => {
+    const createSection = (title, items, isIdea) => {
       if (items.length === 0) return;
 
       const header = document.createElement("h3");
       header.className = "travel-section-title";
       header.textContent = title;
-      header.style.borderLeftColor = isPlanned ? '#ff9800' : '#00695c';
+      header.style.borderLeftColor = isIdea ? '#ff9800' : '#00695c';
 
       const gridDiv = document.createElement("div");
       gridDiv.className = "travel-grid"; 
 
       items.forEach(place => {
-        const card = createCard(place, isPlanned);
+        const card = createCard(place, isIdea);
         gridDiv.appendChild(card);
       });
 
@@ -342,17 +342,17 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     createSection(_travelI18n.t("travel.section.visited", siteLang), visitedData, false);
-    createSection(_travelI18n.t("travel.section.planned", siteLang), plannedData, true);
+    createSection(_travelI18n.t("travel.section.idea", siteLang), ideaData, true);
   }
 
   // 创建卡片的逻辑（HTML 由纯函数 buildPlaceCardHtml 生成）
-  function createCard(place, isPlanned) {
+  function createCard(place, isIdea) {
     const card = document.createElement("div");
-    card.className = `place-card ${isPlanned ? 'planned' : ''}`;
+    card.className = `place-card ${isIdea ? 'idea' : ''}`;
     card.setAttribute("data-continent", place.continent || "other");
     card.setAttribute("data-name", _travelI18n.pick(place.name, siteLang));
     card.setAttribute("data-date", place.date || "");
-    card.innerHTML = buildPlaceCardHtml(place, isPlanned, siteLang);
+    card.innerHTML = buildPlaceCardHtml(place, isIdea, siteLang);
     return card;
   }
 
@@ -372,7 +372,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   if (visitedCheckbox) visitedCheckbox.addEventListener("change", updateView);
-  if (plannedCheckbox) plannedCheckbox.addEventListener("change", updateView);
+  if (ideaCheckbox) ideaCheckbox.addEventListener("change", updateView);
 
   // 7. Sorting Logic
   sortSelect.addEventListener("change", function () {
@@ -380,13 +380,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const activeBtn = document.querySelector(".continent-tabs .tab-btn.active");
     const targetContinent = activeBtn ? activeBtn.getAttribute("data-continent") : "all";
     const showVisited = visitedCheckbox.checked;
-    const showPlanned = plannedCheckbox.checked;
+    const showIdea = ideaCheckbox.checked;
 
     let filteredData = allTravelData.filter(place => {
       if (targetContinent !== "all" && place.continent !== targetContinent) return false;
-      const isPlanned = place.status === 'planned';
-      if (isPlanned && !showPlanned) return false;
-      if (!isPlanned && !showVisited) return false;
+      const isIdea = place.status === 'idea';
+      if (isIdea && !showIdea) return false;
+      if (!isIdea && !showVisited) return false;
       return true;
     });
 

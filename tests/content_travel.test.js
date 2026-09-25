@@ -62,10 +62,10 @@ function checkPlaceShape(p, where) {
 }
 
 function checkPlaceDates(p, where) {
-  if (p.status === "planned") {
+  if (p.status === "idea") {
     return p.date === null && p.date_end === null
       ? []
-      : [`${where}: planned places use date:null, date_end:null`];
+      : [`${where}: idea places use date:null, date_end:null`];
   }
   if (p.status !== "visited") return [`${where}.status: "${p.status}"`];
   return rules.checkDateRange({ start: p.date, end: p.date_end }, where, "day").concat(
@@ -201,8 +201,14 @@ test("place rules flag legacy fields, bad codes and inverted dates", () => {
   ["legacy field \"country\"", "legacy field \"date_display\"", "x.name", "country_code", "continent", "after end"]
     .forEach((needle) => assert.ok(errors.some((e) => e.includes(needle)), needle));
   assert.deepStrictEqual(
-    checkPlaceDates({ status: "planned", date: "2025-01-01", date_end: null }, "p").length,
+    checkPlaceDates({ status: "idea", date: "2025-01-01", date_end: null }, "p").length,
     1
+  );
+  assert.deepStrictEqual(checkPlaceDates({ status: "idea", date: null, date_end: null }, "p"), []);
+  // The legacy "planned" status was renamed to "idea" and is rejected.
+  assert.deepStrictEqual(
+    checkPlaceDates({ status: "planned", date: null, date_end: null }, "p"),
+    ['p.status: "planned"']
   );
 });
 

@@ -32,7 +32,7 @@ const REQUIRED_KEYS = [
   "index.contact.email_label", "index.contact.email_placeholder",
   "index.contact.message_label", "index.contact.message_placeholder",
   "index.contact.submit", "index.contact.sending", "index.contact.success", "index.contact.error",
-  "travel.section.visited", "travel.section.planned", "travel.empty", "travel.error",
+  "travel.section.visited", "travel.section.idea", "travel.empty", "travel.error",
   "travel.coming_soon", "travel.play_video", "travel.loading",
   "trip.day", "trip.photos", "trip.watch_video", "trip.back",
   "trip.error.no_place", "trip.error.load", "trip.error.not_found", "trip.error.back",

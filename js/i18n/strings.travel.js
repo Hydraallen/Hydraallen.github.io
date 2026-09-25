@@ -41,17 +41,17 @@
   "travel.map_lang.cn": { en: "中文 (Chinese)", zh: "中文" },
   "travel.map_lang.local": { en: "Original (Local)", zh: "当地语言" },
   "travel.filter.visited": { en: "Visited", zh: "去过" },
-  "travel.filter.planned": { en: "TODO List", zh: "心愿单" },
+  "travel.filter.idea": { en: "TODO List", zh: "心愿单" },
 
   // --- Grid / 卡片列表 ---
   "travel.loading": { en: "Loading world map & memories...", zh: "正在加载世界地图与回忆……" },
   "travel.error": { en: "Error loading data.", zh: "数据加载失败。" },
   "travel.empty": { en: "No places found matching your filters.", zh: "没有符合筛选条件的地点。" },
   "travel.section.visited": { en: "Visited Places", zh: "去过的地方" },
-  "travel.section.planned": { en: "TODO List", zh: "心愿单" },
+  "travel.section.idea": { en: "TODO List", zh: "心愿单" },
   "travel.coming_soon": { en: "Coming Soon", zh: "即将出发" },
   "travel.play_video": { en: "Play Video", zh: "播放视频" },
-  "travel.date.planned": { en: "TODO List", zh: "待出发" },
+  "travel.date.idea": { en: "TODO List", zh: "待出发" },
 
   // --- Lightbox / 灯箱 ---
   "travel.lightbox.prev": { en: "Previous photo", zh: "上一张" },

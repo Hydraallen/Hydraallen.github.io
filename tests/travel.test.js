@@ -114,7 +114,7 @@ const VISITED = {
   status: "visited",
   cover: "c.jpg",
 };
-const PLANNED = {
+const IDEA = {
   id: "japan",
   name: { en: "Japan", zh: "日本" },
   country_code: "JP",
@@ -122,7 +122,7 @@ const PLANNED = {
   date: null,
   date_end: null,
   video: "",
-  status: "planned",
+  status: "idea",
   cover: "j.jpg",
 };
 
@@ -144,12 +144,12 @@ test("buildPlaceCardHtml renders a Chinese card", () => {
   assert.ok(html.includes(">播放视频</a>"));
 });
 
-test("buildPlaceCardHtml marks planned places and never prints null", () => {
-  const en = travel.buildPlaceCardHtml(PLANNED, true, "en");
+test("buildPlaceCardHtml marks idea places and never prints null", () => {
+  const en = travel.buildPlaceCardHtml(IDEA, true, "en");
   assert.ok(en.includes('<span class="hover-note">Coming Soon</span>'));
   assert.ok(en.includes('<div class="place-date">TODO List</div>'));
   assert.ok(!en.includes("Play Video"), "no video -> no button");
-  const zh = travel.buildPlaceCardHtml(PLANNED, true, "zh");
+  const zh = travel.buildPlaceCardHtml(IDEA, true, "zh");
   assert.ok(zh.includes(">即将出发</span>"));
   assert.ok(zh.includes('<div class="place-date">待出发</div>'));
   [en, zh].forEach((html) => {

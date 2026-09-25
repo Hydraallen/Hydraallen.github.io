@@ -482,8 +482,8 @@
   transform: translateY(-2px);
 }
 
-.toggle-btn.planned-toggle input:checked + .toggle-icon { color: white; }
-.toggle-btn.planned-toggle:has(input:checked) {
+.toggle-btn.idea-toggle input:checked + .toggle-icon { color: white; }
+.toggle-btn.idea-toggle:has(input:checked) {
   background-color: #ff9800;
   color: white;
   box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
