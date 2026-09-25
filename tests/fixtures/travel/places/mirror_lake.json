@@ -1,0 +1,16 @@
+{
+  "id": "mirror_lake",
+  "name": {
+    "en": "Mirror Lake",
+    "zh": "镜湖"
+  },
+  "country_code": "NO",
+  "continent": "europe",
+  "date": null,
+  "date_end": null,
+  "video": "",
+  "status": "idea",
+  "cover": "",
+  "coordinates": [61.5, 8.25],
+  "photos": []
+}

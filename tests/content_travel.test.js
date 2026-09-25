@@ -93,6 +93,40 @@ test("travel: every place matches the bilingual schema", () => {
   assert.deepStrictEqual(errors, []);
 });
 
+// Image paths are relative to the JSON file. An empty cover means "no cover yet"
+// (new places from the LifeChecklist sync); anything else must exist on disk.
+// 图片路径相对 JSON 文件；空 cover 表示尚无封面，否则文件必须存在。
+function checkImageFiles(p, where, dir = TRAVEL_DIR) {
+  const exists = (rel) => fs.existsSync(path.resolve(dir, rel));
+  const errors = [];
+  if (typeof p.cover !== "string") errors.push(`${where}.cover: expected a string`);
+  else if (p.cover && !exists(p.cover)) errors.push(`${where}.cover: missing file ${p.cover}`);
+  (p.photos || []).forEach((photo, i) => {
+    const src = typeof photo === "string" ? photo : photo && photo.src;
+    if (typeof src === "string" && src && !exists(src)) {
+      errors.push(`${where}.photos[${i}]: missing file ${src}`);
+    }
+  });
+  return errors;
+}
+
+test("travel: every cover and photo file exists", () => {
+  const errors = places.flatMap(({ file, data }) => checkImageFiles(data, file));
+  assert.deepStrictEqual(errors, []);
+});
+
+test("image rules flag missing cover and photo files, allow an empty cover", () => {
+  const photos = ["../../img/nope/a.jpg", { src: "../../img/nope/b.jpg" }];
+  const errors = checkImageFiles({ cover: "../../img/nope/c.jpg", photos }, "p");
+  assert.deepStrictEqual(errors, [
+    "p.cover: missing file ../../img/nope/c.jpg",
+    "p.photos[0]: missing file ../../img/nope/a.jpg",
+    "p.photos[1]: missing file ../../img/nope/b.jpg",
+  ]);
+  assert.deepStrictEqual(checkImageFiles({ cover: "", photos: [] }, "p"), []);
+  assert.deepStrictEqual(checkImageFiles({ photos: [] }, "p"), ["p.cover: expected a string"]);
+});
+
 test("travel: index.json lists exactly the place files", () => {
   const files = places.map((p) => p.file.replace(/\.json$/, ""));
   assert.deepStrictEqual(readManifest(TRAVEL_DIR), files);

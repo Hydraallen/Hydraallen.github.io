@@ -1,0 +1,17 @@
+{
+  "id": "cloud_harbor",
+  "name": {
+    "en": "Cloud Harbor",
+    "zh": "云港"
+  },
+  "country_code": "US",
+  "state": "WA",
+  "continent": "namerica",
+  "date": "2031-06-01",
+  "date_end": "2031-06-04",
+  "video": "",
+  "status": "visited",
+  "cover": "../../img/travel/CloudHarbor/cover.jpg",
+  "coordinates": [47.12341234, -122.56779999],
+  "photos": []
+}

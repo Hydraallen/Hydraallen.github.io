@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "places": [
+    {
+      "id": "cloud_harbor",
+      "name": {
+        "en": "Cloud Harbor",
+        "zh": "云港"
+      },
+      "country_code": "US",
+      "state": "WA",
+      "continent": "namerica",
+      "status": "visited",
+      "date": "2031-06-01",
+      "date_end": "2031-06-04",
+      "coordinates": [47.1234, -122.5678]
+    },
+    {
+      "id": "mirror_lake",
+      "name": {
+        "en": "Mirror Lake",
+        "zh": "镜湖"
+      },
+      "country_code": "NO",
+      "continent": "europe",
+      "status": "idea",
+      "date": null,
+      "date_end": null,
+      "coordinates": [61.5, 8.25]
+    }
+  ]
+}

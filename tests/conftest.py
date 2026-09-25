@@ -5,7 +5,7 @@ import sys
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # code_quality.py 在仓库根;generate_index.py 在 data/;movie_cleaner.py 在 data/movies/;
-# privacy_guard.py / cv_sync_check.py 在 tools/
+# privacy_guard.py / cv_sync_check.py / travel_sync_check.py 在 tools/
 for _p in (
     _ROOT,
     os.path.join(_ROOT, "data"),

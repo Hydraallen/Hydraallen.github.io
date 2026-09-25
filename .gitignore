@@ -26,5 +26,8 @@ data/movies/backup.json
 # Local-only CV source paths for tools/cv_sync_check.py (never commit local paths)
 tools/cv_sources.local.json
 
+# Local-only LifeChecklist snapshot path for tools/travel_sync_check.py
+tools/travel_sources.local.json
+
 # Local preview server state (manage-service.sh)
 .preview/
