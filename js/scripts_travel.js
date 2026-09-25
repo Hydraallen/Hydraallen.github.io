@@ -16,6 +16,7 @@ var lib =
         getDisplayName: getDisplayName,
         getCountryLabel: getCountryLabel,
         formatPlaceDates: formatPlaceDates,
+        hasCover: hasCover,
         compareVisited: compareVisited,
         compareIdea: compareIdea,
       };
@@ -81,9 +82,13 @@ function buildPlaceCardHtml(place, isIdea, lang = "en") {
     overlayHtml += `<a href="${esc(place.video)}" target="_blank" rel="noopener noreferrer" class="action-btn video-btn-overlay">${esc(_travelI18n.t("travel.play_video", lang))}</a>`;
   }
 
+  const coverHtml = lib.hasCover(place)
+    ? `<img src="${esc(place.cover)}" alt="${esc(displayName)}" loading="lazy">`
+    : `<div class="place-cover-placeholder" aria-hidden="true"></div>`;
+
   return `
       <div class="place-image-wrapper">
-        <img src="${esc(place.cover)}" alt="${esc(displayName)}" loading="lazy">
+        ${coverHtml}
         <div class="hover-actions">
           ${overlayHtml}
         </div>

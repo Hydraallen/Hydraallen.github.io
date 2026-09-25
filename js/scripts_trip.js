@@ -28,6 +28,7 @@ var lib =
         getTripDays: getTripDays,
         buildDayHtml: buildDayHtml,
         getCountryLabel: getCountryLabel,
+        hasCover: hasCover,
       };
 
 // --- i18n (js/i18n.js is loaded in <head>; Node requires it) ---
@@ -123,10 +124,17 @@ function getTripDateDisplay(place, trip, lang = "en") {
 function renderHero(doc, place, trip, lang = "en") {
   var displayName = lib.getDisplayName(place, lang);
 
-  var cover = doc.querySelector(".trip-hero-cover");
-  if (cover) {
-    cover.src = place.cover || "";
+  var cover = doc.querySelector("img.trip-hero-cover");
+  if (cover && lib.hasCover(place)) {
+    cover.src = place.cover;
     cover.alt = displayName;
+  } else if (cover) {
+    // No cover yet: a neutral block instead of a broken <img src="">.
+    // 尚无封面：用中性占位块替换空 src 的 <img>。
+    var placeholder = doc.createElement("div");
+    placeholder.className = "trip-hero-cover trip-hero-cover-placeholder";
+    placeholder.setAttribute("aria-hidden", "true");
+    cover.replaceWith(placeholder);
   }
 
   var countryEl = doc.querySelector(".trip-country");

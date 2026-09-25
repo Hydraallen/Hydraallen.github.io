@@ -516,3 +516,43 @@ test("showTripError localizes the back link and keeps the language", () => {
   assert.ok(docEn.nodes["trip-error"].innerHTML.startsWith("&lt;b&gt;x&lt;/b&gt;"), "message escaped");
   assert.ok(docEn.nodes["trip-error"].innerHTML.includes(">Back to all destinations</a>"));
 });
+
+// ---------------------------------------------------------------------------
+// Hero cover: an empty cover becomes a placeholder, never <img src="">
+// ---------------------------------------------------------------------------
+function heroDoc() {
+  const { JSDOM } = require("jsdom");
+  const html = `<div class="trip-hero"><img class="trip-hero-cover" src="" alt="">
+    <p class="trip-country"></p><h2 class="trip-place"></h2><p class="trip-dates"></p></div>`;
+  return new JSDOM(`<!DOCTYPE html><html><body>${html}</body></html>`).window.document;
+}
+
+const HERO_PLACE = {
+  id: "mirror_lake",
+  name: { en: "Mirror Lake", zh: "镜湖" },
+  country_code: "NO",
+  date: null,
+  date_end: null,
+  status: "idea",
+};
+
+test("renderHero swaps an empty cover for a placeholder block", () => {
+  ["", "  ", undefined].forEach((cover) => {
+    const doc = heroDoc();
+    trip.renderHero(doc, { ...HERO_PLACE, cover }, null, "en");
+    assert.strictEqual(doc.querySelector("img"), null, "no <img> left");
+    const ph = doc.querySelector(".trip-hero-cover-placeholder");
+    assert.ok(ph, "placeholder rendered");
+    assert.strictEqual(ph.getAttribute("aria-hidden"), "true");
+    assert.strictEqual(doc.querySelector(".trip-place").textContent, "Mirror Lake");
+  });
+});
+
+test("renderHero keeps the <img> when a cover exists", () => {
+  const doc = heroDoc();
+  trip.renderHero(doc, { ...HERO_PLACE, cover: "c.jpg" }, null, "zh");
+  const img = doc.querySelector("img.trip-hero-cover");
+  assert.ok(img.getAttribute("src").endsWith("c.jpg"));
+  assert.strictEqual(img.alt, "镜湖");
+  assert.strictEqual(doc.querySelector(".trip-hero-cover-placeholder"), null);
+});

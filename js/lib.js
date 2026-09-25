@@ -114,6 +114,13 @@ function formatPlaceDates(place, lang) {
   return _libI18n.formatDayRange(safePlace.date, safePlace.date_end, lang);
 }
 
+// Travel: a place has a cover when `cover` is a non-blank string. New places
+// from the LifeChecklist sync start with cover:"" and render a placeholder.
+// 封面是否存在：空字符串（同步新建的地点）显示占位块，而不是 <img src="">。
+function hasCover(place) {
+  return !!place && typeof place.cover === "string" && place.cover.trim() !== "";
+}
+
 // Travel lightbox: a photo may be a plain URL string or an object
 // { src, location } where location is LocalizedText (or a plain string).
 function getLightboxSrc(photo) {
@@ -354,6 +361,7 @@ if (typeof module !== "undefined" && module.exports) {
     getCountryLabel: getCountryLabel,
     getDisplayName: getDisplayName,
     formatPlaceDates: formatPlaceDates,
+    hasCover: hasCover,
     getLightboxSrc: getLightboxSrc,
     getLightboxCaption: getLightboxCaption,
     compareVisited: compareVisited,

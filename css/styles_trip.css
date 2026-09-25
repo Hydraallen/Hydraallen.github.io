@@ -105,6 +105,13 @@
   box-shadow: var(--trip-shadow-lift);
 }
 
+/* No cover yet: keep the paper frame, fill it with a neutral block.
+   尚无封面：保留相纸白边，内部为中性占位。 */
+.trip-hero-cover-placeholder {
+  background-image: linear-gradient(135deg, var(--trip-paper-line), var(--trip-paper-edge));
+  background-clip: content-box;
+}
+
 .trip-hero-body {
   display: flex;
   flex-direction: column;

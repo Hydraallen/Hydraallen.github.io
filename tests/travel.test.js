@@ -168,3 +168,19 @@ test("buildPlaceCardHtml escapes data-derived values", () => {
   assert.ok(!html.includes('onerror="evil()'));
   assert.ok(!html.includes("<script>"));
 });
+
+test("buildPlaceCardHtml renders a placeholder instead of <img> when there is no cover", () => {
+  [
+    { ...IDEA, cover: "" },
+    { ...IDEA, cover: "   " },
+    { ...IDEA, cover: undefined },
+  ].forEach((place) => {
+    const html = travel.buildPlaceCardHtml(place, true, "en");
+    assert.ok(!html.includes("<img"), "no <img> for an empty cover");
+    assert.ok(html.includes('<div class="place-cover-placeholder" aria-hidden="true"></div>'));
+    assert.ok(html.includes('<span class="hover-note">Coming Soon</span>'), "overlay kept");
+  });
+  const withCover = travel.buildPlaceCardHtml(IDEA, true, "en");
+  assert.ok(withCover.includes('<img src="j.jpg"'));
+  assert.ok(!withCover.includes("place-cover-placeholder"));
+});

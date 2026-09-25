@@ -133,6 +133,16 @@
   transform: scale(1.08);
 }
 
+/* No cover yet (cover:""): a neutral block instead of a broken image.
+   尚无封面：中性占位块。The site has no dark theme; tones are mid-neutral. */
+.place-cover-placeholder {
+  --cover-ph-from: #e8ecea;
+  --cover-ph-to: #cfd8d5;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--cover-ph-from), var(--cover-ph-to));
+}
+
 .place-info {
   padding: 0 5px;
 }
